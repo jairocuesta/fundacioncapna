@@ -56,7 +56,7 @@ export default function Header({ styles }: NavbarProps) {
                 <Image src={headerBackground ? "/logo-color.png" : styles?.image == 'color' ? "/logo-color.png" : "/logo.png"} width={70} height={70} alt={"Logo"} />
                 <nav className={"hidden lg:flex items-center gap-5"}>
                     <NavbarItem href={"/"} title={"Inicio"} />
-                    <NavbarItem title={"Programas"} children={
+                    <NavbarItem title={"Programas"}>
                         <div className={"flex flex-col gap-3 whitespace-nowrap text-sm text-[#7D8034]"}>
                             <div className={"flex flex-col gap-1"}>
                                 <Link href={"#"} className={"font-semibold"}>Conservación ambiental</Link>
@@ -73,13 +73,13 @@ export default function Header({ styles }: NavbarProps) {
                             <div className={"flex flex-col gap-1"}>
                                 <Link href={"#"} className={"font-semibold"}>Desarrollo social</Link>
                                 <ul className={"ml-8 list-disc"}>
-                                    <li><Link href={"#"}>Programa "Ni una gota más", reconstrucción de techos</Link></li>
+                                    <li><Link href={"#"}>{`Programa "Ni una gota más", reconstrucción de techos`}</Link></li>
                                     <li><Link href={"#"}>Programa de concienciación ambiental</Link></li>
                                 </ul>
                             </div>
                         </div>
-                    } />
-                    <NavbarItem href={"#"} title={"Sostenibilidad"} children={
+                    </NavbarItem>
+                    <NavbarItem href={"#"} title={"Sostenibilidad"}>
                         <div className={"flex flex-col gap-3 whitespace-nowrap text-sm text-[#7D8034]"}>
                             <Link href={"#"} className={"font-semibold"}>Estrategia de sostenibilidad Cap Cana</Link>
                             <div className={"flex flex-col gap-1"}>
@@ -117,8 +117,8 @@ export default function Header({ styles }: NavbarProps) {
                                 </div>
                             </div>
                         </div>
-                    } />
-                    <NavbarItem href={"#"} title={"Donaciones"} children={
+                    </NavbarItem>
+                    <NavbarItem href={"#"} title={"Donaciones"}>
                         <div className={"flex flex-col gap-3 whitespace-nowrap text-sm text-[#7D8034]"}>
                             <div className={"flex flex-col gap-1"}>
                                 <Link href={"#"} className={"font-semibold"}>Membresías</Link>
@@ -130,14 +130,14 @@ export default function Header({ styles }: NavbarProps) {
                             <Link href={"#"} className={"font-semibold"}>Donación única</Link>
                             <Link href={"#"} className={"font-semibold"}>Compra nuestros productos</Link>
                         </div>
-                    } />
-                    <NavbarItem href={"#"} title={"Blog"} children={
+                    </NavbarItem>
+                    <NavbarItem href={"#"} title={"Blog"}>
                         <div className={"flex flex-col gap-3 whitespace-nowrap text-sm text-[#7D8034]"}>
                             <Link href={"#"} className={"font-semibold"}>Eventos</Link>
                             <Link href={"#"} className={"font-semibold"}>Noticias</Link>
                             <Link href={"#"} className={"font-semibold"}>Newsletter</Link>
                         </div>
-                    } />
+                    </NavbarItem>
                     <NavbarItem href={"#"} title={"Alianzas"} />
                     <NavbarItem href={"#"} title={"Contactos"} />
                     <NavbarItem href={"#"} title={"Investigación"} />
@@ -215,7 +215,7 @@ function MobileMenu({ closeMenu }: MobileMenuProps) {
                 <Image src={"/logo-color.png"} width={70} height={70} alt={"Logo"} />
                 <nav className={"flex flex-col items-center gap-5"}>
                     <MenuItem href={"/"} title={"Inicio"} />
-                    <MenuItem title={"Programas"} children={
+                    <MenuItem title={"Programas"}>
                         <div className={"flex flex-col gap-3 text-sm"}>
                             <div className={"flex flex-col gap-1"}>
                                 <Link href={"#"} className={"font-semibold"}>Conservación ambiental</Link>
@@ -232,13 +232,13 @@ function MobileMenu({ closeMenu }: MobileMenuProps) {
                             <div className={"flex flex-col gap-1"}>
                                 <Link href={"#"} className={"font-semibold"}>Desarrollo social</Link>
                                 <ul className={"ml-8 list-disc"}>
-                                    <li><Link href={"#"}>Programa "Ni una gota más", reconstrucción de techos</Link></li>
+                                    <li><Link href={"#"}>{`Programa "Ni una gota más", reconstrucción de techos`}</Link></li>
                                     <li><Link href={"#"}>Programa de concienciación ambiental</Link></li>
                                 </ul>
                             </div>
                         </div>
-                    } />
-                    <MenuItem href={"#"} title={"Sostenibilidad"} children={
+                    </MenuItem>
+                    <MenuItem href={"#"} title={"Sostenibilidad"}>
                         <div className={"flex flex-col gap-3 text-sm"}>
                             <Link href={"#"} className={"font-semibold"}>Estrategia de sostenibilidad Cap Cana</Link>
                             <div className={"flex flex-col gap-1"}>
@@ -276,8 +276,8 @@ function MobileMenu({ closeMenu }: MobileMenuProps) {
                                 </div>
                             </div>
                         </div>
-                    } />
-                    <MenuItem href={"#"} title={"Donaciones"} children={
+                    </MenuItem>
+                    <MenuItem href={"#"} title={"Donaciones"}>
                         <div className={"flex flex-col gap-3 text-sm"}>
                             <div className={"flex flex-col gap-1"}>
                                 <Link href={"#"} className={"font-semibold"}>Membresías</Link>
@@ -289,14 +289,14 @@ function MobileMenu({ closeMenu }: MobileMenuProps) {
                             <Link href={"#"} className={"font-semibold"}>Donación única</Link>
                             <Link href={"#"} className={"font-semibold"}>Compra nuestros productos</Link>
                         </div>
-                    } />
-                    <MenuItem href={"#"} title={"Blog"} children={
+                    </MenuItem>
+                    <MenuItem href={"#"} title={"Blog"}>
                         <div className={"flex flex-col gap-3 text-sm"}>
                             <Link href={"#"} className={"font-semibold"}>Eventos</Link>
                             <Link href={"#"} className={"font-semibold"}>Noticias</Link>
                             <Link href={"#"} className={"font-semibold"}>Newsletter</Link>
                         </div>
-                    } />
+                    </MenuItem>
                     <MenuItem href={"#"} title={"Alianzas"} />
                     <MenuItem href={"#"} title={"Contactos"} />
                     <MenuItem href={"#"} title={"Investigación"} />

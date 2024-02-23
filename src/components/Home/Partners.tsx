@@ -16,7 +16,7 @@ export default function HomePartners() {
                             <div className={"h-[2px] w-8 bg-[#AFA96E]"}></div>
                         </div>
                     </div>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,.</p>
+                    <p>{`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,.`}</p>
                 </div>
                 <div className={"flex flex-col gap-10"}>
                     <div className={"grid grid-cols-5 gap-3"}>
