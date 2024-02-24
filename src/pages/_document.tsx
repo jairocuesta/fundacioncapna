@@ -5,6 +5,7 @@ export default function Document() {
         <Html lang="en">
             <Head>
                 <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css" />
+                <link rel="icon" href="/logo-color.png" type="image/png" />
             </Head>
             <body>
                 <Main />

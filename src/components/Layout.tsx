@@ -16,7 +16,6 @@ export default function Layout({ title, header, children }: LayoutProps) {
         <>
             <Head>
                 <title>{title} | Fundación Capcana</title>
-                <link rel="shortcut icon" href="logo-color.png" type="image/png" />
             </Head>
             <Header styles={header?.styles} />
             {children}
