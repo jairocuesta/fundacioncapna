@@ -8,7 +8,7 @@ import styles from './Index.module.css';
 export default function ProgramExample() {
     return (
         <Layout title={"Programa de ejemplo"}>
-            <div className={"flex flex-col gap-16 pb-20"}>
+            <div className={"flex flex-col gap-16 pb-20 text-center sm:text-left"}>
                 <div className={`grid place-content-center gap-10 ${styles.firstImage} h-[40rem] text-white px-5`}>
                     <h1 className={"text-center text-2xl md:text-3xl lg:text-4xl lg:leading-[3rem]"}>
                         <div>Programa reproducción de</div> 
