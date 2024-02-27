@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        formats: ['image/webp', 'image/png', 'image/jpg', 'image/jpeg', 'image/gif']
+        formats: ['image/avif', 'image/webp'],
     }
 };
 
