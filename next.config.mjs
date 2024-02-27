@@ -2,7 +2,10 @@
 const nextConfig = {
     images: {
         formats: ['image/avif', 'image/webp'],
-        domains: ['capcana.agencia7am.com']
+        remotePatterns: [{
+            protocol: 'https',
+            hostname: 'capcana.agencia7am.com'
+        }]
     }
 };
 
