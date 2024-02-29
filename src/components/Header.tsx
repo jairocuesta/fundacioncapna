@@ -9,7 +9,7 @@ import { styles } from "@/types";
 // Animations
 import { AnimatePresence, motion } from "framer-motion";
 
-const ROUTES = ['/', '/alianzas', '/membresias', '/sostenibilidad'];
+const ROUTES = ['/', '/alianzas', '/membresias', '/sostenibilidad', '/investigacion', '/blog', '/contacto'];
 
 type NavbarProps = styles;
 export default function Header({ styles }: NavbarProps) {
@@ -131,7 +131,7 @@ export default function Header({ styles }: NavbarProps) {
                             <Link href={"#"} className={"font-semibold"}>Compra nuestros productos</Link>
                         </div>
                     </NavbarItem>
-                    <NavbarItem href={"#"} title={"Blog"}>
+                    <NavbarItem href={"/blog"} title={"Blog"}>
                         <div className={"flex flex-col gap-3 whitespace-nowrap text-sm text-[#7D8034]"}>
                             <Link href={"#"} className={"font-semibold"}>Eventos</Link>
                             <Link href={"#"} className={"font-semibold"}>Noticias</Link>
@@ -139,8 +139,8 @@ export default function Header({ styles }: NavbarProps) {
                         </div>
                     </NavbarItem>
                     <NavbarItem href={"/alianzas"} title={"Alianzas"} />
-                    <NavbarItem href={"#"} title={"Investigación"} />
-                    <NavbarItem href={"#"} title={"Contactos"} />
+                    <NavbarItem href={"/investigacion"} title={"Investigación"} />
+                    <NavbarItem href={"/contacto"} title={"Contactos"} />
                 </nav>
                 <button className={"block lg:hidden"} onClick={handleShowMenu}>
                     <i className="fa-solid fa-bars text-3xl"></i>
@@ -280,17 +280,17 @@ function MobileMenu({ closeMenu }: MobileMenuProps) {
                     <MenuItem href={"/membresias"} title={"Donaciones"}>
                         <div className={"flex flex-col gap-3 text-sm"}>
                             <div className={"flex flex-col gap-1"}>
-                                <Link href={"#"} className={"font-semibold"}>Membresías</Link>
+                                <Link href={"/membresias"} className={"font-semibold"}>Membresías</Link>
                                 <ul className={"ml-8 list-disc"}>
-                                    <li><Link href={"#"}>Membresía empresarial</Link></li>
-                                    <li><Link href={"#"}>Membresía personal</Link></li>
+                                    <li><Link href={"/membresias"}>Membresía empresarial</Link></li>
+                                    <li><Link href={"/membresias"}>Membresía personal</Link></li>
                                 </ul>
                             </div>
-                            <Link href={"#"} className={"font-semibold"}>Donación única</Link>
+                            <Link href={"/membresias"} className={"font-semibold"}>Donación única</Link>
                             <Link href={"#"} className={"font-semibold"}>Compra nuestros productos</Link>
                         </div>
                     </MenuItem>
-                    <MenuItem href={"#"} title={"Blog"}>
+                    <MenuItem href={"/blog"} title={"Blog"}>
                         <div className={"flex flex-col gap-3 text-sm"}>
                             <Link href={"#"} className={"font-semibold"}>Eventos</Link>
                             <Link href={"#"} className={"font-semibold"}>Noticias</Link>
@@ -298,8 +298,8 @@ function MobileMenu({ closeMenu }: MobileMenuProps) {
                         </div>
                     </MenuItem>
                     <MenuItem href={"/alianzas"} title={"Alianzas"} />
-                    <MenuItem href={"#"} title={"Investigación"} />
-                    <MenuItem href={"#"} title={"Contactos"} />
+                    <MenuItem href={"/investigacion"} title={"Investigación"} />
+                    <MenuItem href={"/contacto"} title={"Contactos"} />
                 </nav>
             </div>
         </div>
