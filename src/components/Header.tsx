@@ -9,7 +9,7 @@ import { styles } from "@/types";
 // Animations
 import { AnimatePresence, motion } from "framer-motion";
 
-const ROUTES = ['/'];
+const ROUTES = ['/', '/alianzas', '/membresias', '/sostenibilidad'];
 
 type NavbarProps = styles;
 export default function Header({ styles }: NavbarProps) {
@@ -118,7 +118,7 @@ export default function Header({ styles }: NavbarProps) {
                             </div>
                         </div>
                     </NavbarItem>
-                    <NavbarItem href={"#"} title={"Donaciones"}>
+                    <NavbarItem href={"/membresias"} title={"Donaciones"}>
                         <div className={"flex flex-col gap-3 whitespace-nowrap text-sm text-[#7D8034]"}>
                             <div className={"flex flex-col gap-1"}>
                                 <Link href={"#"} className={"font-semibold"}>Membresías</Link>
@@ -138,7 +138,7 @@ export default function Header({ styles }: NavbarProps) {
                             <Link href={"#"} className={"font-semibold"}>Newsletter</Link>
                         </div>
                     </NavbarItem>
-                    <NavbarItem href={"#"} title={"Alianzas"} />
+                    <NavbarItem href={"/alianzas"} title={"Alianzas"} />
                     <NavbarItem href={"#"} title={"Investigación"} />
                     <NavbarItem href={"#"} title={"Contactos"} />
                 </nav>
@@ -161,7 +161,7 @@ type NavbarItem = {
 function NavbarItem({ title, href, children }: NavbarItem) {
     const router = useRouter();
 
-    const currentPath = router.pathname;
+    const currentPath = `/${router.pathname.split('/')[1]}`;
     const isActualRoute = ROUTES.find(route => route == currentPath);
 
     const [ showMenu, setShowMenu ] = useState<boolean>(false);
@@ -277,7 +277,7 @@ function MobileMenu({ closeMenu }: MobileMenuProps) {
                             </div>
                         </div>
                     </MenuItem>
-                    <MenuItem href={"#"} title={"Donaciones"}>
+                    <MenuItem href={"/membresias"} title={"Donaciones"}>
                         <div className={"flex flex-col gap-3 text-sm"}>
                             <div className={"flex flex-col gap-1"}>
                                 <Link href={"#"} className={"font-semibold"}>Membresías</Link>
@@ -297,9 +297,9 @@ function MobileMenu({ closeMenu }: MobileMenuProps) {
                             <Link href={"#"} className={"font-semibold"}>Newsletter</Link>
                         </div>
                     </MenuItem>
-                    <MenuItem href={"#"} title={"Alianzas"} />
-                    <MenuItem href={"#"} title={"Contactos"} />
+                    <MenuItem href={"/alianzas"} title={"Alianzas"} />
                     <MenuItem href={"#"} title={"Investigación"} />
+                    <MenuItem href={"#"} title={"Contactos"} />
                 </nav>
             </div>
         </div>
