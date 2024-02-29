@@ -1,0 +1,33 @@
+.firstImage {
+    background-image: linear-gradient(#7D803480, #7D803480), url('/blog/1.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.blogImageContainer {
+    width: 100%;
+    position: relative !important;
+    height: 15rem;
+}
+
+.blogImage {
+    object-fit: cover;
+    width: 100%;
+    position: absolute !important;
+    height: 100%;
+}
+
+.newsImage {
+    background-image: linear-gradient(#7D8034CC, #7D8034CC), url('/blog/news.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.newsletterImage {
+    background-image: linear-gradient(#AFA96ECC, #AFA96ECC), url('/blog/newsletter.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
