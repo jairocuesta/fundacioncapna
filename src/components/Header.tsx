@@ -17,10 +17,8 @@ export default function Header({ styles }: NavbarProps) {
     const [showMenu, setShowMenu] = useState(false);
     const handleShowMenu = () => {
         if(showMenu) {
-            console.log(showMenu);
             document.body.style.overflowY = 'scroll';
         } else {
-            console.log(showMenu);
             document.body.style.overflowY = 'hidden'
         }
 
@@ -39,6 +37,7 @@ export default function Header({ styles }: NavbarProps) {
 
         return () => {
             window.removeEventListener('scroll', handleScroll);
+            document.body.style.overflowY = 'scroll';
         };
     }, []);
 
