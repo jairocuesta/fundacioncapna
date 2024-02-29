@@ -139,8 +139,8 @@ export default function Header({ styles }: NavbarProps) {
                         </div>
                     </NavbarItem>
                     <NavbarItem href={"#"} title={"Alianzas"} />
-                    <NavbarItem href={"#"} title={"Contactos"} />
                     <NavbarItem href={"#"} title={"Investigación"} />
+                    <NavbarItem href={"#"} title={"Contactos"} />
                 </nav>
                 <button className={"block lg:hidden"} onClick={handleShowMenu}>
                     <i className="fa-solid fa-bars text-3xl"></i>
