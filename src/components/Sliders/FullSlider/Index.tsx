@@ -20,6 +20,7 @@ export default function FullSlider({ images, classes }: SliderProps) {
         duration: 5000,
         transitionDuration: 500,
         easing: 'ease',
+        canSwipe: false,
     }
 
     return (
