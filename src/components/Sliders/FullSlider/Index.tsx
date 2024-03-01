@@ -26,8 +26,8 @@ export default function FullSlider({ images, classes }: SliderProps) {
     return (
         <div className={`relative w-full h-full ${classes ? classes : ''}`}>
             <Slide {...properties}>
-                {images.map(img => (
-                    <div className={styles.imageContainer}>
+                {images.map((img, i) => (
+                    <div key={i} className={styles.imageContainer}>
                         <div style={{ position: 'relative', backgroundImage: `url(${img.src})`, backgroundSize: 'cover', backgroundPosition: img?.classes?.backgroundPosition ?? 'center' }}></div>
                     </div>
                 ))}
