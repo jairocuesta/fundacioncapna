@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 
 export default function HomeHero() {
     return (
-        <div className={`h-screen w-full`}>
+        <div className={`h-screen w-full overflow-x-clip`}>
             <FullSlider 
                 images={
                     [

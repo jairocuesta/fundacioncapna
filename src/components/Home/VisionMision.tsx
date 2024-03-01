@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 
 export default function HomeVisionMision() {
     return (
-        <div className={`flex flex-col items-center gap-16 md:gap-28 py-28 w-full max-w-5xl mx-auto px-5 sm:px-10 xl:px-0`}>
+        <div className={`flex flex-col items-center gap-16 md:gap-28 py-28 w-full max-w-5xl mx-auto px-5 sm:px-10 xl:px-0 overflow-x-clip`}>
             <motion.div
                 initial={{ left: '100px', opacity: 0 }}
                 whileInView={{ left: '0px', opacity: 1 }}

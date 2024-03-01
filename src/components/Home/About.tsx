@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 
 export default function HomeAbout() {
     return (
-        <div className={"relative"}>
+        <div className={"relative overflow-x-clip"}>
             <div className={`absolute -top-32 ${styles.aboutContainer} w-full h-32`}></div>
             <div className={"bg-[#afa96e] px-10 pb-10"}>
                 <motion.div 

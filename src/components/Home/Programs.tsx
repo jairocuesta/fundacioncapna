@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 
 export default function HomePrograms() {
     return (
-        <div className={`relative w-full h-full`}>
+        <div className={`relative w-full h-full overflow-x-clip`}>
             <div className={`${styles.programBackground}`}></div>
             <div className={"grid grid-cols-2 grid-rows-2"}>
                 <div>

@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 
 export default function HomeBlog() {
     return (
-        <div className={`flex flex-col gap-20 py-28 mx-auto max-w-7xl`}>
+        <div className={`flex flex-col gap-20 py-28 mx-auto max-w-7xl overflow-x-clip`}>
             <div className={"grid place-content-center gap-8 text-center mx-auto"}>
                 <motion.div 
                     initial={{ bottom: '-50px', opacity: 0 }}

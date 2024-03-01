@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 export default function HomeImpact() {
     return (
-        <div className={`${styles.impactContainer} py-32 w-full`}>
+        <div className={`${styles.impactContainer} py-32 w-full overflow-x-clip`}>
             <div className={"grid place-content-center gap-10 text-center max-w-[63rem] mx-auto"}>
                 <motion.div
                     initial={{ bottom: '-50px', opacity: 0 }}

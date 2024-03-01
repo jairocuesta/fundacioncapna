@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 export default function HomeHistory() {
     return (
-        <div className={"relative flex items-start gap-20 py-28 w-full lg:w-3/4 2xl:w-1/2 mx-auto"}>
+        <div className={"relative flex items-start gap-20 py-28 w-full lg:w-3/4 2xl:w-1/2 mx-auto overflow-x-clip"}>
             <motion.div
                 initial={{ bottom: '-50px', opacity: 0 }}
                 whileInView={{ bottom: '0px', opacity: 1 }}
