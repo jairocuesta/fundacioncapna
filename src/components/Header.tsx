@@ -133,8 +133,8 @@ function NavbarItem({ title, href, items }: NavbarItem) {
                             exit={{ opacity: 0, left: 20 }}
                         >
                             <div className={`flex flex-col divide-y bg-white shadow-md rounded text-black p-3 py-2 min-w-52 ${subMenus.first.length != 0 ? 'border-r-2 border-r-[#AFA96E] rounded-r-none' : ''}`}>
-                                {items.map(item => item.href ? (
-                                    <div className={"border-[#AFA96E]"}>
+                                {items.map((item, i) => item.href ? (
+                                    <div key={i} className={"border-[#AFA96E]"}>
                                         <Link 
                                             onClick={item?.subitems ? () => handleSetSubmenus({first: item.subitems || [], second: []}) : () => null} 
                                             className={"flex items-center gap-2 text-sm p-2 my-1 hover:bg-[#AFA96E4D] rounded whitespace-nowrap transition-colors"} 
@@ -145,7 +145,7 @@ function NavbarItem({ title, href, items }: NavbarItem) {
                                         </Link>
                                     </div>
                                 ) : (
-                                    <div className={"border-[#AFA96E]"}>
+                                    <div key={i} className={"border-[#AFA96E]"}>
                                         <div 
                                             onClick={item?.subitems ? () => handleSetSubmenus({ first: item.subitems || [], second: []}) : () => null} 
                                             className={"flex items-center gap-2 text-sm p-2 my-1 hover:bg-[#AFA96E4D] rounded whitespace-nowrap transition-colors"}
@@ -158,8 +158,8 @@ function NavbarItem({ title, href, items }: NavbarItem) {
                             </div>
                             {subMenus.first.length != 0 && (
                                 <div className={`flex flex-col divide-y bg-white shadow-md rounded rounded-l-none text-black p-3 py-2 min-w-52 ${subMenus.second.length != 0 ? 'border-r-2 border-r-[#AFA96E] rounded-r-none' : ''}`}>
-                                    {subMenus.first.map(item => item.href ? (
-                                        <div className={"border-[#AFA96E]"}>
+                                    {subMenus.first.map((item, i) => item.href ? (
+                                        <div key={i} className={"border-[#AFA96E]"}>
                                             <Link
                                                 onClick={item?.subitems ? () => handleSetSubmenus({ ...subMenus, second: item.subitems || [] }) : () => null}
                                                 className={"flex items-center gap-2 text-sm p-2 my-1 hover:bg-[#AFA96E4D] rounded whitespace-nowrap transition-colors"}
@@ -170,7 +170,7 @@ function NavbarItem({ title, href, items }: NavbarItem) {
                                             </Link>
                                         </div>
                                     ) : (
-                                        <div className={"border-[#AFA96E]"}>
+                                        <div key={i} className={"border-[#AFA96E]"}>
                                             <div
                                                 onClick={item?.subitems ? () => handleSetSubmenus({ ...subMenus, second: item.subitems || [] }) : () => null}
                                                 className={"flex items-center gap-2 text-sm p-2 my-1 hover:bg-[#AFA96E4D] rounded whitespace-nowrap transition-colors"}
@@ -184,8 +184,8 @@ function NavbarItem({ title, href, items }: NavbarItem) {
                             )}
                             {subMenus.second.length != 0 && (
                                 <div className={"flex flex-col divide-y bg-white shadow-md rounded rounded-l-none text-black p-3 py-2 border min-w-52"}>
-                                    {subMenus.second.map(item => item.href ? (
-                                        <div className={"border-[#AFA96E]"}>
+                                    {subMenus.second.map((item, i) => item.href ? (
+                                        <div key={i} className={"border-[#AFA96E]"}>
                                             <Link
                                                 className={"flex items-center gap-2 text-sm p-2 my-1 hover:bg-[#AFA96E4D] rounded whitespace-nowrap transition-colors"}
                                                 href={item.href}
@@ -195,7 +195,7 @@ function NavbarItem({ title, href, items }: NavbarItem) {
                                             </Link>
                                         </div>
                                     ) : (
-                                        <div className={"border-[#AFA96E]"}>
+                                        <div key={i} className={"border-[#AFA96E]"}>
                                             <div
                                                 className={"flex items-center gap-2 text-sm p-2 my-1 hover:bg-[#AFA96E4D] rounded whitespace-nowrap transition-colors"}
                                             >
