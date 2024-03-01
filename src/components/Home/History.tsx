@@ -3,11 +3,18 @@ import Image from "next/image";
 import Link from "next/link";
 // Styles
 import styles from './Home.module.css';
+// Animations
+import { motion } from "framer-motion";
 
 export default function HomeHistory() {
     return (
         <div className={"relative flex items-start gap-20 py-28 w-full lg:w-3/4 2xl:w-1/2 mx-auto"}>
-            <div className={"flex flex-col items-center lg:items-start text-center lg:text-left gap-8 w-full md:w-2/3 lg:w-1/2 mx-auto lg:mx-0 px-5 sm:px-10 md:px-0"}>
+            <motion.div
+                initial={{ bottom: '-50px', opacity: 0 }}
+                whileInView={{ bottom: '0px', opacity: 1 }}
+                transition={{ delay: .1 }}
+                className={"relative flex flex-col items-center lg:items-start text-center lg:text-left gap-8 w-full md:w-2/3 lg:w-1/2 mx-auto lg:mx-0 px-5 sm:px-10 md:px-0"}
+            >
                 <div className={"relative"}>
                     <div className={"w-11 h-11 bg-[#7d80342a] rounded-full"}></div>
                     <div className={"absolute top-3 left-3"}>
@@ -30,9 +37,14 @@ export default function HomeHistory() {
                         <i className="fa-solid fa-angle-right text-base"></i>
                     </Link>
                 </div>
-            </div>
+            </motion.div>
             <div className={"w-1/2 hidden lg:block"}>
-               <div className={"absolute -top-40 w-1/2"} style={{transform: 'rotateY(-180deg)'}}>
+                <motion.div
+                    initial={{ bottom: '-50px', opacity: 0 }}
+                    whileInView={{ bottom: '0px', opacity: 1 }}
+                    transition={{ delay: .2 }}
+                    className={"absolute -top-40 w-1/2"} style={{ transform: 'rotateY(-180deg)' }}
+                >
                     <div className={"absolute w-full h-full top-28"} style={{ filter: 'grayscale(100%) contrast(0.05) opacity(.7)' }}>
                         <div className={styles.imageContainer}>
                             <Image src={"/home/bird.png"} className={styles.image} fill alt={"Bird image"} />
@@ -43,7 +55,7 @@ export default function HomeHistory() {
                             <Image src={"/home/bird.png"} className={styles.image} fill alt={"Bird image"} />
                         </div>
                     </div>
-               </div>
+                </motion.div>
             </div>
         </div>
     )

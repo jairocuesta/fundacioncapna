@@ -2,11 +2,18 @@
 import Image from 'next/image';
 // Styles
 import styles from './Home.module.css';
+// Animations
+import { motion } from 'framer-motion';
 
 export default function HomeVisionMision() {
     return (
         <div className={`flex flex-col items-center gap-16 md:gap-28 py-28 w-full max-w-5xl mx-auto px-5 sm:px-10 xl:px-0`}>
-            <div className={"flex flex-col md:flex-row item-center gap-8 lg:gap-16 text-center md:text-left w-full"}>
+            <motion.div
+                initial={{ left: '100px', opacity: 0 }}
+                whileInView={{ left: '0px', opacity: 1 }}
+                transition={{ delay: .15 }}
+                className={"relative flex flex-col md:flex-row item-center gap-8 lg:gap-16 text-center md:text-left w-full"}
+            >
                 <div className={"w-full md:w-1/2"}>
                     <div className={`${styles.imageContainer}`}>
                         <Image src={"/home/flower.jpeg"} className={`${styles.image} rounded-lg`} fill alt={"Flower image"} />
@@ -29,8 +36,13 @@ export default function HomeVisionMision() {
                         </p>
                     </div>
                 </div>
-            </div>
-            <div className={"flex flex-col-reverse md:flex-row item-center gap-8 lg:gap-16 text-center md:text-left w-full"}>
+            </motion.div>
+            <motion.div
+                initial={{ left: '-100px', opacity: 0 }}
+                whileInView={{ left: '0px', opacity: 1 }}
+                transition={{ delay: .3 }}
+                className={"relative flex flex-col-reverse md:flex-row item-center gap-8 lg:gap-16 text-center md:text-left w-full"}
+            >
                 <div className={"flex flex-col justify-center items-center md:items-start gap-5 lg:gap-8 w-full md:w-1/2"}>
                     <div className={"relative scale-75 lg:scale-100"}>
                         <div className={"w-12 h-12 bg-[#7d80342a] rounded-full"}></div>
@@ -53,7 +65,7 @@ export default function HomeVisionMision() {
                         <Image src={"/home/lions.jpeg"} className={`${styles.image} rounded-lg`} fill alt={"Flower image"} />
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </div>
     )
 }

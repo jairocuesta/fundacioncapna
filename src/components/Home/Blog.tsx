@@ -1,22 +1,34 @@
 // Next
 import Image from 'next/image';
+import Link from 'next/link';
 // Styles
 import styles from './Home.module.css';
-import Link from 'next/link';
+// Animations
+import { motion } from 'framer-motion';
 
 export default function HomeBlog() {
     return (
         <div className={`flex flex-col gap-20 py-28 mx-auto max-w-7xl`}>
             <div className={"grid place-content-center gap-8 text-center mx-auto"}>
-                <div className={"flex flex-col gap-5"}>
+                <motion.div 
+                    initial={{ bottom: '-50px', opacity: 0 }}
+                    whileInView={{ bottom: '0px', opacity: 1 }}
+                    transition={{ delay: .1 }}
+                    className={"relative flex flex-col gap-5"}
+                >
                     <h2 className={"text-3xl "}>Nuestros <span className={"font-bold text-[#AFA96E]"}>blog</span></h2>
                     <div className={"flex items-center justify-center gap-1"}>
                         <div className={"h-[2px] w-8 bg-[#AFA96E]"}></div>
                         <div className={"h-[2px] w-8 bg-[#AFA96E]"}></div>
                         <div className={"h-[2px] w-8 bg-[#AFA96E]"}></div>
                     </div>
-                </div>
-                <div className={"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-5xl mx-auto px-5 md:px-10"}>
+                </motion.div>
+                <motion.div 
+                    initial={{ bottom: '-50px', opacity: 0 }}
+                    whileInView={{ bottom: '0px', opacity: 1 }}
+                    transition={{ delay: .2 }}
+                    className={"relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-5xl mx-auto px-5 md:px-10"}
+                >
                     <Blog 
                         blog={{ 
                             title: "Nombre del blog",
@@ -44,7 +56,7 @@ export default function HomeBlog() {
                             href: "#",
                         }}
                     />
-                </div>
+                </motion.div>
             </div>
         </div>
     )
