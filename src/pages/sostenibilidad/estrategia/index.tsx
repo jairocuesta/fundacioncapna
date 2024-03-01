@@ -4,7 +4,7 @@ import Layout from "@/components/Layout";
 import Image from "next/image";
 // Styles
 import styles from './Index.module.css';
-import BannerSlider from "@/components/BannerSlider/Index";
+import { TextSlider } from "@/components/Sliders";
 
 export default function SustainabilityStrategy() {
     return (
@@ -70,7 +70,7 @@ export default function SustainabilityStrategy() {
                         </p>
                     </div>
                 </div>
-                <BannerSlider />
+                <TextSlider />
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
                     <span className={"text-lg sm:text-xl font-bold text-[#898C31]"}>Iniciativas sostenibles</span>
                     <div className={"grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6 text-sm sm:text-base"}>

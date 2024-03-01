@@ -1,6 +1,6 @@
 import styles from './Index.module.css'
 
-export default function BannerSlider() {
+export default function TextSlider() {
     return (
         <div className={`flex items-end ${styles.background} lg:h-[30rem] text-white px-5 lg:px-52 text-center lg:text-left py-20 lg:py-0`}>
             <div className={"flex flex-col gap-12 lg:gap-5 lg:pb-24"}>

@@ -1,6 +1,6 @@
 import Layout from "@/components/Layout";
 import styles from './index.module.css'
-import BannerSlider from "@/components/BannerSlider/Index";
+import { TextSlider } from "@/components/Sliders";
 
 export default function Alliances() {
     return (
@@ -24,7 +24,7 @@ export default function Alliances() {
                             sostenible.
                         </p>
                     </div>
-                    <BannerSlider />
+                    <TextSlider />
                 </div>
             </div>
         </Layout>

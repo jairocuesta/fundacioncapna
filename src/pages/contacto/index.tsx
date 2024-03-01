@@ -1,6 +1,5 @@
 import Layout from "@/components/Layout";
 import styles from './index.module.css'
-import BannerSlider from "@/components/BannerSlider/Index";
 
 export default function Contact() {
     return (
