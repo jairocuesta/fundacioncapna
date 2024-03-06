@@ -1,5 +1,7 @@
 // Next
 import Image from 'next/image';
+// Components
+import Button from '../Button/Index';
 // Styles
 import styles from './Home.module.css';
 // Animations
@@ -52,8 +54,16 @@ export default function HomePrograms() {
                         transition={{ delay: .2 }}
                         className={"relative flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-5"}
                     >
-                        <button className={"w-52 py-2 font-medium bg-white text-[#AFA96E] rounded-full border border-white"}>Conoce más</button>
-                        <button className={"w-52 py-2 font-medium bg-[#AFA96E] text-white rounded-full border border-white"}>Quiero donar</button>
+                        <Button 
+                            href={"#"}
+                            text={"Conoce más"}
+                            type={"white"}
+                        />
+                        <Button
+                            href={"#"}
+                            text={"Quiero donar"}
+                            type={"main"}
+                        />
                     </motion.div>
                 </div>
             </div>

@@ -1,5 +1,8 @@
+// Components
 import Layout from "@/components/Layout";
+// Styles
 import styles from './index.module.css'
+import Button from "@/components/Button/Index";
 
 export default function Contact() {
     return (
@@ -38,37 +41,37 @@ export default function Contact() {
                             <span className={"font-semibold text-xl text-[#7D8034]"}>¡Llámanos!</span>
                             <div className={"flex items-center gap-3"}>
                                 <i className="fa-light fa-phone-volume text-[#AFA96E]"></i>
-                                <span className={"text-neutral-700 font-medium"}>1800 - 2355-2356</span>
+                                <a href={"tel:180023552356"} target={'_blank'} className={"link font-medium"}>1800 - 2355-2356</a>
                             </div>
                         </div>
                         <div className={"flex flex-col gap-3 items-center sm:items-start"}>
                             <span className={"font-semibold text-xl text-[#7D8034]"}>Escríbenos</span>
                             <div className={"flex items-center gap-3"}>
                                 <i className="fa-brands fa-whatsapp text-[#AFA96E]"></i>
-                                <span className={"text-neutral-700 font-medium"}>1800 - 2355-2356</span>
+                                <a href={"tel:180023552356"} target={'_blank'} className={"link font-medium"}>1800 - 2355-2356</a>
                             </div>
                             <div className={"flex items-center gap-3"}>
                                 <i className="fa-light fa-envelope text-[#AFA96E]"></i>
-                                <span className={"text-neutral-700 font-medium"}>info@fundacióncapcana.org</span>
+                                <a href={"mailto:info@fundacióncapcana.org"} target={'_blank'} className={"link font-medium"}>info@fundacióncapcana.org</a>
                             </div>
                         </div>
                         <div className={"flex flex-col items-center sm:items-start gap-3"}>
                             <span className={"font-semibold text-xl text-[#7D8034]"}>Síguenos</span>
                             <div className={"flex items-center gap-3"}>
                                 <i className="fa-brands fa-instagram text-[#AFA96E]"></i>
-                                <span className={"text-neutral-700 font-medium"}>@fundacióncapcana</span>
+                                <a href={"https://instagram.com/fundacióncapcana"} target={'_blank'} className={"link font-medium"}>@fundacioncapcana</a>
                             </div>
                             <div className={"flex items-center gap-3"}>
                                 <i className="fa-brands fa-x-twitter text-[#AFA96E]"></i>
-                                <span className={"text-neutral-700 font-medium"}>@fundacióncapcana</span>
+                                <a href={"https://x.com/fundacióncapcana"} target={'_blank'} className={"link font-medium"}>@fundacioncapcana</a>
                             </div>
                             <div className={"flex items-center gap-3"}>
                                 <i className="fa-brands fa-facebook text-[#AFA96E]"></i>
-                                <span className={"text-neutral-700 font-medium"}>@fundacióncapcana</span>
+                                <a href={"https://facebook.com/fundacióncapcana"} target={'_blank'} className={"link font-medium"}>@fundacioncapcana</a>
                             </div>
                             <div className={"flex items-center gap-3"}>
                                 <i className="fa-brands fa-linkedin text-[#AFA96E]"></i>
-                                <span className={"text-neutral-700 font-medium"}>@fundacióncapcana</span>
+                                <a href={"https://linkedin.com/in/fundacióncapcana"} target={'_blank'} className={"link font-medium"}>@fundacioncapcana</a>
                             </div>
                         </div>
                         <div className={"flex flex-col gap-3"}>
@@ -100,9 +103,11 @@ export default function Contact() {
                                 <label htmlFor="comment" className={"text-sm font-medium"}>4. Comentario</label>
                                 <textarea id="comment" placeholder={"Escribir aquí"} className={"py-2 px-3 border rounded-md w-full resize-none"} rows={6} />
                             </div>
-                            <button className={"py-2 w-full bg-[#7D8034] text-white rounded-full font-medium"}>
-                                Conviértete en miembro
-                            </button>
+                            <Button 
+                                href={"#"}
+                                text={"Conviértete en miembro"}
+                                type={"main"}
+                            />
                         </form>
                     </div>
                 </div>

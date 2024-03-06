@@ -33,7 +33,7 @@ export default function HomeHistory() {
                         y residencial.
                     </p>
                     <Link href={"#"} className={"flex items-center gap-2 font-semibold text-[#7D8034] text-sm"}>
-                        <span className={"border-b border-[#7d803446]"}>VER MÁS</span>
+                        <span className={"link"}>VER MÁS</span>
                         <i className="fa-solid fa-angle-right text-base"></i>
                     </Link>
                 </div>

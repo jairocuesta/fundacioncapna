@@ -6,8 +6,12 @@ const nextConfig = {
         remotePatterns: [{
             protocol: 'https',
             hostname: 'capcana.agencia7am.com'
+        }],
+        remotePatterns: [{
+            protocol: 'http',
+            hostname: 'localhost'
         }]
-    }
+    },
 };
 
 export default nextConfig;

@@ -36,11 +36,11 @@ export const headerLinks: Props = {
             subitems: [
                 {
                     name: 'Programa "Ni una gota más", reconstrucción de techos',
-                    href: "#",
+                    href: "/programas/programa-ni-una-gota-mas-reconstruccion-de-techos",
                 },
                 {
                     name: 'Programa de concienciación ambiental',
-                    href: "#",
+                    href: "/programas/programa-de-concienciacion-socioambiental",
                 },
             ]
         },
@@ -48,7 +48,7 @@ export const headerLinks: Props = {
     sustainability: [
         {
             name: "Estrategia de sostenibilidad Cap Cana",
-            href: "#",
+            href: "/sostenibilidad/estrategia",
         },
         {
             name: "Iniciativas sostenibles",

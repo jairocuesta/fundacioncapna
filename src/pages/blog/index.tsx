@@ -1,17 +1,69 @@
-import Layout from "@/components/Layout";
+import axios from "axios";
+import { useEffect, useState } from "react";
+// Next
+import { useRouter } from "next/router";
+// Styles
 import styles from './index.module.css'
-import Image from "next/image";
+// Types
+import { Blog as BlogType } from "@/types";
+// Components
+import Layout from "@/components/Layout";
+import BlogComponent from "@/components/Blog/Index";
+import LoadingSpinner from "@/components/LoadingSpinner/Index";
+import Button from "@/components/Button/Index";
 
-export default function Alliances() {
+export default function Blog({ data, page, pageCount }: { data: BlogType[]; page: number; pageCount: number; }) {
+
+    const router = useRouter();
+
+    const [loading, setLoading] = useState<boolean>(false);
+    const [blogData, setBlogData] = useState<BlogType[]>(data);
+    const [actualPage, setActualPage] = useState<number>(page || 1);
+
+    const handleChangeActualPage = (newPage: number) => {
+        if (newPage > pageCount) return;
+        if (newPage < 1) return;
+
+        setActualPage(newPage);
+        setLoading(true);
+    }
+    const handleNextPage = () => {
+        const newPage = actualPage + 1;
+        
+        if (newPage > pageCount) return;
+        setActualPage(newPage);
+        setLoading(true);
+    }
+    const handlePrevPage = () => {
+        const newPage = actualPage - 1;
+
+        if (newPage < 1) return;
+        setActualPage(newPage);
+        setLoading(true);
+    }
+
+    async function handleGetData() {
+        const { data } = await axios.request({
+            url: `/api/blogs/getByLimit?limit=6&page=${actualPage}`
+        });
+        setBlogData(data.data);
+        setLoading(false);
+    }
+
+    useEffect(() => {
+        if(!loading && actualPage == page) return;
+        handleGetData();
+    }, [actualPage]);
+
     return (
-        <Layout title={"Aliansas"}>
+        <Layout title={"Blog"}>
             <div className={"flex flex-col text-center sm:text-left"}>
                 <div className={`flex items-end justify-start ${styles.firstImage} h-[40rem] text-white px-5`}>
-                    <div className={"flex flex-col gap-4 px-5 sm:px-10 lg:px-28 py-20 w-full"}>
-                        <h1 className={"flex items-center gap-3 text-center lg:text-left text-2xl md:text-3xl lg:text-4xl lg:leading-[3rem] lg:w-1/2"}>
+                    <div className={"flex flex-col gap-4 px-5 sm:px-10 lg:px-28 py-20 w-full max-w-6xl mx-auto text-center"}>
+                        <h1 className={"flex items-center gap-3 text-2xl md:text-3xl lg:text-4xl lg:leading-[3rem]"}>
                             Título de algún blog o artículo que se desee destacar
                         </h1>
-                        <div className={"flex items-center justify-center lg:justify-start gap-2"}>
+                        <div className={"flex items-center justify-center gap-2"}>
                             <div className={"h-1 w-12 bg-white opacity-50 rounded-full"}></div>
                             <div className={"h-1 w-12 bg-white rounded-full"}></div>
                             <div className={"h-1 w-12 bg-white opacity-50 rounded-full"}></div>
@@ -21,9 +73,9 @@ export default function Alliances() {
                 </div>
                 <div className={"flex flex-col items-center gap-16 py-20 max-w-6xl mx-auto"}>
                     <div className={"flex flex-col items-center gap-5"}>
-                        <div className={"flex items-center gap-2 text-2xl md:text-3xl lg:text-4xl lg:leading-[3rem]"}>
-                            <span className={"relative -bottom-[2px]"}>Nuestros</span>
-                            <span className={"font-bold text-[#AFA96E]"}>eventos</span>
+                        <div className={"flex gap-2 text-2xl md:text-3xl lg:text-4xl lg:leading-[3rem]"}>
+                            <span className={"relative -bottom-[2px]"}>Últimas</span>
+                            <span className={"relative top-[2px] font-bold text-[#AFA96E]"}>entradas</span>
                         </div>
                         <div className={"flex items-center justify-center gap-2"}>
                             <div className={"h-[2px] w-8 bg-[#7D8034] rounded-full"}></div>
@@ -31,39 +83,36 @@ export default function Alliances() {
                             <div className={"h-[2px] w-8 bg-[#7D8034] rounded-full"}></div>
                         </div>
                     </div>
-                    <div className={"grid grid-cols-1 md:grid-cols-2 gap-x-5 gap-y-10 px-5 sm:px-10 text-left"}>
-                        <div className={"flex flex-col gap-3"}>
-                            <div className={`grid place-content-center ${styles.blogImageContainer} overflow-hidden rounded-lg`}>
-                                <Image className={`${styles.blogImage} w-full h-full`} src={"/blog/blog-1.jpeg"} fill alt={"Blog image 1"} />
+                    <div className={"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-10 px-5 sm:px-10 text-left"}>
+                        {!loading ? blogData.map(blog => (
+                            <BlogComponent blog={{
+                                title: blog.name,
+                                description: blog.description,
+                                image: `${process.env.NEXT_PUBLIC_STRAPI_URI}${blog.blogPreview.data.attributes.url}`,
+                                date: blog.publishedAt,
+                                href: blog.alias,
+                            }} />
+                        )) : null}
+                        {loading ? (
+                            <div className={"grid place-content-center py-20"}>
+                                <LoadingSpinner />
                             </div>
-                            <span className={"text-[#7D8034] font-bold"}>Bird Watching:</span>
-                            <p className={"text-sm sm:text-base"}>
-                                Te invitamos a sumergirte en el fascinante mundo de las
-                                aves en Cap Cana. Ya seas un observador de aves experimentado o un
-                                principiante entusiasta, esta actividad es para todos. Descubre la magia de
-                                Birdwatching en un entorno.
-                            </p>
-                        </div>
-                        <div className={"flex flex-col gap-3"}>
-                            <div className={`grid place-content-center ${styles.blogImageContainer} overflow-hidden rounded-lg`}>
-                                <Image className={`${styles.blogImage} w-full h-full`} src={"/blog/blog-2.jpeg"} fill alt={"Blog image 1"} />
-                            </div>
-                            <span className={"text-[#7D8034] font-bold"}>Organic Market:</span>
-                            <p className={"text-sm sm:text-base"}>
-                                Creemos en vivir en armonía con nuestro entorno. Cada producto y artesanía que encontrarás en el mercado sigue los principios de
-                                sostenibilidad y comercio justo. Nuestro Organic Market es un escaparate de la
-                                creatividad y el talento de los artesanos locales, con tu visita podrás apoyar a la
-                                comunidad, además de saborear alimentos orgánicos y llevar contigo un pedacito
-                                de nuestro paraíso.
-                            </p>
-                        </div>
+                        ) : null}
                     </div>
-                    <button className={"py-2 px-4 sm:px-8 text-white bg-[#AFA96E] rounded-full font-medium w-fit mx-5"}>
-                        Contáctanos para enterarte de la próxima fecha
-                    </button>
+                    <div className={"flex items-center gap-2"}>
+                        <button onClick={handlePrevPage} className={`grid place-content-center w-8 h-8 border-2 border-[#7D8034] text-[#7D8034] rounded`}>
+                            <i className="fa-solid fa-angle-left"></i>
+                        </button>
+                        {Array.from(Array(pageCount).keys()).map((page, i) => (
+                            <button onClick={() => handleChangeActualPage(page + 1)} className={`grid place-content-center w-8 h-8 border-2 border-[#7D8034] ${(page + 1) == actualPage ? "bg-[#7D8034] text-white" : "bg-transparent text-[#7D8034]"} font-medium rounded`}>{page + 1}</button>
+                        ))}
+                        <button onClick={handleNextPage} className={`grid place-content-center w-8 h-8 border-2 border-[#7D8034] text-[#7D8034] rounded`}>
+                            <i className="fa-solid fa-angle-right"></i>
+                        </button>
+                    </div>
                 </div>
                 <div className={"flex flex-col"}>
-                    <div className={`flex items-center ${styles.newsImage} h-[35rem] text-white`}>
+                    {/* <div className={`flex items-center ${styles.newsImage} h-[35rem] text-white`}>
                         <div className={"flex flex-col items-center gap-12 max-w-4xl mx-auto px-5"}>
                             <div className={"flex flex-col items-center gap-5"}>
                                 <div className={"flex items-center gap-2 text-2xl md:text-3xl lg:text-4xl lg:leading-[3rem]"}>
@@ -85,7 +134,7 @@ export default function Alliances() {
                                 Ver noticias
                             </button>
                         </div>
-                    </div>
+                    </div> */}
                     <div className={`flex items-center ${styles.newsletterImage} h-[35rem] text-white`}>
                         <div className={"flex flex-col items-center gap-12 max-w-4xl mx-auto px-5"}>
                             <div className={"flex flex-col items-center gap-5"}>
@@ -104,9 +153,11 @@ export default function Alliances() {
                                 vida más sostenible directamente en tu bandeja de entrada. ¡No te pierdas ni un solo momento de nuestra
                                 misión! Suscríbete ahora.
                             </p>
-                            <button className={"py-2 px-4 sm:px-8 bg-white text-[#7D8034] rounded-full font-semibold w-fit"}>
-                                Inscríbete ahora
-                            </button>
+                            <Button 
+                                href={"#"}
+                                text={"Inscríbete ahora"}
+                                type={"white"}
+                            />
                         </div>
                     </div>
                 </div>
@@ -114,3 +165,22 @@ export default function Alliances() {
         </Layout>
     )
 }
+
+import type { GetServerSideProps } from 'next'
+export const getServerSideProps = (async (context) => {
+    const isDevelopment = process.env.NODE_ENV === 'development';
+    const apiUrl = isDevelopment ? 'http://localhost:3000' : `http://${context.req.headers.host}`;
+
+    try {
+        const { data } = await axios.request({
+            url: `${apiUrl}/api/blogs/getByLimit?limit=6&page=1`
+        });
+        return { props: { data: data.data, page: data.page, pageCount: data.pageCount } };
+    } catch (error) {
+        return { props: { data: {}, page: 0, pageCount: 0 } };
+    }
+}) satisfies GetServerSideProps<{
+    data: BlogType[];
+    page: number;
+    pageCount: number;
+}>

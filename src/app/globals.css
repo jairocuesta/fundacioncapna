@@ -28,3 +28,13 @@ ul {
   position: relative !important;
   height: unset !important;
 }
+
+.link {
+  color: #7D8034;
+  text-decoration: underline;
+  transition: .25s color;
+}
+
+.link:hover {
+  color: #4e501e;
+}

@@ -70,7 +70,18 @@ export default function SustainabilityStrategy() {
                         </p>
                     </div>
                 </div>
-                <TextSlider />
+                <TextSlider
+                    title={"Frase para esta imagen que irá aquí"}
+                    description={"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"}
+                    images={[
+                        {
+                            src: "/sostenibilidad/estrategia/2.jpg"
+                        },
+                        {
+                            src: "/alianzas/1.jpeg",
+                        }
+                    ]}
+                />
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
                     <span className={"text-lg sm:text-xl font-bold text-[#898C31]"}>Iniciativas sostenibles</span>
                     <div className={"grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6 text-sm sm:text-base"}>
@@ -114,7 +125,7 @@ export default function SustainabilityStrategy() {
                             </p>
                         </div>
                     </div>
-                B</div>
+                </div>
             </div>
         </Layout>
     )

@@ -1,5 +1,6 @@
 import Layout from "@/components/Layout";
 import styles from './index.module.css';
+import Link from "next/link";
 
 export default function Investigation() {
     return (
@@ -20,7 +21,9 @@ export default function Investigation() {
                             nosotros en esta apasionante travesía hacia un mundo más verde y sostenible!
                         </p>
                     </div>
-                    <div className={`${styles.secondImage} h-[6rem]`}></div>
+                    <div className={`grid place-content-center ${styles.secondImage} h-[6rem]`}>
+                        <span className={"text-white font-semibold text-2xl"}>Documentos y soportes de cada investigación</span>
+                    </div>
                     <div className={"flex flex-col gap-16 py-16 max-w-6xl mx-auto px-5 sm:px-10"}>
                         <div className={"flex items-start gap-8"}>
                             <div className={"relative"}>
@@ -30,41 +33,9 @@ export default function Investigation() {
                                 </div>
                             </div>
                             <p>
-                                {
-                                    `Cróquer et al. (2022). Stony Coral Tissue Loss Disease and Other Diseases Affect Adults and
-                                    Recruits of Major Reef Builders at Different Spatial Scales in the Dominican Republic. Gulf and
-                                    Caribbean Research 33 (1): GCFI1-GCFI13. DOI: https://doi.org/10.18785/gcr.3301.03`
-                                }
-                            </p>
-                        </div>
-                        <div className={"flex items-start gap-8"}>
-                            <div className={"relative"}>
-                                <div className={"w-11 h-11 bg-[#7d80342a] rounded-full"}></div>
-                                <div className={"absolute top-3 left-3"}>
-                                    <FlowerSVG />
-                                </div>
-                            </div>
-                            <p>
-                                {
-                                    `Cróquer et al. (2022). Stony Coral Tissue Loss Disease and Other Diseases Affect Adults and
-                                    Recruits of Major Reef Builders at Different Spatial Scales in the Dominican Republic. Gulf and
-                                    Caribbean Research 33 (1): GCFI1-GCFI13. DOI: https://doi.org/10.18785/gcr.3301.03`
-                                }
-                            </p>
-                        </div>
-                        <div className={"flex items-start gap-8"}>
-                            <div className={"relative"}>
-                                <div className={"w-11 h-11 bg-[#7d80342a] rounded-full"}></div>
-                                <div className={"absolute top-3 left-3"}>
-                                    <FlowerSVG />
-                                </div>
-                            </div>
-                            <p>
-                                {
-                                    `Cróquer et al. (2022). Stony Coral Tissue Loss Disease and Other Diseases Affect Adults and
-                                    Recruits of Major Reef Builders at Different Spatial Scales in the Dominican Republic. Gulf and
-                                    Caribbean Research 33 (1): GCFI1-GCFI13. DOI: https://doi.org/10.18785/gcr.3301.03`
-                                }
+                                Cróquer et al. (2022). Stony Coral Tissue Loss Disease and Other Diseases Affect Adults and
+                                Recruits of Major Reef Builders at Different Spatial Scales in the Dominican Republic. Gulf and
+                                Caribbean Research 33 (1): GCFI1-GCFI13. DOI: <a className={"link"} href={"https://doi.org/10.18785/gcr.3301.03"} target={"_blank"}>https://doi.org/10.18785/gcr.3301.03</a>
                             </p>
                         </div>
                     </div>

@@ -1,0 +1,27 @@
+.firstImage {
+    background-image: linear-gradient(#7D803480, #7D803480), url('/programas/example/1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.secondImage {
+    background-image: linear-gradient(#7D803480, #7D803480), url('/programas/example/2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.thirdImage {
+    background-image: linear-gradient(#7D8034CC, #7D8034CC), url('/programas/example/3.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.fourImage {
+    background-image: linear-gradient(#7D80344D, #7D80344D), url('/programas/example/4.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}

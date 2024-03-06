@@ -19,7 +19,7 @@ export default function HomeHero() {
                     ]
                 } 
             />
-            <div className={"absolute flex flex-col gap-5 w-full text-center top-[26vh] text-white"}>
+            <div className={"absolute flex flex-col gap-5 w-full text-center top-1/2 -translate-y-1/2 text-white"}>
                 <motion.h2
                     initial={{ bottom: '-30px', opacity: 0 }}
                     whileInView={{ bottom: '0px', opacity: 1 }}

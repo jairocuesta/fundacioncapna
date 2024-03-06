@@ -1,9 +1,11 @@
 // Next
 import Link from 'next/link';
-// Styles
-import styles from './Home.module.css';
+// Components
+import Button from '../Button/Index';
 // Animations
 import { motion } from 'framer-motion';
+// Styles
+import styles from './Home.module.css';
 
 export default function HomeAbout() {
     return (
@@ -32,7 +34,7 @@ export default function HomeAbout() {
                         <span className={"text-sm"}>Arboles plantados</span>
                     </div>
                 </motion.div>
-                <div className={"flex flex-col items-center gap-10 text-center py-20 w-full lg:w-3/4 2xl:w-1/2 mx-auto text-neutral-300"}>
+                <div className={"flex flex-col items-center gap-10 text-center py-20 w-full lg:w-3/4 2xl:w-1/2 mx-auto text-neutral-200"}>
                     <motion.div 
                         initial={{ bottom: '-50px', opacity: 0 }}
                         whileInView={{ bottom: '0px', opacity: 1 }}
@@ -60,9 +62,11 @@ export default function HomeAbout() {
                         transition={{ delay: .4 }}
                         className={"relative"}
                     >
-                        <Link href={"#"} className={"bg-[#7D8034] py-2 px-12 rounded-full font-medium"}>
-                            <span>Conoce más</span>
-                        </Link>
+                        <Button 
+                            href={"#"}
+                            type={"main"}
+                            text={"Conoce más"}
+                        />
                     </motion.div>
                 </div>
             </div>
