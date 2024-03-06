@@ -1,19 +1,38 @@
+// Components
 import Layout from "@/components/Layout";
-import styles from './index.module.css'
 import Button from "@/components/Button/Index";
+// Styles
+import styles from './index.module.css'
+// Animations
+import { motion } from 'framer-motion'
 
 export default function Memberships() {
     return (
         <Layout title={"Membresías"}>
             <div className={"flex flex-col text-center sm:text-left"}>
                 <div className={`grid place-content-center gap-10 ${styles.firstImage} h-[40rem] text-white px-5`}>
-                    <h1 className={"text-center text-2xl md:text-3xl lg:text-4xl lg:leading-[3rem] font-bold"}>Donaciones</h1>
-                    <span className={"flex justify-center text-3xl md:text-4xl"}>
-                        <i className="fa-light fa-angles-down"></i>
-                    </span>
+                    <motion.h1 
+                        initial={{ bottom: '-30px', opacity: 0 }}
+                        whileInView={{ bottom: '0px', opacity: 1 }}
+                        transition={{ delay: .3 }}
+                        className={"relative text-center text-2xl md:text-3xl lg:text-4xl lg:leading-[3rem] font-bold"}>
+                            Donaciones
+                        </motion.h1>
+                    <motion.span
+                        animate={{ top: '30px' }}
+                        transition={{ repeat: Infinity, duration: .5, ease: 'easeInOut', repeatType: "reverse" }}
+                        className={"relative flex justify-center text-3xl md:text-4xl"}
+                    >
+                        <i className="fa-regular fa-angles-down"></i>
+                    </motion.span>
                 </div>
                 <div className={"grid grid-cols-1 lg:grid-cols-3"}>
-                    <div className={`flex flex-col justify-between ${styles.secondImage} py-12 text-white px-5 sm:px-8 md:px-12 gap-32`}>
+                    <motion.div
+                        initial={{ left: '-30px', opacity: 0 }}
+                        whileInView={{ left: '0px', opacity: 1 }}
+                        transition={{ delay: .1 }}
+                        className={`relative flex flex-col justify-between ${styles.secondImage} py-12 text-white px-5 sm:px-8 md:px-12 gap-32`}
+                    >
                         <h3 className={"flex flex-col items-center text-center text-3xl lg:text-4xl lg:leading-[3rem] font-bold"}>
                             <span>Membresía</span>
                             <span>empresarial</span>
@@ -30,8 +49,13 @@ export default function Memberships() {
                                 type={"white"}
                             />
                         </div>
-                    </div>
-                    <div className={`flex flex-col justify-between ${styles.thirdImage} py-12 text-white px-5 sm:px-8 md:px-12 gap-32`}>
+                    </motion.div>
+                    <motion.div 
+                        initial={{ left: '-30px', opacity: 0 }}
+                        whileInView={{ left: '0px', opacity: 1 }}
+                        transition={{ delay: .2 }}
+                        className={`relative flex flex-col justify-between ${styles.thirdImage} py-12 text-white px-5 sm:px-8 md:px-12 gap-32`}
+                    >
                         <h3 className={"flex flex-col items-center text-center text-3xl lg:text-4xl lg:leading-[3rem] font-bold"}>
                             <span>Membresía</span>
                             <span>personal</span>
@@ -46,8 +70,13 @@ export default function Memberships() {
                                 type={"white"}
                             />
                         </div>
-                    </div>
-                    <div className={`flex flex-col justify-between ${styles.fourImage} py-12 text-white px-5 sm:px-8 md:px-12 gap-32`}>
+                    </motion.div>
+                    <motion.div 
+                        initial={{ left: '-30px', opacity: 0 }}
+                        whileInView={{ left: '0px', opacity: 1 }}
+                        transition={{ delay: .3 }}
+                        className={`relative flex flex-col justify-between ${styles.fourImage} py-12 text-white px-5 sm:px-8 md:px-12 gap-32`}
+                    >
                         <h3 className={"flex flex-col items-center text-center text-3xl lg:text-4xl lg:leading-[3rem] font-bold"}>
                             <span>Donación</span>
                             <span>única</span>
@@ -62,7 +91,7 @@ export default function Memberships() {
                                 type={"white"}
                             />
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </Layout>

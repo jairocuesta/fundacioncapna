@@ -1,31 +1,60 @@
-import Layout from "@/components/Layout";
-import styles from './index.module.css';
+// Next
 import Link from "next/link";
+// Components
+import Layout from "@/components/Layout";
+// Styles
+import styles from './index.module.css';
+// Animations
+import { motion } from 'framer-motion'
 
 export default function Investigation() {
     return (
         <Layout title={"Investigación"}>
             <div className={"flex flex-col text-center sm:text-left"}>
                 <div className={`grid place-content-center gap-10 ${styles.firstImage} h-[40rem] text-white px-5`}>
-                    <h1 className={"text-center text-2xl md:text-3xl lg:text-4xl lg:leading-[3rem] font-bold"}>Investigación</h1>
-                    <span className={"flex justify-center text-3xl md:text-4xl"}>
-                        <i className="fa-light fa-angles-down"></i>
-                    </span>
+                    <motion.h1 
+                        initial={{ bottom: '-30px', opacity: 0 }}
+                        whileInView={{ bottom: '0px', opacity: 1 }}
+                        transition={{ delay: .3 }} 
+                        className={"relative text-center text-2xl md:text-3xl lg:text-4xl lg:leading-[3rem] font-bold"}
+                    >Investigación</motion.h1>
+                    <motion.span
+                        animate={{ top: '30px' }}
+                        transition={{ repeat: Infinity, duration: .5, ease: 'easeInOut', repeatType: "reverse" }}
+                        className={"relative flex justify-center text-3xl md:text-4xl"}
+                    >
+                        <i className="fa-regular fa-angles-down"></i>
+                    </motion.span>
                 </div>
                 <div className={"flex flex-col"}>
                     <div className={"py-20 px-5 sm:px-16"}>
-                        <p className={"text-center max-w-5xl mx-auto"}>
+                        <motion.p
+                            initial={{ bottom: '-30px', opacity: 0 }}
+                            whileInView={{ bottom: '0px', opacity: 1 }}
+                            transition={{ delay: .3 }}  
+                            className={"relative text-center max-w-5xl mx-auto"}
+                        >
                             Nuestro equipo trabaja en proyectos de investigación destinados a comprender y preservar los
                             ecosistemas terrestres y marinos de Cap Cana. Cada estudio, cada descubrimiento y cada informe son un
                             paso más hacia un futuro sostenible. ¡Te invitamos a explorar nuestras investigaciones y a unirte a
                             nosotros en esta apasionante travesía hacia un mundo más verde y sostenible!
-                        </p>
+                        </motion.p>
                     </div>
                     <div className={`grid place-content-center ${styles.secondImage} h-[6rem]`}>
-                        <span className={"text-white font-semibold text-2xl"}>Documentos y soportes de cada investigación</span>
+                        <motion.span
+                            initial={{ bottom: '-30px', opacity: 0 }}
+                            whileInView={{ bottom: '0px', opacity: 1 }}
+                            transition={{ delay: .3 }}   
+                            className={"relative text-white font-semibold text-2xl"}
+                        >Documentos y soportes de cada investigación</motion.span>
                     </div>
                     <div className={"flex flex-col gap-16 py-16 max-w-6xl mx-auto px-5 sm:px-10"}>
-                        <div className={"flex items-start gap-8"}>
+                        <motion.div
+                            initial={{ bottom: '-30px', opacity: 0 }}
+                            whileInView={{ bottom: '0px', opacity: 1 }}
+                            transition={{ delay: .3 }}   
+                            className={"relative flex items-start gap-8"}
+                        >
                             <div className={"relative"}>
                                 <div className={"w-11 h-11 bg-[#7d80342a] rounded-full"}></div>
                                 <div className={"absolute top-3 left-3"}>
@@ -37,7 +66,7 @@ export default function Investigation() {
                                 Recruits of Major Reef Builders at Different Spatial Scales in the Dominican Republic. Gulf and
                                 Caribbean Research 33 (1): GCFI1-GCFI13. DOI: <a className={"link"} href={"https://doi.org/10.18785/gcr.3301.03"} target={"_blank"}>https://doi.org/10.18785/gcr.3301.03</a>
                             </p>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </div>

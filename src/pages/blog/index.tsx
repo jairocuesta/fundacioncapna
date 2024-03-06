@@ -11,6 +11,8 @@ import Layout from "@/components/Layout";
 import BlogComponent from "@/components/Blog/Index";
 import LoadingSpinner from "@/components/LoadingSpinner/Index";
 import Button from "@/components/Button/Index";
+// Animations
+import { motion } from 'framer-motion'
 
 export default function Blog({ data, page, pageCount }: { data: BlogType[]; page: number; pageCount: number; }) {
 
@@ -64,7 +66,12 @@ export default function Blog({ data, page, pageCount }: { data: BlogType[]; page
         <Layout title={"Blog"}>
             <div className={"flex flex-col text-center sm:text-left"}>
                 <div className={`flex items-end justify-start ${styles.firstImage} h-[40rem] text-white px-5`}>
-                    <div className={"flex flex-col gap-4 px-5 sm:px-10 lg:px-28 py-20 w-full max-w-6xl mx-auto text-center"}>
+                    <motion.div 
+                        initial={{ bottom: '-30px', opacity: 0 }}
+                        whileInView={{ bottom: '0px', opacity: 1 }}
+                        transition={{ delay: .3 }}
+                        className={"relative flex flex-col gap-4 px-5 sm:px-10 lg:px-28 py-20 w-full max-w-6xl mx-auto text-center"}
+                    >
                         <h1 className={"flex items-center gap-3 text-2xl md:text-3xl lg:text-4xl lg:leading-[3rem]"}>
                             Título de algún blog o artículo que se desee destacar
                         </h1>
@@ -74,9 +81,14 @@ export default function Blog({ data, page, pageCount }: { data: BlogType[]; page
                             <div className={"h-1 w-12 bg-white opacity-50 rounded-full"}></div>
                             <div className={"h-1 w-12 bg-white opacity-50 rounded-full"}></div>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
-                <div className={"flex flex-col items-center gap-16 py-20 max-w-6xl mx-auto"}>
+                <motion.div 
+                    initial={{ bottom: '-30px', opacity: 0 }}
+                    whileInView={{ bottom: '0px', opacity: 1 }}
+                    transition={{ delay: .3 }}
+                    className={"relative flex flex-col items-center gap-16 py-20 max-w-6xl mx-auto"}
+                >
                     <div className={"flex flex-col items-center gap-5"}>
                         <div className={"flex gap-2 text-2xl md:text-3xl lg:text-4xl lg:leading-[3rem]"}>
                             <span className={"relative -bottom-[2px]"}>Últimas</span>
@@ -122,7 +134,7 @@ export default function Blog({ data, page, pageCount }: { data: BlogType[]; page
                             <i className="fa-solid fa-angle-right"></i>
                         </button>
                     </div>
-                </div>
+                </motion.div>
                 <div className={"flex flex-col"}>
                     {/* <div className={`flex items-center ${styles.newsImage} h-[35rem] text-white`}>
                         <div className={"flex flex-col items-center gap-12 max-w-4xl mx-auto px-5"}>
@@ -148,7 +160,12 @@ export default function Blog({ data, page, pageCount }: { data: BlogType[]; page
                         </div>
                     </div> */}
                     <div className={`flex items-center ${styles.newsletterImage} h-[35rem] text-white`}>
-                        <div className={"flex flex-col items-center gap-12 max-w-4xl mx-auto px-5"}>
+                        <motion.div
+                            initial={{ bottom: '-30px', opacity: 0 }}
+                            whileInView={{ bottom: '0px', opacity: 1 }}
+                            transition={{ delay: .3 }} 
+                            className={"relative flex flex-col items-center gap-12 max-w-4xl mx-auto px-5"}
+                        >
                             <div className={"flex flex-col items-center gap-5"}>
                                 <div className={"flex items-center gap-2 text-2xl md:text-3xl lg:text-4xl lg:leading-[3rem]"}>
                                     <span className={"relative -bottom-[2px]"}>Nuestro</span>
@@ -170,7 +187,7 @@ export default function Blog({ data, page, pageCount }: { data: BlogType[]; page
                                 text={"Inscríbete ahora"}
                                 type={"white"}
                             />
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </div>

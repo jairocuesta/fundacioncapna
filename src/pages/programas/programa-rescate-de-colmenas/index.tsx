@@ -1,27 +1,40 @@
 // Components
 import Layout from "@/components/Layout";
+import { TextSlider } from "@/components/Sliders";
+import Button from "@/components/Button/Index";
 // Next
 import Image from "next/image";
+import Link from "next/link";
 // Styles
 import styles from './Index.module.css';
-import Link from "next/link";
+// Animations
+import { motion } from "framer-motion";
 
 export default function ProgramExample() {
     return (
         <Layout title={"Programa de ejemplo"}>
             <div className={"flex flex-col gap-16 pb-20 text-center sm:text-left"}>
                 <div className={`grid place-content-center gap-10 ${styles.firstImage} h-[40rem] text-white px-5`}>
-                    <h1 className={"text-center text-2xl md:text-3xl lg:text-4xl lg:leading-[3rem]"}>
-                        <div>Programa Rescate de</div> 
+                    <motion.h1
+                        initial={{ bottom: '-30px', opacity: 0 }}
+                        whileInView={{ bottom: '0px', opacity: 1 }}
+                        transition={{ delay: .3 }}
+                        className={"relative text-center text-2xl md:text-3xl lg:text-4xl lg:leading-[3rem]"}
+                    >
+                        <div>Programa Rescate de</div>
                         <div><span className={"font-bold"}>Colmenas</span></div>
-                    </h1>
-                    <span className={"flex justify-center text-3xl md:text-4xl"}>
-                        <i className="fa-light fa-angles-down"></i>
-                    </span>
+                    </motion.h1>
+                    <motion.span
+                        animate={{ top: '30px' }}
+                        transition={{ repeat: Infinity, duration: .5, ease: 'easeInOut', repeatType: "reverse" }}
+                        className={"relative flex justify-center text-3xl md:text-4xl"}
+                    >
+                        <i className="fa-regular fa-angles-down"></i>
+                    </motion.span>
                 </div>
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
                     <span className={"text-lg sm:text-xl font-bold text-[#7D8034]"}>Protegiendo las abejas en zonas urbanizadas
-</span>
+                    </span>
                     <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
                         <p>
                             El Programa de Rescate de Colmenas surge bajo la continua necesidad de proteger las abejas que
@@ -49,28 +62,18 @@ export default function ProgramExample() {
                         </p>
                     </div>
                 </div>
-                <div className={`flex items-end ${styles.secondImage} lg:h-[30rem] text-white px-5 lg:px-52 text-center lg:text-left py-20 lg:py-0`}>
-                    <div className={"flex flex-col gap-12 lg:gap-5 lg:pb-24"}>
-                        <div className={"flex flex-col gap-4 lg:w-2/3"}>
-                            <h2 className={"text-xl sm:text-[1.7rem] font-medium"}>Frase para esta imagen que irá aquí </h2>
-                            <p className={"text-sm sm:text-base"}>{`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book`}</p>
-                            <div className={"flex items-center justify-center lg:justify-start gap-2"}>
-                                <div className={"h-1 w-12 bg-white opacity-50 rounded-full"}></div>
-                                <div className={"h-1 w-12 bg-white rounded-full"}></div>
-                                <div className={"h-1 w-12 bg-white opacity-50 rounded-full"}></div>
-                                <div className={"h-1 w-12 bg-white opacity-50 rounded-full"}></div>
-                            </div>
-                        </div>
-                        <div className={"flex items-center justify-center lg:justify-end gap-5"}>
-                            <button>
-                                <i className="fa-light fa-circle-arrow-left text-[2rem]"></i>
-                            </button>
-                            <button>
-                                <i className="fa-light fa-circle-arrow-right text-[2rem]"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+                <TextSlider
+                    title={"Frase para esta imagen que irá aquí"}
+                    description={"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"}
+                    images={[
+                        {
+                            src: "/programas/example/2.jpg"
+                        },
+                        {
+                            src: "/sostenibilidad/estrategia/2.jpg",
+                        }
+                    ]}
+                />
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
                     <span className={"text-lg sm:text-xl font-bold text-[#7D8034]"}>Un apiario donde se respeta la integridad de las abejas</span>
                     <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
@@ -88,7 +91,7 @@ export default function ProgramExample() {
                         <p>
                             La miel 100% orgánica producida en nuestro apiario es comercializada bajo el nombre “La Colmena
                             Agradecida” y los fondos recaudados de las ventas son reinvertidos en el mismo programa para
-                            garantizar su autosostenibilidad a través del tiempo. Puedes adquirirla en la <Link className="link" href={'#'}>Eco-tienda</Link> de la Fundación. 
+                            garantizar su autosostenibilidad a través del tiempo. Puedes adquirirla en la <Link className="link" href={'#'}>Eco-tienda</Link> de la Fundación.
                         </p>
                     </div>
                 </div>
@@ -105,9 +108,13 @@ export default function ProgramExample() {
                 <div className={`flex items-end ${styles.thirdImage} h-[25rem] text-white px-5`}>
                     <div className={"flex flex-col justify-center items-center gap-10 h-full w-full text-center"}>
                         <h2 className={"text-xl sm:text-[1.7rem] sm:leading-9"}>
-                            <div>Te invitamos a <span className={"font-bold"}>ser parte de<br/> nuestra misión</span> de conservación</div>
+                            <div>Te invitamos a <span className={"font-bold"}>ser parte de<br /> nuestra misión</span> de conservación</div>
                         </h2>
-                        <button className={"bg-white text-[#7D8034] font-semibold py-2 px-5 sm:px-10 rounded-full text-sm sm:text-base"}>¿Cómo puedo ayudar?</button>
+                        <Button
+                            href={"#"}
+                            text={"¿Cómo puedo ayudar?"}
+                            type={"white"}
+                        />
                     </div>
                 </div>
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
@@ -121,7 +128,11 @@ export default function ProgramExample() {
                 </div>
                 <div className={`max-w-7xl mx-auto px-5 sm:px-10 lg:px-20 w-full`}>
                     <div className={`${styles.fourImage} grid place-content-center w-full h-[10rem] sm:h-[20rem] rounded-2xl`}>
-                        <button className={"bg-[#7D8034] text-white py-2 px-5 sm:px-10 rounded-full font-semibold text-sm sm:text-base"}>Conviértete en miembro</button>
+                        <Button
+                            href={"#"}
+                            text={"Conviértete en miembro"}
+                            type={"main"}
+                        />
                     </div>
                 </div>
 

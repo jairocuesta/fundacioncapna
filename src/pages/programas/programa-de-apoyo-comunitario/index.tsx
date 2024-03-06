@@ -4,19 +4,30 @@ import Layout from "@/components/Layout";
 import Image from "next/image";
 // Styles
 import styles from './Index.module.css';
+// Animations
+import { motion } from "framer-motion";
 
 export default function ProgramExample() {
     return (
         <Layout title={"Programa de ejemplo"}>
             <div className={"flex flex-col gap-16 pb-20 text-center sm:text-left"}>
                 <div className={`grid place-content-center gap-10 ${styles.firstImage} h-[40rem] text-white px-5`}>
-                    <h1 className={"text-center text-2xl md:text-3xl lg:text-4xl lg:leading-[3rem]"}>
-                        <div>Programa de</div> 
+                    <motion.h1
+                        initial={{ bottom: '-30px', opacity: 0 }}
+                        whileInView={{ bottom: '0px', opacity: 1 }}
+                        transition={{ delay: .3 }}
+                        className={"relative text-center text-2xl md:text-3xl lg:text-4xl lg:leading-[3rem]"}
+                    >
+                        <div>Programa de</div>
                         <div><span className={"font-bold"}> Apoyo Comunitario</span></div>
-                    </h1>
-                    <span className={"flex justify-center text-3xl md:text-4xl"}>
-                        <i className="fa-light fa-angles-down"></i>
-                    </span>
+                    </motion.h1>
+                    <motion.span
+                        animate={{ top: '30px' }}
+                        transition={{ repeat: Infinity, duration: .5, ease: 'easeInOut', repeatType: "reverse" }}
+                        className={"relative flex justify-center text-3xl md:text-4xl"}
+                    >
+                        <i className="fa-regular fa-angles-down"></i>
+                    </motion.span>
                 </div>
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
                     <span className={"text-lg sm:text-xl font-bold text-[#7D8034]"}></span>
