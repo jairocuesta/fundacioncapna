@@ -17,7 +17,7 @@ export default function Blog({ data, page, pageCount }: { data: BlogType[]; page
     const router = useRouter();
 
     const [loading, setLoading] = useState<boolean>(false);
-    const [blogData, setBlogData] = useState<BlogType[]>(data);
+    const [blogData, setBlogData] = useState<BlogType[]>(data.length ? data : []);
     const [actualPage, setActualPage] = useState<number>(page || 1);
 
     const handleChangeActualPage = (newPage: number) => {
@@ -43,11 +43,16 @@ export default function Blog({ data, page, pageCount }: { data: BlogType[]; page
     }
 
     async function handleGetData() {
-        const { data } = await axios.request({
-            url: `/api/blogs/getByLimit?limit=6&page=${actualPage}`
-        });
-        setBlogData(data.data);
-        setLoading(false);
+        try {
+            const { data } = await axios.request({
+                url: `/api/blogs/getByLimit?limit=6&page=${actualPage}`
+            });
+            setBlogData(data.data);
+            setLoading(false);
+        } catch (error) {
+            setBlogData([])
+            setLoading(false);
+        }
     }
 
     useEffect(() => {
@@ -83,22 +88,29 @@ export default function Blog({ data, page, pageCount }: { data: BlogType[]; page
                             <div className={"h-[2px] w-8 bg-[#7D8034] rounded-full"}></div>
                         </div>
                     </div>
+                    {!loading && blogData.length != 0 ? (
+                        <div className={"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-10 px-5 sm:px-10 text-left"}>
+                            {blogData.map((blog, index) => (
+                                <BlogComponent key={index} blog={{
+                                    title: blog.name,
+                                    description: blog.description,
+                                    image: `${process.env.NEXT_PUBLIC_STRAPI_URI}${blog.blogPreview.data.attributes.url}`,
+                                    date: blog.publishedAt,
+                                    href: blog.alias,
+                                }} />
+                            ))}
+                        </div>
+                    ) : null}
+                    {loading ? (
+                        <div className={"grid place-content-center py-20"}>
+                            <LoadingSpinner />
+                        </div>
+                    ) : null}
                     <div className={"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-10 px-5 sm:px-10 text-left"}>
-                        {!loading ? blogData.map((blog, index) => (
-                            <BlogComponent key={index} blog={{
-                                title: blog.name,
-                                description: blog.description,
-                                image: `${process.env.NEXT_PUBLIC_STRAPI_URI}${blog.blogPreview.data.attributes.url}`,
-                                date: blog.publishedAt,
-                                href: blog.alias,
-                            }} />
-                        )) : null}
-                        {loading ? (
-                            <div className={"grid place-content-center py-20"}>
-                                <LoadingSpinner />
-                            </div>
-                        ) : null}
                     </div>
+                    {!loading && !blogData.length ? (
+                        <div className={"text-center text-lg font-medium"}>No se pudieron obtener blogs</div>
+                    ) : null}
                     <div className={"flex items-center gap-2"}>
                         <button onClick={handlePrevPage} className={`grid place-content-center w-8 h-8 border-2 border-[#7D8034] text-[#7D8034] rounded`}>
                             <i className="fa-solid fa-angle-left"></i>
