@@ -84,8 +84,8 @@ export default function Blog({ data, page, pageCount }: { data: BlogType[]; page
                         </div>
                     </div>
                     <div className={"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-10 px-5 sm:px-10 text-left"}>
-                        {!loading ? blogData.map(blog => (
-                            <BlogComponent blog={{
+                        {!loading ? blogData.map((blog, index) => (
+                            <BlogComponent key={index} blog={{
                                 title: blog.name,
                                 description: blog.description,
                                 image: `${process.env.NEXT_PUBLIC_STRAPI_URI}${blog.blogPreview.data.attributes.url}`,
@@ -104,7 +104,7 @@ export default function Blog({ data, page, pageCount }: { data: BlogType[]; page
                             <i className="fa-solid fa-angle-left"></i>
                         </button>
                         {Array.from(Array(pageCount).keys()).map((page, i) => (
-                            <button onClick={() => handleChangeActualPage(page + 1)} className={`grid place-content-center w-8 h-8 border-2 border-[#7D8034] ${(page + 1) == actualPage ? "bg-[#7D8034] text-white" : "bg-transparent text-[#7D8034]"} font-medium rounded`}>{page + 1}</button>
+                            <button key={i} onClick={() => handleChangeActualPage(page + 1)} className={`grid place-content-center w-8 h-8 border-2 border-[#7D8034] ${(page + 1) == actualPage ? "bg-[#7D8034] text-white" : "bg-transparent text-[#7D8034]"} font-medium rounded`}>{page + 1}</button>
                         ))}
                         <button onClick={handleNextPage} className={`grid place-content-center w-8 h-8 border-2 border-[#7D8034] text-[#7D8034] rounded`}>
                             <i className="fa-solid fa-angle-right"></i>
