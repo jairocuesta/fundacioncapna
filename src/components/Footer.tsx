@@ -29,41 +29,51 @@ export default function Footer() {
                 <div className={"flex flex-col gap-3"}>
                     <span className={"text-[#AFA96E] font-semibold"}>Navegación</span>
                     <div className={"flex flex-col gap-1 text-neutral-200"}>
-                        <Link href={"#"} className={"flex items-center gap-3 border-b py-2 border-neutral-500"}>
+                        <Link href={"/"} className={"flex items-center gap-3 border-b py-2 border-neutral-500"}>
                             <i className="fa-regular fa-angle-right text-lg"></i>
                             <span>Inicio</span>
                         </Link>
-                        <Link href={"#"} className={"flex items-center gap-3 border-b py-2 border-neutral-500"}>
+                        <Link href={"/programas/programa-de-concienciacion-socioambiental"} className={"flex items-center gap-3 border-b py-2 border-neutral-500"}>
                             <i className="fa-regular fa-angle-right text-lg"></i>
                             <span>Programas</span>
                         </Link>
-                        <Link href={"#"} className={"flex items-center gap-3 border-b py-2 border-neutral-500"}>
+                        <Link href={"/sostenibilidad/estrategia"} className={"flex items-center gap-3 border-b py-2 border-neutral-500"}>
                             <i className="fa-regular fa-angle-right text-lg"></i>
-                            <span>Actividades</span>
+                            <span>Sostenibilidad</span>
                         </Link>
-                        <Link href={"#"} className={"flex items-center gap-3 border-b py-2 border-neutral-500"}>
+                        <Link href={"/membresias"} className={"flex items-center gap-3 border-b py-2 border-neutral-500"}>
                             <i className="fa-regular fa-angle-right text-lg"></i>
-                            <span>Colaboraciones</span>
+                            <span>Donaciones</span>
                         </Link>
-                        <Link href={"#"} className={"flex items-center gap-3 border-b py-2 border-neutral-500"}>
+                        <Link href={"/blog"} className={"flex items-center gap-3 border-b py-2 border-neutral-500"}>
                             <i className="fa-regular fa-angle-right text-lg"></i>
                             <span>Blog</span>
                         </Link>
-                        <Link href={"#"} className={"flex items-center gap-3 border-b py-2 border-neutral-500"}>
+                        <Link href={"/alianzas"} className={"flex items-center gap-3 border-b py-2 border-neutral-500"}>
                             <i className="fa-regular fa-angle-right text-lg"></i>
-                            <span>Galería</span>
+                            <span>Alianzas</span>
                         </Link>
-                        <Link href={"#"} className={"flex items-center gap-3 border-b py-2 border-neutral-500"}>
+                        <Link href={"/investigacion"} className={"flex items-center gap-3 border-b py-2 border-neutral-500"}>
+                            <i className="fa-regular fa-angle-right text-lg"></i>
+                            <span>Investigación</span>
+                        </Link>
+                        <Link href={"/contacto"} className={"flex items-center gap-3 border-b py-2 border-neutral-500"}>
                             <i className="fa-regular fa-angle-right text-lg"></i>
                             <span>Contactos</span>
                         </Link>
                     </div>
                 </div>
                 <div className={"flex flex-col gap-3"}>
-                    <span className={"text-[#AFA96E] font-semibold"}>Portafolio de proyectos</span>
-                    <div className={"flex flex-col gap-1 text-neutral-200"}>
-                        <p>Lorem Ipsus Lorem Ipsus Lorem Ipsus Lorem Ipsus Lorem Ipsus Lorem Ipsus Lorem Ipsus Lorem Ipsus Lorem Ipsus Lorem Ipsus Lorem Ipsus </p>
-                    </div>
+                    <span className={"text-[#AFA96E] font-semibold"}>Programas</span>
+                    <Link href={"/programas/programa-atencion-primaria-fauna-silvestre"} className={"hover:text-[#AFA96E] transition-colors"}>Fauna silvestre</Link>
+                    <Link href={"/programas/programa-conservacion-de-orquideas-nativas"} className={"hover:text-[#AFA96E] transition-colors"}>Conservación de orquideas nativas</Link>
+                    <Link href={"/programas/programa-de-apoyo-comunitario"} className={"hover:text-[#AFA96E] transition-colors"}>Apoyo comunitario</Link>
+                    <Link href={"/programas/programa-de-concienciacion-socioambiental"} className={"hover:text-[#AFA96E] transition-colors"}>Concienciación socioambiental</Link>
+                    <Link href={"/programas/programa-de-monitoreo-de-anidamiento-de-tortugas-marinas"} className={"hover:text-[#AFA96E] transition-colors"}>Monitoreo de anidamiento de tortugas marinas</Link>
+                    <Link href={"/programas/programa-de-monitoreo-de-salud-arrecifal-y-de-enfermedades-de-coral"} className={"hover:text-[#AFA96E] transition-colors"}>Monitoreo de salud arrecifal y de enfermedades de coral</Link>
+                    <Link href={"/programas/programa-de-registro-de-avistamientos-de-manaties"} className={"hover:text-[#AFA96E] transition-colors"}>Registro de avistamientos de manatíes</Link>
+                    <Link href={"/programas/programa-monitoreo-de-fauna-silvestre"} className={"hover:text-[#AFA96E] transition-colors"}>Monitoreo de fauna silvestre</Link>
+                    <Link href={"/programas/programa-proteccion-de-especies-de-fauna-amenazadas"} className={"hover:text-[#AFA96E] transition-colors"}>Protección de especies de fauna amenazadas</Link>
                 </div>
             </div>
         </footer>

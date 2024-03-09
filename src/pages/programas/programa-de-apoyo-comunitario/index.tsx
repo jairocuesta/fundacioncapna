@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 
 export default function ProgramExample() {
     return (
-        <Layout title={"Programa de ejemplo"}>
+        <Layout title={"Programa de apoyo comunitario"}>
             <div className={"flex flex-col gap-16 pb-20 text-center sm:text-left"}>
                 <div className={`grid place-content-center gap-10 ${styles.firstImage} h-[40rem] text-white px-5`}>
                     <motion.h1

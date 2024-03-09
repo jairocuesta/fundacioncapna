@@ -53,12 +53,12 @@ export default function Header({ styles }: NavbarProps) {
     return (
         <header className={`w-screen flex items-center justify-center h-28 z-20 transition-colors ${headerBackground ? 'shadow-md border-b' : ''}`} style={{ backgroundColor: headerBackground ? headerBackground : styles?.background, color: headerBackground ? '#7D8034' : styles?.color || 'white', position: styles?.position || 'fixed' }}>
             <div className={"flex items-center justify-between lg:justify-center gap-16 px-10 w-full lg:w-auto"}>
-                <Image src={headerBackground ? "/logo-color.png" : styles?.image == 'color' ? "/logo-color.png" : "/logo.png"} width={70} height={70} alt={"Logo"} />
+                <Image src={headerBackground ? "/logo-color.png" : styles?.image == 'color' ? "/logo-color.png" : "/logo.png"} width={95} height={95} alt={"Logo"} />
                 <nav className={"hidden lg:flex items-center gap-5"}>
                     <NavbarItem href={"/"} title={"Inicio"} />
                     <NavbarItem title={"Programas"} items={headerLinks.programs} />
-                    <NavbarItem href={"#"} title={"Sostenibilidad"} items={headerLinks.sustainability} />
-                    <NavbarItem href={"/membresias"} title={"Donaciones"} items={headerLinks.memberships} />
+                    <NavbarItem href={"/sostenibilidad/estrategia"} title={"Sostenibilidad"} />
+                    <NavbarItem href={"/membresias"} title={"Donaciones"} />
                     <NavbarItem href={"/blog"} title={"Blog"} items={headerLinks.blog} />
                     <NavbarItem href={"/alianzas"} title={"Alianzas"} />
                     <NavbarItem href={"/investigacion"} title={"Investigación"} />
@@ -134,7 +134,7 @@ function NavbarItem({ title, href, items }: NavbarItem) {
                         >
                             <div className={`flex flex-col divide-y bg-white shadow-md rounded text-black p-3 py-2 min-w-52 ${subMenus.first.length != 0 ? 'border-r-2 border-r-[#AFA96E] rounded-r-none' : ''}`}>
                                 {items.map((item, i) => item.href ? (
-                                    <div key={i} className={"border-[#AFA96E]"}>
+                                    <div key={i} className={"border-[#e4e4e4]"}>
                                         <Link 
                                             onClick={item?.subitems ? () => handleSetSubmenus({first: item.subitems || [], second: []}) : () => null} 
                                             className={"flex items-center gap-2 text-sm p-2 my-1 hover:bg-[#AFA96E4D] rounded whitespace-nowrap transition-colors"} 
@@ -224,7 +224,7 @@ function MobileMenu({ closeMenu }: MobileMenuProps) {
                 <i className={"fa-solid fa-times text-3xl"}></i>
             </button>
             <div className={"flex flex-col gap-16 items-center"}>
-                <Image src={"/logo-color.png"} width={70} height={70} alt={"Logo"} />
+                <Image src={"/logo-color.png"} width={95} height={95} alt={"Logo"} />
                 <nav className={"flex flex-col items-center gap-5"}>
                     <MenuItem href={"/"} title={"Inicio"} />
                     <MenuItem title={"Programas"}>
@@ -250,8 +250,8 @@ function MobileMenu({ closeMenu }: MobileMenuProps) {
                             </div>
                         </div>
                     </MenuItem>
-                    <MenuItem href={"#"} title={"Sostenibilidad"}>
-                        <div className={"flex flex-col gap-3 text-sm"}>
+                    <MenuItem href={"/sostenibilidad/estrategia"} title={"Sostenibilidad"}>
+                        {/* <div className={"flex flex-col gap-3 text-sm"}>
                             <Link href={"#"} className={"font-semibold"}>Estrategia de sostenibilidad Cap Cana</Link>
                             <div className={"flex flex-col gap-1"}>
                                 <Link href={"#"} className={"font-semibold"}>Iniciativas sostenibles</Link>
@@ -287,10 +287,10 @@ function MobileMenu({ closeMenu }: MobileMenuProps) {
                                     </ul>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                     </MenuItem>
                     <MenuItem href={"/membresias"} title={"Donaciones"}>
-                        <div className={"flex flex-col gap-3 text-sm"}>
+                        {/* <div className={"flex flex-col gap-3 text-sm"}>
                             <div className={"flex flex-col gap-1"}>
                                 <Link href={"/membresias"} className={"font-semibold"}>Membresías</Link>
                                 <ul className={"ml-8 list-disc"}>
@@ -300,7 +300,7 @@ function MobileMenu({ closeMenu }: MobileMenuProps) {
                             </div>
                             <Link href={"/membresias"} className={"font-semibold"}>Donación única</Link>
                             <Link href={"#"} className={"font-semibold"}>Compra nuestros productos</Link>
-                        </div>
+                        </div> */}
                     </MenuItem>
                     <MenuItem href={"/blog"} title={"Blog"}>
                         <div className={"flex flex-col gap-3 text-sm"}>
