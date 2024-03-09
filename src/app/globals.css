@@ -29,6 +29,10 @@ ul {
   height: unset !important;
 }
 
+input, textarea {
+  outline: none;
+}
+
 .link {
   color: #7D8034;
   text-decoration: underline;

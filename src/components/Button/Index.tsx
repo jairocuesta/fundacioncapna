@@ -4,12 +4,13 @@ type ButtonProps = {
     href?: string;
     type: 'main' | 'white';
     text: string;
-    action?: () => void;
+    buttonType?: "submit" | "button" | "reset" | undefined;
+    action?: (e?: any) => void;
     classes?: string;
     py?: string;
     px?: string;
 }
-export default function Button({ href, type, text, action, classes, py, px }: ButtonProps) {
+export default function Button({ href, type, text, buttonType, action, classes, py, px }: ButtonProps) {
 
     const classesObj = {
         main: "font-medium bg-[#7D8034] hover:bg-[#616328] text-white rounded-full transition-colors text-center",
@@ -19,6 +20,6 @@ export default function Button({ href, type, text, action, classes, py, px }: Bu
     return href ? (
         <Link className={classes ? classes : `${classesObj[type]} ${px ? px : 'px-10'} ${py ? py : 'py-2'}`} href={href}>{text}</Link>
     ) : (
-        <button className={classes ? classes : `${classesObj[type]} ${px ? px : 'px-10'} ${py ? py : 'py-2'}`} onClick={action ? action : () => null}>{text}</button>
+        <button type={buttonType} className={classes ? classes : `${classesObj[type]} ${px ? px : 'px-10'} ${py ? py : 'py-2'}`} onClick={action ? action : () => null}>{text}</button>
     )
 }
