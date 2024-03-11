@@ -29,7 +29,8 @@ ul {
   height: unset !important;
 }
 
-input, textarea {
+input,
+textarea {
   outline: none;
 }
 
@@ -41,4 +42,57 @@ input, textarea {
 
 .link:hover {
   color: #4e501e;
+}
+
+ul.indicators {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  gap: 7px;
+  margin-top: 0 !important;
+  bottom: 6rem;
+  left: 13rem;
+}
+
+.indicator {
+  height: 0.25rem;
+  width: 2.5rem;
+  background: rgb(207, 207, 207);
+  border-radius: 9999px;
+}
+
+.indicator.active {
+  background: rgb(255, 255, 255);
+}
+
+.text-slider-prev-arrow {
+  position: absolute;
+  right: 16rem !important;
+  width: fit-content;
+  left: inherit !important;
+  bottom: 5rem;
+}
+
+.text-slider-next-arrow {
+  position: absolute;
+  right: 13rem !important;
+  bottom: 5rem;
+}
+
+@media (max-width: 1024px) {
+  ul.indicators {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 8.8rem;
+  }
+
+  .text-slider-prev-arrow {
+    right: 50% !important;
+    transform: translateX(calc(.7rem - 50%));
+  }
+
+  .text-slider-next-arrow {
+    right: 50% !important;
+    transform: translateX(calc(1.4rem + 50%));
+  }
 }

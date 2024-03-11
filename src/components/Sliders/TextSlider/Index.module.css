@@ -10,6 +10,10 @@
 
 @media (max-width: 1024px) {
     .imageContainer>div {
-        padding: 5rem 0;
+        padding: 8rem 0;
     }
+}
+
+.slider .indicators {
+    position:  absolute;
 }
