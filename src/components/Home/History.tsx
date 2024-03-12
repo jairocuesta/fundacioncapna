@@ -4,15 +4,29 @@ import Link from "next/link";
 // Styles
 import styles from './Home.module.css';
 // Animations
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import { useState } from "react";
 
 export default function HomeHistory() {
+
+    const [showModal, setShowModal] = useState(false);
+    const handleShowModal = () => {
+        if(showModal) {
+            document.body.style.overflowY = 'auto';
+        } else {
+            document.body.style.overflowY = 'hidden';
+        }
+
+        setShowModal(!showModal)
+    };
+
     return (
         <div className={"relative flex items-start gap-20 py-28 w-full lg:w-3/4 2xl:w-1/2 mx-auto overflow-x-clip"}>
             <motion.div
                 initial={{ bottom: '-50px', opacity: 0 }}
                 whileInView={{ bottom: '0px', opacity: 1 }}
-                transition={{ delay: .1 }}
+                viewport={{ once: true }}
+                transition={{ delay: .1, duration: .5 }}
                 className={"relative flex flex-col items-center lg:items-start text-center lg:text-left gap-8 w-full md:w-2/3 lg:w-1/2 mx-auto lg:mx-0 px-5 sm:px-10 md:px-0"}
             >
                 <div className={"relative"}>
@@ -32,17 +46,18 @@ export default function HomeHistory() {
                         natural que dota este destino turístico, hotelero
                         y residencial.
                     </p>
-                    <Link href={"#"} className={"flex items-center gap-2 font-semibold text-[#7D8034] text-sm"}>
+                    <button onClick={handleShowModal} className={"flex items-center gap-2 font-semibold text-[#7D8034] text-sm"}>
                         <span className={"link"}>VER MÁS</span>
                         <i className="fa-solid fa-angle-right text-base"></i>
-                    </Link>
+                    </button>
                 </div>
             </motion.div>
             <div className={"w-1/2 hidden lg:block"}>
                 <motion.div
                     initial={{ bottom: '-50px', opacity: 0 }}
                     whileInView={{ bottom: '0px', opacity: 1 }}
-                    transition={{ delay: .2 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: .2, duration: .5 }}
                     className={"absolute -top-40 w-1/2"} style={{ transform: 'rotateY(-180deg)' }}
                 >
                     <div className={"absolute w-full h-full top-28"} style={{ filter: 'grayscale(100%) contrast(0.05) opacity(.7)' }}>
@@ -57,6 +72,15 @@ export default function HomeHistory() {
                     </div>
                 </motion.div>
             </div>
+            <AnimatePresence>
+                {showModal ? (
+                    <ShowMoreModal
+                        title={"Nuestra historia"}
+                        description={"Desde los inicios de su desarrollo, Cap Cana, S.A., la empresa desarrolladora de la Ciudad Destino ha venido realizando una ardua labor para la preservación de toda la riqueza natural que dota este destino turístico, hotelero y residencial."}
+                        handleClose={handleShowModal}
+                    />
+                ) : null}
+            </AnimatePresence>
         </div>
     )
 }
@@ -71,5 +95,30 @@ function FlowerSVG() {
             <path d="M24 24L28.5 28.5" stroke="#7D8034" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" />
             <path d="M43.5 43.5L48 48" stroke="#7D8034" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
+    )
+}
+
+
+function ShowMoreModal({ title, description, handleClose }: { title: string; description: string; handleClose: () => void }) {
+    return (
+        <div className={"fixed w-screen h-screen top-0 left-0"} style={{ zIndex: 100 }}>
+            <div className={"bg-black opacity-50 w-full h-full absolute left-0 top-0"}></div>
+            <div className={"absolute grid place-content-center w-full h-full"}>
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    className={"relative w-[90vw] sm:w-[75vw] lg:w-[50vw] h-fit max-h-[80vh] bg-white rounded-xl p-8"}
+                >
+                    <div className={"flex flex-col gap-6"}>
+                        <div className={"flex items-center justify-between text-[#7D8034]"}>
+                            <h3 className={"text-2xl font-semibold"}>{title}</h3>
+                            <button onClick={handleClose}><i className="fa-solid fa-xmark text-3xl"></i></button>
+                        </div>
+                        <p className={""}>{description}</p>
+                    </div>
+                </motion.div>
+            </div>
+        </div>
     )
 }

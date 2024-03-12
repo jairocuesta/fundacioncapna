@@ -6,6 +6,7 @@ import Button from '../Button/Index';
 import { motion } from 'framer-motion';
 // Styles
 import styles from './Home.module.css';
+import CounterAnimation from '../Counter/Index';
 
 export default function HomeAbout() {
     return (
@@ -15,22 +16,29 @@ export default function HomeAbout() {
                 <motion.div 
                     initial={{ bottom: '-50px', opacity: 0 }}
                     whileInView={{ bottom: '0px', opacity: 1 }}
-                    transition={{ delay: .1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: .1, duration: .5 }}
                     className={"relative grid grid-cols-1 md:grid-cols-3 gap-7 max-w-fit md:max-w-3xl mx-auto"}
                 >
                     <div className={"grid place-content-center gap-2 text-center bg-white text-[#afa96e] rounded-2xl h-40 px-10 md:px-0"}>
                         <i className="fa-light fa-squirrel text-3xl"></i>
-                        <span className={"text-2xl font-bold"}>+34K</span>
+                        <span className={"flex items-center justify-center text-2xl font-bold"}>
+                            +<CounterAnimation from={0} to={34} />K
+                        </span>
                         <span className={"text-sm"}>Especies vistas</span>
                     </div>
                     <div className={"grid place-content-center gap-2 text-center bg-white text-[#afa96e] rounded-2xl h-40 px-10 md:px-0"}>
                         <i className="fa-light fa-bottle-water text-3xl"></i>
-                        <span className={"text-2xl font-bold"}>+34K</span>
+                        <span className={"flex items-center justify-center text-2xl font-bold"}>
+                            +<CounterAnimation from={0} to={34} />K
+                        </span>
                         <span className={"text-sm"}>Botellas recolectadas</span>
                     </div>
                     <div className={"grid place-content-center gap-2 text-center bg-white text-[#afa96e] rounded-2xl h-40 px-10 md:px-0"}>
                         <i className="fa-light fa-tree text-3xl"></i>
-                        <span className={"text-2xl font-bold"}>+34K</span>
+                        <span className={"flex items-center justify-center text-2xl font-bold"}>
+                            +<CounterAnimation from={0} to={34} />K
+                        </span>
                         <span className={"text-sm"}>Arboles plantados</span>
                     </div>
                 </motion.div>
@@ -38,7 +46,8 @@ export default function HomeAbout() {
                     <motion.div 
                         initial={{ bottom: '-50px', opacity: 0 }}
                         whileInView={{ bottom: '0px', opacity: 1 }}
-                        transition={{ delay: .2 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: .2, duration: .5 }}
                         className={"relative"}
                     >
                         <i className="fa-light fa-leaf text-[2.7rem]"></i>
@@ -46,7 +55,8 @@ export default function HomeAbout() {
                     <motion.p 
                         initial={{ bottom: '-50px', opacity: 0 }}
                         whileInView={{ bottom: '0px', opacity: 1 }}
-                        transition={{ delay: .3 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: .3, duration: .5 }}
                         className={"relative"}
                     >
                         Somos una Organización Sin Fines de Lucro creada en el año 2016, que surge como el
@@ -59,7 +69,8 @@ export default function HomeAbout() {
                     <motion.div 
                         initial={{ bottom: '-50px', opacity: 0 }}
                         whileInView={{ bottom: '0px', opacity: 1 }}
-                        transition={{ delay: .4 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: .4, duration: .5 }}
                         className={"relative"}
                     >
                         <Button 

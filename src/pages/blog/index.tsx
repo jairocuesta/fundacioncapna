@@ -69,7 +69,8 @@ export default function Blog({ data, page, pageCount }: { data: BlogType[]; page
                     <motion.div 
                         initial={{ bottom: '-30px', opacity: 0 }}
                         whileInView={{ bottom: '0px', opacity: 1 }}
-                        transition={{ delay: .3 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: .3, duration: .5 }}
                         className={"relative flex flex-col gap-4 px-5 sm:px-10 lg:px-28 py-20 w-full max-w-6xl mx-auto text-center"}
                     >
                         <h1 className={"flex items-center gap-3 text-2xl md:text-3xl lg:text-4xl lg:leading-[3rem]"}>
@@ -86,7 +87,8 @@ export default function Blog({ data, page, pageCount }: { data: BlogType[]; page
                 <motion.div 
                     initial={{ bottom: '-30px', opacity: 0 }}
                     whileInView={{ bottom: '0px', opacity: 1 }}
-                    transition={{ delay: .3 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: .3, duration: .5 }}
                     className={"relative flex flex-col items-center gap-16 py-20 max-w-6xl mx-auto"}
                 >
                     <div className={"flex flex-col items-center gap-5"}>
@@ -163,7 +165,8 @@ export default function Blog({ data, page, pageCount }: { data: BlogType[]; page
                         <motion.div
                             initial={{ bottom: '-30px', opacity: 0 }}
                             whileInView={{ bottom: '0px', opacity: 1 }}
-                            transition={{ delay: .3 }} 
+                            viewport={{ once: true }}
+                            transition={{ delay: .3, duration: .5 }} 
                             className={"relative flex flex-col items-center gap-12 max-w-4xl mx-auto px-5"}
                         >
                             <div className={"flex flex-col items-center gap-5"}>

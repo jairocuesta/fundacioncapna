@@ -18,7 +18,8 @@ export default function ProgramExample() {
                     <motion.h1
                         initial={{ bottom: '-30px', opacity: 0 }}
                         whileInView={{ bottom: '0px', opacity: 1 }}
-                        transition={{ delay: .3 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: .3, duration: .5 }}
                         className={"relative text-center text-2xl md:text-3xl lg:text-4xl lg:leading-[3rem]"}
                     >
                         <div>Programa de</div>

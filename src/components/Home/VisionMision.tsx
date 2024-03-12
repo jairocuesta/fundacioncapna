@@ -11,7 +11,8 @@ export default function HomeVisionMision() {
             <motion.div
                 initial={{ left: '100px', opacity: 0 }}
                 whileInView={{ left: '0px', opacity: 1 }}
-                transition={{ delay: .15 }}
+                viewport={{ once: true }}
+                transition={{ delay: .1, duration: .55 }}
                 className={"relative flex flex-col md:flex-row item-center gap-8 lg:gap-16 text-center md:text-left w-full"}
             >
                 <div className={"w-full md:w-1/2"}>
@@ -40,7 +41,8 @@ export default function HomeVisionMision() {
             <motion.div
                 initial={{ left: '-100px', opacity: 0 }}
                 whileInView={{ left: '0px', opacity: 1 }}
-                transition={{ delay: .3 }}
+                viewport={{ once: true }}
+                transition={{ delay: .3, duration: .5 }}
                 className={"relative flex flex-col-reverse md:flex-row item-center gap-8 lg:gap-16 text-center md:text-left w-full"}
             >
                 <div className={"flex flex-col justify-center items-center md:items-start gap-5 lg:gap-8 w-full md:w-1/2"}>

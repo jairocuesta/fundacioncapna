@@ -47,7 +47,8 @@ export default function Contact() {
                     <motion.h1
                         initial={{ bottom: '-30px', opacity: 0 }}
                         whileInView={{ bottom: '0px', opacity: 1 }}
-                        transition={{ delay: .3 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: .3, duration: .5 }}
                         className={"relative text-center text-2xl md:text-3xl lg:text-4xl lg:leading-[3rem] font-bold"}
                     >Contáctanos</motion.h1>
                 </div>
@@ -59,7 +60,8 @@ export default function Contact() {
                         <motion.div
                             initial={{ bottom: '-30px', opacity: 0 }}
                             whileInView={{ bottom: '0px', opacity: 1 }}
-                            transition={{ delay: .1 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: .1, duration: .5 }}
                             className={"relative flex flex-col gap-3 items-center sm:items-start"}
                         >
                             <span className={"font-semibold text-xl text-[#7D8034]"}>¡Llámanos!</span>
@@ -71,7 +73,8 @@ export default function Contact() {
                         <motion.div
                             initial={{ bottom: '-30px', opacity: 0 }}
                             whileInView={{ bottom: '0px', opacity: 1 }}
-                            transition={{ delay: .2 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: .2, duration: .5 }}
                             className={"relative flex flex-col gap-3 items-center sm:items-start"}
                         >
                             <span className={"font-semibold text-xl text-[#7D8034]"}>Escríbenos</span>
@@ -87,7 +90,8 @@ export default function Contact() {
                         <motion.div
                             initial={{ bottom: '-30px', opacity: 0 }}
                             whileInView={{ bottom: '0px', opacity: 1 }}
-                            transition={{ delay: .3 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: .3, duration: .5 }}
                             className={"relative flex flex-col items-center sm:items-start gap-3"}
                         >
                             <span className={"font-semibold text-xl text-[#7D8034]"}>Síguenos</span>
@@ -111,7 +115,8 @@ export default function Contact() {
                         <motion.div
                             initial={{ bottom: '-30px', opacity: 0 }}
                             whileInView={{ bottom: '0px', opacity: 1 }}
-                            transition={{ delay: .4 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: .4, duration: .5 }}
                             className={"relative flex flex-col gap-3"}
                         >
                             <span className={"font-semibold text-xl text-[#7D8034]"}>Dirección</span>
@@ -124,7 +129,8 @@ export default function Contact() {
                         <motion.div
                             initial={{ bottom: '-30px', opacity: 0 }}
                             whileInView={{ bottom: '0px', opacity: 1 }}
-                            transition={{ delay: .5 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: .5, duration: .5 }}
                             className={`h-[15rem] w-full rounded-xl overflow-hidden`}
                         >
                             <Wrapper apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || ""}>
@@ -135,7 +141,8 @@ export default function Contact() {
                     <motion.div
                         initial={{ top: '0', opacity: 0 }}
                         whileInView={{ top: '-7rem', opacity: 1 }}
-                        transition={{ delay: .3 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: .3, duration: .5 }}
                         className={"hidden lg:flex lg:absolute right-0 w-1/2 border lg:border-none rounded-xl lg:shadow-xl bg-white p-5 sm:p-10"}
                         style={{ top: `-7rem` }}
                         ref={formRef}

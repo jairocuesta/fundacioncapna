@@ -15,7 +15,8 @@ export default function Investigation() {
                     <motion.h1 
                         initial={{ bottom: '-30px', opacity: 0 }}
                         whileInView={{ bottom: '0px', opacity: 1 }}
-                        transition={{ delay: .3 }} 
+                        viewport={{ once: true }}
+                        transition={{ delay: .3, duration: .5 }} 
                         className={"relative text-center text-2xl md:text-3xl lg:text-4xl lg:leading-[3rem] font-bold"}
                     >Investigación</motion.h1>
                     <motion.span
@@ -31,7 +32,8 @@ export default function Investigation() {
                         <motion.p
                             initial={{ bottom: '-30px', opacity: 0 }}
                             whileInView={{ bottom: '0px', opacity: 1 }}
-                            transition={{ delay: .3 }}  
+                            viewport={{ once: true }}
+                            transition={{ delay: .3, duration: .5 }}  
                             className={"relative text-center max-w-5xl mx-auto"}
                         >
                             Nuestro equipo trabaja en proyectos de investigación destinados a comprender y preservar los
@@ -44,7 +46,8 @@ export default function Investigation() {
                         <motion.span
                             initial={{ bottom: '-30px', opacity: 0 }}
                             whileInView={{ bottom: '0px', opacity: 1 }}
-                            transition={{ delay: .3 }}   
+                            viewport={{ once: true }}
+                            transition={{ delay: .3, duration: .5 }}   
                             className={"relative text-white font-semibold text-2xl"}
                         >Documentos y soportes de cada investigación</motion.span>
                     </div>
@@ -52,7 +55,8 @@ export default function Investigation() {
                         <motion.div
                             initial={{ bottom: '-30px', opacity: 0 }}
                             whileInView={{ bottom: '0px', opacity: 1 }}
-                            transition={{ delay: .3 }}   
+                            viewport={{ once: true }}
+                            transition={{ delay: .3, duration: .5 }}   
                             className={"relative flex items-start gap-8"}
                         >
                             <div className={"relative"}>

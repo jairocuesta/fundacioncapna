@@ -14,7 +14,8 @@ export default function Memberships() {
                     <motion.h1 
                         initial={{ bottom: '-30px', opacity: 0 }}
                         whileInView={{ bottom: '0px', opacity: 1 }}
-                        transition={{ delay: .3 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: .3, duration: .5 }}
                         className={"relative text-center text-2xl md:text-3xl lg:text-4xl lg:leading-[3rem] font-bold"}>
                             Donaciones
                         </motion.h1>
@@ -30,7 +31,8 @@ export default function Memberships() {
                     <motion.div
                         initial={{ left: '-30px', opacity: 0 }}
                         whileInView={{ left: '0px', opacity: 1 }}
-                        transition={{ delay: .1 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: .1, duration: .5 }}
                         className={`relative flex flex-col justify-between ${styles.secondImage} py-12 text-white px-5 sm:px-8 md:px-12 gap-32`}
                     >
                         <h3 className={"flex flex-col items-center text-center text-3xl lg:text-4xl lg:leading-[3rem] font-bold"}>
@@ -53,7 +55,8 @@ export default function Memberships() {
                     <motion.div 
                         initial={{ left: '-30px', opacity: 0 }}
                         whileInView={{ left: '0px', opacity: 1 }}
-                        transition={{ delay: .2 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: .2, duration: .5 }}
                         className={`relative flex flex-col justify-between ${styles.thirdImage} py-12 text-white px-5 sm:px-8 md:px-12 gap-32`}
                     >
                         <h3 className={"flex flex-col items-center text-center text-3xl lg:text-4xl lg:leading-[3rem] font-bold"}>
@@ -74,7 +77,8 @@ export default function Memberships() {
                     <motion.div 
                         initial={{ left: '-30px', opacity: 0 }}
                         whileInView={{ left: '0px', opacity: 1 }}
-                        transition={{ delay: .3 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: .3, duration: .5 }}
                         className={`relative flex flex-col justify-between ${styles.fourImage} py-12 text-white px-5 sm:px-8 md:px-12 gap-32`}
                     >
                         <h3 className={"flex flex-col items-center text-center text-3xl lg:text-4xl lg:leading-[3rem] font-bold"}>

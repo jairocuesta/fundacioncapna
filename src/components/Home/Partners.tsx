@@ -13,7 +13,8 @@ export default function HomePartners() {
                     <motion.div 
                         initial={{ bottom: '-50px', opacity: 0 }}
                         whileInView={{ bottom: '0px', opacity: 1 }}
-                        transition={{ delay: .1 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: .1, duration: .5 }}
                         className={"relative flex flex-col gap-5"}
                     >
                         <h2 className={"relative text-3xl"}>Nuestros <span className={"font-bold text-[#AFA96E]"}>aliados</span></h2>
@@ -26,14 +27,16 @@ export default function HomePartners() {
                     <motion.p 
                         initial={{ bottom: '-50px', opacity: 0 }}
                         whileInView={{ bottom: '0px', opacity: 1 }}
-                        transition={{ delay: .2 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: .2, duration: .5 }}
                         className={"relative"}
                     >{`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,.`}</motion.p>
                 </div>
                 <motion.div 
                     initial={{ bottom: '-50px', opacity: 0 }}
                     whileInView={{ bottom: '0px', opacity: 1 }}
-                    transition={{ delay: .3 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: .3, duration: .5 }}
                     className={"relative flex flex-col gap-10"}
                 >
                     <div className={"grid grid-cols-5 gap-3"}>

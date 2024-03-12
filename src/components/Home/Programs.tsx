@@ -38,7 +38,8 @@ export default function HomePrograms() {
                     <motion.div 
                         initial={{ bottom: '-50px', opacity: 0 }}
                         whileInView={{ bottom: '0px', opacity: 1 }}
-                        transition={{ delay: .1 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: .1, duration: .5 }}
                         className={"relative flex flex-col gap-7"}
                     >
                         <h2 className={"text-center text-3xl md:text-[2.5rem]"}>Conoce nuestros <span className={"font-bold text-[#AFA96E]"}>programas</span></h2>
@@ -51,7 +52,8 @@ export default function HomePrograms() {
                     <motion.div 
                         initial={{ bottom: '-50px', opacity: 0 }}
                         whileInView={{ bottom: '0px', opacity: 1 }}
-                        transition={{ delay: .2 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: .2, duration: .5 }}
                         className={"relative flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-5"}
                     >
                         <Button 

@@ -1,6 +1,7 @@
 .imageContainer {
     width: 100%;
     position: relative !important;
+    left: 2rem;
 }
 .imageContainer .image {
     object-fit: contain;

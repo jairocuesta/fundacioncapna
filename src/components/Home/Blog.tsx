@@ -36,7 +36,8 @@ export default function HomeBlog() {
                     <motion.div
                         initial={{ bottom: '-50px', opacity: 0 }}
                         whileInView={{ bottom: '0px', opacity: 1 }}
-                        transition={{ delay: .1 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: .1, duration: .5 }}
                         className={"relative flex flex-col gap-5"}
                     >
                         <h2 className={"text-3xl "}>Nuestros <span className={"font-bold text-[#AFA96E]"}>blog</span></h2>
@@ -54,7 +55,8 @@ export default function HomeBlog() {
                         <motion.div
                             initial={{ bottom: '-50px', opacity: 0 }}
                             whileInView={{ bottom: '0px', opacity: 1 }}
-                            transition={{ delay: .2 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: .2, duration: .5 }}
                             className={"relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-5xl mx-auto px-5 md:px-10"}
                         >
                             {blogs.length != 0 && blogs.map((blog, i) => (
