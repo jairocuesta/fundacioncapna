@@ -138,7 +138,7 @@ function NavbarItem({ title, href, items }: NavbarItem) {
                                 {items.map((item, i) => item.href ? (
                                     <div key={i} className={"border-[#e4e4e4]"}>
                                         <Link 
-                                            onClick={item?.subitems ? () => handleSetSubmenus({first: item.subitems || [], second: []}) : () => null} 
+                                            onMouseEnter={item?.subitems ? () => handleSetSubmenus({first: item.subitems || [], second: []}) : () => null} 
                                             className={"flex items-center gap-2 text-sm p-2 my-1 hover:bg-[#AFA96E4D] rounded whitespace-nowrap transition-colors"} 
                                             href={item.href}
                                         >
@@ -149,7 +149,7 @@ function NavbarItem({ title, href, items }: NavbarItem) {
                                 ) : (
                                     <div key={i} className={"border-[#AFA96E]"}>
                                         <div 
-                                            onClick={item?.subitems ? () => handleSetSubmenus({ first: item.subitems || [], second: []}) : () => null} 
+                                            onMouseEnter={item?.subitems ? () => handleSetSubmenus({ first: item.subitems || [], second: []}) : () => null} 
                                             className={"flex items-center gap-2 text-sm p-2 my-1 hover:bg-[#AFA96E4D] rounded whitespace-nowrap transition-colors"}
                                         >
                                             <span>{item.name}</span>
@@ -163,7 +163,7 @@ function NavbarItem({ title, href, items }: NavbarItem) {
                                     {subMenus.first.map((item, i) => item.href ? (
                                         <div key={i} className={"border-[#AFA96E]"}>
                                             <Link
-                                                onClick={item?.subitems ? () => handleSetSubmenus({ ...subMenus, second: item.subitems || [] }) : () => null}
+                                                onMouseEnter={item?.subitems ? () => handleSetSubmenus({ ...subMenus, second: item.subitems || [] }) : () => null}
                                                 className={"flex items-center gap-2 text-sm p-2 my-1 hover:bg-[#AFA96E4D] rounded whitespace-nowrap transition-colors"}
                                                 href={item.href}
                                             >
@@ -174,7 +174,7 @@ function NavbarItem({ title, href, items }: NavbarItem) {
                                     ) : (
                                         <div key={i} className={"border-[#AFA96E]"}>
                                             <div
-                                                onClick={item?.subitems ? () => handleSetSubmenus({ ...subMenus, second: item.subitems || [] }) : () => null}
+                                                onMouseEnter={item?.subitems ? () => handleSetSubmenus({ ...subMenus, second: item.subitems || [] }) : () => null}
                                                 className={"flex items-center gap-2 text-sm p-2 my-1 hover:bg-[#AFA96E4D] rounded whitespace-nowrap transition-colors"}
                                             >
                                                 <span>{item.name}</span>
