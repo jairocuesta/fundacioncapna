@@ -27,33 +27,33 @@ export default function HomeImpact() {
                     whileInView={{ bottom: '0px', opacity: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: .2, duration: .5 }}
-                    className={"relative hidden lg:flex flex-row items-center gap-y-10 mx-10"}
+                    className={"relative hidden lg:flex flex-row items-center gap-y-10 mx-10 gap-x-10"}
                 >
-                    <div className={"text-white px-4 border-l-2 border-r-2 max-w-[11rem]"}>
+                    <div className={"text-white max-w-[11rem]"}>
                         <span className={"flex items-center justify-center font-bold text-2xl"}>
                             +<CounterAnimation from={0} to={34} />K
                         </span>
                         <p>Injected humour and the like. Lorem ipsus</p>
                     </div>
-                    <div className={"text-white px-4 border-r-2 max-w-[11rem]"}>
+                    <div className={"text-white max-w-[11rem]"}>
                         <span className={"flex items-center justify-center font-bold text-2xl"}>
                             +<CounterAnimation from={0} to={34} />K
                         </span>
                         <p>Injected humour and the like. Lorem ipsus</p>
                     </div>
-                    <div className={"text-white px-4 border-r-2 max-w-[11rem]"}>
+                    <div className={"text-white max-w-[11rem]"}>
                         <span className={"flex items-center justify-center font-bold text-2xl"}>
                             +<CounterAnimation from={0} to={34} />K
                         </span>
                         <p>Injected humour and the like. Lorem ipsus</p>
                     </div>
-                    <div className={"text-white px-4 border-r-2 max-w-[11rem]"}>
+                    <div className={"text-white max-w-[11rem]"}>
                         <span className={"flex items-center justify-center font-bold text-2xl"}>
                             +<CounterAnimation from={0} to={34} />K
                         </span>
                         <p>Injected humour and the like. Lorem ipsus</p>
                     </div>
-                    <div className={"text-white px-4 border-r-2 max-w-[11rem]"}>
+                    <div className={"text-white max-w-[11rem]"}>
                         <span className={"flex items-center justify-center font-bold text-2xl"}>
                             +<CounterAnimation from={0} to={34} />K
                         </span>
@@ -67,28 +67,28 @@ export default function HomeImpact() {
                     transition={{ delay: .2, duration: .5 }}
                     className={"relative flex lg:hidden flex-col items-center gap-y-10 mx-5 sm:mx-10"}
                 >
-                    <div className={"flex items-center"}>
-                        <div className={"text-white px-4 border-l-2 border-r-2 max-w-[11rem]"}>
+                    <div className={"flex items-center gap-x-10"}>
+                        <div className={"text-white max-w-[11rem]"}>
                             <span className={"font-bold text-2xl"}>+34K</span>
                             <p>Injected humour and the like. Lorem ipsus</p>
                         </div>
-                        <div className={"text-white px-4 border-r-2 max-w-[11rem]"}>
-                            <span className={"font-bold text-2xl"}>+34K</span>
-                            <p>Injected humour and the like. Lorem ipsus</p>
-                        </div>
-                    </div>
-                    <div className={"flex items-center"}>
-                        <div className={"text-white px-4 border-l-2 lg:border-l-0 border-r-2 max-w-[11rem]"}>
-                            <span className={"font-bold text-2xl"}>+34K</span>
-                            <p>Injected humour and the like. Lorem ipsus</p>
-                        </div>
-                        <div className={"text-white px-4 border-r-2 max-w-[11rem]"}>
+                        <div className={"text-white max-w-[11rem]"}>
                             <span className={"font-bold text-2xl"}>+34K</span>
                             <p>Injected humour and the like. Lorem ipsus</p>
                         </div>
                     </div>
-                    <div className={"flex items-center"}>
-                        <div className={"text-white px-4 border-l-2 border-r-2 max-w-[11rem]"}>
+                    <div className={"flex items-center gap-x-10"}>
+                        <div className={"text-white lg:border-l-0 max-w-[11rem]"}>
+                            <span className={"font-bold text-2xl"}>+34K</span>
+                            <p>Injected humour and the like. Lorem ipsus</p>
+                        </div>
+                        <div className={"text-white max-w-[11rem]"}>
+                            <span className={"font-bold text-2xl"}>+34K</span>
+                            <p>Injected humour and the like. Lorem ipsus</p>
+                        </div>
+                    </div>
+                    <div className={"flex items-center gap-x-10"}>
+                        <div className={"text-white max-w-[11rem]"}>
                             <span className={"font-bold text-2xl"}>+34K</span>
                             <p>Injected humour and the like. Lorem ipsus</p>
                         </div>
