@@ -63,7 +63,7 @@ export default function Header({ styles }: NavbarProps) {
                     <NavbarItem href={"/membresias"} title={"Donaciones"} />
                     <NavbarItem href={"/blog"} title={"Blog"} items={headerLinks.blog} />
                     <NavbarItem href={"/alianzas"} title={"Alianzas"} />
-                    <NavbarItem href={"/investigacion"} title={"Investigación"} />
+                    <NavbarItem href={"/investigacion"} title={"Investigacion"} />
                     <NavbarItem href={"/contacto"} title={"Contactos"} />
                 </nav>
                 <button className={"block lg:hidden"} onClick={handleShowMenu}>
@@ -120,9 +120,9 @@ function NavbarItem({ title, href, items }: NavbarItem) {
                 className={`text-sm ${isActualRoute == href ? 'font-semibold' : 'font-normal'}`}
             >
                 {href ? (
-                    <Link href={href}>{title}</Link>
+                    <Link href={href} className={"futura-light-regular uppercase text-base border-b-2 py-2 border-transparent hover:border-white transition-colors"}>{title}</Link>
                 ) : (
-                    <span className={"cursor-pointer"}>{title}</span>
+                    <span className={"cursor-pointer futura-light-regular uppercase text-base border-b-2 py-2 border-transparent hover:border-white transition-colors"}>{title}</span>
                 )}
             </div>
             {items && items?.length != 0 ? (
@@ -342,9 +342,9 @@ function MenuItem({ title, href, children }: NavbarItem) {
                 className={`flex items-center justify-center gap-2 ${isActualRoute == href ? 'font-semibold' : 'font-normal'} cursor-pointer`}
             >
                 {href ? (
-                    <Link href={href}>{title}</Link>
+                    <Link href={href} className={"futura-light-regular uppercase text-base"}>{title}</Link>
                 ) : (
-                    <span className={"cursor-pointer"}>{title}</span>
+                    <span className={"cursor-pointer futura-light-regular uppercase text-base"}>{title}</span>
                 )}
                 {children ? <i className="fa-regular fa-angle-down"></i> : null}
             </div>

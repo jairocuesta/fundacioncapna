@@ -32,7 +32,7 @@ export default function Blog({ blog }: BlogProps) {
                         <p>{blog.description}</p>
                     </div>
                 </div>
-                <Link href={blog.href} className={"flex items-center gap-2 font-semibold text-[#7D8034]"}>
+                <Link href={`/blog/${blog.href}`} className={"flex items-center gap-2 font-semibold text-[#7D8034]"}>
                     <span>Ver más</span>
                     <i className="fa-solid fa-arrow-right"></i>
                 </Link>

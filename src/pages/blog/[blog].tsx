@@ -38,11 +38,11 @@ export default function DynamicBlog({ blog }: BlogProps) {
                 <div className={"image-container"}>
                     <Image src={`${process.env.NEXT_PUBLIC_STRAPI_URI}${blog.bannerImage.data.attributes.url}`} className={"image bg-center max-h-[30rem]"} fill alt={"Banner image"} />
                 </div>
-                <div className={"flex flex-col gap-10 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
+                <div className={"flex flex-col gap-6 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
                     {blog.content.map((item, i) => item.__component == 'blog-content.subtitle' ? (
                         <span key={i} className={"text-xl sm:text-2xl font-bold text-[#7D8034]"}>{item.subtitle}</span>
                     ) : item.__component == 'blog-content.content' ? (
-                        <div key={i} className={"flex flex-col gap-5"}>
+                        <div key={i} className={"flex flex-col gap-3"}>
                             {item.content.split('\n').map((p, i) => (<Markdown key={i} className={"leading-8"}>{p}</Markdown>))}
                         </div>
                     ) : null)}

@@ -11,14 +11,13 @@ import CounterAnimation from '../Counter/Index';
 export default function HomeAbout() {
     return (
         <div className={"relative overflow-x-clip"}>
-            <div className={`absolute -top-32 ${styles.aboutContainer} w-full h-32`}></div>
-            <div className={"bg-[#afa96e] px-10 pb-10"}>
+            <div className={"py-20"}>
                 <motion.div 
                     initial={{ bottom: '-50px', opacity: 0 }}
                     whileInView={{ bottom: '0px', opacity: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: .1, duration: .5 }}
-                    className={"relative grid grid-cols-1 md:grid-cols-3 gap-7 max-w-fit md:max-w-3xl mx-auto"}
+                    className={"relative grid grid-cols-1 md:grid-cols-3 gap-7 max-w-fit md:max-w-3xl mx-auto pb-10"}
                 >
                     <div className={"grid place-content-center gap-2 text-center bg-white text-[#afa96e] rounded-2xl h-40 px-10 md:px-0"}>
                         <i className="fa-light fa-squirrel text-3xl"></i>
@@ -42,7 +41,7 @@ export default function HomeAbout() {
                         <span className={"text-sm"}>Arboles plantados</span>
                     </div>
                 </motion.div>
-                <div className={"flex flex-col items-center gap-10 text-center py-20 w-full lg:w-3/4 2xl:w-1/2 mx-auto text-neutral-200"}>
+                <div className={"flex flex-col items-center gap-10 text-center w-full lg:w-3/4 2xl:w-1/2 mx-auto text-neutral-200 pt-10"}>
                     <motion.div 
                         initial={{ bottom: '-50px', opacity: 0 }}
                         whileInView={{ bottom: '0px', opacity: 1 }}
@@ -57,7 +56,7 @@ export default function HomeAbout() {
                         whileInView={{ bottom: '0px', opacity: 1 }}
                         viewport={{ once: true }}
                         transition={{ delay: .3, duration: .5 }}
-                        className={"relative"}
+                        className={"relative text-[#7d7d7d]"}
                     >
                         Somos una Organización Sin Fines de Lucro creada en el año 2016, que surge como el
                         brazo ejecutor de todas las acciones de sostenibilidad de la Ciudad Destino Cap Cana,  con

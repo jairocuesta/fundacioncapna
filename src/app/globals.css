@@ -1,13 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 /* font-family: 'Montserrat', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Protest+Riot&display=swap');
+/* font-family: "Open Sans", sans-serif; */
+
+/* Fonts */
+@font-face {
+  font-family: futura-light-regular;
+  src: url('../fonts/futura-light-regular/font.otf'), format('otf');
+}
+
+@font-face {
+  font-family: optima-bold;
+  src: url('../fonts/optima/bold.TTF'), format('ttf');
+}
+
+@font-face {
+  font-family: optima-medium;
+  src: url('../fonts/optima/medium.ttf'), format('ttf');
+}
+
+@font-face {
+  font-family: optima-regular;
+  src: url('../fonts/optima/regular.TTF'), format('ttf');
+}
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-* {
-  font-family: 'Montserrat', sans-serif;
+.optima-bold { font-family: optima-bold; }
+.optima-medium { font-family: optima-medium; }
+.optima-regular { font-family: optima-regular; }
+
+h1, h2, h3, h4, h5 {
+  font-family: optima-medium;
 }
+
+p {
+  font-family: "Open Sans", sans-serif;
+  color: #7d7d7d;
+}
+
+/* * {
+  font-family: 'Montserrat', sans-serif;
+} */
 
 li {
   width: fit-content;

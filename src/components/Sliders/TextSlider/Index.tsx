@@ -30,10 +30,10 @@ export default function TextSlider({ images, classes, title, description }: Slid
             <Slide {...properties}>
                 {images.map((img, i) => (
                     <div key={i} className={`${styles.imageContainer}`}>
-                        <div className={"grid place-content-end"} style={{ position: 'relative', backgroundImage: `linear-gradient(#7D803480, #7D803480), url(${img.src})`, backgroundSize: 'cover', backgroundPosition: img?.classes?.backgroundPosition ?? 'center' }}>
+                        <div className={"grid place-content-end"} style={{ position: 'relative', backgroundImage: `url(${img.src})`, backgroundSize: 'cover', backgroundPosition: img?.classes?.backgroundPosition ?? 'center' }}>
                             <div className={"pb-10 lg:pb-32 flex flex-col gap-4 px-5 lg:px-52 text-center lg:text-left 2xl:w-3/4"}>
                                 <h2 className={"text-xl sm:text-[1.7rem] font-medium"}>{title}</h2>
-                                <p className={"text-sm sm:text-base"}>{description}</p>
+                                <p className={"text-sm sm:text-base text-white"}>{description}</p>
                             </div>
                         </div>
                     </div>

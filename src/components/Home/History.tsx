@@ -21,7 +21,7 @@ export default function HomeHistory() {
     };
 
     return (
-        <div className={"relative flex items-start gap-20 py-28 w-full lg:w-3/4 2xl:w-1/2 mx-auto overflow-x-clip"}>
+        <div className={"relative flex items-start gap-20 w-full lg:w-3/4 2xl:w-1/2 mx-auto overflow-x-clip py-40"}>
             <motion.div
                 initial={{ bottom: '-50px', opacity: 0 }}
                 whileInView={{ bottom: '0px', opacity: 1 }}
@@ -36,7 +36,7 @@ export default function HomeHistory() {
                     </div>
                 </div>
                 <div className={"flex flex-col items-center lg:items-start gap-3"}>
-                    <h3 className={"text-xl"}>Nuestra <span className={"font-semibold text-[#7D8034]"}>historia</span></h3>
+                    <div className={"text-xl"}>Nuestra <span className={"font-semibold text-[#7D8034]"}>historia</span></div>
                     <p>Desde los inicios de su desarrollo, Cap Cana,
                         S.A.,
                         la empresa desarrolladora de la Ciudad
@@ -58,15 +58,15 @@ export default function HomeHistory() {
                     whileInView={{ bottom: '0px', opacity: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: .2, duration: .5 }}
-                    className={"absolute -top-40 w-1/2"} style={{ transform: 'rotateY(-180deg)' }}
+                    className={"absolute -top-20 w-1/2"} style={{ transform: 'rotateY(-180deg)' }}
                 >
                     <div className={"absolute w-full h-full top-28"} style={{ filter: 'grayscale(100%) contrast(0.05) opacity(.7)' }}>
-                        <div className={styles.imageContainer}>
+                        <div className={styles.imageContainer} style={{ left: '2rem' }}>
                             <Image src={"/home/bird.png"} className={styles.image} fill alt={"Bird image"} />
                         </div>
                     </div>
                     <div className={"absolute w-full h-full"}>
-                        <div className={styles.imageContainer}>
+                        <div className={styles.imageContainer} style={{ left: '2rem' }}>
                             <Image src={"/home/bird.png"} className={styles.image} fill alt={"Bird image"} />
                         </div>
                     </div>

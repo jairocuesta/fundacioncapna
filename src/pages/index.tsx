@@ -15,8 +15,8 @@ export default function HomePage() {
             <HomeHero />
             <HomeAbout />
             <HomeHistory />
-            <HomeImpact />
-            <HomeVisionMision />
+            {/* <HomeImpact /> */}
+            {/* <HomeVisionMision /> */}
             <HomePrograms />
             <HomePartners />
             <HomeBlog />

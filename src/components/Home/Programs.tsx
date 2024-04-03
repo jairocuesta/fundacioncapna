@@ -9,9 +9,9 @@ import { motion } from 'framer-motion';
 
 export default function HomePrograms() {
     return (
-        <div className={`relative w-full h-full overflow-x-clip`}>
+        <div className={`relative w-full h-[600px] overflow-x-clip`}>
             <div className={`${styles.programBackground}`}></div>
-            <div className={"grid grid-cols-2 grid-rows-2"}>
+            <div className={"grid grid-cols-3 h-full"}>
                 <div>
                     <div className={`${styles.programImageContainer}`}>
                         <Image src={"/home/programs/1.jpeg"} className={`${styles.programImage}`} fill alt={"Programs image"} />
@@ -25,11 +25,6 @@ export default function HomePrograms() {
                 <div>
                     <div className={`${styles.programImageContainer}`}>
                         <Image src={"/home/programs/3.jpeg"} className={`${styles.programImage}`} fill alt={"Programs image"} />
-                    </div>
-                </div>
-                <div>
-                    <div className={`${styles.programImageContainer}`}>
-                        <Image src={"/home/programs/4.jpeg"} className={`${styles.programImage}`} fill alt={"Programs image"} />
                     </div>
                 </div>
             </div>

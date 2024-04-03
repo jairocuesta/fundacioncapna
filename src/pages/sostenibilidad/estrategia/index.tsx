@@ -11,13 +11,13 @@ import { motion } from "framer-motion";
 export default function SustainabilityStrategy() {
     return (
         <Layout title={"Estrategia de sostenibilidad"}>
-            <div className={"flex flex-col gap-16 pb-20 text-center sm:text-left"}>
+            <div className={"flex flex-col gap-4 pb-20 text-center sm:text-left"}>
                 <div className={`grid place-content-center gap-10 ${styles.firstImage} h-[40rem] text-white px-5`}>
                     <motion.h1
                         initial={{ bottom: '-30px', opacity: 0 }}
                         whileInView={{ bottom: '0px', opacity: 1 }}
                         viewport={{ once: true }}
-                        transition={{ delay: .3, duration: .5 }} 
+                        transition={{ delay: .3, duration: .5 }}
                         className={"relative text-center text-2xl md:text-3xl lg:text-4xl lg:leading-[3rem]"}
                     >
                         <div className={"font-bold"}>Estrategia de sostenibilidad</div>
@@ -31,55 +31,57 @@ export default function SustainabilityStrategy() {
                         <i className="fa-regular fa-angles-down"></i>
                     </motion.span>
                 </div>
-                <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
-                    <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
-                        <p>
-                            La Fundación Cap Cana como entidad creada para la protección de los recursos naturales y el desarrollo
-                            social de la Ciudad Destino, lidera y funciona como brazo ejecutor para impulsar y aplicar todas aquellas
-                            iniciativas técnicas, operativas y de gestión que se requieren para lograr el desarrollo sostenible en Cap
-                            Cana.
-                        </p>
+                <div className={"flex flex-col py-16 gap-4"}>
+                    <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
+                        <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
+                            <p>
+                                La Fundación Cap Cana como entidad creada para la protección de los recursos naturales y el desarrollo
+                                social de la Ciudad Destino, lidera y funciona como brazo ejecutor para impulsar y aplicar todas aquellas
+                                iniciativas técnicas, operativas y de gestión que se requieren para lograr el desarrollo sostenible en Cap
+                                Cana.
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
-                    <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
-                        <p>
-                            La Agenda 2030 para el Desarrollo Sostenible de las Naciones Unidas, elaborada y adoptada en el 2015,
-                            acarreó la creación de los 17 Objetivos de Desarrollo Sostenible (ODS) y 169 metas con el fin de
-                            establecer el plan de acción de la comunidad internacional por los próximos 15 años.
-                        </p>
+                    <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
+                        <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
+                            <p>
+                                La Agenda 2030 para el Desarrollo Sostenible de las Naciones Unidas, elaborada y adoptada en el 2015,
+                                acarreó la creación de los 17 Objetivos de Desarrollo Sostenible (ODS) y 169 metas con el fin de
+                                establecer el plan de acción de la comunidad internacional por los próximos 15 años.
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
-                    <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
-                        <p>
-                            Estos objetivos, en palabras de la Asamblea General de las Naciones Unidas, “son de carácter integrado e
-                            indivisible y conjugan las tres dimensiones del desarrollo sostenible: económica, social y ambiental”.
-                        </p>
+                    <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
+                        <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
+                            <p>
+                                Estos objetivos, en palabras de la Asamblea General de las Naciones Unidas, “son de carácter integrado e
+                                indivisible y conjugan las tres dimensiones del desarrollo sostenible: económica, social y ambiental”.
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
-                    <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
-                        <p>
-                            Ante este panorama, la ciudad destino Cap Cana ha decidido implementar una Estrategia de
-                            Sostenibilidad basada en las áreas materiales, ejes, objetivos y acciones estratégicas claves armonizadas con los ODS y el END, alineándose con la ideación internacional y nacional. De esta manera, se busca
-                            hacer de Cap Cana una Ciudad Destino Sostenible.
-                        </p>
+                    <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
+                        <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
+                            <p>
+                                Ante este panorama, la ciudad destino Cap Cana ha decidido implementar una Estrategia de
+                                Sostenibilidad basada en las áreas materiales, ejes, objetivos y acciones estratégicas claves armonizadas con los ODS y el END, alineándose con la ideación internacional y nacional. De esta manera, se busca
+                                hacer de Cap Cana una Ciudad Destino Sostenible.
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
-                    <span className={"text-lg sm:text-xl font-bold text-[#898C31]"}>Distrito de sostenibilidad Cap Cana</span>
-                    <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
-                        <p>
-                            El Distrito de Sostenibilidad de la Ciudad Destino Cap Cana es el espacio geográfico donde se
-                            engloban los principales proyectos e iniciativas en materia de sostenibilidad ambiental y social que se
-                            desarrollan a través de la Fundación Cap Cana.
-                            Oficinas administrativas Fundación Cap Cana, centro de Investigación ambiental, laboratorio marino,
-                            laboratorio botánico, área de atención de fauna, museo virtual, alojamientos para pasantes técnicos,
-                            refugio de rescate doméstico, orquideario, vivero de plantas nativas, huerto urbano, apiario de colmenas
-                            rescatadas, área de acuaponía, área de compost, mariposario y refugio de aves son las amenidades que
-                            componen el Distrito.
-                        </p>
+                    <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20 pt-6"}>
+                        <span className={"text-lg sm:text-xl font-bold text-[#898C31]"}>Distrito de sostenibilidad Cap Cana</span>
+                        <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
+                            <p>
+                                El Distrito de Sostenibilidad de la Ciudad Destino Cap Cana es el espacio geográfico donde se
+                                engloban los principales proyectos e iniciativas en materia de sostenibilidad ambiental y social que se
+                                desarrollan a través de la Fundación Cap Cana.
+                                Oficinas administrativas Fundación Cap Cana, centro de Investigación ambiental, laboratorio marino,
+                                laboratorio botánico, área de atención de fauna, museo virtual, alojamientos para pasantes técnicos,
+                                refugio de rescate doméstico, orquideario, vivero de plantas nativas, huerto urbano, apiario de colmenas
+                                rescatadas, área de acuaponía, área de compost, mariposario y refugio de aves son las amenidades que
+                                componen el Distrito.
+                            </p>
+                        </div>
                     </div>
                 </div>
                 <TextSlider
@@ -94,7 +96,7 @@ export default function SustainabilityStrategy() {
                         }
                     ]}
                 />
-                <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
+                <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20 pt-16"}>
                     <span className={"text-lg sm:text-xl font-bold text-[#898C31]"}>Iniciativas sostenibles</span>
                     <div className={"grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6 text-sm sm:text-base"}>
                         <div className={"flex flex-col gap-1"}>
