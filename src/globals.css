@@ -11,7 +11,7 @@
 
 @font-face {
   font-family: optima-medium;
-  src: url('./fonts/optima/medium.otf');
+  src: url('./fonts/optima/medium.ttf');
   font-style: medium;
   font-weight: normal;
   font-display: swap;
@@ -19,7 +19,7 @@
 
 @font-face {
   font-family: optima-regular;
-  src: url('./fonts/optima/regular.otf');
+  src: url('./fonts/optima/regular.ttf');
   font-style: medium;
   font-weight: normal;
   font-display: swap;
@@ -29,6 +29,7 @@
 @tailwind components;
 @tailwind utilities;
 
+.futura-light-regular { font-family: futura-light-regular; }
 .optima-medium { font-family: optima-medium; }
 .optima-regular { font-family: optima-regular; }
 
