@@ -10,25 +10,19 @@
 }
 
 @font-face {
-  font-family: optima-bold;
-  src: url('../fonts/optima/bold.TTF'), format('ttf');
-}
-
-@font-face {
   font-family: optima-medium;
-  src: url('../fonts/optima/medium.ttf'), format('ttf');
+  src: url('../fonts/optima/medium.ttf');
 }
 
 @font-face {
   font-family: optima-regular;
-  src: url('../fonts/optima/regular.TTF'), format('ttf');
+  src: url('../fonts/optima/regular.TTF');
 }
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.optima-bold { font-family: optima-bold; }
 .optima-medium { font-family: optima-medium; }
 .optima-regular { font-family: optima-regular; }
 
