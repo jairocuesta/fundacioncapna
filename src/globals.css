@@ -6,12 +6,15 @@
 /* Fonts */
 @font-face {
   font-family: futura-light-regular;
-  src: url('./fonts/futura-light-regular/font.otf'), format('otf');
+  src: url('/fonts/futura-light-regular/font.otf') format('opentype');
+  font-style: medium;
+  font-weight: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: optima-medium;
-  src: url('./fonts/optima/medium.otf');
+  src: url('/fonts/optima/medium.otf') format('opentype');
   font-style: medium;
   font-weight: normal;
   font-display: swap;
@@ -19,7 +22,7 @@
 
 @font-face {
   font-family: optima-regular;
-  src: url('./fonts/optima/regular.otf');
+  src: url('/fonts/optima/regular.otf') format('opentype');
   font-style: medium;
   font-weight: normal;
   font-display: swap;
