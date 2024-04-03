@@ -40,11 +40,11 @@ export default function Memberships() {
                             <span>empresarial</span>
                         </h3>
                         <div className={"flex flex-col items-center gap-5"}>
-                            <p className={"text-center"}>
+                            {/* <p className={"text-center"}>
                                 ¿Deseas que tu empresa tenga compromiso con la sostenibilidad y la conservación de su entorno
                                 natural? Al unirte a esta membresía, recibirá apoyo y asesoramiento y además podrá disfrutar de
                                 beneficios exclusivos.
-                            </p>
+                            </p> */}
                             <Button
                                 href={"#"}
                                 text={"Conviértete en miembro"}
@@ -64,9 +64,9 @@ export default function Memberships() {
                             <span>personal</span>
                         </h3>
                         <div className={"flex flex-col items-center gap-5"}>
-                            <p className={"text-center"}>
+                            {/* <p className={"text-center"}>
                                 ¿Quieres aportar de manera individual? Conviértete en un voluntario asociado
-                            </p>
+                            </p> */}
                             <Button
                                 href={"#"}
                                 text={"Conviértete en miembro"}
@@ -86,9 +86,9 @@ export default function Memberships() {
                             <span>única</span>
                         </h3>
                         <div className={"flex flex-col items-center gap-5"}>
-                            <p className={"text-center"}>
+                            {/* <p className={"text-center"}>
                                 Una sola acción es valiosa para nosotros, aporta una única vez.
-                            </p>
+                            </p> */}
                             <Button
                                 href={"#"}
                                 text={"Donar ahora"}
