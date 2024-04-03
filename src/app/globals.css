@@ -12,11 +12,17 @@
 @font-face {
   font-family: optima-medium;
   src: url('../fonts/optima/medium.otf');
+  font-style: medium;
+  font-weight: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: optima-regular;
   src: url('../fonts/optima/regular.otf');
+  font-style: medium;
+  font-weight: normal;
+  font-display: swap;
 }
 
 @tailwind base;
