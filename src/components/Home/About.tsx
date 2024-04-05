@@ -51,7 +51,7 @@ export default function HomeAbout() {
                     >
                         <i className="fa-light fa-leaf text-[2.7rem] text-[#afa96e]"></i>
                     </motion.div>
-                    <div className={"flex flex-col gap-20"}>
+                    <div className={"flex flex-col gap-16"}>
                         <motion.p
                             initial={{ bottom: '-50px', opacity: 0 }}
                             whileInView={{ bottom: '0px', opacity: 1 }}

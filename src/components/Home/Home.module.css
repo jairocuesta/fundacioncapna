@@ -72,3 +72,17 @@
     position: relative !important;
     height: 100% !important;
 }
+
+.newsImage {
+    background-image: url('/blog/news.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.newsletterImage {
+    background-image: url('/blog/newsletter.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}

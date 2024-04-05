@@ -37,6 +37,7 @@
 .optima-regular { font-family: optima-regular; }
 
 h1, h2, h3, h4, h5 {
+  text-transform: uppercase;
   font-family: optima-medium;
 }
 

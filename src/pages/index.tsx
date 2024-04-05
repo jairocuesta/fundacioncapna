@@ -8,6 +8,7 @@ import HomeVisionMision from "@/components/Home/VisionMision";
 import HomePrograms from "@/components/Home/Programs";
 import HomePartners from "@/components/Home/Partners";
 import HomeBlog from "@/components/Home/Blog";
+import HomeNewsletter from "@/components/Home/Newsletter";
 
 export default function HomePage() {
     return (
@@ -20,6 +21,7 @@ export default function HomePage() {
             <HomePrograms />
             <HomePartners />
             <HomeBlog />
+            <HomeNewsletter />
         </Layout>
     )
 }

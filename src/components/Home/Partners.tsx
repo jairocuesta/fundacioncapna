@@ -24,13 +24,13 @@ export default function HomePartners() {
                             <div className={"h-[2px] w-8 bg-[#AFA96E]"}></div>
                         </div>
                     </motion.div>
-                    <motion.p 
+                    {/* <motion.p 
                         initial={{ bottom: '-50px', opacity: 0 }}
                         whileInView={{ bottom: '0px', opacity: 1 }}
                         viewport={{ once: true }}
                         transition={{ delay: .2, duration: .5 }}
                         className={"relative"}
-                    >{`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,.`}</motion.p>
+                    >{`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,.`}</motion.p> */}
                 </div>
                 <motion.div 
                     initial={{ bottom: '-50px', opacity: 0 }}
