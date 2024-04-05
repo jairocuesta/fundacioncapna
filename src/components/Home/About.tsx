@@ -20,25 +20,25 @@ export default function HomeAbout() {
                     className={"relative grid grid-cols-1 md:grid-cols-3 gap-7 max-w-fit md:max-w-3xl mx-auto pb-10"}
                 >
                     <div className={"grid place-content-center gap-6 text-center bg-white text-[#afa96e] rounded-2xl h-40 px-10 md:px-0"}>
-                        <i className="fa-light fa-squirrel text-5xl"></i>
+                        <i className="fa-light fa-squirrel text-4xl"></i>
                         <span className={"flex items-center justify-center text-4xl font-bold"}>
                             <CounterAnimation from={0} to={34} />
                         </span>
-                        <span className={"text-lg "}>Especies vistas</span>
+                        <span className={"text-lg futura-light-regular"}>Especies vistas</span>
                     </div>
                     <div className={"grid place-content-center gap-6 text-center bg-white text-[#afa96e] rounded-2xl h-40 px-10 md:px-0"}>
-                        <i className="fa-light fa-bottle-water text-5xl"></i>
+                        <i className="fa-light fa-bottle-water text-4xl"></i>
                         <span className={"flex items-center justify-center text-4xl font-bold"}>
                             <CounterAnimation from={0} to={34} />
                         </span>
-                        <span className={"text-lg "}>Botellas recolectadas</span>
+                        <span className={"text-lg futura-light-regular"}>Botellas recolectadas</span>
                     </div>
                     <div className={"grid place-content-center gap-6 text-center bg-white text-[#afa96e] rounded-2xl h-40 px-10 md:px-0"}>
-                        <i className="fa-light fa-tree text-5xl"></i>
+                        <i className="fa-light fa-tree text-4xl"></i>
                         <span className={"flex items-center justify-center text-4xl font-bold"}>
                             <CounterAnimation from={0} to={34} />
                         </span>
-                        <span className={"text-lg "}>Arboles plantados</span>
+                        <span className={"text-lg futura-light-regular"}>Arboles plantados</span>
                     </div>
                 </motion.div>
                 <div className={"flex flex-col items-center gap-10 text-center w-full lg:w-3/4 2xl:w-1/2 mx-auto text-neutral-200 pt-10"}>
@@ -49,7 +49,7 @@ export default function HomeAbout() {
                         transition={{ delay: .2, duration: .5 }}
                         className={"relative"}
                     >
-                        <i className="fa-light fa-leaf text-[2.7rem] text-[#7d7d7d]"></i>
+                        <i className="fa-light fa-leaf text-[2.7rem] text-[#afa96e]"></i>
                     </motion.div>
                     <div className={"flex flex-col gap-20"}>
                         <motion.p
