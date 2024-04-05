@@ -15,20 +15,29 @@ export default function HomePrograms() {
                 <div>
                     <div className={`${styles.programImageContainer}`}>
                         <Image src={"/home/programs/1.jpeg"} className={`${styles.programImage}`} fill alt={"Programs image"} />
+                        <div className={"absolute top-0 left-0 w-full h-full grid place-content-center text-white"}>
+                            <div className={"text-xl font-bold"}>Texto de ejemplo</div>
+                        </div>
                     </div>
                 </div>
                 <div>
                     <div className={`${styles.programImageContainer}`}>
                         <Image src={"/home/programs/2.jpeg"} className={`${styles.programImage}`} fill alt={"Programs image"} />
+                        <div className={"absolute top-0 left-0 w-full h-full grid place-content-center text-white"}>
+                            <div className={"text-xl font-bold"}>Texto de ejemplo</div>
+                        </div>
                     </div>
                 </div>
                 <div>
                     <div className={`${styles.programImageContainer}`}>
                         <Image src={"/home/programs/3.jpeg"} className={`${styles.programImage}`} fill alt={"Programs image"} />
+                        <div className={"absolute top-0 left-0 w-full h-full grid place-content-center text-white"}>
+                            <div className={"text-xl font-bold"}>Texto de ejemplo</div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div className={"absolute w-full h-full top-0 left-0 z-10"}>
+            {/* <div className={"absolute w-full h-full top-0 left-0 z-10"}>
                 <div className={"grid place-content-center gap-20 w-full h-full text-white px-5"}>
                     <motion.div 
                         initial={{ bottom: '-50px', opacity: 0 }}
@@ -63,7 +72,7 @@ export default function HomePrograms() {
                         />
                     </motion.div>
                 </div>
-            </div>
+            </div> */}
         </div>
     )
 }

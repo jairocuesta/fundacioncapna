@@ -16,8 +16,8 @@ export default function HomeNewsletter() {
                 className={"relative flex flex-col items-center gap-12 max-w-4xl mx-auto px-5"}
             >
                 <div className={"flex flex-col items-center gap-5"}>
-                    <h2 className={"flex items-center gap-2 text-2xl md:text-3xl lg:text-4xl lg:leading-[3rem]"}>
-                        <span className={"relative -bottom-[2px]"}>Nuestro</span>
+                    <h2 className={"flex flex-col items-center gap-2 text-2xl md:text-3xl lg:text-4xl lg:leading-[3rem]"}>
+                        <span className={"relative -bottom-[2px]"}>Suscribete a nuestro</span>
                         <span className={"font-bold"}>newsletter</span>
                     </h2>
                     <div className={"flex items-center justify-center gap-2"}>
@@ -26,11 +26,11 @@ export default function HomeNewsletter() {
                         <div className={"h-[2px] w-8 bg-white rounded-full"}></div>
                     </div>
                 </div>
-                <p className={"text-center text-white"}>
+                {/* <p className={"text-center text-white"}>
                     Recibe las últimas noticias de conservación, eventos emocionantes y consejos para un estilo de
                     vida más sostenible directamente en tu bandeja de entrada. ¡No te pierdas ni un solo momento de nuestra
                     misión! Suscríbete ahora.
-                </p>
+                </p> */}
                 <Button
                     href={"#"}
                     text={"Inscríbete ahora"}

@@ -13,8 +13,8 @@ type ButtonProps = {
 export default function Button({ href, type, text, buttonType, action, classes, py, px }: ButtonProps) {
 
     const classesObj = {
-        main: "font-bold uppercase bg-[#afa96e] hover:bg-[#8f8959] text-white rounded-full transition-colors text-center",
-        white: "font-bold uppercase bg-white hover:bg-neutral-200 text-[#afa96e] rounded-full transition-colors text-center"
+        main: "font-bold uppercase bg-[#afa96e] hover:bg-[#8f8959] text-white rounded-full transition-colors text-center futura-light-regular",
+        white: "font-bold uppercase bg-white hover:bg-neutral-200 text-[#afa96e] rounded-full transition-colors text-center futura-light-regular"
     }
 
     return href ? (
