@@ -14,7 +14,7 @@ export default function HomePrograms() {
             <div className={`absolute w-full h-full`}></div>
             <div className={"grid grid-rows-3 grid-cols-1 sm:grid-rows-3 sm:grid-cols-2 xl:grid-rows-1 xl:grid-cols-3 gap-2 sm:h-[2100px] xl:h-[700px]"}>
                 <Link href={"#"} className={"overflow-hidden h-full"}>
-                    <div className={"relative h-full"}>
+                    <div className={`${styles.imageScale} relative h-full`}>
                         <div className={``}></div>
                         <div className={`${styles.programImageContainer}`}>
                             <Image src={"/home/programs/1.webp"} className={`${styles.programImage}`} fill loading={'eager'} alt={"Programs image"} />
@@ -25,7 +25,7 @@ export default function HomePrograms() {
                     </div>
                 </Link>
                 <Link href={"#"} className={"overflow-hidden h-full"}>
-                    <div className={"relative h-full"}>
+                    <div className={`${styles.imageScale} relative h-full`}>
                         <div className={``}></div>
                         <div className={`${styles.programImageContainer}`}>
                             <Image src={"/home/programs/2-1.webp"} className={`${styles.programImage}`} fill loading={'eager'} alt={"Programs image"} />
@@ -36,7 +36,7 @@ export default function HomePrograms() {
                     </div>
                 </Link>
                 <Link href={"#"} className={"overflow-hidden h-full"}>
-                    <div className={"relative h-full sm:col-start-1 sm:col-end-3 sm:row-start-2 sm:row-end-4 xl:row-end-auto xl:row-start-auto xl:col-start-auto xl:col-end-auto"}>
+                    <div className={`${styles.imageScale} relative h-full sm:col-start-1 sm:col-end-3 sm:row-start-2 sm:row-end-4 xl:row-end-auto xl:row-start-auto xl:col-start-auto xl:col-end-auto`}>
                         <div className={``}></div>
                         <div className={`${styles.programImageContainer}`}>
                             <Image src={"/home/programs/3.webp"} className={`${styles.programImage}`} fill loading={'eager'} alt={"Programs image"} />

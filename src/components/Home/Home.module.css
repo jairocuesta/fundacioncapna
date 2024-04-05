@@ -79,3 +79,13 @@
     background-position: center;
     background-size: cover;
 }
+
+.programImage {
+    transform: scale(100%);
+    transition: all .3s ease-in-out;
+}
+
+.imageScale:hover .programImage {
+    transform: scale(110%);
+    
+}
