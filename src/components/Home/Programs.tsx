@@ -19,7 +19,7 @@ export default function HomePrograms() {
                         <div className={`${styles.programImageContainer}`}>
                             <Image src={"/home/programs/1.webp"} className={`${styles.programImage}`} fill loading={'eager'} alt={"Programs image"} />
                             <div className={"absolute top-0 left-0 w-full h-full grid place-content-center text-white z-10"}>
-                                <h4 className={"text-xl font-bold text-shadow"}>Conservación ambiental</h4>
+                                <h4 className={"text-xl font-bold"}>Conservación ambiental</h4>
                             </div>
                         </div>
                     </div>
@@ -30,7 +30,7 @@ export default function HomePrograms() {
                         <div className={`${styles.programImageContainer}`}>
                             <Image src={"/home/programs/2-1.webp"} className={`${styles.programImage}`} fill loading={'eager'} alt={"Programs image"} />
                             <div className={"absolute top-0 left-0 w-full h-full grid place-content-center text-white z-10"}>
-                                <h4 className={"text-xl font-bold text-shadow"}>Desarrollo social</h4>
+                                <h4 className={"text-xl font-bold"}>Desarrollo social</h4>
                             </div>
                         </div>
                     </div>
@@ -41,7 +41,7 @@ export default function HomePrograms() {
                         <div className={`${styles.programImageContainer}`}>
                             <Image src={"/home/programs/3.webp"} className={`${styles.programImage}`} fill loading={'eager'} alt={"Programs image"} />
                             <div className={"absolute top-0 left-0 w-full h-full grid place-content-center text-white z-10"}>
-                                <h4 className={"text-xl font-bold text-shadow"}>Sostenibilidad</h4>
+                                <h4 className={"text-xl font-bold"}>Sostenibilidad</h4>
                             </div>
                         </div>
                     </div>
