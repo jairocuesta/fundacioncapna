@@ -10,11 +10,13 @@ export default function HomeHero() {
                 images={
                     [
                         { 
-                            src: '/home/background.webp',
-                            classes: { backgroundPosition: 'bottom' }
+                            src: '/home/banner/3.webp',
                         },
                         {
-                            src: '/home/lions.jpeg'
+                            src: '/home/banner/2.webp'
+                        },
+                        {
+                            src: '/home/banner/1.webp'
                         },
                     ]
                 } 

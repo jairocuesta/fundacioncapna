@@ -6,36 +6,46 @@ import Button from '../Button/Index';
 import styles from './Home.module.css';
 // Animations
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 export default function HomePrograms() {
     return (
-        <div className={`relative w-full h-[600px] overflow-x-clip pb-2 px-2`}>
+        <div className={`relative w-full overflow-x-clip pb-2 px-2`}>
             <div className={`absolute w-full h-full`}></div>
-            <div className={"grid grid-cols-3 gap-2 h-full"}>
-                <div className={`${styles.programBackground}`}>
-                    <div className={`${styles.programImageContainer}`}>
-                        <Image src={"/home/programs/1.jpeg"} className={`${styles.programImage}`} fill alt={"Programs image"} />
-                        <div className={"absolute top-0 left-0 w-full h-full grid place-content-center text-white z-10"}>
-                            <h4 className={"text-lg font-bold"}>Conservación ambiental</h4>
+            <div className={"grid grid-rows-3 grid-cols-1 sm:grid-rows-3 sm:grid-cols-2 xl:grid-rows-1 xl:grid-cols-3 gap-2 sm:h-[1200px] xl:h-[400px]"}>
+                <Link href={"#"} className={"overflow-hidden h-full"}>
+                    <div className={"relative h-full"}>
+                        <div className={`${styles.programBackground}`}></div>
+                        <div className={`${styles.programImageContainer}`}>
+                            <Image src={"/home/programs/1.jpeg"} className={`${styles.programImage}`} fill alt={"Programs image"} />
+                            <div className={"absolute top-0 left-0 w-full h-full grid place-content-center text-white z-10"}>
+                                <h4 className={"text-lg font-bold"}>Conservación ambiental</h4>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div className={`${styles.programBackground}`}>
-                    <div className={`${styles.programImageContainer}`}>
-                        <Image src={"/home/programs/2.jpeg"} className={`${styles.programImage}`} fill alt={"Programs image"} />
-                        <div className={"absolute top-0 left-0 w-full h-full grid place-content-center text-white z-10"}>
-                            <h4 className={"text-lg font-bold"}>Desarrollo social</h4>
+                </Link>
+                <Link href={"#"} className={"overflow-hidden h-full"}>
+                    <div className={"relative h-full"}>
+                        <div className={`${styles.programBackground}`}></div>
+                        <div className={`${styles.programImageContainer}`}>
+                            <Image src={"/home/programs/2.jpeg"} className={`${styles.programImage}`} fill alt={"Programs image"} />
+                            <div className={"absolute top-0 left-0 w-full h-full grid place-content-center text-white z-10"}>
+                                <h4 className={"text-lg font-bold"}>Desarrollo social</h4>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div className={`${styles.programBackground}`}>
-                    <div className={`${styles.programImageContainer}`}>
-                        <Image src={"/home/programs/3.jpeg"} className={`${styles.programImage}`} fill alt={"Programs image"} />
-                        <div className={"absolute top-0 left-0 w-full h-full grid place-content-center text-white z-10"}>
-                            <h4 className={"text-lg font-bold"}>Sostenibilidad</h4>
+                </Link>
+                <Link href={"#"} className={"overflow-hidden h-full"}>
+                    <div className={"relative h-full sm:col-start-1 sm:col-end-3 sm:row-start-2 sm:row-end-4 xl:row-end-auto xl:row-start-auto xl:col-start-auto xl:col-end-auto"}>
+                        <div className={`${styles.programBackground}`}></div>
+                        <div className={`${styles.programImageContainer}`}>
+                            <Image src={"/home/programs/3.jpeg"} className={`${styles.programImage}`} fill alt={"Programs image"} />
+                            <div className={"absolute top-0 left-0 w-full h-full grid place-content-center text-white z-10"}>
+                                <h4 className={"text-lg font-bold"}>Sostenibilidad</h4>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </Link>
             </div>
             {/* <div className={"absolute w-full h-full top-0 left-0 z-10"}>
                 <div className={"grid place-content-center gap-20 w-full h-full text-white px-5"}>
