@@ -11,7 +11,7 @@ import CounterAnimation from '../Counter/Index';
 export default function HomeAbout() {
     return (
         <div className={"relative overflow-x-clip"}>
-            <div className={"py-20"}>
+            <div className={"py-20 pb-28"}>
                 <motion.div 
                     initial={{ bottom: '-50px', opacity: 0 }}
                     whileInView={{ bottom: '0px', opacity: 1 }}
@@ -49,35 +49,37 @@ export default function HomeAbout() {
                         transition={{ delay: .2, duration: .5 }}
                         className={"relative"}
                     >
-                        <i className="fa-light fa-leaf text-[2.7rem]"></i>
+                        <i className="fa-light fa-leaf text-[2.7rem] text-[#7d7d7d]"></i>
                     </motion.div>
-                    <motion.p 
-                        initial={{ bottom: '-50px', opacity: 0 }}
-                        whileInView={{ bottom: '0px', opacity: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: .3, duration: .5 }}
-                        className={"relative text-[#7d7d7d]"}
-                    >
-                        Somos una Organización Sin Fines de Lucro creada en el año 2016, que surge como el
-                        brazo ejecutor de todas las acciones de sostenibilidad de la Ciudad Destino Cap Cana,  con
-                        el propósito de
-                        promover la conservación de los diversos ecosistemas y recursos naturales,
-                        así como  el desarrollo de las
-                        comunidades de la zona.
-                    </motion.p>
-                    <motion.div 
-                        initial={{ bottom: '-50px', opacity: 0 }}
-                        whileInView={{ bottom: '0px', opacity: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: .4, duration: .5 }}
-                        className={"relative"}
-                    >
-                        <Button 
-                            href={"#"}
-                            type={"main"}
-                            text={"Conoce más"}
-                        />
-                    </motion.div>
+                    <div className={"flex flex-col gap-20"}>
+                        <motion.p
+                            initial={{ bottom: '-50px', opacity: 0 }}
+                            whileInView={{ bottom: '0px', opacity: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: .3, duration: .5 }}
+                            className={"relative text-[#7d7d7d] leading-9"}
+                        >
+                            Somos una Organización Sin Fines de Lucro creada en el año 2016, que surge como el
+                            brazo ejecutor de todas las acciones de sostenibilidad de la Ciudad Destino Cap Cana,  con
+                            el propósito de
+                            promover la conservación de los diversos ecosistemas y recursos naturales,
+                            así como  el desarrollo de las
+                            comunidades de la zona.
+                        </motion.p>
+                        <motion.div
+                            initial={{ bottom: '-50px', opacity: 0 }}
+                            whileInView={{ bottom: '0px', opacity: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: .4, duration: .5 }}
+                            className={"relative"}
+                        >
+                            <Button
+                                href={"#"}
+                                type={"main"}
+                                text={"Conoce más"}
+                            />
+                        </motion.div>
+                    </div>
                 </div>
             </div>
         </div>

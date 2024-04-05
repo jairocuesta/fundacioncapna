@@ -180,7 +180,7 @@ export default function Blog({ data, page, pageCount }: { data: BlogType[]; page
                                     <div className={"h-[2px] w-8 bg-white rounded-full"}></div>
                                 </div>
                             </div>
-                            <p className={"text-center text-white"}>
+                        <p className={"text-center text-white"}>
                                 Recibe las últimas noticias de conservación, eventos emocionantes y consejos para un estilo de
                                 vida más sostenible directamente en tu bandeja de entrada. ¡No te pierdas ni un solo momento de nuestra
                                 misión! Suscríbete ahora.

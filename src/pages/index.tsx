@@ -14,7 +14,7 @@ export default function HomePage() {
         <Layout title={"Inicio"}>
             <HomeHero />
             <HomeAbout />
-            <HomeHistory />
+            {/* <HomeHistory /> */}
             {/* <HomeImpact /> */}
             {/* <HomeVisionMision /> */}
             <HomePrograms />

@@ -221,7 +221,7 @@ type MobileMenuProps = {
 }
 function MobileMenu({ closeMenu }: MobileMenuProps) {
     return (
-        <div className={"fixed left-0 top-0 bg-white text-[#7D8034] w-screen h-screen px-5 py-10 sm:p-10 overflow-scroll"}>
+        <div className={"futura-light-regular fixed left-0 top-0 bg-white text-[#7D8034] w-screen h-screen px-5 py-10 sm:p-10 overflow-scroll"}>
             <button className={"absolute top-10 right-12"} onClick={closeMenu}>
                 <i className={"fa-solid fa-times text-3xl"}></i>
             </button>
