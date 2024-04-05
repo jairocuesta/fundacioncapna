@@ -17,7 +17,7 @@ export default function HomePartners() {
                         transition={{ delay: .1, duration: .5 }}
                         className={"relative flex flex-col gap-5"}
                     >
-                        <h2 className={"relative text-3xl"}>Nuestros <span className={"font-bold text-[#AFA96E]"}>aliados</span></h2>
+                        <h2 className={"relative text-3xl font-bold text-[#AFA96E]"}>Nuestros aliados</h2>
                         <div className={"flex items-center justify-center gap-1"}>
                             <div className={"h-[2px] w-8 bg-[#AFA96E]"}></div>
                             <div className={"h-[2px] w-8 bg-[#AFA96E]"}></div>
