@@ -117,12 +117,12 @@ function NavbarItem({ title, href, items }: NavbarItem) {
             className={"relative"}
         >
             <div
-                className={`text-sm ${isActualRoute == href ? 'font-semibold' : 'font-normal'}`}
+                className={` ${isActualRoute == href ? 'font-semibold' : 'font-normal'}`}
             >
                 {href ? (
-                    <Link href={href} className={"futura-light-regular uppercase text-base border-b-2 py-2 border-transparent hover:border-white transition-colors"}>{title}</Link>
+                    <Link href={href} className={"futura-light-regular uppercase text-sm border-b-2 py-2 border-transparent hover:border-white transition-colors"}>{title}</Link>
                 ) : (
-                    <span className={"cursor-pointer futura-light-regular uppercase text-base border-b-2 py-2 border-transparent hover:border-white transition-colors"}>{title}</span>
+                    <span className={"cursor-pointer futura-light-regular uppercase text-sm border-b-2 py-2 border-transparent hover:border-white transition-colors"}>{title}</span>
                 )}
             </div>
             {items && items?.length != 0 ? (
