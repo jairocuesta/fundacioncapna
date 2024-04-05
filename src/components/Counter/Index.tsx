@@ -19,7 +19,7 @@ export default function CounterAnimation({ from, to }: CounterAnimationProps) {
                 duration: 1.5,
                 onUpdate(value) {
                     if(node) {
-                        node.textContent = value.toFixed(0);
+                        node.textContent = `+${value.toFixed(0)}K`;
                     }
                 },
             });
@@ -27,7 +27,7 @@ export default function CounterAnimation({ from, to }: CounterAnimationProps) {
             return () => controls.stop();
         }, [from, to, isInView]);
 
-        return <div ref={nodeRef} />;
+        return <div className={"optima-medium"} ref={nodeRef} />;
     }
 
     return (
