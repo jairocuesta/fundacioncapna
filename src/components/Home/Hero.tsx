@@ -24,7 +24,7 @@ export default function HomeHero() {
                     initial={{ bottom: '-30px', opacity: 0 }}
                     animate={{ bottom: '0px', opacity: 1 }}
                     transition={{ delay: .3, duration: .5 }}
-                    className={"relative flex flex-col px-5 lg:p-0 text-2xl md:text-3xl lg:text-[3.5rem] lg:leading-[4.5rem]"}
+                    className={"relative flex flex-col px-5 lg:p-0 text-2xl md:text-3xl lg:text-[3.1rem] lg:leading-[4.5rem]"}
                 >
                     <span className={"sm:whitespace-nowrap"}>{`Todo lo que le damos a la Naturaleza,`}</span>
                     <span className={"sm:whitespace-nowrap"}>{`nos lo damos a nosotros`}</span>
