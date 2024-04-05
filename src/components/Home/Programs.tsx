@@ -9,29 +9,29 @@ import { motion } from 'framer-motion';
 
 export default function HomePrograms() {
     return (
-        <div className={`relative w-full h-[600px] overflow-x-clip`}>
-            <div className={`${styles.programBackground}`}></div>
-            <div className={"grid grid-cols-3 h-full"}>
-                <div>
+        <div className={`relative w-full h-[600px] overflow-x-clip pb-2 px-2`}>
+            <div className={`absolute w-full h-full`}></div>
+            <div className={"grid grid-cols-3 gap-2 h-full"}>
+                <div className={`${styles.programBackground}`}>
                     <div className={`${styles.programImageContainer}`}>
                         <Image src={"/home/programs/1.jpeg"} className={`${styles.programImage}`} fill alt={"Programs image"} />
-                        <div className={"absolute top-0 left-0 w-full h-full grid place-content-center text-white"}>
+                        <div className={"absolute top-0 left-0 w-full h-full grid place-content-center text-white z-10"}>
                             <h4 className={"text-lg font-bold"}>Conservación ambiental</h4>
                         </div>
                     </div>
                 </div>
-                <div>
+                <div className={`${styles.programBackground}`}>
                     <div className={`${styles.programImageContainer}`}>
                         <Image src={"/home/programs/2.jpeg"} className={`${styles.programImage}`} fill alt={"Programs image"} />
-                        <div className={"absolute top-0 left-0 w-full h-full grid place-content-center text-white"}>
+                        <div className={"absolute top-0 left-0 w-full h-full grid place-content-center text-white z-10"}>
                             <h4 className={"text-lg font-bold"}>Desarrollo social</h4>
                         </div>
                     </div>
                 </div>
-                <div>
+                <div className={`${styles.programBackground}`}>
                     <div className={`${styles.programImageContainer}`}>
                         <Image src={"/home/programs/3.jpeg"} className={`${styles.programImage}`} fill alt={"Programs image"} />
-                        <div className={"absolute top-0 left-0 w-full h-full grid place-content-center text-white"}>
+                        <div className={"absolute top-0 left-0 w-full h-full grid place-content-center text-white z-10"}>
                             <h4 className={"text-lg font-bold"}>Sostenibilidad</h4>
                         </div>
                     </div>
