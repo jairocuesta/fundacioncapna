@@ -57,7 +57,7 @@ export default function HomeAbout() {
                             whileInView={{ bottom: '0px', opacity: 1 }}
                             viewport={{ once: true }}
                             transition={{ delay: .3, duration: .5 }}
-                            className={"relative text-[#7d7d7d] leading-9"}
+                            className={"relative text-[#7d7d7d] leading-9 px-5"}
                         >
                             Somos una Organización Sin Fines de Lucro creada en el año 2016, que surge como el
                             brazo ejecutor de todas las acciones de sostenibilidad de la Ciudad Destino Cap Cana,  con

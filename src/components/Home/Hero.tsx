@@ -21,7 +21,7 @@ export default function HomeHero() {
                     ]
                 } 
             />
-            <div className={"absolute flex flex-col items-center gap-5 w-full text-center left-1/2 -translate-x-1/2 bottom-20 text-white max-w-5xl"}>
+            <div className={"absolute flex flex-col items-center gap-5 w-full text-center left-1/2 -translate-x-1/2 bottom-20 text-white max-w-5xl overflow-x-clip"}>
                 <motion.h2
                     initial={{ bottom: '-30px', opacity: 0 }}
                     animate={{ bottom: '0px', opacity: 1 }}
