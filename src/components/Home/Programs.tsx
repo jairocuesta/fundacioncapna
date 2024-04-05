@@ -16,7 +16,7 @@ export default function HomePrograms() {
                     <div className={`${styles.programImageContainer}`}>
                         <Image src={"/home/programs/1.jpeg"} className={`${styles.programImage}`} fill alt={"Programs image"} />
                         <div className={"absolute top-0 left-0 w-full h-full grid place-content-center text-white"}>
-                            <div className={"text-xl font-bold"}>Texto de ejemplo</div>
+                            <h4 className={"text-lg font-bold"}>Conservación ambiental</h4>
                         </div>
                     </div>
                 </div>
@@ -24,7 +24,7 @@ export default function HomePrograms() {
                     <div className={`${styles.programImageContainer}`}>
                         <Image src={"/home/programs/2.jpeg"} className={`${styles.programImage}`} fill alt={"Programs image"} />
                         <div className={"absolute top-0 left-0 w-full h-full grid place-content-center text-white"}>
-                            <div className={"text-xl font-bold"}>Texto de ejemplo</div>
+                            <h4 className={"text-lg font-bold"}>Desarrollo social</h4>
                         </div>
                     </div>
                 </div>
@@ -32,7 +32,7 @@ export default function HomePrograms() {
                     <div className={`${styles.programImageContainer}`}>
                         <Image src={"/home/programs/3.jpeg"} className={`${styles.programImage}`} fill alt={"Programs image"} />
                         <div className={"absolute top-0 left-0 w-full h-full grid place-content-center text-white"}>
-                            <div className={"text-xl font-bold"}>Texto de ejemplo</div>
+                            <h4 className={"text-lg font-bold"}>Sostenibilidad</h4>
                         </div>
                     </div>
                 </div>

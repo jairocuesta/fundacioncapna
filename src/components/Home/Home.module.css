@@ -47,6 +47,7 @@
     object-fit: cover;
     width: 100% !important;
     position: relative !important;
+    background: rgba(0, 0, 0, .5);
 }
 
 .partnerImageContainer {
