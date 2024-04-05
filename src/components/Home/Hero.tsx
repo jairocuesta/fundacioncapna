@@ -28,8 +28,8 @@ export default function HomeHero() {
                     transition={{ delay: .3, duration: .5 }}
                     className={"relative flex flex-col px-5 lg:p-0 text-lg md:text-xl lg:text-2xl w-fit"}
                 >
-                    <span style={{ textShadow: '0 0 7px rgba(0,0,0,.66)' }} className={"sm:whitespace-nowrap z-10 relative"}>{`Todo lo que le damos a la Naturaleza,`}</span>
-                    <span style={{ textShadow: '0 0 7px rgba(0,0,0,.66)' }} className={"sm:whitespace-nowrap z-10 relative"}>{`nos lo damos a nosotros`}</span>
+                    <span className={"sm:whitespace-nowrap z-10 relative text-shadow"}>{`Todo lo que le damos a la Naturaleza,`}</span>
+                    <span className={"sm:whitespace-nowrap z-10 relative text-shadow"}>{`nos lo damos a nosotros`}</span>
                     <div className={"absolute w-full h-full bg-black opacity-20 blur-2xl"}></div>
                 </motion.h2>
                 <motion.span

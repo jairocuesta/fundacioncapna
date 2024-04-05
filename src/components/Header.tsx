@@ -142,7 +142,7 @@ function NavbarItem({ title, href, items }: NavbarItem) {
                                             className={"flex items-center gap-2 text-sm p-2 my-1 hover:bg-[#AFA96E4D] rounded whitespace-nowrap transition-colors"} 
                                             href={item.href}
                                         >
-                                            <span>{item.name}</span>
+                                            <span className={"futura-light-regular"}>{item.name}</span>
                                             {item.subitems ? (<i className="fa-regular fa-arrow-right"></i>) : null}
                                         </Link>
                                     </div>
@@ -152,7 +152,7 @@ function NavbarItem({ title, href, items }: NavbarItem) {
                                             onMouseEnter={item?.subitems ? () => handleSetSubmenus({ first: item.subitems || [], second: []}) : () => null} 
                                             className={"flex items-center gap-2 text-sm p-2 my-1 hover:bg-[#AFA96E4D] rounded whitespace-nowrap transition-colors"}
                                         >
-                                            <span>{item.name}</span>
+                                            <span className={"futura-light-regular"}>{item.name}</span>
                                             {item.subitems ? (<i className="fa-regular fa-arrow-right"></i>) : null}
                                         </div>
                                     </div>
@@ -167,7 +167,7 @@ function NavbarItem({ title, href, items }: NavbarItem) {
                                                 className={"flex items-center gap-2 text-sm p-2 my-1 hover:bg-[#AFA96E4D] rounded whitespace-nowrap transition-colors"}
                                                 href={item.href}
                                             >
-                                                <span>{item.name}</span>
+                                                <span className={"futura-light-regular"}>{item.name}</span>
                                                 {item.subitems ? (<i className="fa-regular fa-arrow-right"></i>) : null}
                                             </Link>
                                         </div>
@@ -177,7 +177,7 @@ function NavbarItem({ title, href, items }: NavbarItem) {
                                                 onMouseEnter={item?.subitems ? () => handleSetSubmenus({ ...subMenus, second: item.subitems || [] }) : () => null}
                                                 className={"flex items-center gap-2 text-sm p-2 my-1 hover:bg-[#AFA96E4D] rounded whitespace-nowrap transition-colors"}
                                             >
-                                                <span>{item.name}</span>
+                                                <span className={"futura-light-regular"}>{item.name}</span>
                                                 {item.subitems ? (<i className="fa-regular fa-arrow-right"></i>) : null}
                                             </div>
                                         </div>
@@ -192,7 +192,7 @@ function NavbarItem({ title, href, items }: NavbarItem) {
                                                 className={"flex items-center gap-2 text-sm p-2 my-1 hover:bg-[#AFA96E4D] rounded whitespace-nowrap transition-colors"}
                                                 href={item.href}
                                             >
-                                                <span>{item.name}</span>
+                                                <span className={"futura-light-regular"}>{item.name}</span>
                                                 {item.subitems ? (<i className="fa-regular fa-arrow-right"></i>) : null}
                                             </Link>
                                         </div>
@@ -201,7 +201,7 @@ function NavbarItem({ title, href, items }: NavbarItem) {
                                             <div
                                                 className={"flex items-center gap-2 text-sm p-2 my-1 hover:bg-[#AFA96E4D] rounded whitespace-nowrap transition-colors"}
                                             >
-                                                <span>{item.name}</span>
+                                                <span className={"futura-light-regular"}>{item.name}</span>
                                                 {item.subitems ? (<i className="fa-regular fa-arrow-right"></i>) : null}
                                             </div>
                                         </div>

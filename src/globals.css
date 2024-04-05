@@ -41,6 +41,10 @@ h1, h2, h3, h4, h5 {
   font-family: optima-medium;
 }
 
+.text-shadow {
+  text-shadow: 0 0 7px rgba(0,0,0,.66);
+}
+
 p {
   font-family: "Open Sans", sans-serif;
   color: #7d7d7d;
