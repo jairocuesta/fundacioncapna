@@ -52,7 +52,7 @@ export default function Header({ styles }: NavbarProps) {
 
     return (
         <header className={`w-screen flex items-center justify-center h-28 z-20 transition-colors ${headerBackground ? 'shadow-md border-b' : ''}`} style={{ backgroundColor: headerBackground ? headerBackground : styles?.background, color: headerBackground ? '#7D8034' : styles?.color || 'white', position: styles?.position || 'fixed' }}>
-            <div className={"flex items-center justify-between lg:justify-center gap-16 px-10 w-full lg:w-auto"}>
+            <div className={"flex items-center justify-between lg:justify-center gap-16 px-10 w-full max-w-5xl"}>
                 <Link href={"/"}>
                     <Image src={headerBackground ? "/logo-color.png" : styles?.image == 'color' ? "/logo-color.png" : "/logo.png"} width={95} height={95} alt={"Logo"} />
                 </Link>

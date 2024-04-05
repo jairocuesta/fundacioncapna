@@ -19,12 +19,12 @@ export default function HomeHero() {
                     ]
                 } 
             />
-            <div className={"absolute flex flex-col gap-5 w-full text-center top-1/2 -translate-y-1/2 text-white"}>
+            <div className={"absolute flex flex-col gap-5 w-full text-left left-1/2 -translate-x-1/2 bottom-20 text-white max-w-5xl"}>
                 <motion.h2
                     initial={{ bottom: '-30px', opacity: 0 }}
                     animate={{ bottom: '0px', opacity: 1 }}
                     transition={{ delay: .3, duration: .5 }}
-                    className={"relative flex flex-col px-5 lg:p-0 text-2xl leading-10 md:text-3xl md:leading-[3.5rem] lg:text-[2.4rem] lg:leading-[4.5rem]"}
+                    className={"relative flex flex-col px-5 lg:p-0 text-lg md:text-xl lg:text-2xl"}
                 >
                     <span className={"sm:whitespace-nowrap"}>{`Todo lo que le damos a la Naturaleza,`}</span>
                     <span className={"sm:whitespace-nowrap"}>{`nos lo damos a nosotros`}</span>
