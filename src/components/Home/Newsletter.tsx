@@ -7,7 +7,7 @@ import Link from 'next/link'
 
 export default function HomeNewsletter() {
     return (
-        <div className={"overflow-x-clip h-[35rem]"}>
+        <div className={"overflow-hidden h-[35rem]"}>
             <Link href={"#"} className={"text-white h-[35rem]"}>
                 <div className={`${styles.imageScale} relative h-full`}>
                     <div className={``}></div>

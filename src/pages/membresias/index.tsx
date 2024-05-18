@@ -16,7 +16,7 @@ export default function Memberships() {
                         whileInView={{ bottom: '0px', opacity: 1 }}
                         viewport={{ once: true }}
                         transition={{ delay: .3, duration: .5 }}
-                        className={"relative text-center text-2xl md:text-3xl lg:text-4xl lg:leading-[3rem] font-bold"}>
+                        className={"relative text-center text-2xl md:text-3xl lg:text-4xl lg:leading-[3rem] font-bold text-shadow"}>
                             Donaciones
                         </motion.h1>
                     <motion.span
@@ -35,7 +35,7 @@ export default function Memberships() {
                         transition={{ delay: .1, duration: .5 }}
                         className={`relative flex flex-col justify-between ${styles.secondImage} py-12 text-white px-5 sm:px-8 md:px-12 gap-32`}
                     >
-                        <h3 className={"flex flex-col items-center text-center text-3xl lg:text-4xl lg:leading-[3rem] font-bold"}>
+                        <h3 className={"flex flex-col items-center text-center text-3xl lg:text-4xl lg:leading-[3rem] font-bold futura-light-regular"}>
                             <span>Membresía</span>
                             <span>empresarial</span>
                         </h3>
@@ -49,6 +49,7 @@ export default function Memberships() {
                                 href={"#"}
                                 text={"Conviértete en miembro"}
                                 type={"white"}
+                                classes={"bg-transparent text-white uppercase futura-light-regular border rounded-lg py-2 px-10"}
                             />
                         </div>
                     </motion.div>
@@ -59,7 +60,7 @@ export default function Memberships() {
                         transition={{ delay: .2, duration: .5 }}
                         className={`relative flex flex-col justify-between ${styles.thirdImage} py-12 text-white px-5 sm:px-8 md:px-12 gap-32`}
                     >
-                        <h3 className={"flex flex-col items-center text-center text-3xl lg:text-4xl lg:leading-[3rem] font-bold"}>
+                        <h3 className={"flex flex-col items-center text-center text-3xl lg:text-4xl lg:leading-[3rem] font-bold futura-light-regular"}>
                             <span>Membresía</span>
                             <span>personal</span>
                         </h3>
@@ -71,6 +72,7 @@ export default function Memberships() {
                                 href={"#"}
                                 text={"Conviértete en miembro"}
                                 type={"white"}
+                                classes={"bg-transparent text-white uppercase futura-light-regular border rounded-lg py-2 px-10"}
                             />
                         </div>
                     </motion.div>
@@ -81,7 +83,7 @@ export default function Memberships() {
                         transition={{ delay: .3, duration: .5 }}
                         className={`relative flex flex-col justify-between ${styles.fourImage} py-12 text-white px-5 sm:px-8 md:px-12 gap-32`}
                     >
-                        <h3 className={"flex flex-col items-center text-center text-3xl lg:text-4xl lg:leading-[3rem] font-bold"}>
+                        <h3 className={"flex flex-col items-center text-center text-3xl lg:text-4xl lg:leading-[3rem] font-bold futura-light-regular"}>
                             <span>Donación</span>
                             <span>única</span>
                         </h3>
@@ -93,6 +95,7 @@ export default function Memberships() {
                                 href={"#"}
                                 text={"Donar ahora"}
                                 type={"white"}
+                                classes={"bg-transparent text-white uppercase futura-light-regular border rounded-lg py-2 px-10"}
                             />
                         </div>
                     </motion.div>

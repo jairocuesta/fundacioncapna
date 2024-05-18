@@ -16,7 +16,7 @@ export default function Alliances() {
                         whileInView={{ bottom: '0px', opacity: 1 }}
                         viewport={{ once: true }}
                         transition={{ delay: .3, duration: .5 }} 
-                        className={"relative flex items-center gap-3 text-center text-2xl md:text-3xl lg:text-4xl lg:leading-[3rem]"}
+                        className={"relative flex items-center gap-3 text-center text-2xl md:text-3xl lg:text-4xl lg:leading-[3rem] text-shadow"}
                     >
                         <span>Alianzas</span>
                         <span className={"font-bold"}>corporativas</span>

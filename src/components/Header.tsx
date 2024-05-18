@@ -1,5 +1,5 @@
 // React
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 // Next
 import { useRouter } from "next/router";
 import Image from "next/image";
@@ -9,6 +9,7 @@ import { styles } from "@/types";
 // Animations
 import { AnimatePresence, motion } from "framer-motion";
 import { headerLinks } from "@/utils/headerLinks";
+import useClickOutside from "@/hooks/useClickOutside";
 
 const ROUTES = ['/', '/alianzas', '/membresias', '/sostenibilidad', '/investigacion', '/blog', '/contacto'];
 
@@ -52,11 +53,11 @@ export default function Header({ styles }: NavbarProps) {
 
     return (
         <header className={`w-screen flex items-center justify-center h-28 z-20 transition-colors ${headerBackground ? 'shadow-md border-b' : ''}`} style={{ backgroundColor: headerBackground ? headerBackground : styles?.background, color: headerBackground ? '#7D8034' : styles?.color || 'white', position: styles?.position || 'fixed' }}>
-            <div className={"flex items-center justify-between lg:justify-center gap-16 px-10 w-full max-w-5xl"}>
+            <div className={"flex items-center justify-between lg:justify-center gap-10 px-10 w-full max-w-7xl"}>
                 <Link href={"/"}>
                     <Image src={headerBackground ? "/logo-color.png" : styles?.image == 'color' ? "/logo-color.png" : "/logo.png"} width={95} height={95} alt={"Logo"} />
                 </Link>
-                <nav className={"hidden lg:flex items-center gap-5"}>
+                <nav className={"hidden lg:flex items-center justify-between w-full"}>
                     <NavbarItem href={"/"} title={"Inicio"} />
                     <NavbarItem title={"Programas"} items={headerLinks.programs} />
                     <NavbarItem href={"/sostenibilidad/estrategia"} title={"Sostenibilidad"} />
@@ -64,6 +65,7 @@ export default function Header({ styles }: NavbarProps) {
                     <NavbarItem href={"/blog"} title={"Blog"} items={headerLinks.blog} />
                     <NavbarItem href={"/alianzas"} title={"Alianzas"} />
                     <NavbarItem href={"/investigacion"} title={"Investigacion"} />
+                    <NavbarItem href={"#"} title={"Quienes somos"} />
                     <NavbarItem href={"/contacto"} title={"Contactos"} />
                 </nav>
                 <button className={"block lg:hidden"} onClick={handleShowMenu}>
@@ -229,92 +231,15 @@ function MobileMenu({ closeMenu }: MobileMenuProps) {
                 <Link href={"/"}>
                     <Image src={"/logo-color.png"} width={95} height={95} alt={"Logo"} />
                 </Link>
-                <nav className={"flex flex-col items-center gap-5"}>
+                <nav className={"flex flex-col gap-5 items-center justify-between w-full"}>
                     <MenuItem href={"/"} title={"Inicio"} />
-                    <MenuItem title={"Programas"}>
-                        <div className={"flex flex-col gap-3 text-sm"}>
-                            <div className={"flex flex-col gap-1"}>
-                                <Link href={"#"} className={"font-semibold"}>Conservación ambiental</Link>
-                                <div>
-                                    <ul className={"ml-8 list-disc"}>
-                                        <li><Link href={"#"}>Conservación terrestre</Link></li>
-                                    </ul>
-                                    <ul className={"ml-14 list-decimal"}>
-                                        <li><Link href={"#"}>Flora</Link></li>
-                                        <li><Link href={"#"}>Fauna terrestre</Link></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div className={"flex flex-col gap-1"}>
-                                <Link href={"#"} className={"font-semibold"}>Desarrollo social</Link>
-                                <ul className={"ml-8 list-disc"}>
-                                    <li><Link href={"#"}>{`Programa "Ni una gota más", reconstrucción de techos`}</Link></li>
-                                    <li><Link href={"#"}>Programa de concienciación ambiental</Link></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </MenuItem>
-                    <MenuItem href={"/sostenibilidad/estrategia"} title={"Sostenibilidad"}>
-                        {/* <div className={"flex flex-col gap-3 text-sm"}>
-                            <Link href={"#"} className={"font-semibold"}>Estrategia de sostenibilidad Cap Cana</Link>
-                            <div className={"flex flex-col gap-1"}>
-                                <Link href={"#"} className={"font-semibold"}>Iniciativas sostenibles</Link>
-                                <div>
-                                    <ul className={"ml-8 list-disc"}>
-                                        <li><Link href={"#"}>Programa recuperación de PET</Link></li>
-                                        <li><Link href={"#"}>Huerto orgánico</Link></li>
-                                        <li><Link href={"#"}>Política de poda sostenible</Link></li>
-                                        <li><Link href={"#"}>Políticas de pesca y liberación especies de Marlín</Link></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div className={"flex flex-col gap-1"}>
-                                <Link href={"#"} className={"font-semibold"}>Distrito de Sostenibilidad</Link>
-                                <div>
-                                    <ul className={"ml-8 list-disc"}>
-                                        <li><Link href={"#"}>Centro de investigación</Link></li>
-                                    </ul>
-                                    <ul className={"ml-14 list-decimal mb-2"}>
-                                        <li><Link href={"#"}>Laboratorio Marino Punta Espada</Link></li>
-                                        <li><Link href={"#"}>Laboratorio botánico</Link></li>
-                                    </ul>
-                                    <ul className={"ml-8 list-disc"}>
-                                        <li><Link href={"#"}>Museo interactivo</Link></li>
-                                        <li><Link href={"#"}>Colecciones científicas de referencia</Link></li>
-                                        <li><Link href={"#"}>Vivero de plantas nativas</Link></li>
-                                        <li><Link href={"#"}>Huerto Orgánico</Link></li>
-                                        <li><Link href={"#"}>Mariposario</Link></li>
-                                        <li><Link href={"#"}>Apiario</Link></li>
-                                        <li><Link href={"#"}>Orquideario</Link></li>
-                                        <li><Link href={"#"}>Estación de compostaje</Link></li>
-                                        <li><Link href={"#"}>Eco-tienda</Link></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div> */}
-                    </MenuItem>
-                    <MenuItem href={"/membresias"} title={"Donaciones"}>
-                        {/* <div className={"flex flex-col gap-3 text-sm"}>
-                            <div className={"flex flex-col gap-1"}>
-                                <Link href={"/membresias"} className={"font-semibold"}>Membresías</Link>
-                                <ul className={"ml-8 list-disc"}>
-                                    <li><Link href={"/membresias"}>Membresía empresarial</Link></li>
-                                    <li><Link href={"/membresias"}>Membresía personal</Link></li>
-                                </ul>
-                            </div>
-                            <Link href={"/membresias"} className={"font-semibold"}>Donación única</Link>
-                            <Link href={"#"} className={"font-semibold"}>Compra nuestros productos</Link>
-                        </div> */}
-                    </MenuItem>
-                    <MenuItem href={"/blog"} title={"Blog"}>
-                        <div className={"flex flex-col gap-3 text-sm"}>
-                            <Link href={"#"} className={"font-semibold"}>Eventos</Link>
-                            <Link href={"#"} className={"font-semibold"}>Noticias</Link>
-                            <Link href={"#"} className={"font-semibold"}>Newsletter</Link>
-                        </div>
-                    </MenuItem>
+                    <MenuItem title={"Programas"} items={headerLinks.programs} />
+                    <MenuItem href={"/sostenibilidad/estrategia"} title={"Sostenibilidad"} />
+                    <MenuItem href={"/membresias"} title={"Donaciones"} />
+                    <MenuItem href={"/blog"} title={"Blog"} items={headerLinks.blog} />
                     <MenuItem href={"/alianzas"} title={"Alianzas"} />
-                    <MenuItem href={"/investigacion"} title={"Investigación"} />
+                    <MenuItem href={"/investigacion"} title={"Investigacion"} />
+                    <MenuItem href={"#"} title={"Quienes somos"} />
                     <MenuItem href={"/contacto"} title={"Contactos"} />
                 </nav>
             </div>
@@ -323,42 +248,128 @@ function MobileMenu({ closeMenu }: MobileMenuProps) {
 }
 
 
-function MenuItem({ title, href, children }: NavbarItem) {
-
+function MenuItem({ title, href, items, children }: NavbarItem) {
     const router = useRouter();
 
-    const currentPath = router.pathname;
+    const menuRef = useRef(null);
+    const currentPath = `/${router.pathname.split('/')[1]}`;
     const isActualRoute = ROUTES.find(route => route == currentPath);
 
-    const [showContent, setShowContent] = useState<boolean>(false);
-    const handleShowContent = () => setShowContent(!showContent);
+    const [showMenu, setShowMenu] = useState<boolean>(false);
+    const handleShowMenu = () => setShowMenu(true);
+
+    const [subMenus, setSubMenus] = useState<{ first: Item[], second: Item[] }>({ first: [], second: [] });
+    const handleSetSubmenus = (items: { first: Item[], second: Item[] }) => {
+        setSubMenus({ first: [], second: [] });
+        setSubMenus(items);
+    }
+
+    useClickOutside({ ref: menuRef, fn: () => setShowMenu(false) })
+
+    useEffect(() => {
+        if (!showMenu) {
+            setSubMenus({ first: [], second: [] });
+        }
+    }, [showMenu])
 
     return (
         <div
-            className={"flex flex-col gap-2 relative"}
+            ref={menuRef}
+            onClick={() => setShowMenu(true)}
+            className={"flex flex-col gap-2 relative text-center"}
         >
             <div
-                onClick={handleShowContent}
-                className={`flex items-center justify-center gap-2 ${isActualRoute == href ? 'font-semibold' : 'font-normal'} cursor-pointer`}
+                className={` ${isActualRoute == href ? 'font-semibold' : 'font-normal'}`}
             >
                 {href ? (
-                    <Link href={href} className={"futura-light-regular uppercase text-base"}>{title}</Link>
+                    <Link href={href} className={"futura-light-regular uppercase text-sm border-b-2 py-2 border-transparent hover:border-white transition-colors"}>{title}</Link>
                 ) : (
-                    <span className={"cursor-pointer futura-light-regular uppercase text-base"}>{title}</span>
+                    <span className={"cursor-pointer futura-light-regular uppercase text-sm border-b-2 py-2 border-transparent hover:border-white transition-colors"}>{title}</span>
                 )}
-                {children ? <i className="fa-regular fa-angle-down"></i> : null}
             </div>
-            {children ? (
+            {items && items?.length != 0 ? (
                 <AnimatePresence>
-                    {showContent ? (
+                    {showMenu ? (
                         <motion.div
+                            className={"grid grid-cols-1"}
                             initial={{ opacity: 0, left: 20 }}
                             animate={{ opacity: 1, left: 0 }}
                             exit={{ opacity: 0, left: 20 }}
                         >
-                            <div className={"py-5 border-b border-t"}>
-                                {children}
+                            <div className={`flex flex-col divide-y bg-white rounded p-3 py-2 min-w-52 ${subMenus.first.length != 0 ? 'border-t-2 border-b-2 border-[#AFA96E] rounded-t-none rounded-b-none' : ''}`}>
+                                {items.map((item, i) => item.href ? (
+                                    <div key={i} className={"border-[#e4e4e4]"}>
+                                        <Link
+                                            onClick={item?.subitems ? () => handleSetSubmenus({ first: item.subitems || [], second: [] }) : () => null}
+                                            className={"flex justify-center uppercase items-center gap-2 text-sm p-2 my-1 hover:bg-[#AFA96E4D] rounded whitespace-nowrap transition-colors"}
+                                            href={item.href}
+                                        >
+                                            <span className={"futura-light-regular whitespace-pre-wrap"}>{item.name}</span>
+                                            {item.subitems ? (<i className="fa-regular fa-arrow-down"></i>) : null}
+                                        </Link>
+                                    </div>
+                                ) : (
+                                    <div key={i} className={"border-[#AFA96E]"}>
+                                        <div
+                                            onClick={item?.subitems ? () => handleSetSubmenus({ first: item.subitems || [], second: [] }) : () => null}
+                                            className={"flex justify-center uppercase items-center gap-2 text-sm p-2 my-1 hover:bg-[#AFA96E4D] rounded whitespace-nowrap transition-colors"}
+                                        >
+                                            <span className={"futura-light-regular whitespace-pre-wrap"}>{item.name}</span>
+                                            {item.subitems ? (<i className="fa-regular fa-arrow-down"></i>) : null}
+                                        </div>
+                                    </div>
+                                ))}
                             </div>
+                            {subMenus.first.length != 0 && (
+                                <div className={`flex flex-col divide-y bg-white rounded rounded-l-none p-3 py-2 min-w-52 ${subMenus.second.length != 0 ? 'border-b-2 border-b-[#AFA96E] rounded-b-none' : ''}`}>
+                                    {subMenus.first.map((item, i) => item.href ? (
+                                        <div key={i} className={"border-[#AFA96E]"}>
+                                            <Link
+                                                onClick={item?.subitems ? () => handleSetSubmenus({ ...subMenus, second: item.subitems || [] }) : () => null}
+                                                className={"flex justify-center uppercase items-center gap-2 text-sm p-2 my-1 hover:bg-[#AFA96E4D] rounded whitespace-nowrap transition-colors"}
+                                                href={item.href}
+                                            >
+                                                <span className={"futura-light-regular whitespace-pre-wrap"}>{item.name}</span>
+                                                {item.subitems ? (<i className="fa-regular fa-arrow-down"></i>) : null}
+                                            </Link>
+                                        </div>
+                                    ) : (
+                                        <div key={i} className={"border-[#AFA96E]"}>
+                                            <div
+                                                onClick={item?.subitems ? () => handleSetSubmenus({ ...subMenus, second: item.subitems || [] }) : () => null}
+                                                className={"flex justify-center uppercase items-center gap-2 text-sm p-2 my-1 hover:bg-[#AFA96E4D] rounded whitespace-nowrap transition-colors"}
+                                            >
+                                                <span className={"futura-light-regular whitespace-pre-wrap"}>{item.name}</span>
+                                                {item.subitems ? (<i className="fa-regular fa-arrow-down"></i>) : null}
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
+                            {subMenus.second.length != 0 && (
+                                <div className={`flex flex-col divide-y bg-white rounded rounded-t-none p-3 py-2 min-w-52 ${subMenus.second.length != 0 ? 'border-b-2 border-b-[#AFA96E] rounded-b-none' : ''}`}>
+                                    {subMenus.second.map((item, i) => item.href ? (
+                                        <div key={i} className={"border-[#AFA96E]"}>
+                                            <Link
+                                                className={"flex justify-center uppercase items-center gap-2 text-sm p-2 my-1 hover:bg-[#AFA96E4D] rounded whitespace-nowrap transition-colors"}
+                                                href={item.href}
+                                            >
+                                                <span className={"futura-light-regular whitespace-pre-wrap"}>{item.name}</span>
+                                                {item.subitems ? (<i className="fa-regular fa-arrow-down"></i>) : null}
+                                            </Link>
+                                        </div>
+                                    ) : (
+                                        <div key={i} className={"border-[#AFA96E]"}>
+                                            <div
+                                                className={"flex justify-center uppercase items-center gap-2 text-sm p-2 my-1 hover:bg-[#AFA96E4D] rounded whitespace-nowrap transition-colors"}
+                                            >
+                                                <span className={"futura-light-regular whitespace-pre-wrap"}>{item.name}</span>
+                                                {item.subitems ? (<i className="fa-regular fa-arrow-down"></i>) : null}
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
                         </motion.div>
                     ) : null}
                 </AnimatePresence>

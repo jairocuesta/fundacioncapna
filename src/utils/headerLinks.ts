@@ -19,12 +19,58 @@ export const headerLinks: Props = {
                     href: "#",
                     subitems: [
                         {
-                            name: "Flora",
-                            href: "#",
+                            name: "Reproducción de plantas nativas y endémicas amenazadas",
+                            href: "/programas/programa-reproduccion-de-plantas-nativas-y-endemicas-amenazadas",
                         },
                         {
-                            name: "Fauna terrestre",
-                            href: "#",
+                            name: "Conservación de orquídeas nativas",
+                            href: "/programas/programa-conservacion-de-orquideas-nativas",
+                        },
+                        {
+                            name: "Protección de especies de fauna amenazadas",
+                            href: "/programas/programa-proteccion-de-especies-de-fauna-amenazadas",
+                        },
+                        {
+                            name: "Monitoreo de fauna silvestre",
+                            href: "/programas/programa-monitoreo-de-fauna-silvestre",
+                        },
+                        {
+                            name: "Atención primaria a fauna silvestre",
+                            href: "/programas/programa-atencion-primaria-fauna-silvestre",
+                        },
+                        {
+                            name: "Rescate de colmenas",
+                            href: "/programas/programa-rescate-de-colmenas",
+                        },
+                    ]
+                },
+                {
+                    name: "Conservación marina",
+                    href: "#",
+                    subitems: [
+                        {
+                            name: "Acuerdo de co-gestión del Santuario Marino Arrecifes del Sureste (SAMAR)",
+                            href: "/programas/programa-reproduccion-de-plantas-nativas-y-endemicas-amenazadas",
+                        },
+                        {
+                            name: "Rehabilitación de arrecifes de coral",
+                            href: "/programas/programa-rehabilitacion-de-arrecifes-de-coral",
+                        },
+                        {
+                            name: "Monitoreo de salud arrecifal y de enfermedades de coral",
+                            href: "/programas/programa-de-monitoreo-de-salud-arrecifal-y-de-enfermedades-de-coral",
+                        },
+                        {
+                            name: "Monitoreo de anidamiento de tortugas marinas",
+                            href: "/programas/programa-de-monitoreo-de-anidamiento-de-tortugas-marinas",
+                        },
+                        {
+                            name: "Registro de avistamientos de manatíes",
+                            href: "/programas/programa-de-registro-de-avistamientos-de-manaties",
+                        },
+                        {
+                            name: "Rescate de colmenas",
+                            href: "/programas/programa-rescate-de-colmenas",
                         },
                     ]
                 }
@@ -35,15 +81,23 @@ export const headerLinks: Props = {
             href: "#",
             subitems: [
                 {
-                    name: 'Programa "Ni una gota más", reconstrucción de techos',
+                    name: '"Ni una gota más", reconstrucción de techos',
                     href: "/programas/programa-ni-una-gota-mas-reconstruccion-de-techos",
                 },
                 {
-                    name: 'Programa de concienciación ambiental',
+                    name: 'Concienciación ambiental',
                     href: "/programas/programa-de-concienciacion-socioambiental",
+                },
+                {
+                    name: 'Apoyo Comunitario',
+                    href: "/programas/programa-de-apoyo-comunitario",
                 },
             ]
         },
+        {
+            name: "Sostenibilidad",
+            href: "/sostenibilidad/estrategia"
+        }
     ],
     sustainability: [
         {

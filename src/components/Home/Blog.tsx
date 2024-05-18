@@ -18,9 +18,9 @@ export default function HomeBlog() {
         (async () => {
             try {
                 const { data } = await axios.request({
-                    url: `/api/blogs/getByLimit?limit=3`,
+                    url: `/api/blogs/getByLimit?limit=3&page=1`,
                 });
-                setBlogs(data);
+                setBlogs(data.data);
             } catch (error) {
                 setBlogs([]);
             } finally {

@@ -141,3 +141,7 @@ ul.indicators {
     transform: translateX(calc(1.4rem + 50%));
   }
 }
+
+.image-scale:hover .program-image {
+  transform: scale(110%);
+}

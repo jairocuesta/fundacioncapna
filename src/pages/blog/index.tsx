@@ -73,7 +73,7 @@ export default function Blog({ data, page, pageCount }: { data: BlogType[]; page
                         transition={{ delay: .3, duration: .5 }}
                         className={"relative flex flex-col gap-4 px-5 sm:px-10 lg:px-28 py-20 w-full max-w-6xl mx-auto text-center"}
                     >
-                        <h1 className={"flex items-center gap-3 text-2xl md:text-3xl lg:text-4xl lg:leading-[3rem]"}>
+                        <h1 className={"flex items-center gap-3 text-2xl md:text-3xl lg:text-4xl lg:leading-[3rem] text-shadow"}>
                             Título de algún blog o artículo que se desee destacar
                         </h1>
                         <div className={"flex items-center justify-center gap-2"}>

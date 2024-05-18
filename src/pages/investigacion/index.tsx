@@ -17,7 +17,7 @@ export default function Investigation() {
                         whileInView={{ bottom: '0px', opacity: 1 }}
                         viewport={{ once: true }}
                         transition={{ delay: .3, duration: .5 }} 
-                        className={"relative text-center text-2xl md:text-3xl lg:text-4xl lg:leading-[3rem] font-bold"}
+                        className={"relative text-center text-2xl md:text-3xl lg:text-4xl lg:leading-[3rem] font-bold text-shadow"}
                     >Investigación</motion.h1>
                     <motion.span
                         animate={{ top: '30px' }}
@@ -48,7 +48,7 @@ export default function Investigation() {
                             whileInView={{ bottom: '0px', opacity: 1 }}
                             viewport={{ once: true }}
                             transition={{ delay: .3, duration: .5 }}   
-                            className={"relative text-white font-semibold text-2xl"}
+                            className={"relative text-white font-semibold text-xl futura-light-regular uppercase"}
                         >Documentos y soportes de cada investigación</motion.span>
                     </div>
                     <div className={"flex flex-col gap-16 py-16 max-w-6xl mx-auto px-5 sm:px-10"}>

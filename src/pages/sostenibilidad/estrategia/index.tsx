@@ -18,7 +18,7 @@ export default function SustainabilityStrategy() {
                         whileInView={{ bottom: '0px', opacity: 1 }}
                         viewport={{ once: true }}
                         transition={{ delay: .3, duration: .5 }}
-                        className={"relative text-center text-2xl md:text-3xl lg:text-4xl lg:leading-[3rem]"}
+                        className={"relative text-center text-2xl md:text-3xl lg:text-4xl lg:leading-[3rem] text-shadow"}
                     >
                         <div className={"font-bold"}>Estrategia de sostenibilidad</div>
                         <div>Cap Cana</div>

@@ -12,6 +12,7 @@ export default function Input({ htmlFor, type, label, placeholder, props, errors
     return (
         <div className={"flex flex-col"}>
             <label 
+                className={"text-sm"}
                 htmlFor={htmlFor}
             >
                 {label}

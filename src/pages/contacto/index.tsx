@@ -49,7 +49,7 @@ export default function Contact() {
                         whileInView={{ bottom: '0px', opacity: 1 }}
                         viewport={{ once: true }}
                         transition={{ delay: .3, duration: .5 }}
-                        className={"relative text-center text-2xl md:text-3xl lg:text-4xl lg:leading-[3rem] font-bold"}
+                        className={"relative text-center text-2xl md:text-3xl lg:text-4xl lg:leading-[3rem] font-bold text-shadow"}
                     >Contáctanos</motion.h1>
                 </div>
                 <div className={"relative flex flex-col items-start w-full max-w-5xl mx-auto py-20 px-5 sm:px-10 gap-20"}>
@@ -97,19 +97,19 @@ export default function Contact() {
                             <span className={"font-semibold text-xl text-[#7D8034]"}>Síguenos</span>
                             <div className={"flex items-center gap-3"}>
                                 <i className="fa-brands fa-instagram text-[#AFA96E]"></i>
-                                <a href={"https://instagram.com/fundacióncapcana"} target={'_blank'} className={"link font-medium"}>@fundacioncapcana</a>
+                                <a href={"https://instagram.com/fundacioncapcana"} target={'_blank'} className={"link font-medium"}>@fundacioncapcana</a>
                             </div>
                             <div className={"flex items-center gap-3"}>
                                 <i className="fa-brands fa-x-twitter text-[#AFA96E]"></i>
-                                <a href={"https://x.com/fundacióncapcana"} target={'_blank'} className={"link font-medium"}>@fundacioncapcana</a>
+                                <a href={"https://x.com/fundacioncapcana"} target={'_blank'} className={"link font-medium"}>@fundacioncapcana</a>
                             </div>
                             <div className={"flex items-center gap-3"}>
                                 <i className="fa-brands fa-facebook text-[#AFA96E]"></i>
-                                <a href={"https://facebook.com/fundacióncapcana"} target={'_blank'} className={"link font-medium"}>@fundacioncapcana</a>
+                                <a href={"https://facebook.com/fundacioncapcana"} target={'_blank'} className={"link font-medium"}>@fundacioncapcana</a>
                             </div>
                             <div className={"flex items-center gap-3"}>
                                 <i className="fa-brands fa-linkedin text-[#AFA96E]"></i>
-                                <a href={"https://linkedin.com/in/fundacióncapcana"} target={'_blank'} className={"link font-medium"}>@fundacioncapcana</a>
+                                <a href={"https://linkedin.com/in/fundacioncapcana"} target={'_blank'} className={"link font-medium"}>@fundacioncapcana</a>
                             </div>
                         </motion.div>
                         <motion.div
@@ -184,7 +184,7 @@ function ContactForm({ id }: { id: number; }) {
     }
 
     return (
-        <div className={"flex flex-col gap-4 w-full"}>
+        <div className={"flex flex-col gap-4 w-full futura-light-regular uppercase"}>
             <div className={"text-center text-xl text-[#7D8034] font-semibold"}>Completa los datos</div>
             <form 
                 onSubmit={handleSubmit(onSubmit)}
