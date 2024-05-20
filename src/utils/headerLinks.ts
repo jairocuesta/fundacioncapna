@@ -50,7 +50,7 @@ export const headerLinks: Props = {
                     subitems: [
                         {
                             name: "Acuerdo de co-gestión del Santuario Marino Arrecifes del Sureste (SAMAR)",
-                            href: "/programas/programa-reproduccion-de-plantas-nativas-y-endemicas-amenazadas",
+                            href: "/programas/acuerdo-de-co-gestion-del-santuario-marino-arrecifes-del-sureste",
                         },
                         {
                             name: "Rehabilitación de arrecifes de coral",

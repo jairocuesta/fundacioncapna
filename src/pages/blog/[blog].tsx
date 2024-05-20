@@ -36,7 +36,7 @@ export default function DynamicBlog({ blog }: BlogProps) {
                     <span className={"text-sm sm:text-base"}>{blog.author} - {date}</span>
                 </div>
                 <div className={"image-container"}>
-                    <Image src={`${process.env.NEXT_PUBLIC_STRAPI_URI}${blog.bannerImage.data.attributes.url}`} className={"image bg-center max-h-[30rem]"} fill alt={"Banner image"} />
+                    <Image loading={'eager'} src={`${process.env.NEXT_PUBLIC_STRAPI_URI}${blog.bannerImage.data.attributes.url}`} className={"image bg-center max-h-[30rem]"} fill alt={"Banner image"} />
                 </div>
                 <div className={"flex flex-col gap-6 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
                     {blog.content.map((item, i) => item.__component == 'blog-content.subtitle' ? (

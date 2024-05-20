@@ -7,7 +7,7 @@ export default function Footer() {
         <footer className={"bg-[#222222] py-16 text-white"}>
             <div className={"grid grid-cols-1 lg:grid-cols-4 gap-10 xl:gap-16 max-w-7xl mx-auto text-sm px-10"}>
                 <div className={"flex flex-col gap-7"}>
-                    <Image src={"/logo.png"} width={75} height={75} alt={"Logo"} />
+                    <Image loading={'eager'} src={"/logo.png"} width={75} height={75} alt={"Logo"} />
                     <p className={"text-neutral-200"}>Organización sin fines de Lucro creada en el año 2016</p>
                     <div className={"flex items-center gap-5 text-xl"}>
                         <i className="fa-brands fa-facebook-f"></i>

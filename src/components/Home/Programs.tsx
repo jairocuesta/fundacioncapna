@@ -17,7 +17,7 @@ export default function HomePrograms() {
                     <div className={`${styles.imageScale} relative h-full`}>
                         <div className={``}></div>
                         <div className={`${styles.programImageContainer}`}>
-                            <Image src={"/home/programs/1.webp"} className={`${styles.programImage}`} fill loading={'eager'} alt={"Programs image"} />
+                            <Image loading={'eager'} src={"/home/programs/1.webp"} className={`${styles.programImage}`} fill alt={"Programs image"} />
                             <div className={"absolute top-0 left-0 w-full h-full grid place-content-center text-white z-10"}>
                                 <h4 className={"text-xl font-bold futura-light-regular"}>Conservación ambiental</h4>
                             </div>
@@ -28,7 +28,7 @@ export default function HomePrograms() {
                     <div className={`${styles.imageScale} relative h-full`}>
                         <div className={``}></div>
                         <div className={`${styles.programImageContainer}`}>
-                            <Image src={"/home/programs/2-1.webp"} className={`${styles.programImage}`} fill loading={'eager'} alt={"Programs image"} />
+                            <Image loading={'eager'} src={"/home/programs/2-1.webp"} className={`${styles.programImage}`} fill alt={"Programs image"} />
                             <div className={"absolute top-0 left-0 w-full h-full grid place-content-center text-white z-10"}>
                                 <h4 className={"text-xl font-bold futura-light-regular"}>Desarrollo social</h4>
                             </div>
@@ -39,7 +39,7 @@ export default function HomePrograms() {
                     <div className={`${styles.imageScale} relative h-full sm:col-start-1 sm:col-end-3 sm:row-start-2 sm:row-end-4 xl:row-end-auto xl:row-start-auto xl:col-start-auto xl:col-end-auto`}>
                         <div className={``}></div>
                         <div className={`${styles.programImageContainer}`}>
-                            <Image src={"/home/programs/3.webp"} className={`${styles.programImage}`} fill loading={'eager'} alt={"Programs image"} />
+                            <Image loading={'eager'} src={"/home/programs/3.webp"} className={`${styles.programImage}`} fill alt={"Programs image"} />
                             <div className={"absolute top-0 left-0 w-full h-full grid place-content-center text-white z-10"}>
                                 <h4 className={"text-xl font-bold futura-light-regular"}>Sostenibilidad</h4>
                             </div>

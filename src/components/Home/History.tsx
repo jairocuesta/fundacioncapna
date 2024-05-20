@@ -62,12 +62,12 @@ export default function HomeHistory() {
                 >
                     <div className={"absolute w-full h-full top-28"} style={{ filter: 'grayscale(100%) contrast(0.05) opacity(.7)' }}>
                         <div className={styles.imageContainer} style={{ left: '2rem' }}>
-                            <Image src={"/home/bird.png"} className={styles.image} fill alt={"Bird image"} />
+                            <Image loading={'eager'} src={"/home/bird.png"} className={styles.image} fill alt={"Bird image"} />
                         </div>
                     </div>
                     <div className={"absolute w-full h-full"}>
                         <div className={styles.imageContainer} style={{ left: '2rem' }}>
-                            <Image src={"/home/bird.png"} className={styles.image} fill alt={"Bird image"} />
+                            <Image loading={'eager'} src={"/home/bird.png"} className={styles.image} fill alt={"Bird image"} />
                         </div>
                     </div>
                 </motion.div>

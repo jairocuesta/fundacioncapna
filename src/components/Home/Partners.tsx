@@ -41,36 +41,36 @@ export default function HomePartners() {
                 >
                     <div className={"grid grid-cols-5 gap-3"}>
                         <div className={`${styles.partnerImageContainer}`}>
-                            <Image src={"/home/partners/igol.webp"} className={`${styles.partnerImage}`} fill alt={"Partner image"} />
+                            <Image loading={'eager'} src={"/home/partners/igol.webp"} className={`${styles.partnerImage}`} fill alt={"Partner image"} />
                         </div>
                         <div className={`${styles.partnerImageContainer}`}>
-                            <Image src={"/home/partners/svg.webp"} className={`${styles.partnerImage}`} fill alt={"Partner image"} />
+                            <Image loading={'eager'} src={"/home/partners/svg.webp"} className={`${styles.partnerImage}`} fill alt={"Partner image"} />
                         </div>
                         <div className={`${styles.partnerImageContainer}`}>
-                            <Image src={"/home/partners/autotrac.webp"} className={`${styles.partnerImage}`} fill alt={"Partner image"} />
+                            <Image loading={'eager'} src={"/home/partners/autotrac.webp"} className={`${styles.partnerImage}`} fill alt={"Partner image"} />
                         </div>
                         <div className={`${styles.partnerImageContainer}`}>
-                            <Image src={"/home/partners/igol.webp"} className={`${styles.partnerImage}`} fill alt={"Partner image"} />
+                            <Image loading={'eager'} src={"/home/partners/igol.webp"} className={`${styles.partnerImage}`} fill alt={"Partner image"} />
                         </div>
                         <div className={`${styles.partnerImageContainer}`}>
-                            <Image src={"/home/partners/vector.webp"} className={`${styles.partnerImage}`} fill alt={"Partner image"} /> 
+                            <Image loading={'eager'} src={"/home/partners/vector.webp"} className={`${styles.partnerImage}`} fill alt={"Partner image"} /> 
                         </div>
                     </div>
                     <div className={"grid grid-cols-5 gap-3"}>
                         <div className={`${styles.partnerImageContainer}`}>
-                            <Image src={"/home/partners/autotrac.webp"} className={`${styles.partnerImage}`} fill alt={"Partner image"} />
+                            <Image loading={'eager'} src={"/home/partners/autotrac.webp"} className={`${styles.partnerImage}`} fill alt={"Partner image"} />
                         </div>
                         <div className={`${styles.partnerImageContainer}`}>
-                            <Image src={"/home/partners/igol.webp"} className={`${styles.partnerImage}`} fill alt={"Partner image"} />
+                            <Image loading={'eager'} src={"/home/partners/igol.webp"} className={`${styles.partnerImage}`} fill alt={"Partner image"} />
                         </div>
                         <div className={`${styles.partnerImageContainer}`}>
-                            <Image src={"/home/partners/vector.webp"} className={`${styles.partnerImage}`} fill alt={"Partner image"} />
+                            <Image loading={'eager'} src={"/home/partners/vector.webp"} className={`${styles.partnerImage}`} fill alt={"Partner image"} />
                         </div>
                         <div className={`${styles.partnerImageContainer}`}>
-                            <Image src={"/home/partners/svg.webp"} className={`${styles.partnerImage}`} fill alt={"Partner image"} />
+                            <Image loading={'eager'} src={"/home/partners/svg.webp"} className={`${styles.partnerImage}`} fill alt={"Partner image"} />
                         </div>
                         <div className={`${styles.partnerImageContainer}`}>
-                            <Image src={"/home/partners/igol.webp"} className={`${styles.partnerImage}`} fill alt={"Partner image"} />
+                            <Image loading={'eager'} src={"/home/partners/igol.webp"} className={`${styles.partnerImage}`} fill alt={"Partner image"} />
                         </div>
                     </div>
                 </motion.div>

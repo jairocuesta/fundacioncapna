@@ -21,7 +21,7 @@ export default function Blog({ blog }: BlogProps) {
         <div className={"flex flex-col items-start gap-3"}>
             <div className={"overflow-hidden rounded-lg w-full"}>
                 <div className={`${styles.blogImageContainer} lg:max-h-[13rem]`}>
-                    <Image src={blog.image} className={`${styles.blogImage}`} fill loading={'eager'} alt={"Blog image"} />
+                    <Image loading={'eager'} src={blog.image} className={`${styles.blogImage}`} fill alt={"Blog image"} />
                 </div>
             </div>
             <div className={"flex flex-col items-start gap-3 text-left"}>

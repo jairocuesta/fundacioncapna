@@ -1,7 +1,7 @@
 .firstImage {
-    background-image: url('/programas/rescate-de-colmenas/banner.webp');
+    background-image: url('/programas/example/1.jpg');
     background-repeat: no-repeat;
-    background-position: top;
+    background-position: center;
     background-size: cover;
 }
 

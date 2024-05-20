@@ -55,7 +55,7 @@ export default function Header({ styles }: NavbarProps) {
         <header className={`w-screen flex items-center justify-center h-28 z-20 transition-colors ${headerBackground ? 'shadow-md border-b' : ''}`} style={{ backgroundColor: headerBackground ? headerBackground : styles?.background, color: headerBackground ? '#7D8034' : styles?.color || 'white', position: styles?.position || 'fixed' }}>
             <div className={"flex items-center justify-between lg:justify-center gap-10 px-10 w-full max-w-7xl"}>
                 <Link href={"/"}>
-                    <Image src={headerBackground ? "/logo-color.png" : styles?.image == 'color' ? "/logo-color.png" : "/logo.png"} width={95} height={95} alt={"Logo"} />
+                    <Image loading={'eager'} src={headerBackground ? "/logo-color.png" : styles?.image == 'color' ? "/logo-color.png" : "/logo.png"} width={95} height={95} alt={"Logo"} />
                 </Link>
                 <nav className={"hidden lg:flex items-center justify-between w-full"}>
                     <NavbarItem href={"/"} title={"Inicio"} />
@@ -229,7 +229,7 @@ function MobileMenu({ closeMenu }: MobileMenuProps) {
             </button>
             <div className={"flex flex-col gap-16 items-center"}>
                 <Link href={"/"}>
-                    <Image src={"/logo-color.png"} width={95} height={95} alt={"Logo"} />
+                    <Image loading={'eager'} src={"/logo-color.png"} width={95} height={95} alt={"Logo"} />
                 </Link>
                 <nav className={"flex flex-col gap-5 items-center justify-between w-full"}>
                     <MenuItem href={"/"} title={"Inicio"} />
