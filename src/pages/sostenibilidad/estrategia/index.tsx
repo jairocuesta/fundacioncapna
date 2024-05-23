@@ -89,10 +89,10 @@ export default function SustainabilityStrategy() {
                     description={"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"}
                     images={[
                         {
-                            src: "/sostenibilidad/estrategia/2.jpg"
+                            src: "/sostenibilidad/1.webp"
                         },
                         {
-                            src: "/alianzas/1.jpeg",
+                            src: "/sostenibilidad/2.webp",
                         }
                     ]}
                 />
