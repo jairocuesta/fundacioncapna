@@ -32,8 +32,8 @@ export default function DesarrolloSocial() {
                     <p>El área de Desarrollo Social se vincula estrechamente con nuestro compromiso hacia las comunidades cercanas a nuestra zona, buscando promover su calidad de vida a través de propuestas de resiliencia, acompañamiento continuo a sus desafíos y educación constante en la gestión sostenible del medioambiente</p>
                     <ImageGrid images={[
                         { src: '', href: 'programa-ni-una-gota-mas-reconstruccion-de-techos', text: 'Programa "Ni una gota más", reconstrucción de techos' },
-                        { src: '', href: 'programa-de-concienciacion-socioambiental', text: 'Programa de concienciación socioambiental' },
-                        { src: '', href: 'programa-de-apoyo-comunitario', text: 'Programa de Apoyo Comunitario' },
+                        { src: '/programas/ni-una-gota-mas-reconstruccion-de-techos/banner.webp', href: 'programa-de-concienciacion-socioambiental', text: 'Programa de concienciación socioambiental' },
+                        { src: '/programas/apoyo-comunitario/banner.webp', href: 'programa-de-apoyo-comunitario', text: 'Programa de Apoyo Comunitario' },
                     ]} />
                 </div>
             </main>
