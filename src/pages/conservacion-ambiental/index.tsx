@@ -28,7 +28,7 @@ export default function ConservacionAmbiental() {
                         <i className="fa-regular fa-angles-down"></i>
                     </motion.span>
                 </div>
-                <div className={"flex flex-col gap-14 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20 py-20"}>
+                <div className={"flex flex-col gap-14 max-w-[95rem] mx-auto px-5 sm:px-10 lg:px-20 py-20"}>
                     <p>En Cap Cana, la conservación ambiental es más que una prioridad; es un compromiso inquebrantable con la preservación de uno de los paraísos naturales más impresionantes del Caribe. Nos enfocamos en equilibrar el desarrollo sostenible con la protección de la biodiversidad y los ecosistemas marinos y terrestres.</p>
                     <motion.div 
                         initial={{ bottom: '-30px', opacity: 0 }}
@@ -98,7 +98,7 @@ type ImageGridProps = {
 }
 function ImageGrid({ images }: ImageGridProps) {
     return (
-        <div className={"grid grid-cols-1 md:grid-cols-2 gap-5 pt-4"}>
+        <div className={"grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-14 pt-4"}>
             {images ? images.map((img, i) => (
                 <Link key={i} href={`/programas/${img.href}`} className={"relative overflow-hidden w-full image-scale"} style={{ aspectRatio: '4/3' }}>
                     {img.src ? (

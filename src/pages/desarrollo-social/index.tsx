@@ -28,7 +28,7 @@ export default function DesarrolloSocial() {
                         <i className="fa-regular fa-angles-down"></i>
                     </motion.span>
                 </div>
-                <div className={"flex flex-col gap-14 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20 py-20"}>
+                <div className={"flex flex-col gap-14 max-w-[95rem] mx-auto px-5 sm:px-10 lg:px-20 py-20"}>
                     <p>El área de Desarrollo Social se vincula estrechamente con nuestro compromiso hacia las comunidades cercanas a nuestra zona, buscando promover su calidad de vida a través de propuestas de resiliencia, acompañamiento continuo a sus desafíos y educación constante en la gestión sostenible del medioambiente</p>
                     <ImageGrid images={[
                         { src: '', href: 'programa-ni-una-gota-mas-reconstruccion-de-techos', text: 'Programa "Ni una gota más", reconstrucción de techos' },
@@ -50,7 +50,7 @@ type ImageGridProps = {
 }
 function ImageGrid({ images }: ImageGridProps) {
     return (
-        <div className={"grid grid-cols-1 md:grid-cols-2 gap-5"}>
+        <div className={"grid grid-cols-1 md:grid-cols-2 gap-5 gap-6 lg:gap-14 pt-4"}>
             {images ? images.map((img, i) => (
                 <Link key={i} href={`/programas/${img.href}`} className={"relative overflow-hidden w-full image-scale"} style={{ aspectRatio: '4/3' }}>
                     {img.src ? (
