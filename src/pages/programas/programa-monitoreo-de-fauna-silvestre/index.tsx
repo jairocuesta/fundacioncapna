@@ -59,7 +59,8 @@ export default function ProgramExample() {
                     images={[
                         {
                             src: "/programas/monitoreo-de-fauna-silvestre/1.mp4",
-                            type: "video"
+                            type: "video",
+                            // title: "Lorem Ipsum is simply dummy text of the printing and typesetting"
                         },
                         {
                             src: "/programas/monitoreo-de-fauna-silvestre/1.webp",

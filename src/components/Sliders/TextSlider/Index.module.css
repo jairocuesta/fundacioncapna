@@ -1,4 +1,5 @@
 .imageContainer {
+    position: relative;
     background: #000;
 }
 
@@ -8,7 +9,7 @@
 
 @media (min-width: 1024px) {
     .imageContainer>div, .imageContainer>video {
-        height: 30rem;
+        height: 45rem;
     }
 }
 

@@ -144,4 +144,5 @@ ul.indicators {
 
 .image-scale:hover .program-image {
   transform: scale(110%);
+  filter: brightness(.5);
 }

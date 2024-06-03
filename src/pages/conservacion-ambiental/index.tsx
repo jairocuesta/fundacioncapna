@@ -98,15 +98,16 @@ type ImageGridProps = {
 }
 function ImageGrid({ images }: ImageGridProps) {
     return (
-        <div className={"grid grid-cols-1 md:grid-cols-2 gap-5"}>
+        <div className={"grid grid-cols-1 md:grid-cols-2 gap-5 pt-4"}>
             {images ? images.map((img, i) => (
                 <Link key={i} href={`/programas/${img.href}`} className={"relative overflow-hidden w-full image-scale"} style={{ aspectRatio: '4/3' }}>
                     {img.src ? (
-                        <Image loading={'eager'} src={img.src} className={"w-full object-cover program-image transition-transform"} fill alt={img.text} />
+                        <div className={"grid place-content-end program-image transition-all h-full"} style={{ position: 'relative', backgroundImage: `url(${img.src})`, backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+
                     ) : (
                         <div className={"absolute w-full h-full bg-neutral-200"}></div>
                     )}
-                    <div className={"absolute w-full h-full grid place-content-center"}>
+                    <div className={"absolute top-0 w-full h-full grid place-content-center"}>
                         <span className={"text-shadow text-white futura-light-regular text-base sm:text-lg md:text-xl select-none uppercase text-center px-4"}>{img.text}</span>
                     </div>
                 </Link>
