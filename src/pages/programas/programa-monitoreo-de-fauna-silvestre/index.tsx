@@ -58,11 +58,34 @@ export default function ProgramExample() {
                     description={"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"}
                     images={[
                         {
-                            src: "/programas/monitoreo-de-fauna-silvestre/1.webp"
+                            src: "/programas/monitoreo-de-fauna-silvestre/1.mp4",
+                            type: "video"
+                        },
+                        {
+                            src: "/programas/monitoreo-de-fauna-silvestre/1.webp",
+                        },
+                        {
+                            src: "/programas/monitoreo-de-fauna-silvestre/2.mp4",
+                            type: "video"
                         },
                         {
                             src: "/programas/monitoreo-de-fauna-silvestre/2.webp",
-                        }
+                        },
+                        {
+                            src: "/programas/monitoreo-de-fauna-silvestre/3.mp4",
+                            type: "video"
+                        },
+                        {
+                            src: "/programas/monitoreo-de-fauna-silvestre/3.webp",
+                        },
+                        {
+                            src: "/programas/monitoreo-de-fauna-silvestre/4.mp4",
+                            type: "video"
+                        },
+                        {
+                            src: "/programas/monitoreo-de-fauna-silvestre/5.mp4",
+                            type: "video"
+                        },
                     ]}
                 />
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>

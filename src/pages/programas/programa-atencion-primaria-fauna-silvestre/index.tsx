@@ -57,10 +57,19 @@ export default function ProgramExample() {
                     description={"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"}
                     images={[
                         {
-                            src: "/programas/example/2.jpg"
+                            src: "/programas/atencion-primaria-fauna-silvestre/1.webp"
                         },
                         {
-                            src: "/sostenibilidad/estrategia/2.jpg",
+                            src: "/programas/atencion-primaria-fauna-silvestre/2.webp",
+                            classes: { backgroundPosition: '0 20%' }
+                        },
+                        {
+                            src: "/programas/atencion-primaria-fauna-silvestre/3.webp",
+                            classes: { backgroundPosition: '0 30%' }
+                        },
+                        {
+                            src: "/programas/atencion-primaria-fauna-silvestre/4.webp",
+                            classes: { backgroundPosition: '0 40%' }
                         }
                     ]}
                 />

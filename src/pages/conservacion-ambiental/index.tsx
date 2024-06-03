@@ -38,7 +38,7 @@ export default function ConservacionAmbiental() {
                         className={"relative overflow-hidden w-full"} 
                         style={{ aspectRatio: '16/7' }}
                     >
-                        <Image loading={'eager'} src={"/programas/conservacion-terrestre/banner.webp"} className={"w-full object-cover"} fill alt={"Conservación terrestre"} />
+                        <Image loading={'eager'} src={"/programas/conservacion-terrestre/portada.webp"} className={"w-full object-cover"} fill alt={"Conservación terrestre"} />
                         <div className={"absolute w-full h-full grid place-content-center"}>
                             <span className={"text-shadow text-white futura-light-regular uppercase text-lg sm:text-xl md:text-2xl select-none text-center px-4"}>Conservación terrestre</span>
                         </div>
@@ -48,25 +48,25 @@ export default function ConservacionAmbiental() {
                         <h3 className={"futura-light-regular text-2xl"}>Flora</h3>
                         <p>En los bosques de Cap Cana podemos encontrar unas 300 especies de plantas nativas y endémicas, algunas de estas especies son raras y se encuentran en peligro crítico de extinción.</p>
                         <ImageGrid images={[
-                            { src: '/programas/reproduccion-de-plantas-nativas-y-endemicas-amenazadas/banner.webp', href: 'programa-reproduccion-de-plantas-nativas-y-endemicas-amenazadas', text: 'Programa reproducción de plantas nativas y endémicas amenazadas' },
-                            { src: '/programas/conservacion-de-orquideas-nativas/banner.webp', href: 'programa-conservacion-de-orquideas-nativas', text: 'Programa conservación de orquídeas nativas' },
+                            { src: '/programas/reproduccion-de-plantas-nativas-y-endemicas-amenazadas/portada.webp', href: 'programa-reproduccion-de-plantas-nativas-y-endemicas-amenazadas', text: 'Programa reproducción de plantas nativas y endémicas amenazadas' },
+                            { src: '/programas/conservacion-de-orquideas-nativas/portada.webp', href: 'programa-conservacion-de-orquideas-nativas', text: 'Programa conservación de orquídeas nativas' },
                         ]} />
                     </div>
                     <div className={"flex flex-col gap-5"}>
                         <h3 className={"futura-light-regular text-2xl"}>Fauna terrestre</h3>
                         <p>Cap Cana es el hogar de numerosas especies de animales nativos y endémicos de la isla La Española, muchas de las cuales se encuentran amenazadas de extinción.</p>
                         <ImageGrid images={[
-                            { src: '/programas/proteccion-de-especies-de-fauna-amenazadas/banner.webp', href: 'programa-proteccion-de-especies-de-fauna-amenazadas', text: 'Programa protección de especies de fauna amenazadas' },
-                            { src: '/programas/monitoreo-de-fauna-silvestre/banner.webp', href: 'programa-monitoreo-de-fauna-silvestre', text: 'Programa monitoreo de fauna silvestre' },
-                            { src: '', href: 'programa-atencion-primaria-fauna-silvestre', text: 'Programa atención primaria a fauna silvestre' },
-                            { src: '/programas/rescate-de-colmenas/banner.webp', href: 'programa-rescate-de-colmenas', text: 'Programa rescate de colmenas' },
+                            { src: '/programas/proteccion-de-especies-de-fauna-amenazadas/portada.webp', href: 'programa-proteccion-de-especies-de-fauna-amenazadas', text: 'Programa protección de especies de fauna amenazadas' },
+                            { src: '/programas/monitoreo-de-fauna-silvestre/portada.webp', href: 'programa-monitoreo-de-fauna-silvestre', text: 'Programa monitoreo de fauna silvestre' },
+                            { src: '/programas/atencion-primaria-fauna-silvestre/portada.webp', href: 'programa-atencion-primaria-fauna-silvestre', text: 'Programa atención primaria a fauna silvestre' },
+                            { src: '/programas/rescate-de-colmenas/portada.webp', href: 'programa-rescate-de-colmenas', text: 'Programa rescate de colmenas' },
                         ]} />
                     </div>
                     <div
                         className={"relative overflow-hidden w-full"}
                         style={{ aspectRatio: '16/7' }}
                     >
-                        <Image loading={'eager'} src={"/programas/conservacion-marina/banner.webp"} className={"w-full object-cover"} fill alt={"Conservación marina"} />
+                        <Image loading={'eager'} src={"/programas/conservacion-marina/portada.webp"} className={"w-full object-cover"} fill alt={"Conservación marina"} />
                         <div className={"absolute w-full h-full grid place-content-center"}>
                             <span className={"text-shadow text-white futura-light-regular uppercase text-lg sm:text-xl md:text-2xl select-none text-center px-4"}>Conservación marina</span>
                         </div>
@@ -77,10 +77,10 @@ export default function ConservacionAmbiental() {
                         <p>Las aguas de la costa de Cap Cana cuentan con una variedad de ecosistemas marinos que incluye fondos arenosos, praderas de hierbas marinas y arrecifes de coral, los cuales albergan una rica biodiversidad y aportan bienes y servicios importantes para los seres humanos.</p>
                         <ImageGrid images={[
                             { src: '', href: 'acuerdo-de-co-gestion-del-santuario-marino-arrecifes-del-sureste', text: 'Acuerdo de co-gestión del Santuario Marino Arrecifes del Sureste (SAMAR)' },
-                            { src: '/programas/rehabilitacion-de-arrecifes-de-coral/banner.webp', href: 'programa-rehabilitacion-de-arrecifes-de-coral', text: 'Programa rehabilitación de arrecifes de coral' },
-                            { src: '', href: 'programa-de-monitoreo-de-salud-arrecifal-y-de-enfermedades-de-coral', text: 'Programa de monitoreo de salud arrecifal y de enfermedades de coral' },
-                            { src: '/programas/monitoreo-de-anidamiento-de-tortugas-marinas/banner.webp', href: 'programa-de-monitoreo-de-anidamiento-de-tortugas-marinas', text: 'Programa de monitoreo de anidamiento de tortugas marinas' },
-                            { src: '/programas/registro-de-avistamientos-de-manaties/banner.webp', href: 'programa-de-registro-de-avistamientos-de-manaties', text: 'Programa de registro de avistamientos de manatíes' },
+                            { src: '/programas/rehabilitacion-de-arrecifes-de-coral/portada.webp', href: 'programa-rehabilitacion-de-arrecifes-de-coral', text: 'Programa rehabilitación de arrecifes de coral' },
+                            { src: '/programas/monitoreo-de-salud-arrecifal-y-de-enfermedades-de-coral/portada.webp', href: 'programa-de-monitoreo-de-salud-arrecifal-y-de-enfermedades-de-coral', text: 'Programa de monitoreo de salud arrecifal y de enfermedades de coral' },
+                            { src: '/programas/monitoreo-de-anidamiento-de-tortugas-marinas/portada.webp', href: 'programa-de-monitoreo-de-anidamiento-de-tortugas-marinas', text: 'Programa de monitoreo de anidamiento de tortugas marinas' },
+                            { src: '/programas/registro-de-avistamientos-de-manaties/portada.webp', href: 'programa-de-registro-de-avistamientos-de-manaties', text: 'Programa de registro de avistamientos de manatíes' },
                         ]} />
                     </div>
                 </div>

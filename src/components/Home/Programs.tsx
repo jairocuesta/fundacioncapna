@@ -17,7 +17,7 @@ export default function HomePrograms() {
                     <div className={`${styles.imageScale} relative h-full`}>
                         <div className={``}></div>
                         <div className={`${styles.programImageContainer}`}>
-                            <Image loading={'eager'} src={"/home/programs/1.webp"} className={`${styles.programImage}`} fill alt={"Programs image"} />
+                            <Image loading={'eager'} src={"/home/programs/1.webp?v=1"} className={`${styles.programImage} object-left`} fill alt={"Programs image"} />
                             <div className={"absolute top-0 left-0 w-full h-full grid place-content-center text-white z-10"}>
                                 <h4 className={"text-xl font-bold futura-light-regular"}>Conservación ambiental</h4>
                             </div>

@@ -69,7 +69,22 @@ export default function ProgramExample() {
                         },
                         {
                             src: "/programas/proteccion-de-especies-de-fauna-amenazadas/2.webp",
-                            classes: { backgroundPosition: '0 25%' }
+                            classes: { backgroundPosition: '0 35%' }
+                        },
+                        {
+                            src: "/programas/proteccion-de-especies-de-fauna-amenazadas/3.webp",
+                        },
+                        {
+                            src: "/programas/proteccion-de-especies-de-fauna-amenazadas/4.webp",
+                        },
+                        {
+                            src: "/programas/proteccion-de-especies-de-fauna-amenazadas/5.webp",
+                        },
+                        {
+                            src: "/programas/proteccion-de-especies-de-fauna-amenazadas/6.webp",
+                        },
+                        {
+                            src: "/programas/proteccion-de-especies-de-fauna-amenazadas/7.webp",
                         }
                     ]}
                 />

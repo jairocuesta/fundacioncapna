@@ -69,9 +69,6 @@ export default function ProgramExample() {
                         {
                             src: "/programas/conservacion-de-orquideas-nativas/1.webp"
                         },
-                        {
-                            src: "/programas/conservacion-de-orquideas-nativas/2.webp",
-                        }
                     ]}
                 />
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>

@@ -66,10 +66,16 @@ export default function ProgramExample() {
                     description={"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"}
                     images={[
                         {
-                            src: "/programas/rehabilitacion-de-arrecifes-de-coral/1.webp"
+                            src: "/programas/rehabilitacion-de-arrecifes-de-coral/1.webp",
+                            classes: { backgroundPosition: '0 70%' }
                         },
                         {
                             src: "/programas/rehabilitacion-de-arrecifes-de-coral/2.webp",
+                            classes: { backgroundPosition: '0 60%' }
+                        },
+                        {
+                            src: "/programas/rehabilitacion-de-arrecifes-de-coral/3.webp",
+                            classes: { backgroundPosition: '0 70%' }
                         }
                     ]}
                 />

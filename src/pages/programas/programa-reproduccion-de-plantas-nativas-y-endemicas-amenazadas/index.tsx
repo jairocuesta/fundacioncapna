@@ -55,10 +55,18 @@ export default function ProgramExample() {
                     images={[
                         {
                             src: "/programas/reproduccion-de-plantas-nativas-y-endemicas-amenazadas/1.webp",
-                            classes: { backgroundPosition: '0 65%' }
+                            classes: { backgroundPosition: '0 85%' }
                         },
                         {
                             src: "/programas/reproduccion-de-plantas-nativas-y-endemicas-amenazadas/2.webp",
+                            classes: { backgroundPosition: '0 85%' }
+                        },
+                        {
+                            src: "/programas/reproduccion-de-plantas-nativas-y-endemicas-amenazadas/3.webp",
+                            classes: { backgroundPosition: '0 85%' }
+                        },
+                        {
+                            src: "/programas/reproduccion-de-plantas-nativas-y-endemicas-amenazadas/4.webp",
                             classes: { backgroundPosition: '0 85%' }
                         }
                     ]}

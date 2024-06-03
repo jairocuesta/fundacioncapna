@@ -1,19 +1,23 @@
-.imageContainer>div {
+.imageContainer {
+    background: #000;
+}
+
+.imageContainer>div, .imageContainer>video {
     width: 100%;
 }
 
 @media (min-width: 1024px) {
-    .imageContainer>div {
+    .imageContainer>div, .imageContainer>video {
         height: 30rem;
     }
 }
 
 @media (max-width: 1024px) {
-    .imageContainer>div {
+    .imageContainer>div, .imageContainer>div {
         padding: 8rem 0;
     }
 }
 
 .slider .indicators {
-    position:  absolute;
+    position: absolute;
 }

@@ -61,11 +61,17 @@ export default function ProgramExample() {
                     description={"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"}
                     images={[
                         {
-                            src: "/programas/example/2.jpg"
+                            src: "/programas/acuerdo-de-co-gestion-del-santuario-marino-arrecifes-del-sureste/1.webp"
                         },
                         {
-                            src: "/sostenibilidad/estrategia/2.jpg",
-                        }
+                            src: "/programas/acuerdo-de-co-gestion-del-santuario-marino-arrecifes-del-sureste/4.webp",
+                        },
+                        {
+                            src: "/programas/acuerdo-de-co-gestion-del-santuario-marino-arrecifes-del-sureste/3.webp",
+                        },
+                        {
+                            src: "/programas/acuerdo-de-co-gestion-del-santuario-marino-arrecifes-del-sureste/2.webp",
+                        },
                     ]}
                 />
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>

@@ -69,6 +69,9 @@ export default function ProgramExample() {
                         },
                         {
                             src: "/programas/registro-de-avistamientos-de-manaties/2.webp",
+                        },
+                        {
+                            src: "/programas/registro-de-avistamientos-de-manaties/3.webp",
                         }
                     ]}
                 />
