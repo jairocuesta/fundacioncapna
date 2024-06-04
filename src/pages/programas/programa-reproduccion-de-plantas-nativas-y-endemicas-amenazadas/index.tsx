@@ -8,6 +8,8 @@ import Image from "next/image";
 import styles from './Index.module.css';
 // Animations
 import { motion } from "framer-motion";
+import BecomeMember from "@/components/Banners/BecomeMember";
+import HowCanHelp from "@/components/Banners/HowCanHelp";
 
 export default function ProgramExample() {
     return (
@@ -91,18 +93,7 @@ export default function ProgramExample() {
                             biodiversidad.</p>
                     </div>
                 </div>
-                <div className={`flex items-end ${styles.thirdImage} h-[25rem] text-white px-5`}>
-                    <div className={"flex flex-col justify-center items-center gap-10 h-full w-full text-center"}>
-                        <h2 className={"text-xl sm:text-[1.7rem] sm:leading-9"}>
-                            <div>Te invitamos a <span className={"font-bold"}>ser parte de<br/> nuestra misión</span> de conservación</div>
-                        </h2>
-                        <Button
-                            href={"#"}
-                            text={"¿Cómo puedo ayudar?"}
-                            type={"white"}
-                        />
-                    </div>
-                </div>
+                <HowCanHelp />
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
                     <span className={"text-lg sm:text-xl font-bold text-[#7D8034]"}>Educación y conciencia</span>
                     <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
@@ -119,15 +110,7 @@ export default function ProgramExample() {
                             Dominicana. Descubre la belleza y la importancia de nuestras plantas.</p>
                     </div>
                 </div>
-                <div className={`max-w-7xl mx-auto px-5 sm:px-10 lg:px-20 w-full`}>
-                    <div className={`${styles.fourImage} grid place-content-center w-full h-[10rem] sm:h-[20rem] rounded-2xl`}>
-                        <Button
-                            href={"#"}
-                            text={"Conviértete en miembro"}
-                            type={"main"}
-                        />
-                    </div>
-                </div>
+                <BecomeMember />
             </div>
         </Layout>
     )

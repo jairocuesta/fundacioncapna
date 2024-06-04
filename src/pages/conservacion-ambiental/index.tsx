@@ -38,7 +38,7 @@ export default function ConservacionAmbiental() {
                         className={"relative overflow-hidden w-full"} 
                         style={{ aspectRatio: '16/7' }}
                     >
-                        <Image loading={'eager'} src={"/programas/conservacion-terrestre/portada.webp"} className={"w-full object-cover"} fill alt={"Conservación terrestre"} />
+                        <img src={"/programas/conservacion-terrestre/portada.webp"} className={"absolute w-full object-cover"} alt={"Conservación terrestre"} />
                         <div className={"absolute w-full h-full grid place-content-center"}>
                             <span className={"text-shadow text-white futura-light-regular uppercase text-lg sm:text-xl md:text-2xl select-none text-center px-4"}>Conservación terrestre</span>
                         </div>
@@ -66,7 +66,7 @@ export default function ConservacionAmbiental() {
                         className={"relative overflow-hidden w-full"}
                         style={{ aspectRatio: '16/7' }}
                     >
-                        <Image loading={'eager'} src={"/programas/conservacion-marina/portada.webp"} className={"w-full object-cover"} fill alt={"Conservación marina"} />
+                        <img src={"/programas/conservacion-marina/portada.webp"} className={"absolute w-full object-cover"} alt={"Conservación marina"} />
                         <div className={"absolute w-full h-full grid place-content-center"}>
                             <span className={"text-shadow text-white futura-light-regular uppercase text-lg sm:text-xl md:text-2xl select-none text-center px-4"}>Conservación marina</span>
                         </div>
@@ -76,7 +76,7 @@ export default function ConservacionAmbiental() {
                         <h3 className={"futura-light-regular text-2xl"}>Vida marina</h3>
                         <p>Las aguas de la costa de Cap Cana cuentan con una variedad de ecosistemas marinos que incluye fondos arenosos, praderas de hierbas marinas y arrecifes de coral, los cuales albergan una rica biodiversidad y aportan bienes y servicios importantes para los seres humanos.</p>
                         <ImageGrid images={[
-                            { src: '', href: 'acuerdo-de-co-gestion-del-santuario-marino-arrecifes-del-sureste', text: 'Acuerdo de co-gestión del Santuario Marino Arrecifes del Sureste (SAMAR)' },
+                            { src: '/programas/acuerdo-de-co-gestion-del-santuario-marino-arrecifes-del-sureste/portada.webp', href: 'acuerdo-de-co-gestion-del-santuario-marino-arrecifes-del-sureste', text: 'Acuerdo de co-gestión del Santuario Marino Arrecifes del Sureste (SAMAR)' },
                             { src: '/programas/rehabilitacion-de-arrecifes-de-coral/portada.webp', href: 'programa-rehabilitacion-de-arrecifes-de-coral', text: 'Programa rehabilitación de arrecifes de coral' },
                             { src: '/programas/monitoreo-de-salud-arrecifal-y-de-enfermedades-de-coral/portada.webp', href: 'programa-de-monitoreo-de-salud-arrecifal-y-de-enfermedades-de-coral', text: 'Programa de monitoreo de salud arrecifal y de enfermedades de coral' },
                             { src: '/programas/monitoreo-de-anidamiento-de-tortugas-marinas/portada.webp', href: 'programa-de-monitoreo-de-anidamiento-de-tortugas-marinas', text: 'Programa de monitoreo de anidamiento de tortugas marinas' },
@@ -102,7 +102,7 @@ function ImageGrid({ images }: ImageGridProps) {
             {images ? images.map((img, i) => (
                 <Link key={i} href={`/programas/${img.href}`} className={"relative overflow-hidden w-full image-scale"} style={{ aspectRatio: '4/3' }}>
                     {img.src ? (
-                        <div className={"grid place-content-end program-image transition-all h-full"} style={{ position: 'relative', backgroundImage: `url(${img.src})`, backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+                        <img src={img.src} className={"absolute w-full h-full object-cover program-image transition-transform"} alt={img.text} />
 
                     ) : (
                         <div className={"absolute w-full h-full bg-neutral-200"}></div>

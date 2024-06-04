@@ -1,7 +1,7 @@
 .firstImage {
-    background-image: url('/investigacion/1.jpeg');
+    background-image: url('/investigacion/1.webp');
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top;
     background-size: cover;
 }
 

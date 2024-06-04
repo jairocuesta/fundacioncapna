@@ -9,6 +9,7 @@ import Link from "next/link";
 import styles from './Index.module.css';
 // Animations
 import { motion } from "framer-motion";
+import BecomeMember from "@/components/Banners/BecomeMember";
 
 export default function ProgramExample() {
     return (
@@ -130,12 +131,12 @@ export default function ProgramExample() {
                         </p>
                     </div>
                 </div>
-                <div className={`flex items-end ${styles.thirdImage} py-16 text-white px-5`}>
+                <div className={`flex items-end ${styles.thirdImage} py-16 text-white px-5 h-[35rem]`}>
                     <div className={"flex flex-col justify-center items-center gap-10 h-full w-full text-center"}>
                         <h2 className={"text-xl sm:text-[1.7rem] sm:leading-9"}>
                             <span className={"font-bold"}>Únete a nuestra misión</span>
                         </h2>
-                        <p className="w-full sm:w-2/3 lg:w-1/2 mx-auto px-5 ">
+                        <p className="w-full sm:w-2/3 lg:w-1/2 mx-auto px-5 text-white">
                             Te invitamos a ser parte de nuestra misión de conservación. Si eres buzo certificado, regístrate para
                             ser voluntario de nuestro programa. Si aún no eres buzo certificado, puedes tomar el curso o comprar
                             una excursión Discover Scuba Diving a nuestro vivero de corales con el centro de buceo Sea Klub
@@ -152,15 +153,7 @@ export default function ProgramExample() {
                         </p>
                     </div>
                 </div>
-                <div className={`max-w-7xl mx-auto px-5 sm:px-10 lg:px-20 w-full`}>
-                    <div className={`${styles.fourImage} grid place-content-center w-full h-[10rem] sm:h-[20rem] rounded-2xl`}>
-                        <Button
-                            href={"#"}
-                            text={"Conviértete en miembro"}
-                            type={"main"}
-                        />
-                    </div>
-                </div>
+                <BecomeMember />
 
                 {/* TODO: HACER GALERIA DE IMAGENES */}
             </div>

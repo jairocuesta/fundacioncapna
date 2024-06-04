@@ -95,7 +95,7 @@ function SlideItem({ slide, title, description, slideState, slideIndex }: SlideI
                     <source src={slide.src} type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
-                <section className={"absolute bottom-0 left-0 pb-10 lg:pb-28 flex flex-col gap-4 px-5 lg:px-52 text-center lg:text-left 2xl:w-3/4"}>
+                <section className={"absolute bottom-0 left-0 pb-10 lg:pb-28 flex flex-col gap-4 px-5 lg:px-52 text-center lg:text-left 2xl:w-3/4"} style={{ zIndex: '-1' }}>
                     {title ? <h2 className={"text-xl sm:text-[1.7rem] font-medium"}>{slide.title}</h2> : null}
                     {description ? <p className={"text-sm sm:text-base text-white text-shadow"}>{slide.description}</p> : null}
                 </section>
