@@ -1,26 +1,26 @@
 .firstImage {
-    background-image: url('/membresias/1.jpeg');
+    background-image: url('/membresias/banner.webp');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 .secondImage {
-    background-image: url('/membresias/2.jpeg');
+    background-image: url('/membresias/1.webp');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 .thirdImage {
-    background-image: url('/membresias/3.jpeg');
+    background-image: url('/membresias/2.webp');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 .fourImage {
-    background-image: url('/membresias/4.png');
+    background-image: url('/membresias/3.webp');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
