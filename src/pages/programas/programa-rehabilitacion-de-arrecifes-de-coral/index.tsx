@@ -10,6 +10,7 @@ import styles from './Index.module.css';
 // Animations
 import { motion } from "framer-motion";
 import BecomeMember from "@/components/Banners/BecomeMember";
+import Breadcrumb from "@/components/Breadcrumb";
 
 export default function ProgramExample() {
     return (
@@ -33,6 +34,14 @@ export default function ProgramExample() {
                     >
                         <i className="fa-regular fa-angles-down"></i>
                     </motion.span>
+                </div>
+                <div className={"flex flex-col gap-4 max-w-7xl w-full px-5 sm:px-10 lg:px-20 mx-auto"}>
+                    <Breadcrumb
+                        routes={[
+                            { name: 'Conservación ambiental', url: '/conservacion-ambiental' },
+                            { name: 'Rehabilitacion de arrecifes de coral', url: '/programas/programa-rehabilitacion-de-arrecifes-de-coral' },
+                        ]}
+                    />
                 </div>
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
                     <span className={"text-lg sm:text-xl font-bold text-[#7D8034]"}>Los arrecifes de coral, grandes héroes</span>
@@ -66,10 +75,10 @@ export default function ProgramExample() {
                     title={"Frase para esta imagen que irá aquí"}
                     description={"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"}
                     images={[
-                        {
+                        /* {
                             src: "/programas/rehabilitacion-de-arrecifes-de-coral/1.webp",
                             classes: { backgroundPosition: '0 70%' }
-                        },
+                        }, */
                         {
                             src: "/programas/rehabilitacion-de-arrecifes-de-coral/2.webp",
                             classes: { backgroundPosition: '0 60%' }
@@ -153,7 +162,7 @@ export default function ProgramExample() {
                         </p>
                     </div>
                 </div>
-                <BecomeMember />
+                {/* <BecomeMember /> */}
 
                 {/* TODO: HACER GALERIA DE IMAGENES */}
             </div>

@@ -85,7 +85,7 @@ export const headerLinks: Props = {
                     href: "/programas/programa-ni-una-gota-mas-reconstruccion-de-techos",
                 },
                 {
-                    name: 'Concienciación ambiental',
+                    name: 'Concienciación socioambiental',
                     href: "/programas/programa-de-concienciacion-socioambiental",
                 },
                 {

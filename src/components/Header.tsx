@@ -61,11 +61,11 @@ export default function Header({ styles }: NavbarProps) {
                     <NavbarItem href={"/"} title={"Inicio"} />
                     <NavbarItem title={"Programas"} items={headerLinks.programs} />
                     <NavbarItem href={"/sostenibilidad/estrategia"} title={"Sostenibilidad"} />
-                    <NavbarItem href={"/membresias"} title={"Donaciones"} />
+                    {/* <NavbarItem href={"/membresias"} title={"Donaciones"} /> */}
                     <NavbarItem href={"/blog"} title={"Blog"} items={headerLinks.blog} />
                     <NavbarItem href={"/alianzas"} title={"Alianzas"} />
                     <NavbarItem href={"/investigacion"} title={"Investigacion"} />
-                    <NavbarItem href={"#"} title={"Quienes somos"} />
+                    <NavbarItem href={"/quienes-somos"} title={"Quienes somos"} />
                     <NavbarItem href={"/contacto"} title={"Contactos"} />
                 </nav>
                 <button className={"block lg:hidden"} onClick={handleShowMenu}>
@@ -107,7 +107,7 @@ function NavbarItem({ title, href, items }: NavbarItem) {
     }
 
     useEffect(() => {
-        if(!showMenu) {
+        if (!showMenu) {
             setSubMenus({ first: [], second: [] });
         }
     }, [showMenu])
@@ -139,9 +139,9 @@ function NavbarItem({ title, href, items }: NavbarItem) {
                             <div className={`flex flex-col divide-y bg-white shadow-md rounded text-black p-3 py-2 min-w-52 ${subMenus.first.length != 0 ? 'border-r-2 border-r-[#AFA96E] rounded-r-none' : ''}`}>
                                 {items.map((item, i) => item.href ? (
                                     <div key={i} className={"border-[#e4e4e4]"}>
-                                        <Link 
-                                            onMouseEnter={item?.subitems ? () => handleSetSubmenus({first: item.subitems || [], second: []}) : () => null} 
-                                            className={"flex items-center gap-2 text-sm p-2 my-1 hover:bg-[#AFA96E4D] rounded whitespace-nowrap transition-colors"} 
+                                        <Link
+                                            onMouseEnter={item?.subitems ? () => handleSetSubmenus({ first: item.subitems || [], second: [] }) : () => null}
+                                            className={"flex items-center gap-2 text-sm p-2 my-1 hover:bg-[#AFA96E4D] rounded whitespace-nowrap transition-colors"}
                                             href={item.href}
                                         >
                                             <span className={"futura-light-regular"}>{item.name}</span>
@@ -150,8 +150,8 @@ function NavbarItem({ title, href, items }: NavbarItem) {
                                     </div>
                                 ) : (
                                     <div key={i} className={"border-[#AFA96E]"}>
-                                        <div 
-                                            onMouseEnter={item?.subitems ? () => handleSetSubmenus({ first: item.subitems || [], second: []}) : () => null} 
+                                        <div
+                                            onMouseEnter={item?.subitems ? () => handleSetSubmenus({ first: item.subitems || [], second: [] }) : () => null}
                                             className={"flex items-center gap-2 text-sm p-2 my-1 hover:bg-[#AFA96E4D] rounded whitespace-nowrap transition-colors"}
                                         >
                                             <span className={"futura-light-regular"}>{item.name}</span>
@@ -231,15 +231,15 @@ function MobileMenu({ closeMenu }: MobileMenuProps) {
                 <Link href={"/"}>
                     <Image loading={'eager'} src={"/logo-color.png"} width={95} height={95} alt={"Logo"} />
                 </Link>
-                <nav className={"flex flex-col gap-5 items-center justify-between w-full"}>
+                <nav className={"flex flex-col items-center justify-between w-fit"}>
                     <MenuItem href={"/"} title={"Inicio"} />
                     <MenuItem title={"Programas"} items={headerLinks.programs} />
                     <MenuItem href={"/sostenibilidad/estrategia"} title={"Sostenibilidad"} />
-                    <MenuItem href={"/membresias"} title={"Donaciones"} />
+                    {/* <MenuItem href={"/membresias"} title={"Donaciones"} /> */}
                     <MenuItem href={"/blog"} title={"Blog"} items={headerLinks.blog} />
                     <MenuItem href={"/alianzas"} title={"Alianzas"} />
                     <MenuItem href={"/investigacion"} title={"Investigacion"} />
-                    <MenuItem href={"#"} title={"Quienes somos"} />
+                    <MenuItem href={"/quienes-somos"} title={"Quienes somos"} />
                     <MenuItem href={"/contacto"} title={"Contactos"} />
                 </nav>
             </div>
@@ -258,9 +258,9 @@ function MenuItem({ title, href, items, children }: NavbarItem) {
     const [showMenu, setShowMenu] = useState<boolean>(false);
     const handleShowMenu = () => setShowMenu(true);
 
-    const [subMenus, setSubMenus] = useState<{ first: Item[], second: Item[] }>({ first: [], second: [] });
-    const handleSetSubmenus = (items: { first: Item[], second: Item[] }) => {
-        setSubMenus({ first: [], second: [] });
+    const [subMenus, setSubMenus] = useState<{ first: { items: Item[] | [], item: number }, second: { items: Item[] | [], item: number } }>({ first: { items: [], item: 0 }, second: { items: [], item: 0 } });
+    const handleSetSubmenus = (items: { first: { items: Item[] | [], item: number }, second: { items: Item[] | [], item: number } }) => {
+        setSubMenus({ first: { items: [], item: 0 }, second: { items: [], item: 0 } });
         setSubMenus(items);
     }
 
@@ -268,112 +268,48 @@ function MenuItem({ title, href, items, children }: NavbarItem) {
 
     useEffect(() => {
         if (!showMenu) {
-            setSubMenus({ first: [], second: [] });
+            setSubMenus({ first: { items: [], item: 0 }, second: { items: [], item: 0 } });
         }
     }, [showMenu])
 
     return (
         <div
             ref={menuRef}
-            onClick={() => setShowMenu(true)}
-            className={"flex flex-col gap-2 relative text-center"}
+            className={"flex flex-col gap-2 relative text-center py-2 w-full"}
         >
             <div
-                className={` ${isActualRoute == href ? 'font-semibold' : 'font-normal'}`}
+                className={` ${isActualRoute == href ? 'font-semibold' : 'font-normal'} futura-light-regular uppercase text-sm flex flex-col`}
             >
-                {href ? (
-                    <Link href={href} className={"futura-light-regular uppercase text-sm border-b-2 py-2 border-transparent hover:border-white transition-colors"}>{title}</Link>
-                ) : (
-                    <span className={"cursor-pointer futura-light-regular uppercase text-sm border-b-2 py-2 border-transparent hover:border-white transition-colors"}>{title}</span>
-                )}
-            </div>
-            {items && items?.length != 0 ? (
-                <AnimatePresence>
-                    {showMenu ? (
-                        <motion.div
-                            className={"grid grid-cols-1"}
-                            initial={{ opacity: 0, left: 20 }}
-                            animate={{ opacity: 1, left: 0 }}
-                            exit={{ opacity: 0, left: 20 }}
-                        >
-                            <div className={`flex flex-col divide-y bg-white rounded p-3 py-2 min-w-52 ${subMenus.first.length != 0 ? 'border-t-2 border-b-2 border-[#AFA96E] rounded-t-none rounded-b-none' : ''}`}>
-                                {items.map((item, i) => item.href ? (
-                                    <div key={i} className={"border-[#e4e4e4]"}>
-                                        <Link
-                                            onClick={item?.subitems ? () => handleSetSubmenus({ first: item.subitems || [], second: [] }) : () => null}
-                                            className={"flex justify-center uppercase items-center gap-2 text-sm p-2 my-1 hover:bg-[#AFA96E4D] rounded whitespace-nowrap transition-colors"}
-                                            href={item.href}
-                                        >
-                                            <span className={"futura-light-regular whitespace-pre-wrap"}>{item.name}</span>
-                                            {item.subitems ? (<i className="fa-regular fa-arrow-down"></i>) : null}
-                                        </Link>
-                                    </div>
-                                ) : (
-                                    <div key={i} className={"border-[#AFA96E]"}>
-                                        <div
-                                            onClick={item?.subitems ? () => handleSetSubmenus({ first: item.subitems || [], second: [] }) : () => null}
-                                            className={"flex justify-center uppercase items-center gap-2 text-sm p-2 my-1 hover:bg-[#AFA96E4D] rounded whitespace-nowrap transition-colors"}
-                                        >
-                                            <span className={"futura-light-regular whitespace-pre-wrap"}>{item.name}</span>
-                                            {item.subitems ? (<i className="fa-regular fa-arrow-down"></i>) : null}
-                                        </div>
+                <Link onClick={() => setShowMenu(!showMenu)} href={href ?? '#'} className={`${showMenu ? 'border-b border-[#7D8034]' : ''} py-2 transition-colors`}>{title}</Link>
+                {items && items?.length != 0 ? (
+                    <AnimatePresence>
+                        {showMenu ? (
+                            <motion.div
+                                className={"grid grid-cols-1"}
+                                initial={{ opacity: 0, left: 20 }}
+                                animate={{ opacity: 1, left: 0 }}
+                                exit={{ opacity: 0, left: 20 }}
+                            >
+                                {items.map((item, i) => (
+                                    <div key={i} className={"flex flex-col py-2"}> 
+                                        <Link className={`${subMenus.first.items.length != 0 && subMenus.first.item == i ? 'pb-2 border-b border-[#7D8034]' : ''}`} href={item.href ?? '#'} onClick={() => subMenus.first.items.length == 0 ? handleSetSubmenus({ first: { items: item.subitems ?? [], item: i}, second: { items: [], item: 0 } }) : handleSetSubmenus({ first: { items: [], item: 0 }, second: { items: [], item: 0 }})}>{item.name}</Link>
+                                        {i == subMenus.first.item && subMenus.first.items.map((item, j) => (
+                                            <div key={j} className={`flex flex-col py-2 ${subMenus.second.items.length != 0 && subMenus.second.item == j ? 'pb-2 border-b border-[#7D8034]' : ''}`}>
+                                                <Link className={`${subMenus.second.items.length != 0 && subMenus.second.item == j ? 'pb-2 border-b border-[#7D8034]' : ''}`} href={item.href ?? '#'} onClick={() => subMenus.second.items.length == 0 ? handleSetSubmenus({ first: { items: subMenus.first.items, item: subMenus.first.item }, second: { items: item.subitems ?? [], item: j } }) : handleSetSubmenus({ first: { items: subMenus.first.items, item: subMenus.first.item }, second: { items: [], item: 0 } })}>{item.name}</Link>
+                                                {j == subMenus.second.item && subMenus.second.items.map((item, k) => (
+                                                    <div key={k} className={"flex flex-col py-2"}>
+                                                        <Link href={item.href ?? '#'}>{item.name}</Link>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        ))}
                                     </div>
                                 ))}
-                            </div>
-                            {subMenus.first.length != 0 && (
-                                <div className={`flex flex-col divide-y bg-white rounded rounded-l-none p-3 py-2 min-w-52 ${subMenus.second.length != 0 ? 'border-b-2 border-b-[#AFA96E] rounded-b-none' : ''}`}>
-                                    {subMenus.first.map((item, i) => item.href ? (
-                                        <div key={i} className={"border-[#AFA96E]"}>
-                                            <Link
-                                                onClick={item?.subitems ? () => handleSetSubmenus({ ...subMenus, second: item.subitems || [] }) : () => null}
-                                                className={"flex justify-center uppercase items-center gap-2 text-sm p-2 my-1 hover:bg-[#AFA96E4D] rounded whitespace-nowrap transition-colors"}
-                                                href={item.href}
-                                            >
-                                                <span className={"futura-light-regular whitespace-pre-wrap"}>{item.name}</span>
-                                                {item.subitems ? (<i className="fa-regular fa-arrow-down"></i>) : null}
-                                            </Link>
-                                        </div>
-                                    ) : (
-                                        <div key={i} className={"border-[#AFA96E]"}>
-                                            <div
-                                                onClick={item?.subitems ? () => handleSetSubmenus({ ...subMenus, second: item.subitems || [] }) : () => null}
-                                                className={"flex justify-center uppercase items-center gap-2 text-sm p-2 my-1 hover:bg-[#AFA96E4D] rounded whitespace-nowrap transition-colors"}
-                                            >
-                                                <span className={"futura-light-regular whitespace-pre-wrap"}>{item.name}</span>
-                                                {item.subitems ? (<i className="fa-regular fa-arrow-down"></i>) : null}
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-                            )}
-                            {subMenus.second.length != 0 && (
-                                <div className={`flex flex-col divide-y bg-white rounded rounded-t-none p-3 py-2 min-w-52 ${subMenus.second.length != 0 ? 'border-b-2 border-b-[#AFA96E] rounded-b-none' : ''}`}>
-                                    {subMenus.second.map((item, i) => item.href ? (
-                                        <div key={i} className={"border-[#AFA96E]"}>
-                                            <Link
-                                                className={"flex justify-center uppercase items-center gap-2 text-sm p-2 my-1 hover:bg-[#AFA96E4D] rounded whitespace-nowrap transition-colors"}
-                                                href={item.href}
-                                            >
-                                                <span className={"futura-light-regular whitespace-pre-wrap"}>{item.name}</span>
-                                                {item.subitems ? (<i className="fa-regular fa-arrow-down"></i>) : null}
-                                            </Link>
-                                        </div>
-                                    ) : (
-                                        <div key={i} className={"border-[#AFA96E]"}>
-                                            <div
-                                                className={"flex justify-center uppercase items-center gap-2 text-sm p-2 my-1 hover:bg-[#AFA96E4D] rounded whitespace-nowrap transition-colors"}
-                                            >
-                                                <span className={"futura-light-regular whitespace-pre-wrap"}>{item.name}</span>
-                                                {item.subitems ? (<i className="fa-regular fa-arrow-down"></i>) : null}
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-                            )}
-                        </motion.div>
-                    ) : null}
-                </AnimatePresence>
-            ) : null}
+                            </motion.div>
+                        ) : null}
+                    </AnimatePresence>
+                ) : null}
+            </div>
         </div>
     )
 }

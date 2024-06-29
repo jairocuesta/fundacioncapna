@@ -31,33 +31,33 @@ export default function HomeImpact() {
                 >
                     <div className={"text-white max-w-[11rem]"}>
                         <span className={"flex items-center justify-center font-bold text-2xl"}>
-                            +<CounterAnimation from={0} to={34} />K
+                            <CounterAnimation from={0} to={34} />
                         </span>
-                        <p>Injected humour and the like. Lorem ipsus</p>
+                        <span>Injected humour and the like. Lorem ipsus</span>
                     </div>
                     <div className={"text-white max-w-[11rem]"}>
                         <span className={"flex items-center justify-center font-bold text-2xl"}>
-                            +<CounterAnimation from={0} to={34} />K
+                            <CounterAnimation from={0} to={34} />
                         </span>
-                        <p>Injected humour and the like. Lorem ipsus</p>
+                        <span>Injected humour and the like. Lorem ipsus</span>
                     </div>
                     <div className={"text-white max-w-[11rem]"}>
                         <span className={"flex items-center justify-center font-bold text-2xl"}>
-                            +<CounterAnimation from={0} to={34} />K
+                            <CounterAnimation from={0} to={34} />
                         </span>
-                        <p>Injected humour and the like. Lorem ipsus</p>
+                        <span>Injected humour and the like. Lorem ipsus</span>
                     </div>
                     <div className={"text-white max-w-[11rem]"}>
                         <span className={"flex items-center justify-center font-bold text-2xl"}>
-                            +<CounterAnimation from={0} to={34} />K
+                            <CounterAnimation from={0} to={34} />
                         </span>
-                        <p>Injected humour and the like. Lorem ipsus</p>
+                        <span>Injected humour and the like. Lorem ipsus</span>
                     </div>
                     <div className={"text-white max-w-[11rem]"}>
                         <span className={"flex items-center justify-center font-bold text-2xl"}>
-                            +<CounterAnimation from={0} to={34} />K
+                            <CounterAnimation from={0} to={34} />
                         </span>
-                        <p>Injected humour and the like. Lorem ipsus</p>
+                        <span>Injected humour and the like. Lorem ipsus</span>
                     </div>
                 </motion.div>
                 <motion.div

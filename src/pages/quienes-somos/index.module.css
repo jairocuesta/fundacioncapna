@@ -1,0 +1,14 @@
+.firstImage {
+    background-image: url('/quienes-somos/1.jpg');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+}
+
+.secondImage {
+    background-image: url('/investigacion/2.jpeg');
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    background-size: cover;
+    background-position-y: 63%;
+}

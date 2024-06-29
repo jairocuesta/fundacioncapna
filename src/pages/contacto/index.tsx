@@ -67,7 +67,7 @@ export default function Contact() {
                             <span className={"font-semibold text-xl text-[#7D8034]"}>¡Llámanos!</span>
                             <div className={"flex items-center gap-3"}>
                                 <i className="fa-light fa-phone-volume text-[#AFA96E]"></i>
-                                <a href={"tel:180023552356"} target={'_blank'} className={"link font-medium"}>1800 - 2355-2356</a>
+                                <a href={"tel:8094697241"} target={'_blank'} className={"link font-medium"}>(809) 469-7241</a>
                             </div>
                         </motion.div>
                         <motion.div
@@ -80,7 +80,7 @@ export default function Contact() {
                             <span className={"font-semibold text-xl text-[#7D8034]"}>Escríbenos</span>
                             <div className={"flex items-center gap-3"}>
                                 <i className="fa-brands fa-whatsapp text-[#AFA96E]"></i>
-                                <a href={"tel:180023552356"} target={'_blank'} className={"link font-medium"}>1800 - 2355-2356</a>
+                                <a href={"tel:8094697241"} target={'_blank'} className={"link font-medium"}>(809) 469-7241</a>
                             </div>
                             <div className={"flex items-center gap-3"}>
                                 <i className="fa-light fa-envelope text-[#AFA96E]"></i>

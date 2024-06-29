@@ -22,7 +22,7 @@ export default function Footer() {
                         <span>Box 3233</span>
                         <span>1810 Kings Way</span>
                         <span>King Street, 5th Avenue, New York</span>
-                        <span>Punta Cana: 1800 - 2355-2356</span>
+                        <span>Punta Canaw: (809) 469-7241</span>
                         <span>info@fundacióncapcana.org</span>
                     </div>
                 </div>
@@ -41,10 +41,10 @@ export default function Footer() {
                             <i className="fa-regular fa-angle-right text-lg"></i>
                             <span>Sostenibilidad</span>
                         </Link>
-                        <Link href={"/membresias"} className={"flex items-center gap-3 border-b py-2 border-neutral-500"}>
+                        {/* <Link href={"/membresias"} className={"flex items-center gap-3 border-b py-2 border-neutral-500"}>
                             <i className="fa-regular fa-angle-right text-lg"></i>
                             <span>Donaciones</span>
-                        </Link>
+                        </Link> */}
                         <Link href={"/blog"} className={"flex items-center gap-3 border-b py-2 border-neutral-500"}>
                             <i className="fa-regular fa-angle-right text-lg"></i>
                             <span>Blog</span>

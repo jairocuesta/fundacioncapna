@@ -11,13 +11,20 @@ export default function HomeHero() {
                     [
                         { 
                             src: '/home/banner/3.webp',
+                            type: 'image'
                         },
                         {
-                            src: '/home/banner/1.webp'
+                            src: '/home/banner/1.webp',
+                            type: 'image'
                         },
                         {
-                            src: '/home/banner/2.webp'
+                            src: '/home/banner/2.webp',
+                            type: 'image'
                         },
+                        {
+                            src: '/home/banner/farallon.mp4',
+                            type: 'video'
+                        }
                     ]
                 } 
             />

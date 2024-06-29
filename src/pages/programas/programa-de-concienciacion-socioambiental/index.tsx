@@ -6,6 +6,7 @@ import Image from "next/image";
 import styles from './Index.module.css';
 // Animations
 import { motion } from "framer-motion";
+import Breadcrumb from "@/components/Breadcrumb";
 
 export default function ProgramExample() {
     return (
@@ -29,6 +30,14 @@ export default function ProgramExample() {
                     >
                         <i className="fa-regular fa-angles-down"></i>
                     </motion.span>
+                </div>
+                <div className={"flex flex-col gap-4 max-w-7xl w-full px-5 sm:px-10 lg:px-20 mx-auto"}>
+                    <Breadcrumb
+                        routes={[
+                            { name: 'Desarrollo social', url: '/desarrollo-social' },
+                            { name: 'Concienciacion socioambiental', url: '/programas/programa-de-concienciacion-socioambiental' },
+                        ]}
+                    />
                 </div>
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
                     <span className={"text-lg sm:text-xl font-bold text-[#7D8034]"}></span>

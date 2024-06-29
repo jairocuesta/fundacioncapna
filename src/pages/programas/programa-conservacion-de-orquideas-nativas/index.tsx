@@ -11,6 +11,7 @@ import styles from './Index.module.css';
 import { motion } from "framer-motion";
 import BecomeMember from "@/components/Banners/BecomeMember";
 import HowCanHelp from "@/components/Banners/HowCanHelp";
+import Breadcrumb from "@/components/Breadcrumb";
 
 export default function ProgramExample() {
     return (
@@ -34,6 +35,14 @@ export default function ProgramExample() {
                     >
                         <i className="fa-regular fa-angles-down"></i>
                     </motion.span>
+                </div>
+                <div className={"flex flex-col gap-4 max-w-7xl w-full px-5 sm:px-10 lg:px-20 mx-auto"}>
+                    <Breadcrumb
+                        routes={[
+                            { name: 'Conservación ambiental', url: '/conservacion-ambiental' },
+                            { name: 'Conservacion de orquideas nativas', url: '/programas/programa-conservacion-de-orquideas-nativas' },
+                        ]}
+                    />
                 </div>
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
                     <span className={"text-lg sm:text-xl font-bold text-[#7D8034]"}>Conocer para cuidar</span>
@@ -112,7 +121,7 @@ export default function ProgramExample() {
                         </p>
                     </div>
                 </div>
-                <BecomeMember />
+                {/* <BecomeMember /> */}
 
                 {/* TODO: HACER GALERIA DE IMAGENES */}
             </div>

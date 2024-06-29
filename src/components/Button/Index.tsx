@@ -2,6 +2,7 @@ import Link from "next/link";
 
 type ButtonProps = {
     href?: string;
+    hrefTarget?: '_blank' | '_self';
     type: 'main' | 'white';
     text: string;
     buttonType?: "submit" | "button" | "reset" | undefined;
@@ -10,7 +11,7 @@ type ButtonProps = {
     py?: string;
     px?: string;
 }
-export default function Button({ href, type, text, buttonType, action, classes, py, px }: ButtonProps) {
+export default function Button({ href, hrefTarget, type, text, buttonType, action, classes, py, px }: ButtonProps) {
 
     const classesObj = {
         main: "font-bold uppercase bg-[#afa96e] hover:bg-[#8f8959] text-white rounded-full transition-colors text-center futura-light-regular",
@@ -18,7 +19,7 @@ export default function Button({ href, type, text, buttonType, action, classes, 
     }
 
     return href ? (
-        <Link className={classes ? classes : `${classesObj[type]} ${px ? px : 'px-10'} ${py ? py : 'py-2'}`} href={href}>{text}</Link>
+        <Link target={hrefTarget ?? '_self'} className={classes ? classes : `${classesObj[type]} ${px ? px : 'px-10'} ${py ? py : 'py-2'}`} href={href}>{text}</Link>
     ) : (
         <button type={buttonType} className={classes ? classes : `${classesObj[type]} ${px ? px : 'px-10'} ${py ? py : 'py-2'}`} onClick={action ? action : () => null}>{text}</button>
     )

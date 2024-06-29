@@ -20,7 +20,7 @@ export default function HomeAbout() {
                     className={"relative grid grid-cols-1 md:grid-cols-3 gap-7 max-w-fit md:max-w-3xl mx-auto pb-10"}
                 >
                     <div className={"grid place-content-center gap-6 text-center bg-white text-[#afa96e] rounded-2xl h-40 px-10 md:px-0"}>
-                        <i className="fa-light fa-squirrel text-4xl"></i>
+                        <i className="fa-light fa-crow text-4xl"></i>
                         <span className={"flex items-center justify-center text-4xl font-bold"}>
                             <CounterAnimation from={0} to={34} />
                         </span>
@@ -34,7 +34,7 @@ export default function HomeAbout() {
                         <span className={"text-lg futura-light-regular"}>Botellas recolectadas</span>
                     </div>
                     <div className={"grid place-content-center gap-6 text-center bg-white text-[#afa96e] rounded-2xl h-40 px-10 md:px-0"}>
-                        <i className="fa-light fa-tree text-4xl"></i>
+                        <i className="fa-sharp fa-light fa-tree-deciduous text-4xl"></i>
                         <span className={"flex items-center justify-center text-4xl font-bold"}>
                             <CounterAnimation from={0} to={34} />
                         </span>
@@ -59,12 +59,8 @@ export default function HomeAbout() {
                             transition={{ delay: .3, duration: .5 }}
                             className={"relative text-[#7d7d7d] leading-9 px-5"}
                         >
-                            Somos una Organización Sin Fines de Lucro creada en el año 2016, que surge como el
-                            brazo ejecutor de todas las acciones de sostenibilidad de la Ciudad Destino Cap Cana,  con
-                            el propósito de
-                            promover la conservación de los diversos ecosistemas y recursos naturales,
-                            así como  el desarrollo de las
-                            comunidades de la zona.
+                            Construyendo una ciudad destino sostenible protegiendo nuestros recursos naturales 
+                            a través de programas de conservación ambiental y desarrollo comunitario.
                         </motion.p>
                         <motion.div
                             initial={{ bottom: '-50px', opacity: 0 }}
@@ -74,7 +70,7 @@ export default function HomeAbout() {
                             className={"relative"}
                         >
                             <Button
-                                href={"#"}
+                                href={"/quienes-somos"}
                                 type={"main"}
                                 text={"Conoce más"}
                             />

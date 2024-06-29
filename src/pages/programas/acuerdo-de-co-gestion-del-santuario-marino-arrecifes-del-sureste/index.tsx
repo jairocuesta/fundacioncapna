@@ -11,6 +11,7 @@ import styles from './Index.module.css';
 import { motion } from "framer-motion";
 import BecomeMember from "@/components/Banners/BecomeMember";
 import HowCanHelp from "@/components/Banners/HowCanHelp";
+import Breadcrumb from "@/components/Breadcrumb";
 
 export default function ProgramExample() {
     return (
@@ -34,6 +35,14 @@ export default function ProgramExample() {
                     >
                         <i className="fa-regular fa-angles-down"></i>
                     </motion.span>
+                </div>
+                <div className={"flex flex-col gap-4 max-w-7xl w-full px-5 sm:px-10 lg:px-20 mx-auto"}>
+                    <Breadcrumb
+                        routes={[
+                            { name: 'Conservación ambiental', url: '/conservacion-ambiental' },
+                            { name: 'Acuerdo de co-gestion del santuario marino arrecifes del sureste', url: '/programas/acuerdo-de-co-gestion-del-santuario-marino-arrecifes-del-sureste' },
+                        ]}
+                    />
                 </div>
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
                     <span className={"text-lg sm:text-xl font-bold text-[#7D8034]"}>La segunda área protegida más grande del país</span>
@@ -86,7 +95,7 @@ export default function ProgramExample() {
                         </p>
                     </div>
                 </div>
-                <HowCanHelp />
+                <HowCanHelp type={'marino'} />
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
                     <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
                         <p>
@@ -96,9 +105,9 @@ export default function ProgramExample() {
                         </p>
                     </div>
                 </div>
-                <BecomeMember />
 
-                {/* TODO: HACER GALERIA DE IMAGENES */}
+                {/* <BecomeMember /> */}
+
             </div>
         </Layout>
     )

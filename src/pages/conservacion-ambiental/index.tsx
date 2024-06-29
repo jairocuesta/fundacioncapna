@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import styles from './Index.module.css'
+import Button from "@/components/Button/Index";
 
 export default function ConservacionAmbiental() {
     return (
@@ -82,6 +83,15 @@ export default function ConservacionAmbiental() {
                             { src: '/programas/monitoreo-de-anidamiento-de-tortugas-marinas/portada.webp', href: 'programa-de-monitoreo-de-anidamiento-de-tortugas-marinas', text: 'Programa de monitoreo de anidamiento de tortugas marinas' },
                             { src: '/programas/registro-de-avistamientos-de-manaties/portada.webp', href: 'programa-de-registro-de-avistamientos-de-manaties', text: 'Programa de registro de avistamientos de manatíes' },
                         ]} />
+                    </div>
+                    <div className={"flex flex-col gap-4 w-fit"}>
+                        <span className={"text-lg sm:text-xl font-bold text-[#7D8034]"}>Inaturalist</span>
+                        <Button 
+                            type={"main"}
+                            href={"https://www.inaturalist.org/projects/biodiversidad-de-cap-cana"} 
+                            hrefTarget={"_blank"}
+                            text={"Ir a Inaturalist"} 
+                        />
                     </div>
                 </div>
             </main>
