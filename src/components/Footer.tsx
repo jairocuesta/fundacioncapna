@@ -15,14 +15,12 @@ export default function Footer() {
                         <i className="fa-brands fa-x-twitter"></i>
                         <i className="fa-brands fa-linkedin-in"></i>
                     </div>
+                    <span>Developed by <Link target={"_blank"} className={"text-[#AFA96E] underline"} href={"https://www.agencia7am.com/"}>7am Agencia Multimedia SRL</Link></span>
                 </div>
                 <div className={"flex flex-col gap-3"}>
                     <span className={"text-[#AFA96E] font-semibold"}>Contacto</span>
                     <div className={"flex flex-col gap-1 text-neutral-200"}>
-                        <span>Box 3233</span>
-                        <span>1810 Kings Way</span>
-                        <span>King Street, 5th Avenue, New York</span>
-                        <span>Punta Canaw: (809) 469-7241</span>
+                        <span>Distrito de Sostenibilidad, Caleton, Cap Cana, Rep. Dominicana.</span>
                         <span>info@fundacióncapcana.org</span>
                     </div>
                 </div>

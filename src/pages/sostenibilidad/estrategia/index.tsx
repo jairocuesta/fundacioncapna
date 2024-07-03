@@ -8,6 +8,7 @@ import styles from './Index.module.css';
 // Animations
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Subtitle from "@/components/Subtitle";
 
 export default function SustainabilityStrategy() {
     return (
@@ -70,7 +71,7 @@ export default function SustainabilityStrategy() {
                         </div>
                     </div>
                     <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20 pt-6"}>
-                        <span className={"text-lg sm:text-xl font-bold text-[#898C31]"}>Distrito de sostenibilidad Cap Cana</span>
+                        <Subtitle text={"Distrito de sostenibilidad Cap Cana"} />
                         <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
                             <p>
                                 El Distrito de Sostenibilidad de la Ciudad Destino Cap Cana es el espacio geográfico donde se
@@ -98,7 +99,7 @@ export default function SustainabilityStrategy() {
                     ]}
                 />
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20 pt-16"}>
-                    <span className={"text-lg sm:text-xl font-bold text-[#898C31]"}>Iniciativas sostenibles</span>
+                    <Subtitle text={"Iniciativas sostenibles"} />
                     <div className={"grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6 text-sm sm:text-base"}>
                         <div className={"flex flex-col gap-1"}>
                             <span className={"text-[#898C31] leading-6 sm:leading-8"}>Programa recuperación de PET</span>
@@ -142,7 +143,7 @@ export default function SustainabilityStrategy() {
                     </div>
                 </div>
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20 pt-6"}>
-                    <span className={"text-lg sm:text-xl font-bold text-[#898C31]"}>Asesoría de paisajismo sostenible</span>
+                    <Subtitle text={"Asesoría de paisajismo sostenible"} />
                     <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
                         <p>
                             Brindamos asesorías de paisajismo sostenible, creando hermosos jardines utilizando plantas 

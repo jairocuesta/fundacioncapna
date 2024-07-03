@@ -11,6 +11,7 @@ import styles from './Index.module.css';
 import { motion } from "framer-motion";
 import BecomeMember from "@/components/Banners/BecomeMember";
 import Breadcrumb from "@/components/Breadcrumb";
+import Subtitle from "@/components/Subtitle";
 
 export default function ProgramExample() {
     return (
@@ -35,7 +36,7 @@ export default function ProgramExample() {
                         <i className="fa-regular fa-angles-down"></i>
                     </motion.span>
                 </div>
-                <div className={"flex flex-col gap-4 max-w-7xl w-full px-5 sm:px-10 lg:px-20 mx-auto"}>
+                <div className={"relative -top-8 flex flex-col gap-4 max-w-7xl w-full px-5 sm:px-10 lg:px-20 mx-auto"}>
                     <Breadcrumb
                         routes={[
                             { name: 'Conservación ambiental', url: '/conservacion-ambiental' },
@@ -44,7 +45,7 @@ export default function ProgramExample() {
                     />
                 </div>
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
-                    <span className={"text-lg sm:text-xl font-bold text-[#7D8034]"}>Los arrecifes de coral, grandes héroes</span>
+                    <Subtitle text={"Los arrecifes de coral, grandes héroes"} />
                     <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
                         <p>
                             Los arrecifes de coral cubren menos del 1% del fondo del océano, pero albergan al 25% de todas las
@@ -59,7 +60,7 @@ export default function ProgramExample() {
                     </div>
                 </div>
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
-                    <span className={"text-lg sm:text-xl font-bold text-[#7D8034]"}>El grave declive</span>
+                    <Subtitle text={"El grave declive"} />
                     <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
                         <p>
                             No obstante, los arrecifes están en grave declive. En el área del Gran Caribe, el Golfo de México y las
@@ -90,7 +91,7 @@ export default function ProgramExample() {
                     ]}
                 />
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
-                    <span className={"text-lg sm:text-xl font-bold text-[#7D8034]"}>Recuperando los arrecifes de Cap Cana</span>
+                    <Subtitle text={"Recuperando los arrecifes de Cap Cana"} />
                     <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
                         <p>
                             Nuestro Programa de Rehabilitación de Arrecifes de Coral se dedica a la reproducción y recuperación
@@ -99,7 +100,7 @@ export default function ProgramExample() {
                     </div>
                 </div>
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
-                    <span className={"text-lg sm:text-xl font-bold text-[#7D8034]"}>Propagando corales asexualmente</span>
+                    <Subtitle text={"Propagando corales asexualmente"} />
                     <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
                         <p>
                             Actualmente contamos con un vivero de corales bajo el mar frente a la playa de Juanillo, un sitio que
@@ -114,7 +115,7 @@ export default function ProgramExample() {
                     </div>
                 </div>
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
-                    <span className={"text-lg sm:text-xl font-bold text-[#7D8034]"}>Propagando larvas de coral mediante reproducción sexual asistida</span>
+                    <Subtitle text={"Propagando larvas de coral mediante reproducción sexual asistida"} />
                     <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
                         <p>
                             Nos estamos preparando para incursionar próximamente en una técnica alternativa, la propagación de
@@ -129,7 +130,7 @@ export default function ProgramExample() {
                     </div>
                 </div>
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
-                    <span className={"text-lg sm:text-xl font-bold text-[#7D8034]"}>Educación y conciencia</span>
+                    <Subtitle text={"Educación y conciencia"} />
                     <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
                         <p>
                             El Programa de Rehabilitación de Arrecifes de Coral no se termina cuando introducimos los corales

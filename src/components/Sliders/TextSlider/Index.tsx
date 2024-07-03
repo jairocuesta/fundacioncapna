@@ -23,7 +23,7 @@ export default function TextSlider({ images, classes, title, description }: Slid
     const properties = {
         prevArrow: <button className={"text-slider-prev-arrow"}><i className="fa-light fa-circle-arrow-left text-[2rem]"></i></button>,
         nextArrow: <button className={"text-slider-next-arrow"}><i className="fa-light fa-circle-arrow-right text-[2rem]"></i></button>,
-        autoplay: false,
+        autoplay: true,
         duration: 5000,
         transitionDuration: 500,
         easing: 'ease',
@@ -95,18 +95,18 @@ function SlideItem({ slide, title, description, slideState, slideIndex }: SlideI
                     <source src={slide.src} type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
-                {/* <section className={"absolute bottom-0 left-0 pb-10 lg:pb-28 flex flex-col gap-4 px-5 lg:px-52 text-center lg:text-left 2xl:w-3/4"} style={{ zIndex: '-1' }}>
-                    {title ? <h2 className={"text-xl sm:text-[1.7rem] font-medium"}>{slide.title}</h2> : null}
-                    {description ? <p className={"text-sm sm:text-base text-white text-shadow"}>{slide.description}</p> : null}
-                </section> */}
+                <section className={"absolute bottom-0 left-0 pb-10 lg:pb-20 flex flex-col gap-4 px-5 lg:px-52 text-center lg:text-left 2xl:w-3/4"}>
+                    {title ? <h2 className={"text-xl sm:text-[1.7rem] font-medium"}>Galeria de Imágenes</h2> : null}
+                    {description ? <p className={"text-sm sm:text-base text-white text-shadow"}>Usa las fechas de la derecha para pasar la imagen.</p> : null}
+                </section>
             </div>
         ) : (
             <div className={`${styles.imageContainer}`}>
-                <div className={"grid place-content-end"} style={{ position: 'relative', backgroundImage: `url(${slide.src})`, backgroundSize: 'cover', backgroundPosition: slide?.classes?.backgroundPosition ?? 'center' }}>
-                    {/* <div className={"pb-10 lg:pb-32 flex flex-col gap-4 px-5 lg:px-52 text-center lg:text-left 2xl:w-3/4"}>
-                        <h2 className={"text-xl sm:text-[1.7rem] font-medium text-shadow"}>{title}</h2>
-                        <p className={"text-sm sm:text-base text-white"}>{description}</p>
-                    </div> */}
+                <div className={"flex items-end"} style={{ position: 'relative', backgroundImage: `url(${slide.src})`, backgroundSize: 'cover', backgroundPosition: slide?.classes?.backgroundPosition ?? 'center' }}>
+                    <div className={"pb-10 lg:pb-20 flex flex-col gap-4 px-5 lg:px-52 text-center lg:text-left 2xl:w-3/4"}>
+                        <h2 className={"text-xl sm:text-[1.7rem] font-medium text-shadow"}>Galeria de Imágenes</h2>
+                        <p className={"text-sm sm:text-base text-white"}>Usa las fechas de la derecha para pasar la imagen.</p>
+                    </div>
                 </div>
             </div>
         )

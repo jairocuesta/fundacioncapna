@@ -1,14 +1,13 @@
 .firstImage {
-    background-image: url('/investigacion/1.webp');
+    background-image: url('/investigacion/3.webp');
     background-repeat: no-repeat;
-    background-position: top;
+    background-position: 0 70%;
     background-size: cover;
 }
 
 .secondImage {
-    background-image: url('/investigacion/2.jpeg');
+    background-image: url('/investigacion/trinitarias.webp');
     background-repeat: no-repeat;
-    /* background-position: center; */
+    background-position: center;
     background-size: cover;
-    background-position-y: 63%;
 }

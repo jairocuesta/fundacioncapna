@@ -31,7 +31,7 @@ export default function ProgramExample() {
                         <i className="fa-regular fa-angles-down"></i>
                     </motion.span>
                 </div>
-                <div className={"flex flex-col gap-4 max-w-7xl w-full px-5 sm:px-10 lg:px-20 mx-auto"}>
+                <div className={"relative -top-8 flex flex-col gap-4 max-w-7xl w-full px-5 sm:px-10 lg:px-20 mx-auto"}>
                     <Breadcrumb
                         routes={[
                             { name: 'Desarrollo social', url: '/desarrollo-social' },
@@ -40,7 +40,6 @@ export default function ProgramExample() {
                     />
                 </div>
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
-                    <span className={"text-lg sm:text-xl font-bold text-[#7D8034]"}></span>
                     <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
                         <p>
                             El programa de concienciación socioambiental consiste en planes formativos continuos donde buscamos

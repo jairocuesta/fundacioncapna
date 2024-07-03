@@ -12,6 +12,7 @@ import { motion } from "framer-motion";
 import BecomeMember from "@/components/Banners/BecomeMember";
 import HowCanHelp from "@/components/Banners/HowCanHelp";
 import Breadcrumb from "@/components/Breadcrumb";
+import Subtitle from "@/components/Subtitle";
 
 export default function ProgramExample() {
     return (
@@ -36,7 +37,7 @@ export default function ProgramExample() {
                         <i className="fa-regular fa-angles-down"></i>
                     </motion.span>
                 </div>
-                <div className={"flex flex-col gap-4 max-w-7xl w-full px-5 sm:px-10 lg:px-20 mx-auto"}>
+                <div className={"relative -top-8 flex flex-col gap-4 max-w-7xl w-full px-5 sm:px-10 lg:px-20 mx-auto"}>
                     <Breadcrumb
                         routes={[
                             { name: 'Conservación ambiental', url: '/conservacion-ambiental' },
@@ -45,8 +46,7 @@ export default function ProgramExample() {
                     />
                 </div>
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
-                    <span className={"text-lg sm:text-xl font-bold text-[#7D8034]"}>Protegiendo las abejas en zonas urbanizadas
-                    </span>
+                    <Subtitle text={"Protegiendo las abejas en zonas urbanizadas"} />
                     <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
                         <p>
                             El Programa de Rescate de Colmenas surge bajo la continua necesidad de proteger las abejas que
@@ -58,7 +58,7 @@ export default function ProgramExample() {
                     </div>
                 </div>
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
-                    <span className={"text-lg sm:text-xl font-bold text-[#7D8034]"}>Valiosos polinizadores</span>
+                    <Subtitle text={"Valiosos polinizadores"} />
                     <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
                         <p>
                             Las abejas y algunos otros animales como las mariposas, murciélagos y colibríes ejercen un rol
@@ -89,7 +89,7 @@ export default function ProgramExample() {
                     ]}
                 />
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
-                    <span className={"text-lg sm:text-xl font-bold text-[#7D8034]"}>Un apiario donde se respeta la integridad de las abejas</span>
+                    <Subtitle text={"Un apiario donde se respeta la integridad de las abejas"} />
                     <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
                         <p>
                             Gracias a esta iniciativa se han rescatado cientos de colmenas que hoy en día habitan sin peligro en
@@ -100,7 +100,7 @@ export default function ProgramExample() {
                     </div>
                 </div>
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
-                    <span className={"text-lg sm:text-xl font-bold text-[#7D8034]"}>La Colmena Agradecida: Miel 100% orgánica</span>
+                    <Subtitle text={"La Colmena Agradecida: Miel 100% orgánica"} />
                     <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
                         <p>
                             La miel 100% orgánica producida en nuestro apiario es comercializada bajo el nombre “La Colmena
@@ -111,7 +111,7 @@ export default function ProgramExample() {
                 </div>
                 <Link href={'#'} className={"bg-[#7D8034] w-fit mx-auto text-white py-2 px-5 sm:px-10 rounded-full font-semibold text-sm sm:text-base"}>SIGUE A LA COLMENA AGRADECIDA EN INSTAGRAM O FACEBOOK</Link>
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
-                    <span className={"text-lg sm:text-xl font-bold text-[#7D8034]"}>Reporta las colmenas en situación de riesgo a la Fundación</span>
+                    <Subtitle text={"Reporta las colmenas en situación de riesgo a la Fundación"} />
                     <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
                         <p>
                             Si conoces una colmena ubicada en una zona urbanizada que represente un peligro para los seres

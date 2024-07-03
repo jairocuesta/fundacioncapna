@@ -16,6 +16,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { contactSchema } from "@/utils/formValidations";
 // Notifications
 import toast, { Toaster } from "react-hot-toast";
+import Subtitle from "@/components/Subtitle";
 
 export default function Contact() {
 
@@ -64,7 +65,7 @@ export default function Contact() {
                             transition={{ delay: .1, duration: .5 }}
                             className={"relative flex flex-col gap-3 items-center sm:items-start"}
                         >
-                            <span className={"font-semibold text-xl text-[#7D8034]"}>¡Llámanos!</span>
+                            <Subtitle text={"¡Llámanos!"} />
                             <div className={"flex items-center gap-3"}>
                                 <i className="fa-light fa-phone-volume text-[#AFA96E]"></i>
                                 <a href={"tel:8094697241"} target={'_blank'} className={"link font-medium"}>(809) 469-7241</a>
@@ -77,7 +78,7 @@ export default function Contact() {
                             transition={{ delay: .2, duration: .5 }}
                             className={"relative flex flex-col gap-3 items-center sm:items-start"}
                         >
-                            <span className={"font-semibold text-xl text-[#7D8034]"}>Escríbenos</span>
+                            <Subtitle text={"Escríbenos"} />
                             <div className={"flex items-center gap-3"}>
                                 <i className="fa-brands fa-whatsapp text-[#AFA96E]"></i>
                                 <a href={"tel:8094697241"} target={'_blank'} className={"link font-medium"}>(809) 469-7241</a>
@@ -94,7 +95,7 @@ export default function Contact() {
                             transition={{ delay: .3, duration: .5 }}
                             className={"relative flex flex-col items-center sm:items-start gap-3"}
                         >
-                            <span className={"font-semibold text-xl text-[#7D8034]"}>Síguenos</span>
+                            <Subtitle text={"Síguenos"} />
                             <div className={"flex items-center gap-3"}>
                                 <i className="fa-brands fa-instagram text-[#AFA96E]"></i>
                                 <a href={"https://instagram.com/fundacioncapcana"} target={'_blank'} className={"link font-medium"}>@fundacioncapcana</a>
@@ -119,11 +120,9 @@ export default function Contact() {
                             transition={{ delay: .4, duration: .5 }}
                             className={"relative flex flex-col gap-3"}
                         >
-                            <span className={"font-semibold text-xl text-[#7D8034]"}>Dirección</span>
+                            <Subtitle text={"Dirección"} />
                             <div className={"flex flex-col items-center sm:items-start"}>
-                                <span className={"text-neutral-700 font-medium"}>Box 3233</span>
-                                <span className={"text-neutral-700 font-medium"}>1810 Kings Way</span>
-                                <span className={"text-neutral-700 font-medium"}>King Street, 5th Avenue, New York</span>
+                                <span className={"text-neutral-700 font-medium"}>Distrito de Sostenibilidad, Caleton, Cap Cana, Rep. Dominicana.</span>
                             </div>
                         </motion.div>
                         <motion.div
@@ -238,8 +237,8 @@ function Map() {
     const ref = useRef<HTMLDivElement>(null);
     const [map, setMap] = useState<google.maps.Map>();
 
-    const center = { lat: -34.397, lng: 150.644 };
-    const zoom = 4;
+    const center = { lat: 18.479757290197856, lng: -68.41130759495732 };
+    const zoom = 13;
 
     useEffect(() => {
         if (ref.current && !map) {

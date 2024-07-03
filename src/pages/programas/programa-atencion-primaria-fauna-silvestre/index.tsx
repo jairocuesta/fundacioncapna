@@ -12,6 +12,7 @@ import { motion } from "framer-motion";
 import BecomeMember from "@/components/Banners/BecomeMember";
 import HowCanHelp from "@/components/Banners/HowCanHelp";
 import Breadcrumb from "@/components/Breadcrumb";
+import Subtitle from "@/components/Subtitle";
 
 export default function ProgramExample() {
     return (
@@ -36,7 +37,7 @@ export default function ProgramExample() {
                         <i className="fa-regular fa-angles-down"></i>
                     </motion.span>
                 </div>
-                <div className={"flex flex-col gap-4 max-w-7xl w-full px-5 sm:px-10 lg:px-20 mx-auto"}>
+                <div className={"relative -top-8 flex flex-col gap-4 max-w-7xl w-full px-5 sm:px-10 lg:px-20 mx-auto"}>
                     <Breadcrumb
                         routes={[
                             { name: 'Conservación ambiental', url: '/conservacion-ambiental' },
@@ -45,7 +46,7 @@ export default function ProgramExample() {
                     />
                 </div>
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
-                    <span className={"text-lg sm:text-xl font-bold text-[#7D8034]"}>Rescatando los animales silvestres de Cap Cana</span>
+                    <Subtitle text={"Rescatando los animales silvestres de Cap Cana"} />
                     <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
                         <p>
                             A menudo aparecen animales silvestres heridos, enfermos, desplazados o juveniles que han quedado
@@ -55,7 +56,7 @@ export default function ProgramExample() {
                     </div>
                 </div>
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
-                    <span className={"text-lg sm:text-xl font-bold text-[#7D8034]"}>Brindando atención primaria</span>
+                    <Subtitle text={"Brindando atención primaria"} />
                     <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
                         <p>
                             Recibimos animales traídos o reportados a la Fundación y le brindamos atención primaria en
@@ -85,7 +86,7 @@ export default function ProgramExample() {
                     ]}
                 />
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
-                    <span className={"text-lg sm:text-xl font-bold text-[#7D8034]"}>Reubicando ejemplares en situación de riesgo</span>
+                    <Subtitle text={"Reubicando ejemplares en situación de riesgo"} />
                     <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
                         <p>
                             En ocasiones nos reportan nidos o ejemplares en situación de riesgo que necesitan ser reubicados, ya
@@ -96,7 +97,7 @@ export default function ProgramExample() {
                     </div>
                 </div>
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
-                    <span className={"text-lg sm:text-xl font-bold text-[#7D8034]"}>Reporta a través de la línea directa de rescate de vida silvestre</span>
+                    <Subtitle text={"Reporta a través de la línea directa de rescate de vida silvestre"} />
                     <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
                         <p>
                             Reporta animales silvestres heridos, enfermos, desplazados, que hayan quedado huérfanos o que se

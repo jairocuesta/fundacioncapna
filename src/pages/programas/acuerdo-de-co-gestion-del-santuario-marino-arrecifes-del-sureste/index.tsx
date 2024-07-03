@@ -12,6 +12,7 @@ import { motion } from "framer-motion";
 import BecomeMember from "@/components/Banners/BecomeMember";
 import HowCanHelp from "@/components/Banners/HowCanHelp";
 import Breadcrumb from "@/components/Breadcrumb";
+import Subtitle from "@/components/Subtitle";
 
 export default function ProgramExample() {
     return (
@@ -36,7 +37,7 @@ export default function ProgramExample() {
                         <i className="fa-regular fa-angles-down"></i>
                     </motion.span>
                 </div>
-                <div className={"flex flex-col gap-4 max-w-7xl w-full px-5 sm:px-10 lg:px-20 mx-auto"}>
+                <div className={"relative -top-8 flex flex-col gap-4 max-w-7xl w-full px-5 sm:px-10 lg:px-20 mx-auto"}>
                     <Breadcrumb
                         routes={[
                             { name: 'Conservación ambiental', url: '/conservacion-ambiental' },
@@ -44,19 +45,24 @@ export default function ProgramExample() {
                         ]}
                     />
                 </div>
-                <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
-                    <span className={"text-lg sm:text-xl font-bold text-[#7D8034]"}>La segunda área protegida más grande del país</span>
-                    <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
-                        <p>
-                            ¿Sabías que el área marina del sureste de la República Dominicana está protegida? Se trata de la segunda área protegida más grande del país, 
-                            con una extensión de 7,862.59 km2, abarcando aproximadamente 120 km de costa desde la desembocadura del río Higuamo (en San Pedro de Macorís) 
-                            hasta Cabo Engaño (en Punta Cana). Esta fue declarada por decreto presidencial en el 2009 como el “Santuario Marino Arrecifes del Sureste” 
-                            (SAMAR, para abreviar), mediante el decreto 571-09.
-                        </p>
+                <div className={"flex flex-col md:flex-row items-center gap-10 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
+                    <div className={"flex flex-col gap-4 flex-1"}>
+                        <Subtitle text={"La segunda área protegida más grande del país"} />
+                        <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
+                            <p>
+                                ¿Sabías que el área marina del sureste de la República Dominicana está protegida? Se trata de la segunda área protegida más grande del país,
+                                con una extensión de 7,862.59 km2, abarcando aproximadamente 120 km de costa desde la desembocadura del río Higuamo (en San Pedro de Macorís)
+                                hasta Cabo Engaño (en Punta Cana). Esta fue declarada por decreto presidencial en el 2009 como el “Santuario Marino Arrecifes del Sureste”
+                                (SAMAR, para abreviar), mediante el decreto 571-09.
+                            </p>
+                        </div>
+                    </div>
+                    <div className={"relative w-56 h-24"}>
+                        <Image src={"/programas/acuerdo-de-co-gestion-del-santuario-marino-arrecifes-del-sureste/samar-logo.png"} fill className={"object-cover"} alt={"SAMAR Logo"} />
                     </div>
                 </div>
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
-                    <span className={"text-lg sm:text-xl font-bold text-[#7D8034]"}>Una alianza público-privada para la gestión del SAMAR</span>
+                    <Subtitle text={"Una alianza público-privada para la gestión del SAMAR"} />
                     <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
                         <p>
                             En el 2018, un grupo de 15 organizaciones se unieron con el Ministerio de Medio Ambiente y Recursos Naturales (MIMARENA) para firmar un acuerdo
@@ -86,7 +92,7 @@ export default function ProgramExample() {
                     ]}
                 />
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
-                    <span className={"text-lg sm:text-xl font-bold text-[#7D8034]"}>Manejando nuestros recursos marinos</span>
+                    <Subtitle text={"Manejando nuestros recursos marinos"} />
                     <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
                         <p>
                             Actualmente se está elaborando el Plan de Manejo del SAMAR, el cual consiste en un documento técnico y normativo que contiene el conjunto de 

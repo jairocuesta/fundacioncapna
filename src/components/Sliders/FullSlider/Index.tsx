@@ -79,17 +79,19 @@ function SlideItem({ item, slideState, slideIndex }: SlideItemProps) {
     }, [videoRef])
 
     return (
-        item.type == 'image' ? (
-            <div className={styles.imageContainer}>
-                <div style={{ position: 'relative', backgroundImage: `url(${item.src})`, backgroundSize: 'cover', backgroundPosition: item?.classes?.backgroundPosition ?? 'center' }}></div>
-            </div>
-        ) : item.type == 'video' ? (
-            <div className={styles.imageContainer}>
-                <video ref={videoRef} width={'w-full'} loop={true}>
-                    <source src={item.src} type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        ) : null
+        <div className={"h-screen w-screen overflow-hidden"}>
+            {item.type == 'image' ? (
+                <div className={styles.imageContainer}>
+                    <div style={{ position: 'relative', backgroundImage: `url(${item.src})`, backgroundSize: 'cover', backgroundPosition: item?.classes?.backgroundPosition ?? 'center' }}></div>
+                </div>
+            ) : item.type == 'video' ? (
+                <div className={styles.imageContainer}>
+                    <video ref={videoRef} className={"w-screen h-screen object-cover"} loop={true}>
+                        <source src={item.src} type="video/mp4" className={"object-cover"} />
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            ) : null}
+        </div>
     )
 }

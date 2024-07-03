@@ -12,6 +12,7 @@ import { motion } from "framer-motion";
 import BecomeMember from "@/components/Banners/BecomeMember";
 import HowCanHelp from "@/components/Banners/HowCanHelp";
 import Breadcrumb from "@/components/Breadcrumb";
+import Subtitle from "@/components/Subtitle";
 
 export default function ProgramExample() {
     return (
@@ -36,7 +37,7 @@ export default function ProgramExample() {
                         <i className="fa-regular fa-angles-down"></i>
                     </motion.span>
                 </div>
-                <div className={"flex flex-col gap-4 max-w-7xl w-full px-5 sm:px-10 lg:px-20 mx-auto"}>
+                <div className={"relative -top-8 flex flex-col gap-4 max-w-7xl w-full px-5 sm:px-10 lg:px-20 mx-auto"}>
                     <Breadcrumb
                         routes={[
                             { name: 'Conservación ambiental', url: '/conservacion-ambiental' },
@@ -45,7 +46,7 @@ export default function ProgramExample() {
                     />
                 </div>
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
-                    <span className={"text-lg sm:text-xl font-bold text-[#7D8034]"}>Monitoreando la fauna silvestre de Cap Cana</span>
+                    <Subtitle text={"Monitoreando la fauna silvestre de Cap Cana"} />
                     <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
                         <p>
                             Para poder tomar medidas adecuadas para el manejo y la conservación de las especies, es necesario
@@ -57,7 +58,7 @@ export default function ProgramExample() {
                     </div>
                 </div>
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
-                    <span className={"text-lg sm:text-xl font-bold text-[#7D8034]"}>Fototrampeando a los animales</span>
+                    <Subtitle text={"Fototrampeando a los animales"} />
                     <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
                         <p>
                             Colocamos 11 cámaras trampa en la <Link className="link" href={'#'}>Reserva Ecológica Falda del Farallón</Link> para estudiar a los animales en su hábitat natural sin alterar su comportamiento. Estas cámaras tienen un diseño que se mimetiza con el entorno del bosque, haciéndolas difíciles de percibir para los animales. A través de un sensor de movimiento infrarrojo, la cámara detecta la presencia de un animal y automáticamente toma fotos y/o vídeos.
@@ -101,7 +102,7 @@ export default function ProgramExample() {
                     ]}
                 />
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
-                    <span className={"text-lg sm:text-xl font-bold text-[#7D8034]"}>Detectando amenazas y oportunidades de conservación</span>
+                    <Subtitle text={"Detectando amenazas y oportunidades de conservación"} />
                     <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
                         <p>
                             A través del uso de las cámaras trampa, hemos podido identificar amenazas para los animales, tales
@@ -113,7 +114,7 @@ export default function ProgramExample() {
                     </div>
                 </div>
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
-                    <span className={"text-lg sm:text-xl font-bold text-[#7D8034]"}>Aplicando medidas de manejo para conservar</span>
+                    <Subtitle text={"Aplicando medidas de manejo para conservar"} />
                     <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
                         <p>
                             A partir de la información conseguida a través del monitoreo, aplicamos medidas de manejo para

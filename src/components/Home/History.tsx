@@ -36,16 +36,8 @@ export default function HomeHistory() {
                     </div>
                 </div>
                 <div className={"flex flex-col items-center lg:items-start gap-3"}>
-                    <div className={"text-xl"}>Nuestra <span className={"font-semibold text-[#7D8034]"}>historia</span></div>
-                    <p>Desde los inicios de su desarrollo, Cap Cana,
-                        S.A.,
-                        la empresa desarrolladora de la Ciudad
-                        Destino ha venido realizando una ardua
-                        labor para la preservación
-                        de toda la riqueza
-                        natural que dota este destino turístico, hotelero
-                        y residencial.
-                    </p>
+                    <h2 className={"text-xl uppercase text-[#7D8034]"}>Quienes somos</h2>
+                    <p>Somos una Organización Sin Fines de Lucro creada en el año 2016, que surge como el brazo ejecutor de todas las acciones de sostenibilidad de la Ciudad Destino Cap Cana...</p>
                     <button onClick={handleShowModal} className={"flex items-center gap-2 font-semibold text-[#7D8034] text-sm"}>
                         <span className={"link"}>VER MÁS</span>
                         <i className="fa-solid fa-angle-right text-base"></i>
@@ -75,8 +67,8 @@ export default function HomeHistory() {
             <AnimatePresence>
                 {showModal ? (
                     <ShowMoreModal
-                        title={"Nuestra historia"}
-                        description={"Desde los inicios de su desarrollo, Cap Cana, S.A., la empresa desarrolladora de la Ciudad Destino ha venido realizando una ardua labor para la preservación de toda la riqueza natural que dota este destino turístico, hotelero y residencial."}
+                        title={"Quienes somos"}
+                        description={"Somos una Organización Sin Fines de Lucro creada en el año 2016, que surge como el brazo ejecutor de todas las acciones de sostenibilidad de la Ciudad Destino Cap Cana, con el propósito de promover la conservación de los diversos ecosistemas y recursos naturales, así como el desarrollo de las comunidades de la zona."}
                         handleClose={handleShowModal}
                     />
                 ) : null}
@@ -108,14 +100,23 @@ function ShowMoreModal({ title, description, handleClose }: { title: string; des
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className={"relative w-[90vw] sm:w-[75vw] lg:w-[50vw] h-fit max-h-[80vh] bg-white rounded-xl p-8"}
+                    className={"relative w-[90vw] sm:w-[75vw] lg:w-[50vw] h-fit max-h-[80vh] bg-white rounded-xl p-8 overflow-y-scroll"}
                 >
-                    <div className={"flex flex-col gap-6"}>
-                        <div className={"flex items-center justify-between text-[#7D8034]"}>
-                            <h3 className={"text-2xl font-semibold"}>{title}</h3>
-                            <button onClick={handleClose}><i className="fa-solid fa-xmark text-3xl"></i></button>
+                    <div className={"flex flex-col gap-10"}>
+                        <div className={"flex flex-col gap-4"}>
+                            <div className={"flex items-center justify-between text-[#7D8034]"}>
+                                <h3 className={"text-2xl font-semibold"}>{title}</h3>
+                                <button onClick={handleClose}><i className="fa-solid fa-xmark text-3xl"></i></button>
+                            </div>
+                            <p className={""}>{description}</p>
                         </div>
-                        <p className={""}>{description}</p>
+                        <div className={"flex flex-col gap-4"}>
+                            <h3 className={"text-2xl font-semibold text-[#7D8034]"}>Nuestra historia</h3>
+                            <p>Desde los inicios de su desarrollo, Cap Cana, S.A., la empresa desarrolladora de la Ciudad Destino ha venido realizando una ardua labor para la preservación de toda la riqueza natural que dota este destino turístico, hotelero y residencial.</p>
+                            <p>En el 2016, Cap Cana emprendió un plan de acción de sostenibilidad ambiental que dio lugar a la creación de la Fundación Cap Cana, organización sin fines de lucro que tiene como objetivo principal la protección y conservación de los diversos ecosistemas y recursos naturales ubicados dentro del destino.</p>
+                            <p>Monumentos arqueológicos, kilómetros de costa, y una dotada variedad de flora y fauna son parte de los recursos que la Fundación Cap Cana patrocina a través de sus planes de conservación.</p>
+                            <p>Cap Cana es un ejemplo de cómo pueden convivir la vida silvestre y los humanos en un entorno totalmente sostenible.</p>
+                        </div>
                     </div>
                 </motion.div>
             </div>

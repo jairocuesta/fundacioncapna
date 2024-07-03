@@ -44,11 +44,11 @@ export default function Investigation() {
                             nosotros en esta apasionante travesía hacia un mundo más verde y sostenible!
                         </motion.p>
                     </div>
-                    <div className={"relative w-full h-[25rem] md:h-[35rem] lg:h-[50rem]"}>
+                    {/* <div className={"relative w-full h-[25rem] md:h-[35rem] lg:h-[50rem]"}>
                         <Image src={"/investigacion/3.webp"} fill className={"object-cover"} alt={"Laboratorio"} />
-                    </div>
+                    </div> */}
                     <div className={"py-10"}></div>
-                    <div className={`grid place-content-center ${styles.secondImage} h-[6rem]`}>
+                    <div className={`grid place-content-center ${styles.secondImage} h-[9rem]`}>
                         <motion.span
                             initial={{ bottom: '-30px', opacity: 0 }}
                             whileInView={{ bottom: '0px', opacity: 1 }}

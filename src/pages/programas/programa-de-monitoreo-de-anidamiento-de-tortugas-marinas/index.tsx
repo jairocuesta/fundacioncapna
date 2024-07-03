@@ -12,6 +12,7 @@ import { motion } from "framer-motion";
 import BecomeMember from "@/components/Banners/BecomeMember";
 import HowCanHelp from "@/components/Banners/HowCanHelp";
 import Breadcrumb from "@/components/Breadcrumb";
+import Subtitle from "@/components/Subtitle";
 
 export default function ProgramExample() {
     return (
@@ -36,7 +37,7 @@ export default function ProgramExample() {
                         <i className="fa-regular fa-angles-down"></i>
                     </motion.span>
                 </div>
-                <div className={"flex flex-col gap-4 max-w-7xl w-full px-5 sm:px-10 lg:px-20 mx-auto"}>
+                <div className={"relative -top-8 flex flex-col gap-4 max-w-7xl w-full px-5 sm:px-10 lg:px-20 mx-auto"}>
                     <Breadcrumb
                         routes={[
                             { name: 'Conservación ambiental', url: '/conservacion-ambiental' },
@@ -45,7 +46,7 @@ export default function ProgramExample() {
                     />
                 </div>
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
-                    <span className={"text-lg sm:text-xl font-bold text-[#7D8034]"}>Conservando tortugas marinas en peligro de extinción</span>
+                    <Subtitle text={"Conservando tortugas marinas en peligro de extinción"} />
                     <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
                         <p>
                             En Cap Cana tenemos la suerte de compartir algunas de las playas con las tortugas marinas que las
@@ -59,7 +60,7 @@ export default function ProgramExample() {
                     </div>
                 </div>
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
-                    <span className={"text-lg sm:text-xl font-bold text-[#7D8034]"}>Monitoreando los anidamientos</span>
+                    <Subtitle text={"Monitoreando los anidamientos"} />
                     <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
                         <p>
                             En Cap Cana tenemos mucho por conocer sobre nuestras tortugas marinas, por ejemplo, la cantidad
@@ -98,7 +99,7 @@ export default function ProgramExample() {
                     ]}
                 />
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
-                    <span className={"text-lg sm:text-xl font-bold text-[#7D8034]"}>Protegiendo los nidos en las playas</span>
+                    <Subtitle text={"Protegiendo los nidos en las playas"} />
                     <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
                         <p>
                             Además de monitorear las playas, nuestro programa también se dedica a implementar medidas para
@@ -108,7 +109,7 @@ export default function ProgramExample() {
                     </div>
                 </div>
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
-                    <span className={"text-lg sm:text-xl font-bold text-[#7D8034]"}>Educación y conciencia</span>
+                    <Subtitle text={"Educación y conciencia"} />
                     <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
                         <p>
                             También nos dedicamos a educar a la comunidad en general y en especial al personal de los hoteles
@@ -118,7 +119,7 @@ export default function ProgramExample() {
                     </div>
                 </div>
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
-                    <span className={"text-lg sm:text-xl font-bold text-[#7D8034]"}>Únete al voluntariado Turtle Patrol</span>
+                    <Subtitle text={"Únete al voluntariado Turtle Patrol"} />
                     <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
                         <p>
                             Necesitamos voluntarios para caminar por las playas de Cap Cana cada mañana al amanecer en busca

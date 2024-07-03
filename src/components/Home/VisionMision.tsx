@@ -17,7 +17,7 @@ export default function HomeVisionMision() {
             >
                 <div className={"w-full md:w-1/2"}>
                     <div className={`${styles.imageContainer}`}>
-                        <Image loading={'eager'} src={"/home/flower.jpeg"} className={`${styles.image} rounded-lg`} fill alt={"Flower image"} />
+                        <Image loading={'eager'} src={"/quienes-somos/vision.webp"} className={`${styles.image} rounded-lg`} fill alt={"Flower image"} />
                     </div>
                 </div>
                 <div className={"flex flex-col justify-center items-center md:items-start gap-5 lg:gap-8 w-full md:w-1/2"}>
@@ -64,7 +64,7 @@ export default function HomeVisionMision() {
                 </div>
                 <div className={"w-full md:w-1/2"}>
                     <div className={`${styles.imageContainer}`}>
-                        <Image loading={'eager'} src={"/home/lions.jpeg"} className={`${styles.image} rounded-lg`} fill alt={"Flower image"} />
+                        <Image loading={'eager'} src={"/quienes-somos/mision.webp"} className={`${styles.image} rounded-lg`} fill alt={"Flower image"} />
                     </div>
                 </div>
             </motion.div>

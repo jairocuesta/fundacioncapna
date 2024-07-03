@@ -92,7 +92,7 @@ export default function Blog({ data, page, pageCount }: { data: BlogType[]; page
                     className={"relative flex flex-col items-center gap-16 py-20 max-w-6xl mx-auto"}
                 >
                     <div className={"flex flex-col items-center gap-5"}>
-                        <div className={"flex gap-2 text-2xl md:text-3xl lg:text-4xl lg:leading-[3rem]"}>
+                        <div className={"flex gap-2 text-2xl md:text-3xl lg:text-4xl lg:leading-[3rem] uppercase"}>
                             <span className={"relative -bottom-[2px]"}>Últimas</span>
                             <span className={"relative top-[2px] font-bold text-[#AFA96E]"}>entradas</span>
                         </div>
@@ -161,37 +161,7 @@ export default function Blog({ data, page, pageCount }: { data: BlogType[]; page
                             </button>
                         </div>
                     </div> */}
-                    <div className={`flex items-center ${styles.newsletterImage} h-[35rem] text-white`}>
-                        <motion.div
-                            initial={{ bottom: '-30px', opacity: 0 }}
-                            whileInView={{ bottom: '0px', opacity: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: .3, duration: .5 }} 
-                            className={"relative flex flex-col items-center gap-12 max-w-4xl mx-auto px-5"}
-                        >
-                            <div className={"flex flex-col items-center gap-5"}>
-                                <div className={"flex items-center gap-2 text-2xl md:text-3xl lg:text-4xl lg:leading-[3rem]"}>
-                                    <span className={"relative -bottom-[2px]"}>Nuestro</span>
-                                    <span className={"font-bold"}>newsletter</span>
-                                </div>
-                                <div className={"flex items-center justify-center gap-2"}>
-                                    <div className={"h-[2px] w-8 bg-white rounded-full"}></div>
-                                    <div className={"h-[2px] w-8 bg-white rounded-full"}></div>
-                                    <div className={"h-[2px] w-8 bg-white rounded-full"}></div>
-                                </div>
-                            </div>
-                        <p className={"text-center text-white"}>
-                                Recibe las últimas noticias de conservación, eventos emocionantes y consejos para un estilo de
-                                vida más sostenible directamente en tu bandeja de entrada. ¡No te pierdas ni un solo momento de nuestra
-                                misión! Suscríbete ahora.
-                            </p>
-                            <Button 
-                                href={"#"}
-                                text={"Inscríbete ahora"}
-                                type={"white"}
-                            />
-                        </motion.div>
-                    </div>
+                    <HomeNewsletter />
                 </div>
             </div>
         </Layout>
@@ -199,6 +169,7 @@ export default function Blog({ data, page, pageCount }: { data: BlogType[]; page
 }
 
 import type { GetServerSideProps } from 'next'
+import HomeNewsletter from "@/components/Home/Newsletter";
 export const getServerSideProps = (async (context) => {
     const isDevelopment = process.env.NODE_ENV === 'development';
     const apiUrl = isDevelopment ? 'http://localhost:3000' : `http://${context.req.headers.host}`;

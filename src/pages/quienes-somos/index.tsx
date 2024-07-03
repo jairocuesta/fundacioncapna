@@ -15,7 +15,7 @@ import Image from "next/image";
 
 export default function QuienesSomos() {
     return (
-        <Layout title={"Investigación"}>
+        <Layout title={"Quienes somos"}>
             <div className={"flex flex-col text-center sm:text-left"}>
                 <div className={`grid place-content-center gap-10 ${styles.firstImage} h-[40rem] text-white px-5`}>
                     <motion.h1 

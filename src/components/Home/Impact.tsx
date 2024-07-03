@@ -27,71 +27,25 @@ export default function HomeImpact() {
                     whileInView={{ bottom: '0px', opacity: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: .2, duration: .5 }}
-                    className={"relative hidden lg:flex flex-row items-center gap-y-10 mx-10 gap-x-10"}
+                    className={"relative flex flex-col sm:flex-row items-center gap-y-10 mx-10 gap-x-10"}
                 >
                     <div className={"text-white max-w-[11rem]"}>
                         <span className={"flex items-center justify-center font-bold text-2xl"}>
                             <CounterAnimation from={0} to={34} />
                         </span>
-                        <span>Injected humour and the like. Lorem ipsus</span>
+                        <span className={"futura-light-regular text-lg"}>Especies vistas</span>
                     </div>
                     <div className={"text-white max-w-[11rem]"}>
                         <span className={"flex items-center justify-center font-bold text-2xl"}>
                             <CounterAnimation from={0} to={34} />
                         </span>
-                        <span>Injected humour and the like. Lorem ipsus</span>
+                        <span className={"futura-light-regular text-lg"}>Botellas recolectadas</span>
                     </div>
                     <div className={"text-white max-w-[11rem]"}>
                         <span className={"flex items-center justify-center font-bold text-2xl"}>
                             <CounterAnimation from={0} to={34} />
                         </span>
-                        <span>Injected humour and the like. Lorem ipsus</span>
-                    </div>
-                    <div className={"text-white max-w-[11rem]"}>
-                        <span className={"flex items-center justify-center font-bold text-2xl"}>
-                            <CounterAnimation from={0} to={34} />
-                        </span>
-                        <span>Injected humour and the like. Lorem ipsus</span>
-                    </div>
-                    <div className={"text-white max-w-[11rem]"}>
-                        <span className={"flex items-center justify-center font-bold text-2xl"}>
-                            <CounterAnimation from={0} to={34} />
-                        </span>
-                        <span>Injected humour and the like. Lorem ipsus</span>
-                    </div>
-                </motion.div>
-                <motion.div
-                    initial={{ bottom: '-50px', opacity: 0 }}
-                    whileInView={{ bottom: '0px', opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: .2, duration: .5 }}
-                    className={"relative flex lg:hidden flex-col items-center gap-y-10 mx-5 sm:mx-10"}
-                >
-                    <div className={"flex items-center gap-x-10"}>
-                        <div className={"text-white max-w-[11rem]"}>
-                            <span className={"font-bold text-2xl"}>+34K</span>
-                            <p>Injected humour and the like. Lorem ipsus</p>
-                        </div>
-                        <div className={"text-white max-w-[11rem]"}>
-                            <span className={"font-bold text-2xl"}>+34K</span>
-                            <p>Injected humour and the like. Lorem ipsus</p>
-                        </div>
-                    </div>
-                    <div className={"flex items-center gap-x-10"}>
-                        <div className={"text-white lg:border-l-0 max-w-[11rem]"}>
-                            <span className={"font-bold text-2xl"}>+34K</span>
-                            <p>Injected humour and the like. Lorem ipsus</p>
-                        </div>
-                        <div className={"text-white max-w-[11rem]"}>
-                            <span className={"font-bold text-2xl"}>+34K</span>
-                            <p>Injected humour and the like. Lorem ipsus</p>
-                        </div>
-                    </div>
-                    <div className={"flex items-center gap-x-10"}>
-                        <div className={"text-white max-w-[11rem]"}>
-                            <span className={"font-bold text-2xl"}>+34K</span>
-                            <p>Injected humour and the like. Lorem ipsus</p>
-                        </div>
+                        <span className={"futura-light-regular text-lg"}>Arboles plantados</span>
                     </div>
                 </motion.div>
             </div>

@@ -12,6 +12,7 @@ import { motion } from "framer-motion";
 import BecomeMember from "@/components/Banners/BecomeMember";
 import HowCanHelp from "@/components/Banners/HowCanHelp";
 import Breadcrumb from "@/components/Breadcrumb";
+import Subtitle from "@/components/Subtitle";
 
 export default function ProgramExample() {
     return (
@@ -36,7 +37,7 @@ export default function ProgramExample() {
                         <i className="fa-regular fa-angles-down"></i>
                     </motion.span>
                 </div>
-                <div className={"flex flex-col gap-4 max-w-7xl w-full px-5 sm:px-10 lg:px-20 mx-auto"}>
+                <div className={"relative -top-8 flex flex-col gap-4 max-w-7xl w-full px-5 sm:px-10 lg:px-20 mx-auto"}>
                     <Breadcrumb
                         routes={[
                             { name: 'Conservación ambiental', url: '/conservacion-ambiental' },
@@ -45,7 +46,7 @@ export default function ProgramExample() {
                     />
                 </div>
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
-                    <span className={"text-lg sm:text-xl font-bold text-[#7D8034]"}>Conservando los manatíes, mamíferos marinos en peligro de extinción</span>
+                    <Subtitle text={"Conservando los manatíes, mamíferos marinos en peligro de extinción"} />
                     <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
                         <p>
                             En Cap Cana tenemos la suerte de contar con al menos seis manatíes que habitan en las aguas de la
@@ -58,7 +59,7 @@ export default function ProgramExample() {
                     </div>
                 </div>
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
-                    <span className={"text-lg sm:text-xl font-bold text-[#7D8034]"}>Creando una base de datos de avistamientos</span>
+                    <Subtitle text={"Creando una base de datos de avistamientos"} />
                     <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
                         <p>
                             Frecuentemente recibimos reportes de avistamientos de manatíes en distintos puntos de la Marina Cap
@@ -87,7 +88,7 @@ export default function ProgramExample() {
                     ]}
                 />
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
-                    <span className={"text-lg sm:text-xl font-bold text-[#7D8034]"}>Monitoreando los manatíes</span>
+                    <Subtitle text={"Monitoreando los manatíes"} />
                     <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
                         <p>
                             Bajo la mentoría de FUNDEMAR {'(Fundación Dominicana de Estudios Marinos)'}, iniciamos en 2023
@@ -105,7 +106,7 @@ export default function ProgramExample() {
                     </div>
                 </div>
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
-                    <span className={"text-lg sm:text-xl font-bold text-[#7D8034]"}>Aplicando medidas de seguridad para proteger los manatíes en la Marina Cap Cana</span>
+                    <Subtitle text={"Aplicando medidas de seguridad para proteger los manatíes en la Marina Cap Cana"} />
                     <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
                         <p>
                             Para la protección de esta especie, la Marina Cap Cana implementa regulaciones estrictas para el
@@ -119,7 +120,7 @@ export default function ProgramExample() {
                     </div>
                 </div>
                 <div className={"w-full flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
-                    <span className={"text-lg sm:text-xl font-bold text-[#7D8034]"}>Reporta tus avistamientos de manatíes</span>
+                    <Subtitle text={"Reporta tus avistamientos de manatíes"} />
                     <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
                         <p>
                             Si ves un manatí, por favor reporta la fecha, hora, localidad y cantidad de individuos a la Fundación a

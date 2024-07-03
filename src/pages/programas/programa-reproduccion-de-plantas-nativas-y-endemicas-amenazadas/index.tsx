@@ -11,6 +11,7 @@ import { motion } from "framer-motion";
 import BecomeMember from "@/components/Banners/BecomeMember";
 import HowCanHelp from "@/components/Banners/HowCanHelp";
 import Breadcrumb from "@/components/Breadcrumb";
+import Subtitle from "@/components/Subtitle";
 
 export default function ProgramExample() {
     return (
@@ -35,7 +36,7 @@ export default function ProgramExample() {
                         <i className="fa-regular fa-angles-down"></i>
                     </motion.span>
                 </div>
-                <div className={"flex flex-col gap-4 max-w-7xl w-full px-5 sm:px-10 lg:px-20 mx-auto"}>
+                <div className={"relative -top-8 flex flex-col gap-4 max-w-7xl w-full px-5 sm:px-10 lg:px-20 mx-auto"}>
                     <Breadcrumb
                         routes={[
                             { name: 'Conservación ambiental', url: '/conservacion-ambiental' },
@@ -44,7 +45,7 @@ export default function ProgramExample() {
                     />
                 </div>
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
-                    <span className={"text-lg sm:text-xl font-bold text-[#7D8034]"}>Recuperando la flora única de Cap Cana, el este y República Dominicana</span>
+                    <Subtitle text={"Recuperando la flora única de Cap Cana, el este y República Dominicana"} />
                     <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
                         <p>El este de la República Dominicana, incluyendo Cap Cana, es el hogar de una rica diversidad de plantas nativas y endémicas, muchas de las cuales son verdaderas joyas botánicas y se encuentran en
                             peligro de extinción. Nuestro programa se dedica a la identificación, reproducción y recuperación de
@@ -53,7 +54,7 @@ export default function ProgramExample() {
                     </div>
                 </div>
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
-                    <span className={"text-lg sm:text-xl font-bold text-[#7D8034]"}>Un refugio para las plantas amenazadas</span>
+                    <Subtitle text={"Un refugio para las plantas amenazadas"} />
                     <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
                         <p>Una vez son identificadas y seleccionadas, nuestro equipo de expertos botánicos trabaja para cuidar y
                             reproducir estas plantas amenazadas. Cada ejemplar es tratado con el mayor cuidado y cariño,
@@ -83,7 +84,7 @@ export default function ProgramExample() {
                     ]}
                 />
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
-                    <span className={"text-lg sm:text-xl font-bold text-[#7D8034]"}>Rehabilitando ecosistemas</span>
+                    <Subtitle text={"Rehabilitando ecosistemas"} />
                     <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
                         <p>La reproducción y reintroducción de estas plantas en sus hábitats naturales no solo beneficia a las
                             especies en sí, sino que también contribuye a la rehabilitación de ecosistemas completos y la
@@ -93,7 +94,7 @@ export default function ProgramExample() {
                     </div>
                 </div>
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
-                    <span className={"text-lg sm:text-xl font-bold text-[#7D8034]"}>Promoviendo el uso de plantas nativas en el paisajismo de Cap Cana</span>
+                    <Subtitle text={"Promoviendo el uso de plantas nativas en el paisajismo de Cap Cana"} />
                     <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
                         <p>En lugar de utilizar plantas exóticas para embellecer las áreas verdes de la Ciudad Destino Cap Cana,
                             promovemos el uso de plantas nativas ornamentales en estas zonas. El uso de estas especies no solo
@@ -104,7 +105,7 @@ export default function ProgramExample() {
                 </div>
                 <HowCanHelp />
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
-                    <span className={"text-lg sm:text-xl font-bold text-[#7D8034]"}>Educación y conciencia</span>
+                    <Subtitle text={"Educación y conciencia"} />
                     <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
                         <p>El Programa de Reproducción de Plantas Nativas y Endémicas Amenazadas no se termina cuando
                             introducimos las especies a su hábitat. También nos dedicamos a educar a la comunidad sobre la
