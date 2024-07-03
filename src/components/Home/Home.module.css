@@ -23,9 +23,9 @@
 }
 
 .impactContainer {
-    background-image: url('/home/impact-background.webp?v=2');
+    background-image: url('/quienes-somos/impacto.webp');
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: bottom;
     background-size: cover;
 }
 

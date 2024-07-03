@@ -46,7 +46,7 @@ export default function ProgramExample() {
                     />
                 </div>
                 <div className={"flex flex-col md:flex-row items-center gap-10 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
-                    <div className={"flex flex-col gap-4 flex-1"}>
+                    <div className={"flex flex-col gap-4 flex-1 md:w-1/2"}>
                         <Subtitle text={"La segunda área protegida más grande del país"} />
                         <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
                             <p>
@@ -57,8 +57,8 @@ export default function ProgramExample() {
                             </p>
                         </div>
                     </div>
-                    <div className={"relative w-56 h-24"}>
-                        <Image src={"/programas/acuerdo-de-co-gestion-del-santuario-marino-arrecifes-del-sureste/samar-logo.png"} fill className={"object-cover"} alt={"SAMAR Logo"} />
+                    <div className={"relative h-[200px] w-full md:w-1/2"}>
+                        <Image src={"/programas/acuerdo-de-co-gestion-del-santuario-marino-arrecifes-del-sureste/samar-logo.png"} fill className={"object-contain"} alt={"SAMAR Logo"} />
                     </div>
                 </div>
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
