@@ -132,9 +132,15 @@ export default function Contact() {
                             transition={{ delay: .5, duration: .5 }}
                             className={`h-[15rem] w-full rounded-xl overflow-hidden`}
                         >
-                            <Wrapper apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || ""}>
-                                <Map />
-                            </Wrapper>
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60545.24466380325!2d-68.45232209147278!3d18.480135203370526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ea890ba67c733c1%3A0x7a0111a8ec90305b!2sCap%20Cana%2C%2023000%20Punta%20Cana%2C%20Rep%C3%BAblica%20Dominicana!5e0!3m2!1ses!2suy!4v1720032461728!5m2!1ses!2suy" 
+                                width="100%" 
+                                height="100%" 
+                                style={{ border: 0, borderRadius: '0.75rem' }} 
+                                allowFullScreen={false} 
+                                loading="lazy" 
+                                referrerPolicy="no-referrer-when-downgrade"
+                            ></iframe>
                         </motion.div>
                     </div>
                     <motion.div
