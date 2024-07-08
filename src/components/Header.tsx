@@ -66,6 +66,7 @@ export default function Header({ styles }: NavbarProps) {
                     <NavbarItem href={"/alianzas"} title={"Alianzas"} />
                     <NavbarItem href={"/investigacion"} title={"Investigacion"} />
                     <NavbarItem href={"/quienes-somos"} title={"Quienes somos"} />
+                    <NavbarItem href={"https://capcana.com/es"} title={"Capcana"} />
                     <NavbarItem href={"/contacto"} title={"Contactos"} />
                 </nav>
                 <button className={"block lg:hidden"} onClick={handleShowMenu}>
@@ -122,7 +123,7 @@ function NavbarItem({ title, href, items }: NavbarItem) {
                 className={` ${isActualRoute == href ? 'font-semibold' : 'font-normal'}`}
             >
                 {href ? (
-                    <Link href={href} className={"futura-light-regular uppercase text-sm border-b-2 py-2 border-transparent hover:border-white transition-colors"}>{title}</Link>
+                    <Link href={href} target={href.slice(0, 5) == 'https' ? '_blank' : '_self'} className={"futura-light-regular uppercase text-sm border-b-2 py-2 border-transparent hover:border-white transition-colors"}>{title}</Link>
                 ) : (
                     <span className={"cursor-pointer futura-light-regular uppercase text-sm border-b-2 py-2 border-transparent hover:border-white transition-colors"}>{title}</span>
                 )}
@@ -240,6 +241,7 @@ function MobileMenu({ closeMenu }: MobileMenuProps) {
                     <MenuItem href={"/alianzas"} title={"Alianzas"} />
                     <MenuItem href={"/investigacion"} title={"Investigacion"} />
                     <MenuItem href={"/quienes-somos"} title={"Quienes somos"} />
+                    <MenuItem href={"https://capcana.com/es"} title={"Capcana"} />
                     <MenuItem href={"/contacto"} title={"Contactos"} />
                 </nav>
             </div>
@@ -280,7 +282,12 @@ function MenuItem({ title, href, items, children }: NavbarItem) {
             <div
                 className={` ${isActualRoute == href ? 'font-semibold' : 'font-normal'} futura-light-regular uppercase text-sm flex flex-col`}
             >
-                <Link onClick={() => setShowMenu(!showMenu)} href={href ?? '#'} className={`${showMenu ? 'border-b border-[#7D8034]' : ''} py-2 transition-colors`}>{title}</Link>
+                <Link 
+                    onClick={() => setShowMenu(!showMenu)} 
+                    href={href ?? '#'} 
+                    className={`${showMenu ? 'border-b border-[#7D8034]' : ''} py-2 transition-colors`}
+                    target={href?.slice(0, 5) == 'https' ? '_blank' : '_self'}
+                >{title}</Link>
                 {items && items?.length != 0 ? (
                     <AnimatePresence>
                         {showMenu ? (

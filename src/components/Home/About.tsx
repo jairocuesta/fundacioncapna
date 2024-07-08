@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 // Styles
 import styles from './Home.module.css';
 import CounterAnimation from '../Counter/Index';
+import Image from 'next/image';
 
 export default function HomeAbout() {
     return (
@@ -47,9 +48,11 @@ export default function HomeAbout() {
                         whileInView={{ bottom: '0px', opacity: 1 }}
                         viewport={{ once: true }}
                         transition={{ delay: .2, duration: .5 }}
-                        className={"relative"}
+                        className={"relative w-60"}
+                        style={{ aspectRatio: '16/4.3' }}
                     >
-                        <i className="fa-light fa-leaf text-[2.7rem] text-[#afa96e]"></i>
+                        <Image src={"/home/about-icons.webp"} className={"object-cover"} fill alt={"Logos"} />
+                        {/* <i className="fa-light fa-leaf text-[2.7rem] text-[#afa96e]"></i> */}
                     </motion.div>
                     <div className={"flex flex-col gap-16"}>
                         <motion.p
@@ -59,8 +62,9 @@ export default function HomeAbout() {
                             transition={{ delay: .3, duration: .5 }}
                             className={"relative text-[#7d7d7d] leading-9 px-5"}
                         >
-                            Construyendo una ciudad destino sostenible protegiendo nuestros recursos naturales 
-                            a través de programas de conservación ambiental y desarrollo comunitario.
+                            Somos una Organización Sin Fines de Lucro creada en el año 2016, que surge como el brazo ejecutor de todas 
+                            las acciones de sostenibilidad de la Ciudad Destino Cap Cana, con el propósito de promover la conservación 
+                            de los diversos ecosistemas y recursos naturales, así como el desarrollo de las comunidades de la zona.
                         </motion.p>
                         <motion.div
                             initial={{ bottom: '-50px', opacity: 0 }}
