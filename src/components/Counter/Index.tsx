@@ -19,7 +19,7 @@ export default function CounterAnimation({ from, to }: CounterAnimationProps) {
                 duration: 1.5,
                 onUpdate(value) {
                     if(node) {
-                        node.textContent = `+${value.toFixed(0)}`;
+                        node.textContent = `+${Number(value.toFixed(0)).toLocaleString("en-US") }`;
                     }
                 },
             });

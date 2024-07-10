@@ -10,6 +10,7 @@ import CounterAnimation from '../Counter/Index';
 import Image from 'next/image';
 
 export default function HomeAbout() {
+
     return (
         <div className={"relative overflow-x-clip"}>
             <div className={"py-28"}>
