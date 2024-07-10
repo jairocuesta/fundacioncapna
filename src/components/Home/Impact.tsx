@@ -27,25 +27,25 @@ export default function HomeImpact() {
                     whileInView={{ bottom: '0px', opacity: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: .2, duration: .5 }}
-                    className={"relative flex flex-col sm:flex-row items-center gap-y-10 mx-10 gap-x-10"}
+                    className={"relative flex flex-col sm:flex-row align-baseline gap-y-10 mx-10 gap-x-10"}
                 >
                     <div className={"text-white max-w-[11rem]"}>
                         <span className={"flex items-center justify-center font-bold text-2xl"}>
-                            <CounterAnimation from={0} to={34} />
+                            <CounterAnimation from={0} to={16368} />
                         </span>
-                        <span className={"futura-light-regular text-lg"}>Especies vistas</span>
+                        <span className={"futura-light-regular text-lg"}>libras de PET recuperado</span>
                     </div>
                     <div className={"text-white max-w-[11rem]"}>
                         <span className={"flex items-center justify-center font-bold text-2xl"}>
-                            <CounterAnimation from={0} to={34} />
+                            <CounterAnimation from={0} to={11800} />
                         </span>
-                        <span className={"futura-light-regular text-lg"}>Botellas recolectadas</span>
+                        <span className={"futura-light-regular text-lg"}>plantas en vivero</span>
                     </div>
                     <div className={"text-white max-w-[11rem]"}>
                         <span className={"flex items-center justify-center font-bold text-2xl"}>
-                            <CounterAnimation from={0} to={34} />
+                            <CounterAnimation from={0} to={600} />
                         </span>
-                        <span className={"futura-light-regular text-lg"}>Arboles plantados</span>
+                        <span className={"futura-light-regular text-lg"}>fragmentos de coral en vivero de corales</span>
                     </div>
                 </motion.div>
             </div>
