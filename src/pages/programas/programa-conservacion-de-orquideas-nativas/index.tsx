@@ -111,7 +111,7 @@ export default function ProgramExample() {
                         </p>
                     </div>
                 </div>
-                <HowCanHelp />
+                <HowCanHelp image={'/programas/conservacion-de-orquideas-nativas/banner.webp'} />
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
                     <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
                         <p>

@@ -68,10 +68,6 @@ export const headerLinks: Props = {
                             name: "Registro de avistamientos de manatíes",
                             href: "/programas/programa-de-registro-de-avistamientos-de-manaties",
                         },
-                        {
-                            name: "Rescate de colmenas",
-                            href: "/programas/programa-rescate-de-colmenas",
-                        },
                     ]
                 }
             ]

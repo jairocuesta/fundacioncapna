@@ -122,7 +122,7 @@ export default function Contact() {
                         >
                             <Subtitle text={"Dirección"} />
                             <div className={"flex flex-col items-center sm:items-start"}>
-                                <span className={"text-neutral-700 font-medium"}>Distrito de Sostenibilidad, Caleton, Cap Cana, Rep. Dominicana.</span>
+                                <span className={"text-neutral-700 font-medium"}>Distrito de Sostenibilidad, Caleton, Cap Cana, <br />Rep. Dominicana.</span>
                             </div>
                         </motion.div>
                         <motion.div

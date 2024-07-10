@@ -129,7 +129,7 @@ export default function ProgramExample() {
                         </p>
                     </div>
                 </div>
-                <HowCanHelp />
+                <HowCanHelp image={"/programas/proteccion-de-especies-de-fauna-amenazadas/banner.webp"} />
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
                     <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
                         <p>

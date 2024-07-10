@@ -152,7 +152,7 @@ export default function ProgramExample() {
                             una excursión Discover Scuba Diving a nuestro vivero de corales con el centro de buceo Sea Klub
                             Ultra Marine Divers, ubicado en Fishing Lodge, Cap Cana.
                         </p>
-                        <Link href={'#'} className={"bg-white text-[#7D8034] font-semibold py-2 px-5 sm:px-10 rounded-full text-sm sm:text-base"}>CONVIÉRTETE EN VOLUNTARIO</Link>
+                        <a href={'https://docs.google.com/forms/d/1NvEPIv6RhDGjpzO9hOlqmXo1RrEf9hJoxAITrTPOhAw/viewform?ts=61f44fec&edit_requested=true'} target={"_blank"} className={"bg-white text-[#7D8034] font-semibold py-2 px-5 sm:px-10 rounded-full text-sm sm:text-base"}>CONVIÉRTETE EN VOLUNTARIO</a>
                     </div>
                 </div>
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
