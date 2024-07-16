@@ -33,19 +33,19 @@ export default function HomeImpact() {
                         <span className={"flex items-center justify-center font-bold text-2xl"}>
                             <CounterAnimation from={0} to={16368} />
                         </span>
-                        <span className={"futura-light-regular text-lg"}>libras de PET recuperado</span>
+                        <span className={"futura-light-regular text-lg uppercase"}>libras de PET recuperado</span>
                     </div>
                     <div className={"text-white max-w-[11rem]"}>
                         <span className={"flex items-center justify-center font-bold text-2xl"}>
                             <CounterAnimation from={0} to={11800} />
                         </span>
-                        <span className={"futura-light-regular text-lg"}>plantas en vivero</span>
+                        <span className={"futura-light-regular text-lg uppercase"}>plantas en vivero</span>
                     </div>
                     <div className={"text-white max-w-[11rem]"}>
                         <span className={"flex items-center justify-center font-bold text-2xl"}>
                             <CounterAnimation from={0} to={600} />
                         </span>
-                        <span className={"futura-light-regular text-lg"}>fragmentos de coral en vivero de corales</span>
+                        <span className={"futura-light-regular text-lg uppercase"}>fragmentos de coral en vivero de corales</span>
                     </div>
                 </motion.div>
             </div>
