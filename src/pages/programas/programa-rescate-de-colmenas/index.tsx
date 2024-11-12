@@ -105,11 +105,11 @@ export default function ProgramExample() {
                         <p>
                             La miel 100% orgánica producida en nuestro apiario es comercializada bajo el nombre “La Colmena
                             Agradecida” y los fondos recaudados de las ventas son reinvertidos en el mismo programa para
-                            garantizar su autosostenibilidad a través del tiempo. Puedes adquirirla en la <Link className="link" href={'#'}>Eco-tienda</Link> de la Fundación.
+                            garantizar su autosostenibilidad a través del tiempo. Puedes adquirirla en la Eco-tienda de la Fundación.
                         </p>
                     </div>
                 </div>
-                <Link href={'#'} className={"bg-[#7D8034] w-fit mx-auto text-white py-2 px-5 sm:px-10 rounded-full font-semibold text-sm sm:text-base"}>SIGUE A LA COLMENA AGRADECIDA EN INSTAGRAM O FACEBOOK</Link>
+                <Link target={'_blank'} href={'https://www.instagram.com/lacolmenaagradecida?igsh=bjE2OXM4bmlhdjVu'} className={"bg-[#7D8034] w-fit mx-auto text-white py-2 px-5 sm:px-10 rounded-full font-semibold text-sm sm:text-base"}>SIGUE A LA COLMENA AGRADECIDA EN INSTAGRAM O FACEBOOK</Link>
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
                     <Subtitle text={"Reporta las colmenas en situación de riesgo a la Fundación"} />
                     <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>

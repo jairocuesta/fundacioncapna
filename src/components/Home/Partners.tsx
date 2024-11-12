@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 
 export default function HomePartners() {
     return (
-        <div className={"flex flex-col gap-28 bg-[#F9F9F9] overflow-x-clip py-28"}>
+        <div className={"flex flex-col gap-28 overflow-x-clip py-28"}>
             <div className={`flex flex-col gap-20 mx-auto max-w-7xl px-5`}>
                 <div className={"grid place-content-center gap-8 text-center mx-auto"}>
                     <motion.div 

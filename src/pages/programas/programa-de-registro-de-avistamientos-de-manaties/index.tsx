@@ -49,9 +49,8 @@ export default function ProgramExample() {
                     <Subtitle text={"Conservando los manatíes, mamíferos marinos en peligro de extinción"} />
                     <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
                         <p>
-                            En Cap Cana tenemos la suerte de contar con al menos seis manatíes que habitan en las aguas de la
-                            Marina Cap Cana y de las costas de la Ciudad Destino Cap Cana, siendo uno de ellos una cría y los
-                            otros cinco, adultos. Se trata del manatí antillano, también conocido como vaca marina, de nombre
+                            En Cap Cana tenemos la suerte de contar con al menos siete manatíes que habitan en las aguas de la Marina Cap Cana y de las costas de la 
+                            Ciudad Destino Cap Cana, siendo dos de ellos crías y los otros cinco, adultos. Se trata del manatí antillano, también conocido como vaca marina, de nombre
                             científico Trichechus <span className="italic">manatus manatus</span>. Son herbívoros grandes y pesados, de movimientos lentos, que se alimentan principalmente de hierbas marinas y son sumamente dóciles porque no tienen
                             depredadores naturales. Los manatíes están declarados en estado de “peligro crítico” en la Lista Roja
                             de Especies en Peligro de Extinción, Amenazadas o Protegidas de la República Dominicana.
@@ -101,7 +100,7 @@ export default function ProgramExample() {
                             adultos y crías avistados, las coordenadas geográficas del lugar en el cual fueron observados, el
                             comportamiento, la cantidad de botes, la turbidez del agua, los avistamientos de otros animales tales
                             como tortugas y rayas, y cualquier otra observación. Este monitoreo permitirá conocer más sobre el
-                            comportamiento de estos herbívoros marinos, así como los sitios que estos frecuentan en el <Link className="link" href={'#'}>Santuario Marino Arrecifes del Sureste {'(SAMAR)'}</Link>, información que facilitará tomar medidas para el manejo de esta área protegida y la conservación de esta especie.
+                            comportamiento de estos herbívoros marinos, así como los sitios que estos frecuentan en el <Link className="link" href={'/programas/acuerdo-de-co-gestion-del-santuario-marino-arrecifes-del-sureste'}>Santuario Marino Arrecifes del Sureste {'(SAMAR)'}</Link>, información que facilitará tomar medidas para el manejo de esta área protegida y la conservación de esta especie.
                         </p>
                     </div>
                 </div>
@@ -130,7 +129,7 @@ export default function ProgramExample() {
                         <div className={"w-fit"}>
                             <Button
                                 href={"#"}
-                                text={"Conviértete en miembro"}
+                                text={"Reporta un avistamiento"}
                                 type={"main"}
                             />
                         </div>

@@ -107,7 +107,7 @@ export default function ProgramExample() {
                             hábitat natural para que cumplan con sus funciones propias en el ecosistema. Una vez los ejemplares
                             reproducidos en laboratorio alcanzan un tamaño y vigor suficientes, se procede a realizar el proceso
                             de reintroducción en zonas protegidas dentro y fuera de Cap Cana para garantizar la continuidad de su
-                            ciclo de vida. La reserva ecológica de Cap Cana, <Link className="link" href={'#'}>Falda del Farallón</Link>, es uno de estosespacios destinados a la conservación, donde puedes disfrutar la belleza de las orquídeas silvestres apadrinadas por la Fundación Cap Cana y demás proyectos de investigación y aplicación ambiental.
+                            ciclo de vida. La reserva ecológica de Cap Cana, Falda del Farallón, es uno de estosespacios destinados a la conservación, donde puedes disfrutar la belleza de las orquídeas silvestres apadrinadas por la Fundación Cap Cana y demás proyectos de investigación y aplicación ambiental.
                         </p>
                     </div>
                 </div>

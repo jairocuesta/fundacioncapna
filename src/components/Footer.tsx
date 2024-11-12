@@ -8,12 +8,20 @@ export default function Footer() {
             <div className={"grid grid-cols-1 lg:grid-cols-4 gap-10 xl:gap-16 max-w-7xl mx-auto text-sm px-10"}>
                 <div className={"flex flex-col gap-7"}>
                     <Image loading={'eager'} src={"/logo.png"} width={75} height={75} alt={"Logo"} />
-                    <p className={"text-neutral-200"}>Organización sin fines de Lucro creada en el año 2016</p>
+                    <p className={"text-neutral-200"}>Organización sin fines de lucro creada en el año 2016</p>
                     <div className={"flex items-center gap-5 text-xl"}>
-                        <i className="fa-brands fa-facebook-f"></i>
-                        <i className="fa-brands fa-instagram"></i>
-                        <i className="fa-brands fa-x-twitter"></i>
-                        <i className="fa-brands fa-linkedin-in"></i>
+                        <a href="https://www.facebook.com/p/Fundaci%C3%B3n-Cap-Cana-100083580931901/?_rdr" target="_blank">
+                            <i className="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="https://instagram.com/fundacioncapcana" target="_blank">
+                            <i className="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://x.com/fundacioncapcana" target="_blank">
+                            <i className="fa-brands fa-x-twitter"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/fundaci%C3%B3n-cap-cana/mycompany/" target="_blank">
+                            <i className="fa-brands fa-linkedin-in"></i>
+                        </a>
                     </div>
                     <span>Developed by <Link target={"_blank"} className={"text-[#AFA96E] underline"} href={"https://www.agencia7am.com/"}>7am Agencia Multimedia SRL</Link></span>
                 </div>
@@ -65,13 +73,15 @@ export default function Footer() {
                     <span className={"text-[#AFA96E] font-semibold"}>Programas</span>
                     <Link href={"/programas/programa-atencion-primaria-fauna-silvestre"} className={"hover:text-[#AFA96E] transition-colors"}>Fauna silvestre</Link>
                     <Link href={"/programas/programa-conservacion-de-orquideas-nativas"} className={"hover:text-[#AFA96E] transition-colors"}>Conservación de orquideas nativas</Link>
-                    <Link href={"/programas/programa-de-apoyo-comunitario"} className={"hover:text-[#AFA96E] transition-colors"}>Apoyo comunitario</Link>
+                    <Link href={"/programas/programa-de-apoyo-comunitario"} className={"hover:text-[#AFA96E] transition-colors"}>Desarrollo comunitario</Link>
                     <Link href={"/programas/programa-de-concienciacion-socioambiental"} className={"hover:text-[#AFA96E] transition-colors"}>Concienciación socioambiental</Link>
                     <Link href={"/programas/programa-de-monitoreo-de-anidamiento-de-tortugas-marinas"} className={"hover:text-[#AFA96E] transition-colors"}>Monitoreo de anidamiento de tortugas marinas</Link>
+                    <Link href={"/programas/programa-rehabilitacion-de-arrecifes-de-coral"} className={"hover:text-[#AFA96E] transition-colors"}>Rehabilitación de arrecifes de coral</Link>
                     <Link href={"/programas/programa-de-monitoreo-de-salud-arrecifal-y-de-enfermedades-de-coral"} className={"hover:text-[#AFA96E] transition-colors"}>Monitoreo de salud arrecifal y de enfermedades de coral</Link>
                     <Link href={"/programas/programa-de-registro-de-avistamientos-de-manaties"} className={"hover:text-[#AFA96E] transition-colors"}>Registro de avistamientos de manatíes</Link>
                     <Link href={"/programas/programa-monitoreo-de-fauna-silvestre"} className={"hover:text-[#AFA96E] transition-colors"}>Monitoreo de fauna silvestre</Link>
                     <Link href={"/programas/programa-proteccion-de-especies-de-fauna-amenazadas"} className={"hover:text-[#AFA96E] transition-colors"}>Protección de especies de fauna amenazadas</Link>
+                    <Link href={"/programas/programa-reproduccion-de-plantas-nativas-y-endemicas-amenazadas"} className={"hover:text-[#AFA96E] transition-colors"}>Reproducción de plantas nativas y endémicas amenazadas</Link>
                 </div>
             </div>
         </footer>

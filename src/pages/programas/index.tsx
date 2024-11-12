@@ -1,15 +1,12 @@
-import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
-import Image from "next/image";
-import Link from "next/link";
 import styles from './Index.module.css'
-import Button from "@/components/Button/Index";
-import Inaturalist from "@/components/Banners/Inaturalist";
+import Layout from "@/components/Layout";
 import ImageGrid from "@/components/Programs/ImageGrid";
+import Inaturalist from "@/components/Banners/Inaturalist";
 
-export default function ConservacionAmbiental() {
+export default function ProgramsPage() {
     return (
-        <Layout title={"Conservación ambiental"}>
+        <Layout title={'Programas'}>
             <main>
                 <div className={`grid place-content-center gap-10 ${styles.firstImage} h-[40rem] text-white px-5`}>
                     <div className={"flex flex-col gap-5"}>
@@ -20,7 +17,7 @@ export default function ConservacionAmbiental() {
                             transition={{ delay: .3, duration: .5 }}
                             className={"relative text-center text-2xl md:text-3xl lg:text-4xl lg:leading-[3rem]"}
                         >
-                            <div>Conservación Ambiental</div>
+                            <div>Programas</div>
                         </motion.h1>
                     </div>
                     <motion.span
@@ -32,21 +29,6 @@ export default function ConservacionAmbiental() {
                     </motion.span>
                 </div>
                 <div className={"flex flex-col gap-14 max-w-[95rem] mx-auto px-5 sm:px-10 lg:px-20 py-20"}>
-                    <p>En Cap Cana, la conservación ambiental es más que una prioridad; es un compromiso inquebrantable con la preservación de uno de los paraísos naturales más impresionantes del Caribe. Nos enfocamos en equilibrar el desarrollo sostenible con la protección de la biodiversidad y los ecosistemas marinos y terrestres.</p>
-                    <motion.div 
-                        initial={{ bottom: '-30px', opacity: 0 }}
-                        whileInView={{ bottom: '0px', opacity: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: .4, duration: .5 }}
-                        className={"relative overflow-hidden w-full"} 
-                        style={{ aspectRatio: '16/7' }}
-                    >
-                        <img src={"/programas/conservacion-terrestre/portada.webp"} className={"absolute w-full object-cover"} alt={"Conservación terrestre"} />
-                        <div className={"absolute w-full h-full grid place-content-center"}>
-                            <span className={"text-shadow text-white futura-light-regular uppercase text-lg sm:text-xl md:text-2xl select-none text-center px-4"}>Conservación terrestre</span>
-                        </div>
-                    </motion.div>
-                    <p>Desde las alturas del Farallón de Cap Cana hasta la línea costera, nuestros programas de conservación terrestre se dedican a conocer y proteger la diversa flora y fauna terrestre que habita en las tierras de la Ciudad Destino Cap Cana.</p>
                     <div className={"flex flex-col gap-5"}>
                         <h3 className={"futura-light-regular text-2xl"}>Flora</h3>
                         <p>En los bosques de Cap Cana podemos encontrar unas 300 especies de plantas nativas y endémicas, algunas de estas especies son raras y se encuentran en peligro crítico de extinción.</p>
@@ -65,16 +47,6 @@ export default function ConservacionAmbiental() {
                             { src: '/programas/rescate-de-colmenas/portada.webp', href: 'programa-rescate-de-colmenas', text: 'Programa rescate de colmenas' },
                         ]} />
                     </div>
-                    <div
-                        className={"relative overflow-hidden w-full"}
-                        style={{ aspectRatio: '16/7' }}
-                    >
-                        <img src={"/programas/conservacion-marina/portada.webp"} className={"absolute w-full object-cover"} alt={"Conservación marina"} />
-                        <div className={"absolute w-full h-full grid place-content-center"}>
-                            <span className={"text-shadow text-white futura-light-regular uppercase text-lg sm:text-xl md:text-2xl select-none text-center px-4"}>Conservación marina</span>
-                        </div>
-                    </div>
-                    <p>Desde el borde costero hasta altamar, nuestros programas de conservación marina se dedican a conocer y  proteger la rica biodiversidad marina que habita debajo del mar frente la costa de la Ciudad Destino Cap Cana, en las aguas del Santuario Marino Arrecifes del Sureste (SAMAR).</p>
                     <div className={"flex flex-col gap-5"}>
                         <h3 className={"futura-light-regular text-2xl"}>Vida marina</h3>
                         <p>Las aguas de la costa de Cap Cana cuentan con una variedad de ecosistemas marinos que incluye fondos arenosos, praderas de hierbas marinas y arrecifes de coral, los cuales albergan una rica biodiversidad y aportan bienes y servicios importantes para los seres humanos.</p>
@@ -86,9 +58,25 @@ export default function ConservacionAmbiental() {
                             { src: '/programas/registro-de-avistamientos-de-manaties/portada.webp', href: 'programa-de-registro-de-avistamientos-de-manaties', text: 'Programa de registro de avistamientos de manatíes' },
                         ]} />
                     </div>
+                    <div className={"flex flex-col gap-5"}>
+                        <h3 className={"futura-light-regular text-2xl"}>Desarrollo social</h3>
+                        <p>El área de Desarrollo Social se vincula estrechamente con nuestro compromiso hacia las comunidades cercanas a nuestra zona, buscando promover su calidad de vida a través de propuestas de resiliencia, acompañamiento continuo a sus desafíos y educación constante en la gestión sostenible del medioambiente</p>
+                        <ImageGrid images={[
+                            { src: '/programas/ni-una-gota-mas-reconstruccion-de-techos/1.png', href: 'programa-ni-una-gota-mas-reconstruccion-de-techos', text: 'Programa "Ni una gota más", reconstrucción de techos' },
+                            { src: '/programas/ni-una-gota-mas-reconstruccion-de-techos/portada.webp', href: 'programa-de-concienciacion-socioambiental', text: 'Programa de concienciación socioambiental' },
+                            { src: '/programas/apoyo-comunitario/portada.webp', href: 'programa-de-apoyo-comunitario', text: 'Programa de Apoyo Comunitario' },
+                        ]} />
+                    </div>
+                    <div className={"flex flex-col gap-5"}>
+                        <h3 className={"futura-light-regular text-2xl"}>Sostenibilidad</h3>
+                        <p>La Fundación Cap Cana como entidad creada para la protección de los recursos naturales y el desarrollo social de la Ciudad Destino, lidera y funciona como brazo ejecutor para impulsar y aplicar todas aquellas iniciativas técnicas, operativas y de gestión que se requieren para lograr el desarrollo sostenible en Cap Cana.</p>
+                        <ImageGrid images={[
+                            { src: '/home/programs/sostenibilidad.webp', href: 'sostenibilidad/estrategia', text: 'Programa estrategia de sostenibilidad' },
+                        ]} />
+                    </div>
                 </div>
                 <Inaturalist />
             </main>
         </Layout>
     )
-}
+};

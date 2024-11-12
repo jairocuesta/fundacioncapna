@@ -29,11 +29,9 @@ export default function HomeVisionMision() {
                     </div>
                     <div className={"flex flex-col gap-3"}>
                         <h3 className={"text-lg lg:text-xl"}>Nuestra <span className={"font-semibold text-[#7D8034]"}>visión</span></h3>
-                        <p className={"text-sm lg:text-base"}>Involucrarnos en labores y proyectos de rescate
-                            y conservación con el propósito de convertir a
-                            Cap Cana
-                            en un destino completamente
-                            eco-amigable.
+                        <p className={"text-sm lg:text-base"}>
+                            Lograr el reconocimiento internacional como entidad de conservación de la naturaleza 
+                            basada en la ciencia y el compromiso con el desarrollo sostenible.
                         </p>
                     </div>
                 </div>
@@ -54,11 +52,10 @@ export default function HomeVisionMision() {
                     </div>
                     <div className={"flex flex-col gap-3"}>
                         <h3 className={"text-lg lg:text-xl"}>Nuestra <span className={"font-semibold text-[#7D8034]"}>misión</span></h3>
-                        <p className={"text-sm lg:text-base"}>Garantizar el mantenimiento de las diversas
-                            especies endémicas y áreas protegidas para
-                            que puedan ser
-                            disfrutadas de manera
-                            sostenible a través del tiempo.
+                        <p className={"text-sm lg:text-base"}>
+                            Promover la conservación ambiental mediante programas de sensibilización e intervenciones que 
+                            permitan mantener la salud de los ecosistemas, el uso sostenible de los recursos naturales y 
+                            elevar la resiliencia climática, así como promover el desarrollo de sus comunidades vecinas.
                         </p>
                     </div>
                 </div>

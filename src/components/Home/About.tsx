@@ -40,7 +40,7 @@ export default function HomeAbout() {
                         <span className={"flex items-center justify-center text-4xl font-bold"}>
                             <CounterAnimation from={0} to={11800} />
                         </span>
-                        <span className={"futura-light-regular uppercase text-sm"}>plantas en vivero</span>
+                        <span className={"futura-light-regular uppercase text-sm"}>plástico recolectado</span>
                     </div>
                 </motion.div>
                 <div className={"flex flex-col items-center gap-10 text-center w-full lg:w-3/4 2xl:w-1/2 mx-auto text-neutral-200 pt-10"}>
