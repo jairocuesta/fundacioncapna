@@ -7,6 +7,12 @@ const contactSchema = yup.object({
     comment: yup.string()
 })
 
+export const formDonations = yup.object({
+    name: yup.string().required("Nombre es requerido"),
+    surname: yup.string().required("Nombre es requerido"),
+    email: yup.string().email("Formato no válido").required("Correo electrónico es requerido"),
+})
+
 export {
     contactSchema
 }

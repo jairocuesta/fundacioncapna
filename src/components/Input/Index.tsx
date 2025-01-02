@@ -10,7 +10,7 @@ type InputTypes = {
 }
 export default function Input({ htmlFor, type, label, placeholder, props, errors }: InputTypes) {
     return (
-        <div className={"flex flex-col"}>
+        <div className={"flex flex-col w-full"}>
             <label 
                 className={"text-sm"}
                 htmlFor={htmlFor}

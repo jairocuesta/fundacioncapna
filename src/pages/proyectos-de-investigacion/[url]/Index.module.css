@@ -1,0 +1,27 @@
+.firstImage {
+    background-image: url('/investigacion/1.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* .secondImage {
+    background-image: url('/programas/example/2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.thirdImage {
+    background-image: url('/programas/example/3.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.fourImage {
+    background-image: url('/programas/example/4.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+} */

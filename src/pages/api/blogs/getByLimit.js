@@ -26,5 +26,6 @@ export default async function GET(req, res) {
         });
     } catch (error) {
         return res.status(500).json({ success: false, message: "There was an error getting blog by url" });
+        console.log(error)
     }
 }

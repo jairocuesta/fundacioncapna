@@ -8,7 +8,7 @@ export default function Breadcrumb({ routes }: Props) {
 
     return (
         <div className={"text-[#7D8034] uppercase"}>
-            <div className={"flex items-center gap-2"}>
+            <div className={"flex flex-wrap items-center gap-2"}>
                 {routes?.map((route, i) => (
                     <div key={i} className={"flex items-center gap-2"}>
                         <Link href={route.url} className={"underline"}>{route.name}</Link>

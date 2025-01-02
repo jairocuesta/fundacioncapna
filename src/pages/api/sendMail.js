@@ -41,8 +41,8 @@ export default async function POST(req, res) {
 
     try {
         await transporter.sendMail(emailOptions);
-        return res.status(200).json({ success: true, data: 'Email sent' });
+        return res.status(200).json({ success: true, data: 'Success' });
     } catch (error) {
-        return res.status(500).json({ success: false, message: "There was an error sending this email" });
+        return res.status(500).json({ success: false, message: "Failed" });
     }
 }

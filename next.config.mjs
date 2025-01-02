@@ -10,7 +10,12 @@ const nextConfig = {
         remotePatterns: [{
             protocol: 'http',
             hostname: 'localhost'
-        }]
+        }],
+        remotePatterns: [{
+            protocol: 'https',
+            hostname: 'blog.fundacioncapcana.org',
+        }],
+
     },
 };
 
