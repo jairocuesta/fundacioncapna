@@ -74,8 +74,8 @@ const DonationOption = ({ amounts, onSelect, selectedCurrency, error, setError}:
                             }}
                         />
                         <div className="flex flex-col">
-                            <p className="font-bold text-neutral-600">{`${currency} $${item.amount}`}</p>
-                            <p className="text-xs">{item.message}</p>
+                            <p className="font-bold text-neutral-600 text-lg">{`${currency} $${item.amount}`}</p>
+                            <p className="text-sm">{item.message}</p>
                         </div>
                     </div>
                 </div>
@@ -100,9 +100,9 @@ const DonationOption = ({ amounts, onSelect, selectedCurrency, error, setError}:
                     <div className="flex flex-col">
                         <div className="flex gap-1 justify-start items-center w-full">
                             {error ? (
-                                <p className="font-bold text-red-500">{currency} $</p>
+                                <p className="font-bold text-red-500 text-lg">{currency} $</p>
                             ) :
-                                <p className="font-bold text-neutral-600">{currency} $</p>
+                                <p className="font-bold text-neutral-600 text-lg">{currency} $</p>
                             }
 
                             <input

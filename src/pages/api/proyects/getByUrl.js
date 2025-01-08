@@ -11,7 +11,7 @@ export default async function GET(req, res) {
     try {
         const { data } = await axios.request({
             method: 'GET',
-            url: `${process.env.NEW_STRAPI_URI}/api/programs?filters[url]=${url}&populate=Images.Image&populate=redirect`,
+            url: `${process.env.NEW_STRAPI_URI}/api/programs?filters[url]=${url}&populate=Images.Image&populate=redirect&populate=textForm`,
             headers: {
                 Authorization: `Bearer ${process.env.NEW_STRAPI_TOKEN}`
             }

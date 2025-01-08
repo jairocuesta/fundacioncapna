@@ -23,7 +23,7 @@ const CommentBox = ({ comment, setComment, isCommentVisible,  setIsCommentVisibl
 
     return (
         <div className='flex flex-col gap-3'>
-            <label className='text-xs flex gap-1 text-neutral-600'>
+            <label className='text-sm flex gap-1 text-neutral-600'>
                 <input
                     type="checkbox"
                     checked={isCommentVisible}
@@ -41,11 +41,11 @@ const CommentBox = ({ comment, setComment, isCommentVisible,  setIsCommentVisibl
                         value={comment}
                         onChange={(e) => handleCommentChange(e.target.value)}
                         placeholder="Escribe tu comentario aquí..."
-                        className='custom-checkbox w-full border-b border-[#898C31] text-xs text-neutral-600 min-h-10 max-h-14'
+                        className='custom-checkbox w-full border-b border-[#898C31] text-sm text-neutral-600 min-h-10 max-h-14'
                         rows={2}
                     />
                     {errorMessage && errorMessage !== "" && (
-                        <div className="text-xs text-red-500 font-semibold">
+                        <div className="text-sm text-red-500 font-semibold">
                             {errorMessage}
                         </div>
                     )}

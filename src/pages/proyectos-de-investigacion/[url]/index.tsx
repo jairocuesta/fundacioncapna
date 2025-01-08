@@ -23,6 +23,7 @@ const ViewProyects = () => {
     const [images, setImages] = useState<any>();
     const [loading, setLoading] = useState(false);
     const [description, setDescription] = useState<any[]>();
+    const [textForm, setTextForm] = useState<any[]>();
 
     useEffect(() => {
         setLoading(true);
@@ -44,11 +45,21 @@ const ViewProyects = () => {
 
     useEffect(() => {
         if (proyecto) {
-            setDescription(proyecto.attributes.content)
+            typeof url === 'string' ? localStorage.setItem('url', url) : null;
+            setDescription(proyecto.attributes.content);
+            setTextForm(proyecto.attributes.textForm.text);
         }
-    })
+    }, [proyecto, url]);
 
-    console.log(proyecto)
+    useEffect(() => {
+        if (proyecto && window.location.hash) {
+            const hash = window.location.hash;
+            const element = document.querySelector(hash);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    }, [proyecto]);
 
     return (
         loading ? (
@@ -86,16 +97,6 @@ const ViewProyects = () => {
                     </motion.span>
                 </div> */}
                 <div className='flex flex-col gap-5 py-40'>
-                    <div className={"relative -top-8 flex flex-col gap-4 w-full pt-5 px-5 sm:px-10 lg:px-20 mx-auto"}>
-                        {proyecto && proyecto.attributes.redirect ? (
-                            <Breadcrumb
-                                routes={proyecto.attributes.redirect.map((redirect) => ({
-                                    name: redirect.name_redirect,
-                                    url: redirect.url_redirect,
-                                }))}
-                            />
-                        ) : null}
-                    </div>
                     <div className='flex flex-col gap-20'>
                         <div className='flex flex-col w-full px-5 sm:px-10 lg:px-20 mx-auto'>
                             <TextSlider
@@ -114,8 +115,18 @@ const ViewProyects = () => {
                                 ]}
                             />
                         </div>
-                        <div className={"flex flex-col max-w-7xl mx-auto px-5 sm:px-10 lg:px-20 gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
-                            <div className="flex flex-col gap-6 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20">
+                        <div className={"relative -top-8 flex flex-col gap-4 w-full pt-5 px-5 sm:px-10 lg:px-20 mx-auto"}>
+                            {proyecto && proyecto.attributes.redirect ? (
+                                <Breadcrumb
+                                    routes={proyecto.attributes.redirect.map((redirect) => ({
+                                        name: redirect.name_redirect,
+                                        url: redirect.url_redirect,
+                                    }))}
+                                />
+                            ) : null}
+                        </div>
+                        <div className={"flex flex-col px-5 md:px-10 lg:px-20 gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
+                            <div className="flex flex-col gap-6 [&>p>strong]:font-bold">
                                 {description ? (
                                     <BlocksRenderer content={description} />
                                 ) : (
@@ -123,10 +134,15 @@ const ViewProyects = () => {
                                 )}
                             </div>
                         </div>
-                        <div className='flex flex-col md:flex-row justify-center items-start gap-10 xl:gap-20 px-5'>
+                        <div id="form" className='flex flex-col lg:flex-row justify-between items-start gap-10 xl:gap-20 px-5 md:px-10 lg:px-20'>
                             <DonationForm />
-                            <div className='w-full md:w-1/3 lg:w-1/3 flex flex-col gap-5'>
-                                <Subtitle text='Informacion bancaria' />
+                            <div className='w-full lg:w-1/2 flex flex-col gap-5 [&>p>strong]:font-bold'>
+                                <Subtitle text={proyecto?.attributes.textForm.subtitle} />
+                                {textForm ? (
+                                    <BlocksRenderer content={textForm} />
+                                ) : (
+                                    <p>No hay contenido disponible</p>
+                                )}
                                 <p>
                                     Actualmente se está elaborando el Plan de Manejo del SAMAR, el cual consiste en un documento técnico y normativo que contiene el conjunto de
                                     decisiones sobre el área protegida en las que, con fundamento estrictamente basado en el conocimiento científico y en la experiencia de las

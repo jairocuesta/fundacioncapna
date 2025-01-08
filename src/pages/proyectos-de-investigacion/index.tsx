@@ -59,8 +59,8 @@ const ProyectosInvestigacion = () => {
                     </motion.span>
                 </div>
 
-                <div className={"flex flex-col justify-center items-center w-full gap-10 px-5"}>
-                    <div className='flex flex-col max-w-7xl w-full gap-10'>
+                <div className={"flex flex-col justify-center items-center w-full gap-10 px-5 py-20"}>
+                    <div className='flex flex-col max-w-7xl w-full gap-14 overflow-hidden'>
                         {loading ? (
                             <div className='flex justify-center items-center w-full'>
                                 <div className="secondSpinner"></div>

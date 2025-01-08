@@ -118,6 +118,19 @@ type DataAttributes = {
         name_redirect: string;
         url_redirect: string;
     }[];
+    textForm: {
+        id: number,
+        subtitle: string,
+        text:
+        {
+            type: "heading" | "paragraph" | "list",
+            children: 
+                {
+                    type: string,
+                    text: string,
+                }[]
+        }[]
+    }
     Images: {
         id: number;
         Image: {

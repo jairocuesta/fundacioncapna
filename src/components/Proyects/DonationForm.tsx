@@ -15,28 +15,16 @@ const DonationForm = () => {
 
     // MONEDA SELECCIONADA
     const [selectedCurrency, setSelectedCurrency] = useState('DOP');
-    const [codeCurrency, setCodeCurrency] = useState('')
     const [amount, setAmount] = useState(0);
     // COMENTARIO
     const [comment, setComment] = useState('asdasd');
     const [paymentSession, setPaymentSession] = useState<string | undefined>(undefined);
 
     useEffect(() => {
-        if(selectedCurrency === 'DOP') {
-            setCodeCurrency('214')
-        } else if(selectedCurrency === 'USD') {
-            setCodeCurrency('840')
-        } else {
-            setCodeCurrency('214')
-        }
-    }, [selectedCurrency])
-
-
-    useEffect(() => {
         if (step === 2) {
             window.scrollBy({
-                top: -400,  
-                behavior: 'smooth', 
+                top: -400,
+                behavior: 'smooth',
             });
         }
     }, [step]);
@@ -44,12 +32,14 @@ const DonationForm = () => {
     //console.log(codeCurrency) 
 
     return (
-        <div className='flex flex-col w-full md:w-1/2 lg:w-1/3'>
-            <div className='flex justify-between items-center gap-5 w-full bg-[#898C31] p-5'>
-                <p className='text-white font-semibold'>Elige la cantidad</p>
+        <div className="flex flex-col w-full lg:w-1/2 shadow-xl overflow-hidden rounded-xl">
+            <div className='flex justify-between items-center gap-5 w-full rounded-t-xl pt-10 px-10'>
+                <p className="text-start text-xl text-[#afa96e] font-semibold futura-light-regular uppercase">
+                    Elige la cantidad a donar
+                </p>
                 <Steps step={step} />
             </div>
-            <div className='flex flex-col gap-5 border border-[#898C31] border-opacity-30 p-5'>
+            <div className='flex flex-col gap-5 p-10 rounded-xl overflow-hidden'>
                 {step === 1 ? (
                     <FormFirsStep
                         step={step}
@@ -61,10 +51,9 @@ const DonationForm = () => {
                         selectedCurrency={selectedCurrency}
                         setSelectedCurrency={setSelectedCurrency}
                         setPaymentSession={setPaymentSession}
-                        codeCurrency={codeCurrency}
                     />
                 ) : (
-                    <FormSecondStep 
+                    <FormSecondStep
                         setStep={setStep}
                         paymentSession={paymentSession}
                     />

@@ -6,7 +6,7 @@ import Input from "@/components/Input/Index";
 import CompanyDonationBox from './CompanyDonationBox';
 
 type Props = {
-    setStep: React.Dispatch<React.SetStateAction<number>>; 
+    setStep: React.Dispatch<React.SetStateAction<number>>;
     paymentSession: string | undefined;
 }
 
@@ -17,12 +17,12 @@ const FormSecondStep = ({ setStep, paymentSession }: Props) => {
     });
 
     const [comment, setComment] = useState('');
-    const [anonymous, setAnonymous] = useState(false);
+    //const [anonymous, setAnonymous] = useState(false);
 
     const [companyName, setCompanyName] = useState('');
     const [isCommentVisible, setIsCommentVisible] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
-    
+
     // Estado para controlar el spinner
     const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -30,9 +30,9 @@ const FormSecondStep = ({ setStep, paymentSession }: Props) => {
         setComment(event);
     };
 
-    const handleAnonumousChange = () => {
-        setAnonymous(!anonymous);
-    }
+    // const handleAnonumousChange = () => {
+    //     setAnonymous(!anonymous);
+    // }
 
     useEffect(() => {
         if (companyName !== '') {
@@ -48,26 +48,38 @@ const FormSecondStep = ({ setStep, paymentSession }: Props) => {
             setErrorMessage('Debes ingresar el nombre de la empresa');
             return;
         }
-    
+
         let sessionId: string | undefined;
         if (paymentSession) {
             sessionId = paymentSession;
         }
-    
+
         if (!sessionId) {
             setErrorMessage('No se ha encontrado el sessionId');
             return;
         }
 
         setIsSubmitting(true);
-    
+
         const form = document.getElementById('authorization-form') as HTMLFormElement;
         const sessionInput = form.elements.namedItem('SESSION') as HTMLInputElement;
-    
+
         if (sessionInput) {
             sessionInput.value = sessionId;
         }
         form.submit();
+
+        const userInfo = {
+            name: data.name, 
+            surname: data.surname, 
+            email: data.email, 
+            phone: data.phone,
+            company: companyName,
+            comment: comment,
+        };
+
+        localStorage.setItem("user", JSON.stringify(userInfo));
+
     }
 
     const handleBackClick = () => {
@@ -102,7 +114,7 @@ const FormSecondStep = ({ setStep, paymentSession }: Props) => {
                 props={register('email')}
                 errors={errors.email}
             />
-            <label className="text-xs flex gap-1 text-neutral-600">
+            {/* <label className="text-xs flex gap-1 text-neutral-600">
                 <input
                     type="checkbox"
                     checked={anonymous}
@@ -116,7 +128,7 @@ const FormSecondStep = ({ setStep, paymentSession }: Props) => {
                     <i className="fa-regular fa-circle-info"></i>
                     <span className="tooltip-text">La organización siempre mantendrá su información personal en privado.</span>
                 </span>
-            </label>
+            </label> */}
             <CompanyDonationBox
                 companyName={companyName}
                 setCompanyName={setCompanyName}
@@ -136,18 +148,18 @@ const FormSecondStep = ({ setStep, paymentSession }: Props) => {
                 <button
                     type='button'
                     onClick={handleBackClick}
-                    className='flex gap-2 justify-center items-center w-full h-11 bg-neutral-400 hover:bg-neutral-500 py-2 text-white font-semibold text-lg transition-colors duration-500'>
+                    className='flex gap-2 justify-center items-center w-full font-bold uppercase bg-neutral-400 hover:bg-neutral-500 text-white rounded-full transition-colors text-center futura-light-regular py-3'>
                     Atrás
                 </button>
                 <button
                     type='submit'
-                    className='flex gap-2 justify-center items-center w-full h-11 bg-[#898C31] hover:bg-[#646624] py-2 text-white font-semibold text-lg transition-colors duration-500'
+                    className='flex gap-2 w-full justify-center items-center font-bold uppercase bg-[#afa96e] hover:bg-[#8f8959] text-white rounded-full transition-colors text-center futura-light-regular py-3'
                     disabled={isSubmitting}
                 >
                     {isSubmitting ? (
-                        <div className="spinner"></div>  
+                        <div className="spinner"></div>
                     ) : (
-                        'Realizar Pago'
+                        'Realizar donación'
                     )}
                 </button>
             </div>
@@ -160,3 +172,6 @@ const FormSecondStep = ({ setStep, paymentSession }: Props) => {
 }
 
 export default FormSecondStep;
+
+
+//4761340000000050

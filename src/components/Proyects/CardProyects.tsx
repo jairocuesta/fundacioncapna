@@ -21,37 +21,37 @@ const handleClick = () => {
 };
 
     return (
-        <div onClick={handleClick} className="relative flex flex-col border border-[#898C31] w-full cursor-pointer group overflow-hidden">
-            <div className="relative left-1/2 -translate-x-1/2 w-[calc(100%+2.5rem)] h-40 grid grid-cols-3 overflow-hidden">
-                <div className='flex items-center w-full h-40'>
-                    <div className="relative w-full h-[20rem]" >
+        <div onClick={handleClick} className="relative flex flex-col rounded-md w-full cursor-pointer group overflow-hidden">
+            <div className="relative hover:scale-105 duration-300 left-1/2 -translate-x-1/2 w-[calc(100%+3.3rem)] h-72 grid grid-cols-3 overflow-hidden">
+                <div className='flex items-center w-full h-72'>
+                    <div className="relative w-full h-[30rem]" >
                         <Image
                             src={images[0]}
                             alt=""
                             fill
-                            style={{ transform: "rotate(15deg)" }}
+                            style={{ transform: "rotate(13deg)" }}
                             className="object-cover"
                         />
                     </div>
                 </div>
-                <div className='flex items-center w-full h-40 '>
-                    <div className="relative w-full h-[20rem]" >
+                <div className='flex items-center w-full h-72 '>
+                    <div className="relative w-full h-[30rem]" >
                         <Image
                             src={images[1]}
                             alt=""
                             fill
-                            style={{ transform: "rotate(15deg)" }}
+                            style={{ transform: "rotate(13deg)" }}
                             className="object-cover"
                         />
                     </div>
                 </div>
-                <div className='flex items-center w-full h-40'>
-                    <div className="relative w-full h-[20rem]" >
+                <div className='flex items-center w-full h-72'>
+                    <div className="relative w-full h-[30rem]" >
                         <Image
                             src={images[2]}
                             alt=""
                             fill
-                            style={{ transform: "rotate(15deg)" }}
+                            style={{ transform: "rotate(13deg)" }}
                             className="object-cover"
                         />
                     </div>
@@ -59,7 +59,7 @@ const handleClick = () => {
             </div>
             <div className="absolute bottom-0 p-3">
                 {/* <Subtitle text={"Monitoreo de Manatíes"} /> */}
-                <h5 className='font-bold text-white sm:text-xl group-hover:underline'>{title}</h5>
+                <h5 className='font-bold text-white sm:text-xl'>{title}</h5>
             </div>
         </div>
 

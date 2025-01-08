@@ -14,10 +14,9 @@ type Props = {
     selectedCurrency: string,
     setSelectedCurrency: React.Dispatch<string>
     setPaymentSession: React.Dispatch<string | undefined>
-    codeCurrency: string;
 }
 
-const FormFirsStep = ({ step, setStep, amount, setAmount, comment, setComment, selectedCurrency, setSelectedCurrency, setPaymentSession, codeCurrency }: Props) => {
+const FormFirsStep = ({ step, setStep, amount, setAmount, comment, setComment, selectedCurrency, setSelectedCurrency, setPaymentSession }: Props) => {
 
     // Estados
     const [isCommentVisible, setIsCommentVisible] = useState(false);
@@ -58,12 +57,15 @@ const FormFirsStep = ({ step, setStep, amount, setAmount, comment, setComment, s
                 method: 'POST',
                 data: {
                     amount,
-                    codeCurrency,
                 }
             })
             setError(false);
             setStep(2);
-            console.log(response); 
+            // console.log(response.SESSION);
+            // console.log(response['session-key']);
+            localStorage.setItem('SESSION', response.SESSION);
+            localStorage.setItem('session-key', response['session-key']);
+            localStorage.setItem('session-start-time', new Date().getTime().toString());
             setPaymentSession(response.SESSION);
         } catch (error) {
             console.log(error);
@@ -74,7 +76,7 @@ const FormFirsStep = ({ step, setStep, amount, setAmount, comment, setComment, s
 
     return (
         <>
-            <SelectCurrency setSelectedCurrency={setSelectedCurrency} />
+            {/* <SelectCurrency setSelectedCurrency={setSelectedCurrency} /> */}
             <div>
                 <DonationOption
                     amounts={[
@@ -101,11 +103,11 @@ const FormFirsStep = ({ step, setStep, amount, setAmount, comment, setComment, s
             <button
                 type='submit'
                 onClick={handleSubmitFirsStep}
-                className='flex gap-2 justify-center items-center w-full h-11 bg-[#898C31] hover:bg-[#646624] py-2 text-white font-semibold text-lg transition-colors duration-500'>
+                className='flex justify-center items-center font-bold uppercase bg-[#afa96e] hover:bg-[#8f8959] text-white rounded-full transition-colors text-center futura-light-regular py-3'>
                 {loading ? (
                     <div className="spinner"></div>
                 ) : 'Siguiente'}
-            </button>
+            </button>        
         </>
     );
 };

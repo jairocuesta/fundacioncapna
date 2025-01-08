@@ -167,13 +167,6 @@ ul.indicators {
   filter: brightness(.5);
 }
 
-/* .currency-dropdown {
-  padding: 10px;
-  font-size: 14px;
-  border-bottom: 2px solid #898C31;
-  color:rgb(71, 71, 71);
-} */
-
 .custom-select {
   position: relative;
   font-family: "Open Sans", sans-serif;
@@ -182,7 +175,7 @@ ul.indicators {
 .currency-dropdown {
   padding: 10px;
   font-size: 14px;
-  border-bottom: 1px solid #898C31;
+  border-bottom: 1px solid #afa96e;
   background-color: white;
   color: rgb(71, 71, 71);
   cursor: pointer;

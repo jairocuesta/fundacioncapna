@@ -22,7 +22,7 @@ const CompanyDonationBox = ({companyName, setCompanyName, isCommentVisible, setI
 
     return (
         <div className='flex flex-col gap-3'>
-            <label className='text-xs flex gap-1 text-neutral-600'>
+            <label className='flex gap-1 text-neutral-600'>
                 <input
                     type="checkbox"
                     checked={isCommentVisible}
@@ -44,7 +44,7 @@ const CompanyDonationBox = ({companyName, setCompanyName, isCommentVisible, setI
                         className='custom-checkbox w-full border-b border-[#898C31] text-neutral-600'
                     />
                     {errorMessage && errorMessage !== "" && (
-                        <div className="text-xs text-red-500 font-semibold">
+                        <div className="text-red-500 font-semibold">
                             {errorMessage}
                         </div>
                     )}
