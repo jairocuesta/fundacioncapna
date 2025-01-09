@@ -1,11 +1,14 @@
 import axios from "axios";
 import nodemailer from 'nodemailer';
-import contactTemplate from "../../emailTemplates/contactTemplate";
+
+import donationTemplate from "@/emailTemplates/donationTemplate";
 
 export default async function POST(req, res) {
-    const { full_name, phone_number, email, comment } = req.body || {};
-    if (!full_name || !phone_number || !email) {
-        return res.status(400).json({ success: false, message: `"full_name", "phone_number", "email" body fields are required` });
+    const { fullname, donation, email, comment, company, proyect, card, transaction } = req.body || {};
+
+    console.log({fullname, donation, email, comment, company, proyect, card, transaction});
+    if (!fullname || !donation || !email || !proyect) {
+        return res.status(400).json({ success: false, message: `"fullname", "donation", "email", "proyect" body fields are required` });
     }
 
     const transporter = nodemailer.createTransport({
@@ -18,23 +21,32 @@ export default async function POST(req, res) {
         },
     });
 
-    const template = contactTemplate({
-        full_name,
-        phone_number,
+    const template = donationTemplate({
+        fullname,
+        donation,
         email,
-        comment
+        comment,
+        company,
+        proyect, 
+        card,
+        transaction,
     });
 
     const emailOptions = {
-        from: email,
-        to: process.env.SMTP_TO_EMAIL,
-        subject: "Hay un nuevo interesado en hacerse miembro!",
+        from: process.env.SMTP_TO_EMAIL,
+        to: email,
+        cc: process.env.SMTP_TO_EMAIL,
+        subject: `Confirmación de nueva donación destinada al proyecto ${proyect}`,
         text: `
-            ${full_name} está interesado en hacerse miembro.\n\n
-            Nombre: ${full_name}
-            Número de teléfono: ${phone_number}
+
+            Confirmación de nueva donación destinada al proyecto ${proyect}
+
+            Nombre: ${fullname}\n\n
             Correo electrónico: ${email}
+            Apoyo a: ${proyect}
+            Donación: ${donation}
             ${comment ? `Comentario: ${comment}` : ''}
+            ${comment ? `Empresa: ${company}` : ''}
         `,
         html: template,
     }

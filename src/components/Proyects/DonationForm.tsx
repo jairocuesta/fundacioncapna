@@ -32,7 +32,7 @@ const DonationForm = () => {
     //console.log(codeCurrency) 
 
     return (
-        <div className="flex flex-col w-full lg:w-1/2 shadow-xl overflow-hidden rounded-xl">
+        <div className="flex flex-col w-full lg:w-1/2 shadow-custom overflow-hidden rounded-xl">
             <div className='flex justify-between items-center gap-5 w-full rounded-t-xl pt-10 px-10'>
                 <p className="text-start text-xl text-[#afa96e] font-semibold futura-light-regular uppercase">
                     Elige la cantidad a donar

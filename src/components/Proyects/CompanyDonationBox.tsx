@@ -41,7 +41,7 @@ const CompanyDonationBox = ({companyName, setCompanyName, isCommentVisible, setI
                         value={companyName}
                         onChange={(e) => handleCommentChange(e.target.value)}
                         placeholder="Empresa donante..."
-                        className='custom-checkbox w-full border-b border-[#898C31] text-neutral-600'
+                        className={`custom-checkbox py-2 px-3 rounded-md w-full border focus:border-[#7D8034]`} 
                     />
                     {errorMessage && errorMessage !== "" && (
                         <div className="text-red-500 font-semibold">

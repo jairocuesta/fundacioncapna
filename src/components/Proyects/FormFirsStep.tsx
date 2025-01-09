@@ -3,6 +3,7 @@ import SelectCurrency from './SelectCurrency';
 import DonationOption from './DonationOption';
 import BoxComent from './BoxComent';
 import axios from 'axios';
+import { useRouter } from 'next/router';
 
 type Props = {
     step: number,
@@ -67,6 +68,7 @@ const FormFirsStep = ({ step, setStep, amount, setAmount, comment, setComment, s
             localStorage.setItem('session-key', response['session-key']);
             localStorage.setItem('session-start-time', new Date().getTime().toString());
             setPaymentSession(response.SESSION);
+            localStorage.setItem('donation', amount.toString());
         } catch (error) {
             console.log(error);
         } finally {
@@ -93,13 +95,13 @@ const FormFirsStep = ({ step, setStep, amount, setAmount, comment, setComment, s
                     setError={setError}
                 />
             </div>
-            <BoxComent
+            {/* <BoxComent
                 comment={comment}
                 setComment={setComment}
                 isCommentVisible={isCommentVisible}
                 setIsCommentVisible={setIsCommentVisible}
                 errorMessage={errorMessage}
-            />
+            /> */}
             <button
                 type='submit'
                 onClick={handleSubmitFirsStep}
@@ -107,7 +109,7 @@ const FormFirsStep = ({ step, setStep, amount, setAmount, comment, setComment, s
                 {loading ? (
                     <div className="spinner"></div>
                 ) : 'Siguiente'}
-            </button>        
+            </button>
         </>
     );
 };

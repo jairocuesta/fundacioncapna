@@ -1,7 +1,8 @@
 import axios from "axios";
 
 export default async function GET(req, res) {
-    const { session, sessionKey } = req.query || {};
+    const { session, sessionKey } = req.body;
+
     try {
         const { data } = await axios.request({
             method: 'GET',
@@ -12,7 +13,7 @@ export default async function GET(req, res) {
                 "Transfer-Encoding": "chunked"
             }
         });
-        return res.status(200).json(data?.data || []);
+        return res.status(200).json(data || []);
     } catch (error) {
         console.error("Error fetching data:", error);
         return res.status(500).json(error.message);

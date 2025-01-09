@@ -46,6 +46,7 @@ const ViewProyects = () => {
     useEffect(() => {
         if (proyecto) {
             typeof url === 'string' ? localStorage.setItem('url', url) : null;
+            localStorage.setItem('proyecto', proyecto?.attributes.name) 
             setDescription(proyecto.attributes.content);
             setTextForm(proyecto.attributes.textForm.text);
         }
@@ -60,6 +61,7 @@ const ViewProyects = () => {
             }
         }
     }, [proyecto]);
+
 
     return (
         loading ? (
@@ -97,7 +99,7 @@ const ViewProyects = () => {
                     </motion.span>
                 </div> */}
                 <div className='flex flex-col gap-5 py-40'>
-                    <div className='flex flex-col gap-20'>
+                    <div className='flex flex-col gap-12'>
                         <div className='flex flex-col w-full px-5 sm:px-10 lg:px-20 mx-auto'>
                             <TextSlider
                                 title={"Frase para esta imagen que irá aquí"}
@@ -115,7 +117,7 @@ const ViewProyects = () => {
                                 ]}
                             />
                         </div>
-                        <div className={"relative -top-8 flex flex-col gap-4 w-full pt-5 px-5 sm:px-10 lg:px-20 mx-auto"}>
+                        <div className={"relative -top-8 flex flex-col gap-4 w-full px-5 sm:px-10 lg:px-20 mx-auto"}>
                             {proyecto && proyecto.attributes.redirect ? (
                                 <Breadcrumb
                                     routes={proyecto.attributes.redirect.map((redirect) => ({
@@ -135,9 +137,9 @@ const ViewProyects = () => {
                             </div>
                         </div>
                         <div id="form" className='flex flex-col lg:flex-row justify-between items-start gap-10 xl:gap-20 px-5 md:px-10 lg:px-20'>
-                            <DonationForm />
+                            <DonationForm/>
                             <div className='w-full lg:w-1/2 flex flex-col gap-5 [&>p>strong]:font-bold'>
-                                <Subtitle text={proyecto?.attributes.textForm.subtitle} />
+                                <Subtitle text={proyecto?.attributes.textForm.subtitle!} />
                                 {textForm ? (
                                     <BlocksRenderer content={textForm} />
                                 ) : (

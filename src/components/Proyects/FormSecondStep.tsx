@@ -140,11 +140,11 @@ const FormSecondStep = ({ setStep, paymentSession }: Props) => {
                 value={comment}
                 onChange={(e) => handleCommentChange(e.target.value)}
                 placeholder="Envíale un mensaje a esta causa"
-                className='custom-checkbox w-full border-b border-[#898C31] text-neutral-600 min-h-20 max-h-32'
+                className={`custom-checkbox py-2 px-3 rounded-md w-full border focus:border-[#7D8034] text-neutral-600 min-h-20 max-h-32`} 
                 rows={3}
             />
 
-            <div className='flex gap-5 w-full'>
+            <div className='grid grid-cols-1 sm:grid-cols-2 gap-5 w-full'>
                 <button
                     type='button'
                     onClick={handleBackClick}
@@ -153,7 +153,7 @@ const FormSecondStep = ({ setStep, paymentSession }: Props) => {
                 </button>
                 <button
                     type='submit'
-                    className='flex gap-2 w-full justify-center items-center font-bold uppercase bg-[#afa96e] hover:bg-[#8f8959] text-white rounded-full transition-colors text-center futura-light-regular py-3'
+                    className='row-start-1 sm:col-start-2 flex px-2 gap-2 w-full justify-center items-center font-bold uppercase bg-[#afa96e] hover:bg-[#8f8959] text-white rounded-full transition-colors text-center futura-light-regular py-3'
                     disabled={isSubmitting}
                 >
                     {isSubmitting ? (
@@ -175,3 +175,5 @@ export default FormSecondStep;
 
 
 //4761340000000050
+
+//5461340000000050

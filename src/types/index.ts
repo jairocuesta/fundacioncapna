@@ -124,11 +124,11 @@ type DataAttributes = {
         text:
         {
             type: "heading" | "paragraph" | "list",
-            children: 
-                {
-                    type: string,
-                    text: string,
-                }[]
+            children:
+            {
+                type: string,
+                text: string,
+            }[]
         }[]
     }
     Images: {
@@ -144,3 +144,14 @@ export type ProyectTypes = {
     attributes: DataAttributes;
 };
 
+export type PaymentTypes = {
+    OrdenID: string,
+    AuthorizationCode: string,
+    TxToken: string,
+    ResponseCode: string,
+    CreditcardNumber: string,
+    CreditCardNumber: string,
+    RetrivalReferenceNumber: string,
+    RemoteResponseCode: string,
+    TransactionID: string
+}

@@ -265,3 +265,9 @@ ul.indicators {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+.shadow-custom {
+  --tw-shadow: 0 1px 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  --tw-shadow-colored: 0 1px 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
