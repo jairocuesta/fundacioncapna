@@ -3,8 +3,9 @@ import React, { useEffect, useState } from 'react';
 import { CODES_CARD } from '@/utils/cardCodes'  // Importa los códigos de la lista
 import Image from 'next/image';
 import { PaymentTypes } from '@/types';
+import Link from 'next/link';
 
-const index = () => {
+const Index = () => {
     const [paymentInfo, setPaymentInfo] = useState<PaymentTypes>()
     const [session, setSession] = useState<string | null>(null);
     const [donation, setDonation] = useState<string | null>(null);
@@ -237,7 +238,7 @@ const index = () => {
                             <h6 className='text-xl font-semibold text-[#918F39] text-center'>¡Gracias por contribuir <br /> a nuestra causa!</h6>
                         </div>
                     </div>
-                    <a href='/' onClick={handleRemoveItem} className='text-sm underline cursor-pointer text-neutral-400 hover:text-neutral-500'>Volver al inicio</a>
+                    <Link href='/' onClick={handleRemoveItem} className='text-sm underline cursor-pointer text-neutral-400 hover:text-neutral-500'>Volver al inicio</Link>
                 </div>
             ) : modal.show && modal.type === 'error' ? (
                 <div className='flex flex-col gap-10 justify-center items-center shadow-custom px-5 md:p-10 rounded-xl'>
@@ -247,7 +248,7 @@ const index = () => {
                         </div>
                         <h6 className='font-semibold text-red-500 text-center'>No se pudo realizar la donacion <br /> {modal.message}</h6>
                     </div>
-                    <a onClick={handleRemoveItem} href={`/proyectos-de-investigacion/${url}#form`} className='text-sm underline cursor-pointer text-neutral-400 hover:text-neutral-500'>Volver a intentarlo</a>
+                    <Link onClick={handleRemoveItem} href={`/proyectos-de-investigacion/${url}#form`} className='text-sm underline cursor-pointer text-neutral-400 hover:text-neutral-500'>Volver a intentarlo</Link>
                 </div>
             ) : (
                 <div className='spinner'>
@@ -257,4 +258,4 @@ const index = () => {
     );
 };
 
-export default index;
+export default Index;
