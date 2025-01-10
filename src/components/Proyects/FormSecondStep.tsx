@@ -39,9 +39,9 @@ const FormSecondStep = ({ setStep, paymentSession }: Props) => {
             setErrorMessage('');
         }
         if (!isCommentVisible) {
-            setComment('');
+            setCompanyName('');
         }
-    }, [isCommentVisible, companyName]);
+    }, [setCompanyName, companyName]);
 
     const onSubmit = async (data: any) => {
         if (isCommentVisible && companyName === '') {
@@ -88,7 +88,7 @@ const FormSecondStep = ({ setStep, paymentSession }: Props) => {
 
     return (
         <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col gap-5'>
-            <div className='flex justify-between w-full gap-5'>
+            <div className='flex flex-col sm:flex-row justify-between w-full gap-5'>
                 <Input
                     htmlFor={`name`}
                     type={"text"}
@@ -148,12 +148,12 @@ const FormSecondStep = ({ setStep, paymentSession }: Props) => {
                 <button
                     type='button'
                     onClick={handleBackClick}
-                    className='flex gap-2 justify-center items-center w-full font-bold uppercase bg-neutral-400 hover:bg-neutral-500 text-white rounded-full transition-colors text-center futura-light-regular py-3'>
+                    className='flex gap-2 justify-center items-center w-full font-bold uppercase bg-neutral-400 hover:bg-neutral-500 text-white rounded-full transition-colors text-center futura-light-regular py-3 text-sm md:text-base'>
                     Atrás
                 </button>
                 <button
                     type='submit'
-                    className='row-start-1 sm:col-start-2 flex px-2 gap-2 w-full justify-center items-center font-bold uppercase bg-[#afa96e] hover:bg-[#8f8959] text-white rounded-full transition-colors text-center futura-light-regular py-3'
+                    className='row-start-1 sm:col-start-2 flex px-2 gap-2 w-full justify-center items-center font-bold uppercase bg-[#afa96e] hover:bg-[#8f8959] text-white rounded-full transition-colors text-center futura-light-regular py-3 text-sm md:text-base'
                     disabled={isSubmitting}
                 >
                     {isSubmitting ? (

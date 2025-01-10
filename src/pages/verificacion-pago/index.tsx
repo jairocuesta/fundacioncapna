@@ -166,7 +166,6 @@ const index = () => {
     }
 
     console.log(paymentInfo && paymentInfo.ResponseCode)
-    console.log(paymentInfo && paymentInfo.AuthorizationCode)
 
     return (
         <div className={`flex justify-center items-center px-5 py-10 ${user.comment.length > 150 ? 'h-auto' : 'h-screen'}`}>
@@ -230,7 +229,7 @@ const index = () => {
                                 {user.comment && (
                                     <div className='flex flex-col justify-start items-start gap-1 max-w-[400px]'>
                                         <p className='font-medium text-xl w-full'>
-                                            <span className='text-xl font-semibold text-[#918F39]'>Comentario:</span> Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.
+                                            <span className='text-xl font-semibold text-[#918F39]'>Comentario:</span> {user.comment}
                                         </p>
                                     </div>)
                                 }
