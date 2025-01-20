@@ -23,7 +23,6 @@ const ProyectosInvestigacion = () => {
                     url: `/api/proyects/getAll`,
                 });
 
-                console.log(data)
                 const projects = Array.isArray(data) ? data : [data];
                 setProyects(projects);
             } catch (error) {
