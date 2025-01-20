@@ -40,8 +40,8 @@ export default function SustainabilityStrategy() {
                                 La ciudad destino Cap Cana se distingue por su compromiso con la sostenibilidad a través de su infraestructura 
                                 resiliente y sus iniciativas que promueven el cuidado del medio ambiente, la eficiencia energética y la protección 
                                 de los recursos naturales. Bajo la dirección de la Fundación Cap Cana, se han implementado una serie de proyectos y 
-                                políticas que no solo garantizan el desarrollo responsable del destino, sino que también contribuyen de manera activa a
-                                l bienestar de las comunidades locales y al ecosistema circundante.
+                                políticas que no solo garantizan el desarrollo responsable del destino, sino que también contribuyen de manera activa 
+                                al bienestar de las comunidades locales y al ecosistema circundante.
                             </p>
                         </div>
                     </div>
@@ -82,10 +82,10 @@ export default function SustainabilityStrategy() {
                             </p>
                         </div>
                         <div className={"flex flex-col gap-1"}>
-                            <span className={"text-[#898C31] leading-6 sm:leading-8"}>La campaña "Plastic Not Today"</span>
+                            <span className={"text-[#898C31] leading-6 sm:leading-8"}>La campaña {'"Plastic Not Today"'}</span>
                             <div className={'flex flex-col gap-3'}>
                                 <p className={"leading-7"}>
-                                    La Fundación Cap Cana ha lanzado la campaña "Plastic Not Today" como respuesta al creciente desafío global de
+                                    La Fundación Cap Cana ha lanzado la campaña {'"Plastic Not Today"'} como respuesta al creciente desafío global de
                                     la contaminación por plásticos. Esta iniciativa integral busca reducir el uso de plásticos de un solo uso y
                                     promover alternativas sostenibles dentro de la comunidad.
                                 </p>
