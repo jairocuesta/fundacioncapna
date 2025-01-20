@@ -68,7 +68,7 @@ export default function Contact() {
                             <Subtitle text={"¡Llámanos!"} />
                             <div className={"flex items-center gap-3"}>
                                 <i className="fa-light fa-phone-volume text-[#AFA96E]"></i>
-                                <a href={"tel:8094697241"} target={'_blank'} className={"link font-medium"}>(809) 469-7241</a>
+                                <a href={"tel:+18093901953"} target={'_blank'} className={"link font-medium"}>+1 (809) 390-1953</a>
                             </div>
                         </motion.div>
                         <motion.div
@@ -81,7 +81,7 @@ export default function Contact() {
                             <Subtitle text={"Escríbenos"} />
                             <div className={"flex items-center gap-3"}>
                                 <i className="fa-brands fa-whatsapp text-[#AFA96E]"></i>
-                                <a href={"tel:8094697241"} target={'_blank'} className={"link font-medium"}>(809) 469-7241</a>
+                                <a href={"tel:+18093901953"} target={'_blank'} className={"link font-medium"}>+1 (809) 390-1953</a>
                             </div>
                             <div className={"flex items-center gap-3"}>
                                 <i className="fa-light fa-envelope text-[#AFA96E]"></i>
@@ -106,11 +106,11 @@ export default function Contact() {
                             </div>
                             <div className={"flex items-center gap-3"}>
                                 <i className="fa-brands fa-facebook text-[#AFA96E]"></i>
-                                <a href={"https://facebook.com/fundacioncapcana"} target={'_blank'} className={"link font-medium"}>@fundacioncapcana</a>
+                                <a href={"https://www.facebook.com/p/Fundaci%C3%B3n-Cap-Cana-100083580931901"} target={'_blank'} className={"link font-medium"}>@fundacioncapcana</a>
                             </div>
                             <div className={"flex items-center gap-3"}>
                                 <i className="fa-brands fa-linkedin text-[#AFA96E]"></i>
-                                <a href={"https://linkedin.com/in/fundacioncapcana"} target={'_blank'} className={"link font-medium"}>@fundacioncapcana</a>
+                                <a href={"https://www.linkedin.com/company/fundaci%C3%B3n-cap-cana"} target={'_blank'} className={"link font-medium"}>@fundacioncapcana</a>
                             </div>
                         </motion.div>
                         <motion.div
@@ -133,7 +133,7 @@ export default function Contact() {
                             className={`h-[15rem] w-full rounded-xl overflow-hidden`}
                         >
                             <iframe 
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30272.464207868186!2d-68.42288216759155!3d18.48103065283859!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ea890ba67c733c1%3A0x7a0111a8ec90305b!2sCap%20Cana%2C%2023000%20Punta%20Cana%2C%20Rep%C3%BAblica%20Dominicana!5e0!3m2!1ses!2suy!4v1720032693333!5m2!1ses!2suy" 
+                                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7569.182661722931!2d-68.4222118!3d18.4568553!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ea89b749e7b5333%3A0x72c99d9f2dbdada8!2sDistrito%20de%20Sostenibilidad%20(Fundaci%C3%B3n%20Cap%20Cana)!5e0!3m2!1ses!2suy!4v1737383601612!5m2!1ses!2suy" 
                                 width="100%" 
                                 height="100%" 
                                 style={{ border: 0, borderRadius: '0.75rem' }} 

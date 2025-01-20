@@ -54,7 +54,7 @@ export default function ProgramExample() {
                             para documentar si están degradándose, estables o recuperándose, así como para comprender las
                             causas y los efectos de su estado a escala local, regional y global. Como parte del Plan Operativo
                             Anual del <Link className="link" href={'#'}>Santuario Marino Arrecifes del Sureste {'(SAMAR)'}</Link>,
-                            dos veces al año semonitorea la salud de los arrecifes de coral de esta área protegida. Nuestro programa de monitoreo se enfoca en la Zona Centro del SAMAR, pero en realidad se trata de un esfuerzo conjunto que se está
+                            dos veces al año se monitorea la salud de los arrecifes de coral de esta área protegida. Nuestro programa de monitoreo se enfoca en la Zona Centro del SAMAR, pero en realidad se trata de un esfuerzo conjunto que se está
                             realizando paralelamente por los demás co-manejantes en las otras dos zonas del santuario también,
                             utilizando un mismo protocolo unificado para la colecta de datos. En estos monitoreos, se levanta un
                             conjunto de variables, tales como la biomasa de peces, la cobertura bentónica, la densidad de reclutas

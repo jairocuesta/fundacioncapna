@@ -12,11 +12,11 @@ export const headerLinks: Props = {
     programs: [
         {
             name: "Conservación ambiental",
-            href: "#",
+            href: "/conservacion-ambiental",
             subitems: [
                 {
                     name: "Conservación terrestre",
-                    href: "#",
+                    href: "/conservacion-ambiental#terrestre",
                     subitems: [
                         {
                             name: "Reproducción de plantas nativas y endémicas amenazadas",
@@ -46,7 +46,7 @@ export const headerLinks: Props = {
                 },
                 {
                     name: "Conservación marina",
-                    href: "#",
+                    href: "/conservacion-ambiental#marina",
                     subitems: [
                         {
                             name: "Acuerdo de co-gestión del Santuario Marino Arrecifes del Sureste (SAMAR)",
@@ -74,7 +74,7 @@ export const headerLinks: Props = {
         },
         {
             name: "Desarrollo social",
-            href: "#",
+            href: "/desarrollo-social",
             subitems: [
                 {
                     name: '"Ni una gota más", reconstrucción de techos',
@@ -85,7 +85,7 @@ export const headerLinks: Props = {
                     href: "/programas/programa-de-concienciacion-socioambiental",
                 },
                 {
-                    name: 'Apoyo Comunitario',
+                    name: 'Desarrollo Comunitario',
                     href: "/programas/programa-de-apoyo-comunitario",
                 },
             ]

@@ -6,6 +6,7 @@ type Props = {
 }
 export default function Breadcrumb({ routes }: Props) {
 
+    console.log(routes);
     return (
         <div className={"text-[#7D8034] uppercase"}>
             <div className={"flex flex-wrap items-center gap-2"}>

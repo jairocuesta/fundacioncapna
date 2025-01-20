@@ -22,7 +22,7 @@ export default function HomeAbout() {
                     className={"relative grid grid-cols-1 md:grid-cols-3 align-baseline gap-7 max-w-fit md:max-w-3xl mx-auto pb-10"}
                 >
                     <div className={"flex flex-col gap-6 text-center bg-white text-[#afa96e] rounded-2xl px-10 md:px-0"}>
-                        <i className="fa-light fa-crow text-4xl"></i>
+                        <i className="fa-light fa-bottle-water text-4xl"></i>
                         <span className={"flex items-center justify-center text-4xl font-bold"}>
                             <CounterAnimation from={0} to={16368} />
                         </span>
@@ -36,7 +36,7 @@ export default function HomeAbout() {
                         <span className={"futura-light-regular uppercase text-sm"}>fragmentos de coral en vivero de corales</span>
                     </div>
                     <div className={"flex flex-col gap-6 text-center bg-white text-[#afa96e] rounded-2xl px-10 md:px-0"}>
-                        <i className="fa-light fa-bottle-water text-4xl"></i>
+                        <i className="fa-light fa-seedling text-4xl"></i>
                         <span className={"flex items-center justify-center text-4xl font-bold"}>
                             <CounterAnimation from={0} to={11800} />
                         </span>
@@ -63,7 +63,7 @@ export default function HomeAbout() {
                             transition={{ delay: .3, duration: .5 }}
                             className={"relative text-[#7d7d7d] leading-9 px-5"}
                         >
-                            Somos una Organización Sin Fines de Lucro creada en el año 2016, que surge como el brazo ejecutor de todas 
+                            Somos una organización sin fines de lucro creada en el año 2016, que surge como el brazo ejecutor de todas 
                             las acciones de sostenibilidad de la Ciudad Destino Cap Cana, con el propósito de promover la conservación 
                             de los diversos ecosistemas y recursos naturales, así como el desarrollo de las comunidades de la zona.
                         </motion.p>

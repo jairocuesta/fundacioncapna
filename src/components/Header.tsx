@@ -66,7 +66,7 @@ export default function Header({ styles }: NavbarProps) {
                     <NavbarItem href={"/alianzas"} title={"Alianzas"} />
                     <NavbarItem href={"/investigacion"} title={"Investigacion"} />
                     <NavbarItem href={"/quienes-somos"} title={"Quienes somos"} />
-                    <NavbarItem href={"https://capcana.com/es"} title={"Capcana"} />
+                    <NavbarItem href={"https://capcana.com/es"} title={"Cap cana"} />
                     <NavbarItem href={"/contacto"} title={"Contactos"} />
                 </nav>
                 <button className={"block lg:hidden"} onClick={handleShowMenu}>

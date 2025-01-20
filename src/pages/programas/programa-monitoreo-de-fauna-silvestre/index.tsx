@@ -61,7 +61,7 @@ export default function ProgramExample() {
                     <Subtitle text={"Fototrampeando a los animales"} />
                     <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
                         <p>
-                            Colocamos 11 cámaras trampa en la <Link className="link" href={'#'}>Reserva Ecológica Falda del Farallón</Link> para estudiar a los animales en su hábitat natural sin alterar su comportamiento. Estas cámaras tienen un diseño que se mimetiza con el entorno del bosque, haciéndolas difíciles de percibir para los animales. A través de un sensor de movimiento infrarrojo, la cámara detecta la presencia de un animal y automáticamente toma fotos y/o vídeos.
+                            Colocamos 11 cámaras trampa en la Reserva Ecológica Falda del Farallón para estudiar a los animales en su hábitat natural sin alterar su comportamiento. Estas cámaras tienen un diseño que se mimetiza con el entorno del bosque, haciéndolas difíciles de percibir para los animales. A través de un sensor de movimiento infrarrojo, la cámara detecta la presencia de un animal y automáticamente toma fotos y/o vídeos.
                         </p>
                     </div>
                 </div>

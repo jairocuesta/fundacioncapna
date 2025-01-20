@@ -105,7 +105,7 @@ export default function ProgramExample() {
                     <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
                         <p>
                         Identificamos lugares de alta importancia para la conservación de la fauna nativa y los protegemos.
-                        Ha sido el caso de la  <Link className="link" href={'#'}>Reserva Ecológica Falda del Farallón</Link> y la <Link className="link" href={'#'}>Laguna Las Garzas</Link>, ambos sitios apadrinados por la Fundación.
+                        Ha sido el caso de la Reserva Ecológica Falda del Farallóny la Laguna Las Garzas, ambos sitios apadrinados por la Fundación.
                         </p>
                     </div>
                 </div>
@@ -113,7 +113,7 @@ export default function ProgramExample() {
                     <Subtitle text={"Rehabilitando ecosistemas"} />
                     <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
                         <p>
-                            A través de otro de nuestros programas, el <Link className="link" href={'#'}>Programa Reproducción de Plantas Nativas y Endémicas Amenazadas</Link>, reintroducimos plantas en los hábitats naturales de las especies de animales nativos y endémicos, rehabilitando así los bosques que conforman su hogar. Además, a
+                            A través de otro de nuestros programas, el <Link className="link" href={'/programas/programa-reproduccion-de-plantas-nativas-y-endemicas-amenazadas'}>Programa Reproducción de Plantas Nativas y Endémicas Amenazadas</Link>, reintroducimos plantas en los hábitats naturales de las especies de animales nativos y endémicos, rehabilitando así los bosques que conforman su hogar. Además, a
                             través de este programa también recuperamos las poblaciones de aquellas especies de plantas que
                             aportan alimento a los animales; como por ejemplo el copey, árbol del cual se alimenta la jutía.
                         </p>

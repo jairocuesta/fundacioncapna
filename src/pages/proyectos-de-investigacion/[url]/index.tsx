@@ -10,6 +10,7 @@ import { useRouter } from 'next/router';
 import axios from 'axios';
 import { ProyectTypes, ContentParagraph } from '@/types';
 import { BlocksRenderer } from '@strapi/blocks-react-renderer'
+import Link from 'next/link';
 // Styles
 //import styles from './Index.module.css';
 
@@ -146,18 +147,18 @@ const ViewProyects = () => {
                                     <p>No hay contenido disponible</p>
                                 )}
                                 <p>
-                                    Actualmente se está elaborando el Plan de Manejo del SAMAR, el cual consiste en un documento técnico y normativo que contiene el conjunto de
+                                    Recientemente, en el 2024, el Ministerio de Medio Ambiente y Recursos Naturales aprobó el <Link target={'_blank'} className={'link'}  href={'https://ambiente.gob.do/planes-de-manejo/'}>Plan de Manejo del SAMAR</Link>, el cual consiste en un documento técnico y normativo que contiene el conjunto de
                                     decisiones sobre el área protegida en las que, con fundamento estrictamente basado en el conocimiento científico y en la experiencia de las
                                     aplicaciones técnicas, establece prohibiciones y autorizaciones específicas y norma las actividades que son permitidas en el área protegida.
-                                    Actualmente se está elaborando el Plan de Manejo del SAMAR, el cual consiste en un documento técnico y normativo que contiene el conjunto de
+                                    Recientemente, en el 2024, el Ministerio de Medio Ambiente y Recursos Naturales aprobó el <Link target={'_blank'} className={'link'}  href={'https://ambiente.gob.do/planes-de-manejo/'}>Plan de Manejo del SAMAR</Link>, el cual consiste en un documento técnico y normativo que contiene el conjunto de
                                     decisiones sobre el área protegida en las que, con fundamento estrictamente basado en el conocimiento científico y en la experiencia de las
                                     aplicaciones técnicas, establece prohibiciones y autorizaciones específicas y norma las actividades que son permitidas en el área protegida.
                                 </p>
                                 <p>
-                                    Actualmente se está elaborando el Plan de Manejo del SAMAR, el cual consiste en un documento técnico y normativo que contiene el conjunto de
+                                    Recientemente, en el 2024, el Ministerio de Medio Ambiente y Recursos Naturales aprobó el <Link target={'_blank'} className={'link'}  href={'https://ambiente.gob.do/planes-de-manejo/'}>Plan de Manejo del SAMAR</Link>, el cual consiste en un documento técnico y normativo que contiene el conjunto de
                                     decisiones sobre el área protegida en las que, con fundamento estrictamente basado en el conocimiento científico y en la experiencia de las
                                     aplicaciones técnicas, establece prohibiciones y autorizaciones específicas y norma las actividades que son permitidas en el área protegida.
-                                    Actualmente se está elaborando el Plan de Manejo del SAMAR, el cual consiste en un documento técnico y normativo que contiene el conjunto de
+                                    Recientemente, en el 2024, el Ministerio de Medio Ambiente y Recursos Naturales aprobó el <Link target={'_blank'} className={'link'}  href={'https://ambiente.gob.do/planes-de-manejo/'}>Plan de Manejo del SAMAR</Link>, el cual consiste en un documento técnico y normativo que contiene el conjunto de
                                     decisiones sobre el área protegida en las que, con fundamento estrictamente basado en el conocimiento científico y en la experiencia de las
                                     aplicaciones técnicas, establece prohibiciones y autorizaciones específicas y norma las actividades que son permitidas en el área protegida.
                                 </p>

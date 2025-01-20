@@ -109,13 +109,13 @@ export default function ProgramExample() {
                         </p>
                     </div>
                 </div>
-                <Link href={'#'} className={"bg-[#7D8034] w-fit mx-auto text-white py-2 px-5 sm:px-10 rounded-full font-semibold text-sm sm:text-base"}>SIGUE A LA COLMENA AGRADECIDA EN INSTAGRAM O FACEBOOK</Link>
+                <Link target={'_blank'} href={'https://www.instagram.com/lacolmenaagradecida?igsh=bjE2OXM4bmlhdjVu'} className={"bg-[#7D8034] w-fit mx-auto text-white py-2 px-5 sm:px-10 rounded-full font-semibold text-sm sm:text-base"}>SIGUE A LA COLMENA AGRADECIDA EN INSTAGRAM O FACEBOOK</Link>
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
                     <Subtitle text={"Reporta las colmenas en situación de riesgo a la Fundación"} />
                     <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
                         <p>
                             Si conoces una colmena ubicada en una zona urbanizada que represente un peligro para los seres
-                            humanos, por favor ¡no la fumigues! En cambio, repórtala a la Fundación llamando al <a className="link" href="tel:+18094697241">+1 (809) 469-7241</a> o escribiendo al correo <a className="link" href="mailto:info@fundacioncapcana.org">info@fundacioncapcana.org</a>. Nuestro apicultor se trasladará hasta el lugar para retirarla y trasladarla a nuestro apiario.
+                            humanos, por favor ¡no la fumigues! En cambio, repórtala a la Fundación llamando al <a className="link" href="tel:+18093901953">+1 (809) 390-1953</a> o escribiendo al correo <a className="link" href="mailto:info@fundacioncapcana.org">info@fundacioncapcana.org</a>. Nuestro apicultor se trasladará hasta el lugar para retirarla y trasladarla a nuestro apiario.
                         </p>
                     </div>
                 </div>

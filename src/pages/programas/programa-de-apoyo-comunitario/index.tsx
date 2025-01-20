@@ -10,7 +10,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 
 export default function ProgramExample() {
     return (
-        <Layout title={"Programa de apoyo comunitario"}>
+        <Layout title={"Programa de desarrollo comunitario"}>
             <div className={"flex flex-col gap-16 pb-20 text-center sm:text-left"}>
                 <div className={`grid place-content-center gap-10 ${styles.firstImage} h-[40rem] text-white px-5`}>
                     <motion.h1
@@ -21,7 +21,7 @@ export default function ProgramExample() {
                         className={"relative text-center text-2xl md:text-3xl lg:text-4xl lg:leading-[3rem]"}
                     >
                         <div>Programa de</div>
-                        <div><span className={"font-bold"}> Apoyo Comunitario</span></div>
+                        <div><span className={"font-bold"}>Desarrollo Comunitario</span></div>
                     </motion.h1>
                     <motion.span
                         animate={{ top: '30px' }}
@@ -35,7 +35,7 @@ export default function ProgramExample() {
                     <Breadcrumb
                         routes={[
                             { name: 'Desarrollo social', url: '/desarrollo-social' },
-                            { name: 'Apoyo comunitario', url: '/programas/programa-de-apoyo-comunitario' },
+                            { name: 'Desarrollo comunitario', url: '/programas/programa-de-apoyo-comunitario' },
                         ]}
                     />
                 </div>

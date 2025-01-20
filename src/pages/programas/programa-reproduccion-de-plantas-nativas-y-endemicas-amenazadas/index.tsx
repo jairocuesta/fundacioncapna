@@ -40,12 +40,12 @@ export default function ProgramExample() {
                     <Breadcrumb
                         routes={[
                             { name: 'Conservación ambiental', url: '/conservacion-ambiental' },
-                            { name: 'Reproduccion de plantas nativas y endemicas-amenazadas', url: '/programas/programa-reproduccion-de-plantas-nativas-y-endemicas-amenazadas' },
+                            { name: 'Reproduccion de plantas nativas y endemicas amenazadas', url: '/programas/programa-reproduccion-de-plantas-nativas-y-endemicas-amenazadas' },
                         ]} 
                     />
                 </div>
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
-                    <Subtitle text={"Recuperando la flora única de Cap Cana, el este y República Dominicana"} />
+                    <Subtitle text={"Recuperando la flora de Cap Cana, el este y República Dominicana"} />
                     <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
                         <p>El este de la República Dominicana, incluyendo Cap Cana, es el hogar de una rica diversidad de plantas nativas y endémicas, muchas de las cuales son verdaderas joyas botánicas y se encuentran en
                             peligro de extinción. Nuestro programa se dedica a la identificación, reproducción y recuperación de

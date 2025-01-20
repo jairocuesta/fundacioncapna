@@ -95,7 +95,7 @@ export default function ProgramExample() {
                     <Subtitle text={"Manejando nuestros recursos marinos"} />
                     <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
                         <p>
-                            Actualmente se está elaborando el Plan de Manejo del SAMAR, el cual consiste en un documento técnico y normativo que contiene el conjunto de 
+                            Recientemente, en el 2024, el Ministerio de Medio Ambiente y Recursos Naturales aprobó el <Link target={'_blank'} className={'link'} href={'https://ambiente.gob.do/planes-de-manejo/'}>Plan de Manejo del SAMAR</Link>, el cual consiste en un documento técnico y normativo que contiene el conjunto de
                             decisiones sobre el área protegida en las que, con fundamento estrictamente basado en el conocimiento científico y en la experiencia de las 
                             aplicaciones técnicas, establece prohibiciones y autorizaciones específicas y norma las actividades que son permitidas en el área protegida.
                         </p>
@@ -105,9 +105,7 @@ export default function ProgramExample() {
                 <div className={"flex flex-col gap-4 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20"}>
                     <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
                         <p>
-                            Al unirte a nosotros en el Programa de Atención Primaria a Fauna Silvestre, estás contribuyendo a la
-                            protección de la diversidad de fauna única de Cap Cana, el este y República Dominicana. Descubre la
-                            belleza y la importancia de nuestros animales.
+                            Al unirte a nosotros en el Programa de Co-Gestión del SAMAR, estás contribuyendo a una adecuada gestión de los ecosistemas marinos de Cap Cana. Descubre la belleza y la importancia de nuestros recursos marinos
                         </p>
                     </div>
                 </div>

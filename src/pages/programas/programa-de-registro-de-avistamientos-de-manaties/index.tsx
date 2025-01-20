@@ -50,8 +50,10 @@ export default function ProgramExample() {
                     <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
                         <p>
                             En Cap Cana tenemos la suerte de contar con al menos seis manatíes que habitan en las aguas de la
-                            Marina Cap Cana y de las costas de la Ciudad Destino Cap Cana, siendo uno de ellos una cría y los
-                            otros cinco, adultos. Se trata del manatí antillano, también conocido como vaca marina, de nombre
+                            Marina Cap Cana y de las costas de la Ciudad Destino Cap Cana, En Cap Cana tenemos la
+                            suerte de contar con al menos siete manatíes que habitan en las aguas
+                            de la Marina Cap Cana y de las costas de la Ciudad Destino Cap Cana,
+                            siendo dos de ellos crías y los otros cinco, adultos. Se trata del manatí antillano, también conocido como vaca marina, de nombre
                             científico Trichechus <span className="italic">manatus manatus</span>. Son herbívoros grandes y pesados, de movimientos lentos, que se alimentan principalmente de hierbas marinas y son sumamente dóciles porque no tienen
                             depredadores naturales. Los manatíes están declarados en estado de “peligro crítico” en la Lista Roja
                             de Especies en Peligro de Extinción, Amenazadas o Protegidas de la República Dominicana.
@@ -130,7 +132,7 @@ export default function ProgramExample() {
                         <div className={"w-fit"}>
                             <Button
                                 href={"#"}
-                                text={"Conviértete en miembro"}
+                                text={"Reporta un avistamiento"}
                                 type={"main"}
                             />
                         </div>

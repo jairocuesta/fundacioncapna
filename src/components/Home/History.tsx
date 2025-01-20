@@ -37,7 +37,7 @@ export default function HomeHistory() {
                 </div>
                 <div className={"flex flex-col items-center lg:items-start gap-3"}>
                     <h2 className={"text-xl uppercase text-[#7D8034]"}>Quienes somos</h2>
-                    <p>Somos una Organización Sin Fines de Lucro creada en el año 2016, que surge como el brazo ejecutor de todas las acciones de sostenibilidad de la Ciudad Destino Cap Cana...</p>
+                    <p>Somos una organización sin fines de lucro creada en el año 2016, que surge como el brazo ejecutor de todas las acciones de sostenibilidad de la Ciudad Destino Cap Cana...</p>
                     <button onClick={handleShowModal} className={"flex items-center gap-2 font-semibold text-[#7D8034] text-sm"}>
                         <span className={"link"}>VER MÁS</span>
                         <i className="fa-solid fa-angle-right text-base"></i>
@@ -68,7 +68,7 @@ export default function HomeHistory() {
                 {showModal ? (
                     <ShowMoreModal
                         title={"Quienes somos"}
-                        description={"Somos una Organización Sin Fines de Lucro creada en el año 2016, que surge como el brazo ejecutor de todas las acciones de sostenibilidad de la Ciudad Destino Cap Cana, con el propósito de promover la conservación de los diversos ecosistemas y recursos naturales, así como el desarrollo de las comunidades de la zona."}
+                        description={"Somos una organización sin fines de lucro creada en el año 2016, que surge como el brazo ejecutor de todas las acciones de sostenibilidad de la Ciudad Destino Cap Cana, con el propósito de promover la conservación de los diversos ecosistemas y recursos naturales, así como el desarrollo de las comunidades de la zona."}
                         handleClose={handleShowModal}
                     />
                 ) : null}

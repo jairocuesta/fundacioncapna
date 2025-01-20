@@ -69,18 +69,15 @@ export default function ProgramExample() {
                     description={"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"}
                     images={[
                         {
-                            src: "/programas/atencion-primaria-fauna-silvestre/1.webp"
-                        },
-                        {
-                            src: "/programas/atencion-primaria-fauna-silvestre/2.webp",
+                            src: "/programas/atencion-primaria-fauna-silvestre/5.webp",
                             classes: { backgroundPosition: '0 20%' }
                         },
                         {
-                            src: "/programas/atencion-primaria-fauna-silvestre/3.webp",
+                            src: "/programas/atencion-primaria-fauna-silvestre/6.webp",
                             classes: { backgroundPosition: '0 30%' }
                         },
                         {
-                            src: "/programas/atencion-primaria-fauna-silvestre/4.webp",
+                            src: "/programas/atencion-primaria-fauna-silvestre/7.webp",
                             classes: { backgroundPosition: '0 40%' }
                         }
                     ]}
@@ -101,7 +98,7 @@ export default function ProgramExample() {
                     <div className={"flex flex-col gap-4 leading-6 sm:leading-8 text-sm sm:text-base"}>
                         <p>
                             Reporta animales silvestres heridos, enfermos, desplazados, que hayan quedado huérfanos o que se
-                            encuentren en situación de riesgo, llamando al <a className="link" href="tel:+18096691392">{'+1 (809) 669-1392'}</a>, alternativamente al <a className="link" href="tel:+18094697241">{'+1 (809)469-7241'}</a>. También puedes escribir al correo <a className="link" href="mailto:info@fundacioncapcana.org">info@fundacioncapcana.org</a>.
+                            encuentren en situación de riesgo, llamando al <a className="link" href="tel:+18096691392">{'+1 (809) 669-1392'}</a>, alternativamente al <a className="link" href="tel:+18093901953">{'+1 (809) 390-1953'}</a>. También puedes escribir al correo <a className="link" href="mailto:info@fundacioncapcana.org">info@fundacioncapcana.org</a>.
                         </p>
                     </div>
                 </div>

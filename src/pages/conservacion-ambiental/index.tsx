@@ -39,6 +39,7 @@ export default function ConservacionAmbiental() {
                         transition={{ delay: .4, duration: .5 }}
                         className={"relative overflow-hidden w-full"} 
                         style={{ aspectRatio: '16/7' }}
+                        id={'terrestre'}
                     >
                         <img src={"/programas/conservacion-terrestre/portada.webp"} className={"absolute w-full object-cover"} alt={"Conservación terrestre"} />
                         <div className={"absolute w-full h-full grid place-content-center"}>
@@ -58,7 +59,7 @@ export default function ConservacionAmbiental() {
                         <h3 className={"futura-light-regular text-2xl"}>Fauna terrestre</h3>
                         <p>Cap Cana es el hogar de numerosas especies de animales nativos y endémicos de la isla La Española, muchas de las cuales se encuentran amenazadas de extinción.</p>
                         <ImageGrid images={[
-                            { src: '/programas/proteccion-de-especies-de-fauna-amenazadas/portada.webp', href: 'programa-proteccion-de-especies-de-fauna-amenazadas', text: 'Programa protección de especies de fauna amenazadas' },
+                            { src: '/programas/proteccion-de-especies-de-fauna-amenazadas/1.webp', href: 'programa-proteccion-de-especies-de-fauna-amenazadas', text: 'Programa protección de especies de fauna amenazadas' },
                             { src: '/programas/monitoreo-de-fauna-silvestre/portada.webp', href: 'programa-monitoreo-de-fauna-silvestre', text: 'Programa monitoreo de fauna silvestre' },
                             { src: '/programas/atencion-primaria-fauna-silvestre/portada.webp', href: 'programa-atencion-primaria-fauna-silvestre', text: 'Programa atención primaria a fauna silvestre' },
                             { src: '/programas/rescate-de-colmenas/portada.webp', href: 'programa-rescate-de-colmenas', text: 'Programa rescate de colmenas' },
@@ -67,6 +68,7 @@ export default function ConservacionAmbiental() {
                     <div
                         className={"relative overflow-hidden w-full"}
                         style={{ aspectRatio: '16/7' }}
+                        id={'marina'}
                     >
                         <img src={"/programas/conservacion-marina/portada.webp"} className={"absolute w-full object-cover"} alt={"Conservación marina"} />
                         <div className={"absolute w-full h-full grid place-content-center"}>
