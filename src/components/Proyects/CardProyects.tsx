@@ -31,6 +31,7 @@ const handleClick = () => {
                             fill
                             style={{ transform: "rotate(13deg)" }}
                             className="object-cover"
+                            loading={'eager'}
                         />
                     </div>
                 </div>
@@ -42,6 +43,7 @@ const handleClick = () => {
                             fill
                             style={{ transform: "rotate(13deg)" }}
                             className="object-cover"
+                            loading={'eager'}
                         />
                     </div>
                 </div>
@@ -53,6 +55,7 @@ const handleClick = () => {
                             fill
                             style={{ transform: "rotate(13deg)" }}
                             className="object-cover"
+                            loading={'eager'}
                         />
                     </div>
                 </div>

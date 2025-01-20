@@ -34,8 +34,6 @@ const ProyectosInvestigacion = () => {
         })();
     }, []);
 
-    console.log(proyects)
-
     return (
         <Layout title={"Proyectos de Investigación"}>
             <div className={"flex flex-col gap-16 pb-20 text-center sm:text-left"}>

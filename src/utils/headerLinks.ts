@@ -91,8 +91,8 @@ export const headerLinks: Props = {
             ]
         },
         {
-            name: "Sostenibilidad",
-            href: "/sostenibilidad/estrategia"
+            name: "Sostenibilidad fundación",
+            href: "/sostenibilidad/fundacion"
         }
     ],
     sustainability: [
