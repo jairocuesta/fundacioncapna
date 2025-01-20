@@ -7,8 +7,6 @@ export default async function handler(req, res) {
 
     const {amount, codeCurrency} = req.body;
 
-    console.log(req.body, amount, codeCurrency)
-
     try {
         const response = await axios.post(
             "https://lab.cardnet.com.do/sessions",
@@ -20,8 +18,8 @@ export default async function handler(req, res) {
                 MerchantNumber: "349000000",
                 MerchantTerminal: "58585858",
                 MerchantTerminal_amex: "00000001",
-                ReturnUrl: "http://localhost:3000/verificacion-pago",
-                CancelUrl: "http://localhost:3000/proyectos-de-investigacion/error",
+                ReturnUrl: "https://fundacioncapcana.org/verificacion-pago",
+                CancelUrl: "https://fundacioncapcana.org/proyectos-de-investigacion/error",
                 PageLanguaje: "ENG",
                 OrdenId: "686",
                 TransactionId: "160088",
