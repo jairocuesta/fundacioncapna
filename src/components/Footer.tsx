@@ -31,7 +31,7 @@ export default function Footer() {
                             <i className="fa-regular fa-angle-right text-lg"></i>
                             <span>Inicio</span>
                         </Link>
-                        <Link href={"/programas/programa-de-concienciacion-socioambiental"} className={"flex items-center gap-3 border-b py-2 border-neutral-500"}>
+                        <Link href={"/programas"} className={"flex items-center gap-3 border-b py-2 border-neutral-500"}>
                             <i className="fa-regular fa-angle-right text-lg"></i>
                             <span>Programas</span>
                         </Link>
