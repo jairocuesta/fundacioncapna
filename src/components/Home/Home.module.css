@@ -46,6 +46,7 @@
 .programImage {
     object-fit: cover;
     width: 100% !important;
+    height: 100%;
     position: relative !important;
 }
 

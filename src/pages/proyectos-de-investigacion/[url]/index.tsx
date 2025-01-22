@@ -107,13 +107,13 @@ const ViewProyects = () => {
                                 description={"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"}
                                 images={[
                                     {
-                                        src: `${process.env.NEXT_PUBLIC_NEW_STRAPI_URI}${proyecto?.attributes.Images[0].Image.data.attributes.url}`
+                                        src: `${process.env.NEXT_PUBLIC_STRAPI_URI}${proyecto?.attributes.Images[0].Image.data.attributes.url}`
                                     },
                                     {
-                                        src: `${process.env.NEXT_PUBLIC_NEW_STRAPI_URI}${proyecto?.attributes.Images[1].Image.data.attributes.url}`
+                                        src: `${process.env.NEXT_PUBLIC_STRAPI_URI}${proyecto?.attributes.Images[1].Image.data.attributes.url}`
                                     },
                                     {
-                                        src: `${process.env.NEXT_PUBLIC_NEW_STRAPI_URI}${proyecto?.attributes.Images[2].Image.data.attributes.url}`
+                                        src: `${process.env.NEXT_PUBLIC_STRAPI_URI}${proyecto?.attributes.Images[2].Image.data.attributes.url}`
                                     },
                                 ]}
                             />

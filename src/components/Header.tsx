@@ -59,7 +59,7 @@ export default function Header({ styles }: NavbarProps) {
                 </Link>
                 <nav className={"hidden lg:flex items-center justify-between w-full"}>
                     <NavbarItem href={"/"} title={"Inicio"} />
-                    <NavbarItem title={"Programas"} items={headerLinks.programs} />
+                    <NavbarItem title={"Programas"} href={'/programas'} items={headerLinks.programs} />
                     <NavbarItem href={"/sostenibilidad/estrategia"} title={"Sostenibilidad"} />
                     {/* <NavbarItem href={"/membresias"} title={"Donaciones"} /> */}
                     <NavbarItem href={"/blog"} title={"Blog"} items={headerLinks.blog} />

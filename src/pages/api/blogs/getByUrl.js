@@ -9,7 +9,7 @@ export default async function GET(req, res) {
     try {
         const { data } = await axios.request({
             method: 'GET',
-            url: `${process.env.STRAPI_URI}/api/blogs?filters[alias]=${blog}&populate=*`,
+            url: `${process.env.NEXT_PUBLIC_STRAPI_URI}/api/blogs?filters[alias]=${blog}&populate=*`,
             headers: {
                 Authorization: `Bearer ${process.env.STRAPI_TOKEN}`
             }

@@ -194,17 +194,17 @@ export const headerLinks: Props = {
         },
     ],
     blog: [
-        {
-            name: "Eventos",
-            href: "#",
-        },
-        {
-            name: "Noticias",
-            href: "#",
-        },
-        {
-            name: "Newsletter",
-            href: "#",
-        },
+        // {
+        //     name: "Eventos",
+        //     href: "#",
+        // },
+        // {
+        //     name: "Noticias",
+        //     href: "#",
+        // },
+        // {
+        //     name: "Newsletter",
+        //     href: "#",
+        // },
     ],
 }

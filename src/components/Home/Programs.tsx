@@ -12,7 +12,7 @@ export default function HomePrograms() {
     return (
         <div className={`relative w-full overflow-x-clip pb-2 px-2`}>
             <div className={`absolute w-full h-full`}></div>
-            <div className={"grid grid-rows-3 grid-cols-1 sm:grid-rows-3 sm:grid-cols-2 xl:grid-rows-1 xl:grid-cols-3 gap-2 sm:h-[2100px] xl:h-[700px]"}>
+            <div className={"grid grid-rows-3 grid-cols-1 xl:grid-rows-1 xl:grid-cols-3 gap-2 sm:h-[2100px] xl:h-[700px]"}>
                 <Link href={"/conservacion-ambiental"} className={"overflow-hidden h-full"}>
                     <div className={`${styles.imageScale} relative h-full`}>
                         <div className={``}></div>

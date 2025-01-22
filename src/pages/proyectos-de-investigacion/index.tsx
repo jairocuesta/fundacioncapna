@@ -66,7 +66,7 @@ const ProyectosInvestigacion = () => {
                             proyects.map((proyect, index) => (
                                 <CardProyects
                                     key={index}
-                                    images={proyect.attributes.Images.slice(0, 3).map(image => `${process.env.NEXT_PUBLIC_NEW_STRAPI_URI}${image.Image.data.attributes.url}`)}
+                                    images={proyect.attributes.Images.slice(0, 3).map(image => `${process.env.NEXT_PUBLIC_STRAPI_URI}${image.Image.data.attributes.url}`)}
                                     title={proyect.attributes.name}
                                     url={proyect.attributes.url}
                                 />
